@@ -1,0 +1,44 @@
+{
+  "name": "crown-website",
+  "private": true,
+  "description": "Crown Engine website",
+  "version": "0.1.0",
+  "author": "Alessio Bianchetti <alessio.bianchetti@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "gatsby": "^2.25.3",
+    "gatsby-plugin-manifest": "^2.5.2",
+    "gatsby-plugin-offline": "^3.3.2",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-sass": "^2.4.2",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.11.0"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abianche/crown-website"
+  },
+  "bugs": {
+    "url": "https://github.com/abianche/crown-website/issues"
+  }
+}
