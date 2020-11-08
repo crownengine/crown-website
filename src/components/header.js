@@ -21,17 +21,20 @@ const Header = ({ siteTitle, pageInfo }) => (
     </Link>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto" activeKey={pageInfo && pageInfo.pageName}>
+      <Nav
+        className="mr-auto align-items-center"
+        activeKey={pageInfo && pageInfo.pageName}
+      >
         <Nav.Link href="https://github.com/dbartolini/crown/releases/latest">
           Download
         </Nav.Link>
+        <Nav.Link
+          href="https://github.com/dbartolini/crown"
+          style={{ display: "inline-block" }}
+        >
+          <FaGithub size="30" color="black" />
+        </Nav.Link>
       </Nav>
-      <Nav.Link
-        href="https://github.com/dbartolini/crown"
-        style={{ display: "inline-block" }}
-      >
-        <FaGithub size="30" color="black" />
-      </Nav.Link>
     </Navbar.Collapse>
   </Navbar>
 )

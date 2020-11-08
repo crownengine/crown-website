@@ -2,13 +2,14 @@ import React from "react"
 import { Button, Container, Jumbotron } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styles from "./index.module.css"
 
 export default function Home() {
   return (
     <Layout pageInfo={{ pageName: "index" }}>
       <SEO title="Home" />
-      <Jumbotron fluid>
-        <Container className="text-center">
+      <Jumbotron fluid className="bg-dark">
+        <Container className="text-center text-light">
           <h1>The Flexible Game Engine</h1>
           <p>
             <Button
