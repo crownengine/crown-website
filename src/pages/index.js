@@ -2,7 +2,6 @@ import React from "react"
 import { Button, Container, Jumbotron } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styles from "./index.module.css"
 
 export default function Home() {
   return (
