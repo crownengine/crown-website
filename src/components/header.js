@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import { Nav, Navbar } from "react-bootstrap"
 import { FaGithub } from "react-icons/fa"
@@ -7,18 +6,16 @@ import styles from "./header.module.css"
 
 const Header = ({ siteTitle, pageInfo }) => (
   <Navbar bg="light" variant="light" expand="lg" sticky="top">
-    <Link to="/" className="link-no-style">
-      <Navbar.Brand href="#home" className={styles.title}>
-        <img
-          alt=""
-          src={pepperLogo}
-          width="35"
-          height="35"
-          className="d-inline-block align-top"
-        />{" "}
-        {siteTitle}
-      </Navbar.Brand>
-    </Link>
+    <Navbar.Brand href="/" className={styles.title}>
+      <img
+        alt=""
+        src={pepperLogo}
+        width="35"
+        height="35"
+        className="d-inline-block align-top"
+      />{" "}
+      {siteTitle}
+    </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav
