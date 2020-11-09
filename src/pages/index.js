@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Container, Jumbotron } from "react-bootstrap"
+import { SplitButton, Dropdown, Container, Jumbotron } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -12,14 +12,15 @@ export default function Home({ data }) {
       <Jumbotron fluid className="bg-dark">
         <Container className="text-center text-light">
           <h1>The Flexible Game Engine</h1>
-          <p>
-            <Button
-              href="https://github.com/dbartolini/crown/releases/latest"
-              variant="primary"
-            >
-              Download
-            </Button>
-          </p>
+          <SplitButton
+            href="https://github.com/dbartolini/crown/releases/latest"
+            variant="primary"
+            title="Download"
+          >
+            <Dropdown.Item href="https://aur.archlinux.org/packages/crown/">
+              Arch Linux
+            </Dropdown.Item>
+          </SplitButton>
         </Container>
       </Jumbotron>
     </Layout>
