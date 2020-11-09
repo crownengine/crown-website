@@ -3,7 +3,9 @@ import { Button, Container, Jumbotron } from "react-bootstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(JSON.stringify(data))
+
   return (
     <Layout pageInfo={{ pageName: "index" }}>
       <SEO title="Home" />
@@ -23,3 +25,14 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const mdQuery = graphql`
+  query GetMDByTitle($title: String!) {
+    markdownRemark(frontmatter: { title: { eq: $title } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`

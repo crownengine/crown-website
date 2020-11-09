@@ -24,6 +24,14 @@ module.exports = {
         icon: `src/images/pepper-logo.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data-markdown`,
+        path: `${__dirname}/src/data/markdown`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
   ],
