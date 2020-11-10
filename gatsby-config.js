@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const path = require(`path`)
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -21,18 +23,27 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/pepper-logo.png`, // This path is relative to the root of the site.
+        icon: path.join(__dirname, `src`, `images`, `pepper-logo.png`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data-markdown`,
-        path: `${__dirname}/src/data/markdown`,
+        name: `markdown`,
+        path: path.join(__dirname, `src`, `data`, `markdown`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }

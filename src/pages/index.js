@@ -1,5 +1,14 @@
+import { graphql } from "gatsby"
 import React from "react"
-import { SplitButton, Dropdown, Container, Jumbotron } from "react-bootstrap"
+import {
+  Col,
+  Container,
+  Dropdown,
+  Jumbotron,
+  Row,
+  SplitButton,
+} from "react-bootstrap"
+import Image from "../components/image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -23,13 +32,38 @@ export default function Home({ data }) {
           </SplitButton>
         </Container>
       </Jumbotron>
+      <Container fluid className="text-center">
+        <Row>
+          <Col>
+            <Image
+              fileName="01-physics.png"
+              alt="Physics"
+              title="Physics"
+            ></Image>
+          </Col>
+          <Col>
+            <Image
+              fileName="02-animation.png"
+              alt="Animation"
+              title="Animation"
+            ></Image>
+          </Col>
+          <Col>
+            <Image
+              fileName="level-editor.png"
+              alt="Level editor"
+              title="Level editor"
+            ></Image>
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   )
 }
 
-export const mdQuery = graphql`
-  query GetMDByTitle($title: String!) {
-    markdownRemark(frontmatter: { title: { eq: $title } }) {
+export const query = graphql`
+  query {
+    markdownRemark(frontmatter: { title: { eq: "title" } }) {
       html
       frontmatter {
         title
