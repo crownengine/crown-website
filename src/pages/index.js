@@ -33,7 +33,7 @@ export default function Home({ data }) {
         </Container>
       </Jumbotron>
       <Container fluid className="center">
-        <Row>
+        <Row xs={1} sm={1} md={1} lg={3} xl={3}>
           <Col>
             <Image
               fileName="01-physics.png"
