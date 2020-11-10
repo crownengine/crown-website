@@ -25,6 +25,9 @@ const Header = ({ siteTitle, pageInfo }) => (
         <Nav.Link href="https://github.com/dbartolini/crown/releases/latest">
           Download
         </Nav.Link>
+        <Nav.Link href="https://dbartolini.github.io/crown/html/latest">
+          Manual
+        </Nav.Link>
         <Nav.Link
           href="https://github.com/dbartolini/crown"
           style={{ display: "inline-block" }}
