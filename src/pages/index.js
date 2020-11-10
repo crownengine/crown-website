@@ -32,7 +32,7 @@ export default function Home({ data }) {
           </SplitButton>
         </Container>
       </Jumbotron>
-      <Container fluid className="text-center">
+      <Container fluid className="center">
         <Row>
           <Col>
             <Image
@@ -63,7 +63,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    markdownRemark(frontmatter: { title: { eq: "title" } }) {
+    markdownRemark(frontmatter: { type: { eq: "feature" } }) {
       html
       frontmatter {
         title
