@@ -3,7 +3,7 @@ import { Navbar } from "react-bootstrap"
 
 const Footer = () => (
   <footer>
-    <Navbar bg="dark" variant="light" sticky="bottom">
+    <Navbar bg="dark" variant="light" fixed="bottom">
       <Navbar.Text className="text-light">
         The Crown Foundation © {new Date().getFullYear()}
       </Navbar.Text>
