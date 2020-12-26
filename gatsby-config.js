@@ -10,7 +10,8 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Crown Engine`,
-    description: `General purpose data-driven game engine`,
+    subtitle: `The Flexible Game Engine`,
+    tcf_mail_address: `foundation@crownengine.org`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,13 +27,13 @@ module.exports = {
         icon: path.join(__dirname, `src`, `images`, `pepper-logo.png`),
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown`,
-        path: path.join(__dirname, `src`, `data`, `markdown`),
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `markdown`,
+    //     path: path.join(__dirname, `src`, `data`, `markdown`),
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
