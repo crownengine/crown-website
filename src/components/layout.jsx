@@ -7,10 +7,8 @@
 
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import Header from "./header"
 import Footer from "./footer"
-import { Container } from "react-bootstrap"
-import styles from "./layout.module.css"
+import Header from "./header"
 
 const Layout = ({ children, pageInfo }) => {
   const data = useStaticQuery(graphql`
@@ -26,11 +24,11 @@ const Layout = ({ children, pageInfo }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
-      <Container fluid className={styles.container}>
+      <div class="container mx-auto px-4">
+        <Header siteTitle={data.site.siteMetadata.title} pageInfo={pageInfo} />
         {children}
-      </Container>
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }
