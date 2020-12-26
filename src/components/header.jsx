@@ -2,7 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 function Header({ siteTitle, pageInfo }) {
-  function menuClick() {}
+  function menuClick() {
+    const dropdowns = document.querySelectorAll(".navbar-menu")
+    dropdowns.forEach(dropdown => dropdown.classList.toggle("hidden"))
+  }
 
   return (
     <header>
