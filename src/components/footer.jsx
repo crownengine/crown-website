@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 
 export default function Footer() {
@@ -23,6 +23,18 @@ export default function Footer() {
       <div className="flex flex-col lg:flex-row items-center w-full lg:w-auto">
         <div className="mx-auto lg:mx-0 lg:ml-auto"></div>
         <div className="flex justify-center space-x-6 mt-4 lg:mt-0 lg:ml-8">
+          <Link
+            className="lg:mt-0 text-blue-900 hover:text-indigo-600"
+            to="/privacy_policy"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            className="lg:mt-0 text-blue-900 hover:text-indigo-600"
+            to="/terms_of_service"
+          >
+            Terms of Service
+          </Link>
           <a
             rel="noreferrer"
             target="_blank"
