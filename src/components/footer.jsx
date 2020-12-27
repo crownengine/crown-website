@@ -24,13 +24,13 @@ export default function Footer() {
         <div className="mx-auto lg:mx-0 lg:ml-auto"></div>
         <div className="flex justify-center space-x-6 mt-4 lg:mt-0 lg:ml-8">
           <Link
-            className="lg:mt-0 text-blue-900 hover:text-indigo-600"
+            className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
             to="/privacy_policy"
           >
             Privacy Policy
           </Link>
           <Link
-            className="lg:mt-0 text-blue-900 hover:text-indigo-600"
+            className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
             to="/terms_of_service"
           >
             Terms of Service
@@ -40,7 +40,7 @@ export default function Footer() {
             target="_blank"
             href={`mailto:${data.site.siteMetadata.tcf_mail_address}`}
           >
-            <i className="fas fa-lg fa-envelope text-indigo-600"></i>
+            <i className="fas fa-lg fa-envelope text-pochinki-800"></i>
           </a>
         </div>
       </div>

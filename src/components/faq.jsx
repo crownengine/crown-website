@@ -13,7 +13,7 @@ export default function FAQ() {
               How does Dunder Mifflin paper differ from other products?
             </span>
             <svg
-              className="text-indigo-600 w-6 h-6"
+              className="text-pochinki-800 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ export default function FAQ() {
               Why choose Dunder Mifflin instead of some huge paper producer?
             </span>
             <svg
-              className="text-indigo-600 w-6 h-6"
+              className="text-pochinki-800 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ export default function FAQ() {
               When I will receive the products?
             </span>
             <svg
-              className="text-indigo-600 w-6 h-6"
+              className="text-pochinki-800 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ export default function FAQ() {
               How long does it take to finalize the deal?
             </span>
             <svg
-              className="text-indigo-600 w-6 h-6"
+              className="text-pochinki-800 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

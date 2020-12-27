@@ -25,7 +25,7 @@ export default function Header({ siteTitle, pageInfo }) {
       <nav className="flex flex-wrap items-center justify-between p-4">
         <div className="lg:order-2 w-auto lg:text-center">
           <Link
-            className="text-xl text-indigo-600 font-semibold font-heading"
+            className="text-xl text-pochinki-800 font-semibold font-heading"
             to="/"
           >
             {data.site.siteMetadata.org_title}
@@ -33,7 +33,7 @@ export default function Header({ siteTitle, pageInfo }) {
         </div>
         <div className="block lg:hidden">
           <button
-            className="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500"
+            className="navbar-burger flex items-center py-2 px-3 text-pochinki-500 rounded border border-pochinki-500"
             onClick={menuClick}
           >
             <svg
@@ -48,19 +48,19 @@ export default function Header({ siteTitle, pageInfo }) {
         </div>
         {/* <div className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600"
+            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
             href="#"
           >
             Products
           </a>
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600"
+            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
             href="#"
           >
             Team
           </a>
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600"
+            className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-pochinki-800"
             href="#faq"
           >
             FAQ
@@ -68,7 +68,7 @@ export default function Header({ siteTitle, pageInfo }) {
         </div> */}
         <div className="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600"
+            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
@@ -76,7 +76,7 @@ export default function Header({ siteTitle, pageInfo }) {
             Download
           </a>
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600"
+            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/"
@@ -84,7 +84,7 @@ export default function Header({ siteTitle, pageInfo }) {
             GitHub
           </a>
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600"
+            className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-pochinki-800"
             rel="noreferrer"
             target="_blank"
             href={`mailto:${data.site.siteMetadata.tcf_mail_address}`}

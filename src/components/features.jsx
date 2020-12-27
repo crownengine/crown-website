@@ -5,7 +5,7 @@ export default function Features() {
     <section className="py-8 px-4">
       <div className="flex flex-wrap -mx-4 -mb-6">
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-scroll fa-2x text-indigo-600"></i>
+          <i className="fas fa-database fa-2x text-pochinki-800"></i>
           <h3 className="text-xl my-3 font-semibold font-heading">
             Data-driven design
           </h3>
@@ -17,7 +17,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-microchip fa-2x text-indigo-600"></i>
+          <i className="fas fa-project-diagram fa-2x text-pochinki-800"></i>
           <h3 className="text-xl my-3 font-semibold font-heading">
             Data-oriented design
           </h3>
@@ -28,7 +28,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-fighter-jet fa-2x text-indigo-600"></i>
+          <i className="fas fa-fighter-jet fa-2x text-pochinki-800"></i>
           <h3 className="text-xl my-3 font-semibold font-heading">
             Fast-iteration times
           </h3>
@@ -39,7 +39,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-user-edit fa-2x text-indigo-600"></i>
+          <i className="fas fa-user-edit fa-2x text-pochinki-800"></i>
           <h3 className="text-xl my-3 font-semibold font-heading">
             Cross-platform editor
           </h3>
@@ -50,7 +50,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-feather fa-2x text-indigo-600"></i>
+          <i className="fas fa-feather fa-2x text-pochinki-800"></i>
           <h3 className="text-xl my-3 font-semibold font-heading">
             Lightweight codebase
           </h3>
@@ -61,7 +61,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-code-branch fa-2x text-indigo-600"></i>
+          <i className="fas fa-code-branch fa-2x text-pochinki-800"></i>
           <h3 className="text-xl my-3 font-semibold font-heading">
             Free and Open Source
           </h3>
