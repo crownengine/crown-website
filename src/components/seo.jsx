@@ -46,6 +46,10 @@ export default function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `twitter:description`,
+          content: metaDescription,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },

@@ -11,6 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `Crown Engine`,
     subtitle: `The Flexible Game Engine`,
+    description: `General purpose data-driven game engine.`,
     org_title: `The Crown Foundation`,
     tcf_mail_address: `foundation@crownengine.org`,
   },
