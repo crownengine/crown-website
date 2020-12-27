@@ -1,11 +1,24 @@
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
-import { Link } from "gatsby"
 
-function Header({ siteTitle, pageInfo }) {
+export default function Header({ siteTitle, pageInfo }) {
   function menuClick() {
     const dropdowns = document.querySelectorAll(".navbar-menu")
     dropdowns.forEach(dropdown => dropdown.classList.toggle("hidden"))
   }
+
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            org_title
+            tcf_mail_address
+          }
+        }
+      }
+    `
+  )
 
   return (
     <header>
@@ -15,7 +28,7 @@ function Header({ siteTitle, pageInfo }) {
             className="text-xl text-indigo-600 font-semibold font-heading"
             to="/"
           >
-            The Crown Foundation
+            {data.site.siteMetadata.org_title}
           </Link>
         </div>
         <div className="block lg:hidden">
@@ -74,7 +87,7 @@ function Header({ siteTitle, pageInfo }) {
             className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-indigo-600"
             rel="noreferrer"
             target="_blank"
-            href="mailto:foundation@crownengine.org"
+            href={`mailto:${data.site.siteMetadata.tcf_mail_address}`}
           >
             Contact
           </a>
@@ -83,5 +96,3 @@ function Header({ siteTitle, pageInfo }) {
     </header>
   )
 }
-
-export default Header
