@@ -31,9 +31,9 @@ export default function Footer() {
           </Link>
           <Link
             className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
-            to="/terms_of_service"
+            to="/cookie_policy"
           >
-            Terms of Service
+            Cookie Policy
           </Link>
           <a
             rel="noreferrer"
