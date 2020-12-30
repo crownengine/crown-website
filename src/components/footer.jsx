@@ -25,13 +25,13 @@ export default function Footer() {
         <div className="flex justify-center space-x-6 mt-4 lg:mt-0 lg:ml-8">
           <Link
             className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
-            to="/privacy_policy"
+            to="/privacy-policy"
           >
             Privacy Policy
           </Link>
           <Link
             className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
-            to="/cookie_policy"
+            to="/cookie-policy"
           >
             Cookie Policy
           </Link>
