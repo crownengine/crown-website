@@ -12,9 +12,9 @@ import Header from "./header"
 export default function Layout({ children, pageInfo }) {
   return (
     <>
-      <div className="container mx-auto px-4">
+      <div className="container center mx-auto flex flex-col h-screen justify-between">
         <Header pageInfo={pageInfo} />
-        {children}
+        <main className="mb-auto">{children}</main>
         <Footer />
       </div>
     </>
