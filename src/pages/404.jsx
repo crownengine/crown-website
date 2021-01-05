@@ -1,21 +1,9 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function NotFoundPage() {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            tcf_mail_address
-          }
-        }
-      }
-    `
-  )
-
   return (
     <Layout>
       <SEO title="404: Not found" />
@@ -34,14 +22,6 @@ export default function NotFoundPage() {
             <Link className="px-4 text-indigo-600 hover:underline" to="/">
               Home
             </Link>
-            <a
-              className="px-4 text-indigo-600 hover:underline"
-              rel="noreferrer"
-              target="_blank"
-              href={`mailto:${data.site.siteMetadata.tcf_mail_address}`}
-            >
-              Contact
-            </a>
           </div>
         </div>
       </section>
