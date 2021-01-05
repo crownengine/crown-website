@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
       <div
         className="mb-4 mx-2 lg:mx-32 text-justify break-words"
         dangerouslySetInnerHTML={{
-          __html: require("../html/privacy_policy.html"),
+          __html: require("../data/html/privacy_policy.html"),
         }}
       ></div>
     </Layout>

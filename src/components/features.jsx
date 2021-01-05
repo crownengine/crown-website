@@ -5,7 +5,7 @@ export default function Features() {
     <section className="py-8 px-4">
       <div className="flex flex-wrap -mx-4 -mb-6">
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-database fa-2x text-pochinki-800"></i>
+          <i className="fas fa-database fa-2x text-indigo-600"></i>
           <h3 className="text-xl my-3 font-semibold">Data-driven design</h3>
           <p className="text-gray-400 leading-relaxed">
             Every aspect of the game is controlled through configuration files.
@@ -15,7 +15,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-project-diagram fa-2x text-pochinki-800"></i>
+          <i className="fas fa-project-diagram fa-2x text-indigo-600"></i>
           <h3 className="text-xl my-3 font-semibold">Data-oriented design</h3>
           <p className="text-gray-400 leading-relaxed">
             Data in memory is organized to achive maximum performance possible
@@ -24,7 +24,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-fighter-jet fa-2x text-pochinki-800"></i>
+          <i className="fas fa-fighter-jet fa-2x text-indigo-600"></i>
           <h3 className="text-xl my-3 font-semibold">Fast-iteration times</h3>
           <p className="text-gray-400 leading-relaxed">
             Every game asset is hot-reloadable, code included. Evaluate
@@ -33,7 +33,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-user-edit fa-2x text-pochinki-800"></i>
+          <i className="fas fa-user-edit fa-2x text-indigo-600"></i>
           <h3 className="text-xl my-3 font-semibold">Cross-platform editor</h3>
           <p className="text-gray-400 leading-relaxed">
             It runs and looks equally well both on Linux and Windows. Designed
@@ -42,7 +42,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-feather fa-2x text-pochinki-800"></i>
+          <i className="fas fa-feather fa-2x text-indigo-600"></i>
           <h3 className="text-xl my-3 font-semibold">Lightweight codebase</h3>
           <p className="text-gray-400 leading-relaxed">
             Engine plus tools amounts to less than 100K LOC. Written in simple
@@ -51,7 +51,7 @@ export default function Features() {
           </p>
         </div>
         <div className="lg:w-1/3 px-4 mb-6">
-          <i className="fas fa-code-branch fa-2x text-pochinki-800"></i>
+          <i className="fas fa-code-branch fa-2x text-indigo-600"></i>
           <h3 className="text-xl my-3 font-semibold">Free and Open Source</h3>
           <p className="text-gray-400 leading-relaxed">
             All the code is released under the very permissive MIT license and

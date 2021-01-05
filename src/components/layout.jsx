@@ -14,7 +14,7 @@ export default function Layout({ children, pageInfo }) {
     <>
       <div className="container center mx-auto flex flex-col h-screen justify-between">
         <Header pageInfo={pageInfo} />
-        <main className="mb-auto">{children}</main>
+        <main className="mb-auto lg:mx-48">{children}</main>
         <Footer />
       </div>
     </>

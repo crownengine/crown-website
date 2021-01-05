@@ -3,7 +3,7 @@ import React from "react"
 export default function FAQ() {
   return (
     <section id="faq" className="py-12 px-4">
-      <div className="max-w-3xl mx-auto">
+      {/* <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl text-center mb-6 font-semibold">
           Frequently Asked Questions
         </h2>
@@ -13,7 +13,7 @@ export default function FAQ() {
               How does Dunder Mifflin paper differ from other products?
             </span>
             <svg
-              className="text-pochinki-800 w-6 h-6"
+              className="text-indigo-600 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ export default function FAQ() {
               Why choose Dunder Mifflin instead of some huge paper producer?
             </span>
             <svg
-              className="text-pochinki-800 w-6 h-6"
+              className="text-indigo-600 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ export default function FAQ() {
               When I will receive the products?
             </span>
             <svg
-              className="text-pochinki-800 w-6 h-6"
+              className="text-indigo-600 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ export default function FAQ() {
               How long does it take to finalize the deal?
             </span>
             <svg
-              className="text-pochinki-800 w-6 h-6"
+              className="text-indigo-600 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -115,7 +115,7 @@ export default function FAQ() {
             business days.
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

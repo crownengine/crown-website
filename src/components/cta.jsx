@@ -49,7 +49,7 @@ export default function CTA() {
         </p>
         <div>
           <a
-            className="inline-block py-4 px-8 mb-2 leading-none text-white hover:text-white bg-pochinki-800 hover:bg-pochinki-700 font-semibold rounded shadow"
+            className="inline-block py-4 px-8 mb-2 leading-none text-white hover:text-white bg-indigo-600 hover:bg-indigo-700 font-semibold rounded shadow"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
@@ -59,7 +59,7 @@ export default function CTA() {
         </div>
         <div>
           <a
-            className="text-pochinki-800 hover:underline"
+            className="text-indigo-600 hover:underline"
             rel="noreferrer"
             target="_blank"
             href="https://dbartolini.github.io/crown/html/latest/"

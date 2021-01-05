@@ -10,7 +10,7 @@ export default function CookiePolicy() {
       <div
         className="mb-4 mx-2 lg:mx-32 text-justify break-words"
         dangerouslySetInnerHTML={{
-          __html: require("../html/cookie_policy.html"),
+          __html: require("../data/html/cookie_policy.html"),
         }}
       ></div>
     </Layout>

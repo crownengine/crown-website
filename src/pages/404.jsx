@@ -31,11 +31,11 @@ export default function NotFoundPage() {
             You just hit a route that doesn't exist.
           </p>
           <div>
-            <Link className="px-4 text-pochinki-800 hover:underline" to="/">
+            <Link className="px-4 text-indigo-600 hover:underline" to="/">
               Home
             </Link>
             <a
-              className="px-4 text-pochinki-800 hover:underline"
+              className="px-4 text-indigo-600 hover:underline"
               rel="noreferrer"
               target="_blank"
               href={`mailto:${data.site.siteMetadata.tcf_mail_address}`}
