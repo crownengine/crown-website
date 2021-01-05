@@ -9,7 +9,7 @@ const path = require(`path`)
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Crown Engine`,
+    title: `Crown`,
     subtitle: `The Flexible Game Engine`,
     description: `General purpose data-driven game engine.`,
     org_title: `The Crown Foundation`,
@@ -43,7 +43,16 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: [],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
