@@ -24,7 +24,7 @@ module.exports = {
         short_name: `crown`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#ba8c4f`,
+        theme_color: `#4F46E5`,
         display: `standalone`,
         icon: path.join(__dirname, `src`, `images`, `pepper-logo.png`),
       },
