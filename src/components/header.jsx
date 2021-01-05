@@ -12,8 +12,7 @@ export default function Header({ siteTitle, pageInfo }) {
       query {
         site {
           siteMetadata {
-            org_title
-            tcf_mail_address
+            title
           }
         }
       }
@@ -25,7 +24,7 @@ export default function Header({ siteTitle, pageInfo }) {
       <nav className="flex flex-wrap items-center justify-between p-4">
         <div className="lg:order-2 w-auto lg:text-center">
           <Link className="text-xl text-pochinki-800 font-semibold" to="/">
-            {data.site.siteMetadata.org_title}
+            {data.site.siteMetadata.title}
           </Link>
         </div>
         <div className="block lg:hidden">
@@ -43,26 +42,6 @@ export default function Header({ siteTitle, pageInfo }) {
             </svg>
           </button>
         </div>
-        {/* <div className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
-          <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
-            href="#"
-          >
-            Products
-          </a>
-          <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
-            href="#"
-          >
-            Team
-          </a>
-          <a
-            className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-pochinki-800"
-            href="#faq"
-          >
-            FAQ
-          </a>
-        </div> */}
         <div className="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
           <a
             className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-pochinki-800"
@@ -78,15 +57,15 @@ export default function Header({ siteTitle, pageInfo }) {
             target="_blank"
             href="https://github.com/dbartolini/crown/"
           >
-            GitHub
+            Source
           </a>
           <a
             className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 hover:text-pochinki-800"
             rel="noreferrer"
             target="_blank"
-            href={`mailto:${data.site.siteMetadata.tcf_mail_address}`}
+            href="https://dbartolini.github.io/crown/html/latest/"
           >
-            Contact
+            Manual
           </a>
         </div>
       </nav>
