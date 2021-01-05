@@ -29,13 +29,13 @@ module.exports = {
         icon: path.join(__dirname, `src`, `images`, `pepper-logo.png`),
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `markdown`,
-    //     path: path.join(__dirname, `src`, `data`, `markdown`),
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: path.join(__dirname, `src`, `data`, `markdown`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
