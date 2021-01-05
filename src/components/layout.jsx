@@ -5,9 +5,9 @@ import Header from "./header"
 export default function Layout({ children, pageInfo }) {
   return (
     <>
-      <div className="container center mx-auto flex flex-col h-screen justify-between">
+      <div className="container center mx-auto lg:w-8/12 flex flex-col h-screen justify-between">
         <Header pageInfo={pageInfo} />
-        <main className="mb-auto lg:mx-48">{children}</main>
+        <main className="mb-auto">{children}</main>
         <Footer />
       </div>
     </>

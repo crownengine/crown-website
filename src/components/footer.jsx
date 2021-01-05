@@ -16,7 +16,7 @@ export default function Footer() {
   )
 
   return (
-    <footer className="bg-gray-50 px-6 lg:px-8 py-8 lg:mx-32 text-sm">
+    <footer className="bg-gray-50 px-6 lg:px-8 py-8 text-sm">
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-x-8 lg:px-8">
         <div>
           <h5 className="font-semibold uppercase">Crown</h5>

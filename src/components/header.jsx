@@ -1,7 +1,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 
-export default function Header({ siteTitle, pageInfo }) {
+export default function Header() {
   function menuClick() {
     const dropdowns = document.querySelectorAll(".navbar-menu")
     dropdowns.forEach(dropdown => dropdown.classList.toggle("hidden"))
