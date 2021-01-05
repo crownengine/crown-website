@@ -49,7 +49,7 @@ export default function CTA() {
         </p>
         <div>
           <a
-            className="inline-block py-4 px-8 mb-2 leading-none text-white bg-pochinki-800 hover:bg-pochinki-700 font-semibold rounded shadow"
+            className="inline-block py-4 px-8 mb-2 leading-none text-white hover:text-white bg-pochinki-800 hover:bg-pochinki-700 font-semibold rounded shadow"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
