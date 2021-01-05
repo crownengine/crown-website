@@ -26,9 +26,7 @@ export default function NotFoundPage() {
             src="placeholders-2-0/pictures/error.svg"
             alt=""
           />
-          <h2 className="text-5xl mb-2 font-semibold font-heading">
-            Page not found
-          </h2>
+          <h2 className="text-5xl mb-2 font-semibold">Page not found</h2>
           <p className="mb-6 text-gray-400">
             You just hit a route that doesn't exist.
           </p>

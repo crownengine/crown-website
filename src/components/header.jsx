@@ -24,10 +24,7 @@ export default function Header({ siteTitle, pageInfo }) {
     <header>
       <nav className="flex flex-wrap items-center justify-between p-4">
         <div className="lg:order-2 w-auto lg:text-center">
-          <Link
-            className="text-xl text-pochinki-800 font-semibold font-heading"
-            to="/"
-          >
+          <Link className="text-xl text-pochinki-800 font-semibold" to="/">
             {data.site.siteMetadata.org_title}
           </Link>
         </div>

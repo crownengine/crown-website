@@ -33,7 +33,7 @@ export default function CTA() {
     <section className="py-12 px-4 text-center">
       <div className="w-full max-w-2xl mx-auto">
         {/* <span className="text-sm font-semibold">CROWN ENGINE</span> */}
-        <h2 className="text-5xl mt-2 mb-6 leading-tight font-semibold font-heading">
+        <h2 className="text-5xl mt-2 mb-6 leading-tight font-semibold">
           {data.site.siteMetadata.subtitle}
         </h2>
         <p className="text-gray-400 leading-relaxed">
