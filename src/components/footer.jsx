@@ -46,14 +46,12 @@ export default function Footer() {
               >
                 Manual
               </a>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="#"
-                className="text-blue-900 hover:text-pochinki-800"
+              <Link
+                className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
+                to="/crown-license"
               >
                 License
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
@@ -84,14 +82,12 @@ export default function Footer() {
           <h5 className="text-md font-semibold uppercase">Website</h5>
           <nav className="mt-4">
             <div className="flex flex-col space-y-2">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="#"
-                className="text-blue-900 hover:text-pochinki-800"
+              <Link
+                className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
+                to="/website-about"
               >
                 About
-              </a>
+              </Link>
               <Link
                 className="lg:mt-0 text-blue-900 hover:text-pochinki-800"
                 to="/privacy-policy"
