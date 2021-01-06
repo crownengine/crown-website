@@ -9,6 +9,7 @@ const path = require(`path`)
 module.exports = {
   /* Your site config here */
   siteMetadata: {
+    siteUrl: `https://www.crownengine.org`,
     title: `Crown`,
     subtitle: `The Flexible Game Engine`,
     description: `General purpose data-driven game engine.`,
@@ -53,6 +54,7 @@ module.exports = {
         plugins: [],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
