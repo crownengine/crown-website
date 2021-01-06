@@ -103,17 +103,36 @@ export default function Footer() {
             </div>
           </nav>
         </div>
+        <div>
+          <h5 className="font-semibold uppercase">Follow Crown</h5>
+          <nav className="mt-4">
+            <div className="flex space-x-3">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://github.com/dbartolini/crown/"
+                >
+                  <i className="fab fa-github fa-2x text-indigo-600 hover:text-indigo-700"></i>
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://discord.gg/CeXVWCT"
+                >
+                  <i className="fab fa-discord fa-2x text-indigo-600 hover:text-indigo-700"></i>
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://trello.com/b/h88kbJNm/crown"
+                >
+                  <i className="fab fa-trello fa-2x text-indigo-600 hover:text-indigo-700"></i>
+                </a>
+            </div>
+          </nav>
+        </div>
       </div>
       <div className="max-w-screen-xl mx-auto flex flex-col items-center mt-4">
-        <div className="flex items-center space-x-2">
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://github.com/dbartolini/crown/"
-          >
-            <i className="fab fa-github fa-2x text-indigo-600 hover:text-indigo-700"></i>
-          </a>
-        </div>
         <div className="flex flex-row mt-4 place-items-center">
           &copy;{new Date().getFullYear()} {data.site.siteMetadata.org_title}
           <Link
