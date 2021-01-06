@@ -15,7 +15,7 @@ export default function NotFoundPage() {
             alt=""
           />
           <h2 className="text-5xl mb-2 font-semibold">Page not found</h2>
-          <p className="mb-6 text-gray-400">
+          <p className="mb-6 text-gray-500">
             You just hit a route that doesn't exist.
           </p>
           <div>
