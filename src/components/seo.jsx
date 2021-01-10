@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, withPrefix } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
 
@@ -47,7 +47,9 @@ export default function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
       ].concat(meta)}
-    />
+    >
+      <script src={withPrefix("theme.js")} type="text/javascript" />
+    </Helmet>
   )
 }
 
