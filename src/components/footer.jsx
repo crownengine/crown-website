@@ -5,10 +5,8 @@ export default function Footer() {
   const [theme, setTheme] = useState("light")
 
   function _isThemeKeyValid(value) {
-    return (
-      typeof value === "string" &&
-      (value === null || value === "light" || value === "dark")
-    )
+    if (value === null) return true
+    return typeof value === "string" && (value === "light" || value === "dark")
   }
 
   useEffect(() => {
