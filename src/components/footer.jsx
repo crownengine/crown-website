@@ -189,7 +189,8 @@ export default function Footer() {
           </Link>
           <button
             type="button"
-            className={`fas ${themeFaClass} fa-2x text-indigo-600 dark:text-indigo-200`}
+            className={`fas ${themeFaClass} fa-lg text-indigo-600 dark:text-indigo-200`}
+            title="Switch theme"
             onClick={toggleTheme}
           >
             <span className="sr-only">Toggle theme</span>

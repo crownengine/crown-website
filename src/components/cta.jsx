@@ -36,12 +36,12 @@ export default function CTA() {
         <h2 className="text-5xl mt-2 mb-6 leading-tight font-semibold">
           {data.site.siteMetadata.subtitle}
         </h2>
-        <p className="mb-4 text-gray-500 dark:text-gray-50 leading-relaxed">
+        <p className="mb-4 text-lg text-gray-500 dark:text-gray-50 leading-relaxed">
           Crown is a general purpose and data-driven game engine, written in
           orthodox C++ with a minimalistic and data-oriented design philosophy
           in mind.
         </p>
-        <p className="mb-8 text-gray-500 dark:text-gray-50 leading-relaxed">
+        <p className="mb-8 text-lg text-gray-500 dark:text-gray-50 leading-relaxed">
           Crown isn't tied to a particular game type or genre but instead it
           offers a set of generic primitives and facilities to help you create a
           wide gamut of interactive 2D and 3D products.
