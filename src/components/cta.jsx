@@ -36,16 +36,15 @@ export default function CTA() {
         <h2 className="text-5xl mt-2 mb-6 leading-tight font-semibold">
           {data.site.siteMetadata.subtitle}
         </h2>
-        <p className="text-gray-500 leading-relaxed">
-          Crown is a general purpose data-driven game engine, written from
-          scratch in orthodox C++ with a minimalistic and data-oriented design
-          philosophy in mind.
+        <p className="mb-4 text-gray-500 leading-relaxed">
+          Crown is a general purpose and data-driven game engine, written in
+          orthodox C++ with a minimalistic and data-oriented design philosophy
+          in mind.
         </p>
         <p className="mb-8 text-gray-500 leading-relaxed">
-          It is loosely inspired by Bitsquid (now Stingray) engine and its
-          design principles; the current Lua API is similar to that of Bitsquid
-          but this engine is not meant to be its clone nor to be API compatible
-          with it.
+          Crown isn't tied to a particular game type or genre but instead it offers a set
+          of generic primitives and facilities to help you create a wide gamut of
+          interactive 2D and 3D products.
         </p>
         <div>
           <a
@@ -62,7 +61,7 @@ export default function CTA() {
             className="text-indigo-600 hover:underline"
             rel="noreferrer"
             target="_blank"
-            href="https://dbartolini.github.io/crown/html/latest/"
+            href="https://dbartolini.github.io/crown/html/latest/introduction.html"
           >
             Learn more
           </a>
