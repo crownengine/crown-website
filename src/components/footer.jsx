@@ -1,36 +1,38 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 export default function Footer() {
-  const [themeFaClass, setThemeFaClass] = useState(() => {
-    const currentTheme = localStorage.getItem("theme")
-    if (currentTheme === null || currentTheme === "light") {
-      localStorage.setItem("theme", "dark")
-      return "fa-moon"
-    } else {
-      localStorage.setItem("theme", "light")
-      return "fa-sun"
+  const [theme, setTheme] = useState("light")
+
+  function _isThemeKeyValid(value) {
+    return (
+      typeof value === "string" &&
+      (value === null || value === "light" || value === "dark")
+    )
+  }
+
+  useEffect(() => {
+    let themeValue = localStorage.getItem("theme")
+    if (!_isThemeKeyValid(themeValue)) themeValue = "light"
+    if (
+      themeValue === null &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      themeValue = "dark"
     }
-  })
+
+    setTheme(themeValue)
+  }, [])
 
   function toggleTheme() {
-    const currentTheme = localStorage.getItem("theme")
-    if (currentTheme === null || currentTheme === "light") {
-      localStorage.setItem("theme", "dark")
-      setThemeFaClass("fa-moon")
-    } else {
-      localStorage.setItem("theme", "light")
-      setThemeFaClass("fa-sun")
-    }
-
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.querySelector("html").classList.add("dark")
-    } else {
+    if (theme === null || theme === "dark") {
+      setTheme("light")
       document.querySelector("html").classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    } else {
+      setTheme("dark")
+      document.querySelector("html").classList.add("dark")
+      localStorage.setItem("theme", "dark")
     }
   }
 
@@ -189,7 +191,9 @@ export default function Footer() {
           </Link>
           <button
             type="button"
-            className={`fas ${themeFaClass} fa-lg text-indigo-600 dark:text-indigo-200`}
+            className={`fas ${
+              theme === "dark" ? "fa-moon" : "fa-sun"
+            } fa-lg text-indigo-600 dark:text-indigo-200`}
             title="Switch theme"
             onClick={toggleTheme}
           >
