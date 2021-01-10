@@ -1,37 +1,37 @@
-h1 {
+.lexdo h1 {
   @apply text-center text-lg font-bold;
 }
 
-h4 {
+.lexdo h4 {
   @apply mt-4 font-bold;
 }
 
-a {
-  @apply text-indigo-600 hover:text-indigo-700;
+.lexdo a {
+  @apply text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50;
 }
 
-p {
+.lexdo p {
   @apply mt-4;
 }
 
-ol > li {
+.lexdo ol > li {
   @apply mt-4;
 }
 
-ul > li {
+.lexdo ul > li {
   @apply mt-4;
 }
 
-ol[type="A"] {
+.lexdo ol[type="A"] {
   list-style-type: upper-alpha;
 }
 
-ul {
+.lexdo ul {
   @apply list-disc list-outside;
   padding-inline-start: 2rem;
 }
 
-ol {
+.lexdo ol {
   @apply list-decimal list-outside;
   padding-inline-start: 2rem;
 }

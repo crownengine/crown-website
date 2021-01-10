@@ -3,7 +3,6 @@ import { basename } from "path"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "./markdown.module.css"
 
 export default function MDTemplate({ data }) {
   const { markdownRemark } = data
@@ -13,7 +12,7 @@ export default function MDTemplate({ data }) {
     <Layout pageInfo={{ pageName: basename(frontmatter.slug).base }}>
       <SEO title={frontmatter.title} />
       <div
-        className="mb-4 mx-2 lg:mx-32 text-justify break-words"
+        className="markdown mb-4 mx-2 lg:mx-32 text-justify break-words"
         dangerouslySetInnerHTML={{ __html: html }}
       ></div>
     </Layout>

@@ -1,0 +1,19 @@
+.markdown h1 {
+  @apply mt-4 text-center text-lg font-bold;
+}
+
+.markdown h2 {
+  @apply mt-4 text-lg;
+}
+
+.markdown h4 {
+  @apply mt-4 font-bold;
+}
+
+.markdown a {
+  @apply text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50;
+}
+
+.markdown p {
+  @apply mt-4;
+}
