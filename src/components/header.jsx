@@ -1,5 +1,4 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import React from "react"
 
 export default function Header() {
@@ -53,7 +52,7 @@ export default function Header() {
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
             onClick={_e => {
-              trackCustomEvent({
+              window.gtag("event", "click", {
                 category: "Download Button",
                 action: "Click",
               })

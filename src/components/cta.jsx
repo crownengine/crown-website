@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import { OutboundLink, trackCustomEvent } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
 
 export default function CTA() {
@@ -54,7 +54,7 @@ export default function CTA() {
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
             onClick={_e => {
-              trackCustomEvent({
+              window.gtag("event", "click", {
                 category: "Download Button",
                 action: "Click",
               })

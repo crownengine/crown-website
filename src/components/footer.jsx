@@ -1,5 +1,4 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import React, { useEffect, useState } from "react"
 
 export default function Footer() {
@@ -63,7 +62,7 @@ export default function Footer() {
                 href="https://github.com/dbartolini/crown/releases/latest"
                 className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 onClick={_e => {
-                  trackCustomEvent({
+                  window.gtag("event", "click", {
                     category: "Download Button",
                     action: "Click",
                   })
