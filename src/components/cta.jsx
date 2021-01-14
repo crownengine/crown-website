@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
+import { OutboundLink, trackCustomEvent } from "gatsby-plugin-google-analytics"
 import React, { useEffect, useState } from "react"
 
 export default function CTA() {
@@ -47,14 +48,20 @@ export default function CTA() {
           wide gamut of interactive 2D and 3D products.
         </p>
         <div>
-          <a
+          <OutboundLink
             className="inline-block py-4 px-8 mb-2 leading-none text-white hover:text-white dark:text-black bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-200 dark:hover:bg-indigo-50 font-semibold rounded shadow"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
+            onClick={_e => {
+              trackCustomEvent({
+                category: "Download Button",
+                action: "Click",
+              })
+            }}
           >
             Download Crown {crown_version}
-          </a>
+          </OutboundLink>
         </div>
         <div>
           <a
