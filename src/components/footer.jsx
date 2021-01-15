@@ -175,6 +175,16 @@ export default function Footer() {
               >
                 <i className="fab fa-trello fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
               </a>
+{/* Uncomment when content will be available.
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.youtube.com/channel/UCmvDFWrznsSzStSvwqWaJJQ"
+                title="Trello"
+              >
+                <i className="fab fa-youtube fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
+              </a>
+*/}
             </div>
           </nav>
         </div>
