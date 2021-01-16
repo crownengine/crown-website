@@ -68,9 +68,9 @@ export default function CTA() {
             className="text-indigo-600 hover:underline dark:text-indigo-200"
             rel="noreferrer"
             target="_blank"
-            href="https://dbartolini.github.io/crown/html/latest/introduction.html"
+            href="https://dbartolini.github.io/crown/html/latest/changelog.html"
           >
-            Learn more
+            Changelog
           </a>
         </div>
       </div>
