@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 
 export default function Header() {
@@ -7,28 +7,11 @@ export default function Header() {
     dropdowns.forEach(dropdown => dropdown.classList.toggle("hidden"))
   }
 
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  )
-
   return (
     <header>
-      <nav className="flex flex-wrap items-center justify-between p-4">
-        <div className="lg:order-2 w-auto lg:text-center">
-          <Link
-            className="text-xl text-indigo-600 dark:text-indigo-200 font-semibold"
-            to="/"
-          >
-            {data.site.siteMetadata.title}
-          </Link>
+      <nav className="flex flex-wrap items-start justify-between p-4">
+        <div className="lg:order-2">
+          <Link className="header-logo h-20 lg:w-44 w-36" to="/"></Link>
         </div>
         <div className="block lg:hidden">
           <button
