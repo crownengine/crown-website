@@ -27,7 +27,16 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#4F46E5`,
         display: `standalone`,
-        icon: path.join(__dirname, `src`, `images`, `pepper-logo.png`),
+        icon: path.join(
+          __dirname,
+          `src`,
+          `images`,
+          `crown-logo-kit`,
+          `square`,
+          `512x512`,
+          `apps`,
+          `crown.png`
+        ),
       },
     },
     {
