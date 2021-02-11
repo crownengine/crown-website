@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Features() {
   return (
-    <section className="py-8 px-4">
+    <section className="py-8 px-4 2xl:text-left xl:text-left lg:text-left md:text-left text-center">
       <div className="flex flex-wrap -mx-4 -mb-6">
         <div className="lg:w-1/3 px-4 mb-6">
           <i className="fas fa-database fa-2x text-indigo-600 dark:text-indigo-200"></i>
