@@ -9,9 +9,9 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="flex flex-wrap items-start justify-between p-4">
+      <nav className="flex flex-wrap items-center justify-between p-4">
         <div className="lg:order-2">
-          <Link className="header-logo h-20 lg:w-44 w-36" to="/"></Link>
+          <Link className="header-logo h-20 lg:w-36 w-24" to="/"></Link>
         </div>
         <div className="block lg:hidden">
           <button
