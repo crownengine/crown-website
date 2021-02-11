@@ -11,7 +11,7 @@ export default function Header() {
     <header>
       <nav className="flex flex-wrap items-center justify-between p-4">
         <div className="lg:order-2">
-          <Link className="header-logo h-20 lg:w-36 w-24" to="/"></Link>
+          <Link className="header-logo h-12 lg:w-36 w-24" to="/"></Link>
         </div>
         <div className="block lg:hidden">
           <button
