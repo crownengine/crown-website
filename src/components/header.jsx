@@ -10,10 +10,10 @@ export default function Header() {
   return (
     <header>
       <nav className="flex flex-wrap items-center justify-between p-4">
-        <div className="lg:order-2">
-          <Link className="header-logo h-12 lg:w-36 w-24" to="/"></Link>
+        <div className="sm:order-2">
+          <Link className="header-logo h-12 sm:w-36 w-24" to="/"></Link>
         </div>
-        <div className="block lg:hidden">
+        <div className="block sm:hidden">
           <button
             className="navbar-burger flex items-center py-2 px-3 text-indigo-500 dark:text-indigo-200  rounded border border-indigo-500"
             onClick={menuClick}
@@ -28,9 +28,9 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div className="navbar-menu hidden lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
+        <div className="navbar-menu hidden sm:order-3 sm:block w-full sm:w-2/3 sm:text-right text-center">
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
+            className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/releases/latest"
@@ -44,7 +44,7 @@ export default function Header() {
             Download
           </a>
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
+            className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
             href="https://github.com/dbartolini/crown/"
@@ -52,7 +52,7 @@ export default function Header() {
             Source
           </a>
           <a
-            className="block lg:inline-block mt-4 lg:mt-0 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
+            className="block sm:inline-block mt-4 sm:mt-0 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
             href="https://dbartolini.github.io/crown/html/latest/"

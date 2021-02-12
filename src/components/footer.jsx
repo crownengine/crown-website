@@ -51,11 +51,11 @@ export default function Footer() {
     <footer className="bg-gray-50 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
       <div className="max-w-screen-xl mx-auto grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-x-8 lg:px-8">
         <div>
-          <h1 className="font-semibold uppercase mt-0 text-sm text-left">
+          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Crown
           </h1>
           <nav className="mt-4">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 sm:text-left text-center">
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -96,9 +96,9 @@ export default function Footer() {
           </nav>
         </div>
         {/* <div>
-          <h1 className="font-semibold uppercase mt-0 text-sm text-left">Organization</h1>
+          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">Organization</h1>
           <nav className="mt-4">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 sm:text-left text-center">
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -119,11 +119,11 @@ export default function Footer() {
           </nav>
         </div> */}
         <div>
-          <h1 className="font-semibold uppercase mt-0 text-sm text-left">
+          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Website
           </h1>
           <nav className="mt-4">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 sm:text-left text-center">
               <Link
                 className="lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 to="/website-about"
@@ -146,11 +146,11 @@ export default function Footer() {
           </nav>
         </div>
         <div>
-          <h1 className="font-semibold uppercase mt-0 text-sm text-left">
+          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Follow Crown
           </h1>
           <nav className="mt-4">
-            <div className="flex space-x-3">
+            <div className="space-x-3 sm:text-left text-center">
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -175,7 +175,7 @@ export default function Footer() {
               >
                 <i className="fab fa-trello fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
               </a>
-{/* Uncomment when content will be available.
+              {/* Uncomment when content will be available.
               <a
                 rel="noreferrer"
                 target="_blank"
