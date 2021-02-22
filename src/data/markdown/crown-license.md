@@ -27,4 +27,4 @@ License details
 ===============
 
 Details regarding the license(s) can be found in the [Crown
-Manual](https://dbartolini.github.io/crown/html/latest/license.html).
+Manual](https://dbartolini.github.io/crown/html/latest/copyright.html#license).
