@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import React from "react"
 
 export default Image = ({ fileName, alt, title, style }) => {
@@ -21,7 +21,7 @@ export default Image = ({ fileName, alt, title, style }) => {
 
   return (
     <figure>
-      <Img fluid={fluid} alt={alt} title={title} style={style} />
+      <GatsbyImage image={fluid} alt={alt} title={title} style={style} />
     </figure>
-  )
+  );
 }
