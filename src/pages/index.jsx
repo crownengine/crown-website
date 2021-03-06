@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 export default function Home() {
   return (
-    <Layout pageInfo={{ pageName: "index" }}>
+    <Layout>
       <SEO title="Home" />
       <CTA />
       <Features />

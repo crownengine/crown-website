@@ -54,6 +54,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `html`,
+        path: path.join(__dirname, `src`, `data`, `html`),
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,

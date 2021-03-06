@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
-    "gatsby": "^3.0.2",
+    "gatsby": "^3.0.3",
     "gatsby-plugin-google-gtag": "^3.0.0",
     "gatsby-plugin-image": "1.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
