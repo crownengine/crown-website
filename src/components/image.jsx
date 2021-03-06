@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 
 export default Image = ({ fileName, alt, title, style }) => {
@@ -9,19 +9,19 @@ export default Image = ({ fileName, alt, title, style }) => {
         nodes {
           fluid(maxWidth: 1600) {
             originalName
-            ...GatsbyImageSharpFluid_withWebp
           }
+          gatsbyImageData(formats: WEBP)
         }
       }
     }
   `)
 
-  const fluid = allImageSharp.nodes.find(n => n.fluid.originalName === fileName)
-    .fluid
+  const image = allImageSharp.nodes.find(n => n.fluid.originalName === fileName)
+    .gatsbyImageData
 
   return (
     <figure>
-      <Img fluid={fluid} alt={alt} title={title} style={style} />
+      <GatsbyImage image={image} alt={alt} title={title} style={style} />
     </figure>
   )
 }

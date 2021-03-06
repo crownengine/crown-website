@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import content from "../data/html/cookie_policy.html"
 
 export default function CookiePolicy() {
   return (
@@ -9,7 +10,7 @@ export default function CookiePolicy() {
       <div
         className="lexdo mb-4 mx-2 lg:mx-32 text-justify break-words"
         dangerouslySetInnerHTML={{
-          __html: require("../data/html/cookie_policy.html"),
+          __html: content,
         }}
       ></div>
     </Layout>
