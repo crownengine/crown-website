@@ -10,6 +10,11 @@ Design & Implementation
 
 Alessio Bianchetti
 
+Logo
+-----------------------
+
+Giulia Gazzoli
+
 Supervision
 -----------
 
