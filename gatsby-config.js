@@ -19,27 +19,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Crown Engine`,
-        short_name: `crown`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#4F46E5`,
-        display: `standalone`,
-        icon: path.join(
-          __dirname,
-          `src`,
-          `images`,
-          `crown-logo-kit`,
-          `square`,
-          `512x512`,
-          `apps`,
-          `crown.png`
-        ),
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown`,
