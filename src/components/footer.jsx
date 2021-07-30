@@ -73,18 +73,18 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://github.com/dbartolini/crown/"
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
-              >
-                Source
-              </a>
-              <a
-                rel="noreferrer"
-                target="_blank"
                 href="https://dbartolini.github.io/crown/html/latest/"
                 className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
               >
                 Manual
+              </a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/dbartolini/crown/"
+                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
+              >
+                Source
               </a>
               <Link
                 className="lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"

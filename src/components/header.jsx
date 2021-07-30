@@ -47,17 +47,17 @@ export default function Header() {
             className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
-            href="https://github.com/dbartolini/crown/"
+            href="https://dbartolini.github.io/crown/html/latest/"
           >
-            Source
+            Manual
           </a>
           <a
             className="block sm:inline-block mt-4 sm:mt-0 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
-            href="https://dbartolini.github.io/crown/html/latest/"
+            href="https://github.com/dbartolini/crown/"
           >
-            Manual
+            Source
           </a>
         </div>
       </nav>
