@@ -171,7 +171,7 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="https://www.twitter.com/crown_engine"
-                title="Trello"
+                title="Twitter"
               >
                 <i className="fab fa-twitter fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
               </a>
