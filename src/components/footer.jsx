@@ -59,7 +59,7 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://github.com/dbartolini/crown/releases/latest"
+                href="https://github.com/crownengine/crown/releases/latest"
                 className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 onClick={_e => {
                   window.gtag("event", "click", {
@@ -73,7 +73,7 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://dbartolini.github.io/crown/html/latest/"
+                href="https://crownengine.github.io/crown/html/latest/"
                 className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
               >
                 Manual
@@ -81,7 +81,7 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://github.com/dbartolini/crown/"
+                href="https://github.com/crownengine/crown/"
                 className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
               >
                 Source
@@ -154,7 +154,7 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://github.com/dbartolini/crown/"
+                href="https://github.com/crownengine/crown/"
                 title="GitHub"
               >
                 <i className="fab fa-github fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>

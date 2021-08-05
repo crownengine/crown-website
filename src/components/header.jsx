@@ -33,7 +33,7 @@ export default function Header() {
             className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
-            href="https://github.com/dbartolini/crown/releases/latest"
+            href="https://github.com/crownengine/crown/releases/latest"
             onClick={_e => {
               window.gtag("event", "click", {
                 category: "Download Button",
@@ -47,7 +47,7 @@ export default function Header() {
             className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
-            href="https://dbartolini.github.io/crown/html/latest/"
+            href="https://crownengine.github.io/crown/html/latest/"
           >
             Manual
           </a>
@@ -55,7 +55,7 @@ export default function Header() {
             className="block sm:inline-block mt-4 sm:mt-0 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
             rel="noreferrer"
             target="_blank"
-            href="https://github.com/dbartolini/crown/"
+            href="https://github.com/crownengine/crown/"
           >
             Source
           </a>

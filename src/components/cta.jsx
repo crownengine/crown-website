@@ -81,7 +81,7 @@ export default function CTA() {
   }
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/dbartolini/crown/releases/latest")
+    fetch("https://api.github.com/repos/crownengine/crown/releases/latest")
       .then(res => res.json())
       .then(
         result => {
@@ -120,7 +120,7 @@ export default function CTA() {
             className="text-indigo-600 hover:underline dark:text-indigo-200"
             rel="noreferrer"
             target="_blank"
-            href="https://dbartolini.github.io/crown/html/latest/introduction.html">Learn more...</a>
+            href="https://crownengine.github.io/crown/html/latest/introduction.html">Learn more...</a>
         </p>
         <div className="text-2xl">
           <OutboundLink
@@ -149,7 +149,7 @@ export default function CTA() {
                 className="text-indigo-600 hover:underline dark:text-indigo-200"
                 rel="noreferrer"
                 target="_blank"
-                href="https://dbartolini.github.io/crown/html/latest/changelog.html"
+                href="https://crownengine.github.io/crown/html/latest/changelog.html"
               >
                 What's New?
               </a>
@@ -161,7 +161,7 @@ export default function CTA() {
             className="inline-block py-2 px-6 leading-none text-white bg-gray-600 dark:bg-gray-200 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-50 hover:text-white rounded shadow"
             rel="noreferrer"
             target="_blank"
-            href="https://github.com/dbartolini/crown/releases/latest"
+            href="https://github.com/crownengine/crown/releases/latest"
           >
             {other_oses} and other versions
           </OutboundLink>
