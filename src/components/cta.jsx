@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
+const axios = require("axios").default
 
 export default function Cta() {
   const [crown_version, setCrownVersion] = useState()
@@ -14,85 +15,69 @@ export default function Cta() {
   function getUserOS() {
     var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
-      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-      os = null;
+      macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
+      windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
+      iosPlatforms = ["iPhone", "iPad", "iPod"],
+      os = null
 
-    if (macosPlatforms.indexOf(platform) !== -1)
-      os = 'osx';
-    else if (iosPlatforms.indexOf(platform) !== -1)
-      os = 'ios';
-    else if (windowsPlatforms.indexOf(platform) !== -1)
-      os = 'windows';
-    else if (/Android/.test(userAgent))
-      os = 'android';
-    else if (!os && /Linux/.test(platform))
-      os = 'linux';
+    if (macosPlatforms.indexOf(platform) !== -1) os = "osx"
+    else if (iosPlatforms.indexOf(platform) !== -1) os = "ios"
+    else if (windowsPlatforms.indexOf(platform) !== -1) os = "windows"
+    else if (/Android/.test(userAgent)) os = "android"
+    else if (!os && /Linux/.test(platform)) os = "linux"
 
-    return os;
+    return os
   }
 
   function getOSName(os) {
-    if (os === 'linux')
-      return 'Linux'
-    else if (os === 'osx')
-      return 'MacOS X';
-    else if (os === 'windows')
-      return 'Windows'
-    else
-      return 'Unknown OS'
+    if (os === "linux") return "Linux"
+    else if (os === "osx") return "MacOS X"
+    else if (os === "windows") return "Windows"
+    else return "Unknown OS"
   }
 
   function getPackageType(ext) {
-    if (ext === 'gz')
-      return "Tarball";
-    else if (ext === "zip")
-      return "ZIP";
-    else if (ext === "exe")
-      return "Installer";
-    else
-      return null;
-  }
-
-  function setDownloadDetails(github_assets) {
-    // Get details for Windows version by default because market share.
-    var os = getUserOS();
-    if (os !== "linux" && os !== "windows")
-      os = "windows";
-
-    for (const asset of github_assets) {
-      if (asset.name.indexOf(os) !== -1) {
-        const url = asset.browser_download_url;
-        setCrownDownloadUrl(url);
-        const url_ext = url.substring(url.lastIndexOf('.')+1, url.length) || url;
-        setCrownPackageType(getPackageType(url_ext));
-        const megs = Math.floor(asset.size/1024/1024);
-        setCrownDownloadSize(megs.toString() + "MiB");
-        setCrownRelease(getOSName(os))
-
-        if (os === "windows")
-          setOtherOSes(getOSName("linux"))
-        else
-          setOtherOSes(getOSName("windows"))
-        return;
-      }
-    }
+    if (ext === "gz") return "Tarball"
+    else if (ext === "zip") return "ZIP"
+    else if (ext === "exe") return "Installer"
+    else return null
   }
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/crownengine/crown/releases/latest")
-      .then(res => res.json())
-      .then(
-        result => {
-          setCrownVersion(result.tag_name)
-          setDownloadDetails(result.assets);
-        },
-        _error => {
-          setCrownVersion(null)
+    function setDownloadDetails(github_assets) {
+      // Get details for Windows version by default because market share.
+      var os = getUserOS()
+      if (os !== "linux" && os !== "windows") os = "windows"
+
+      for (const asset of github_assets) {
+        if (asset.name.indexOf(os) !== -1) {
+          const url = asset.browser_download_url
+          setCrownDownloadUrl(url)
+          const url_ext =
+            url.substring(url.lastIndexOf(".") + 1, url.length) || url
+          setCrownPackageType(getPackageType(url_ext))
+          const megs = Math.floor(asset.size / 1024 / 1024)
+          setCrownDownloadSize(megs.toString() + "MiB")
+          setCrownRelease(getOSName(os))
+
+          if (os === "windows") setOtherOSes(getOSName("linux"))
+          else setOtherOSes(getOSName("windows"))
+          return
         }
-      )
-  })
+      }
+    }
+
+    // FIXME: https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting
+    axios
+      .get("https://api.github.com/repos/crownengine/crown/releases/latest")
+      .then(result => {
+        setCrownVersion(result.data.tag_name)
+        setDownloadDetails(result.data.assets)
+      })
+      .catch(() => {
+        setCrownVersion(null)
+      })
+  }, [])
 
   const data = useStaticQuery(
     graphql`
@@ -116,11 +101,15 @@ export default function Cta() {
         <p className="mb-10 text-lg text-gray-500 dark:text-gray-50 leading-relaxed">
           Crown is a general purpose and data-driven game engine, written in
           orthodox C++ with a minimalistic and data-oriented design philosophy
-          in mind. <a
+          in mind.{" "}
+          <a
             className="text-indigo-600 hover:underline dark:text-indigo-200"
             rel="noreferrer"
             target="_blank"
-            href="https://crownengine.github.io/crown/html/latest/introduction.html">Learn more...</a>
+            href="https://crownengine.github.io/crown/html/latest/introduction.html"
+          >
+            Learn more...
+          </a>
         </p>
         <div className="text-2xl">
           <OutboundLink
@@ -140,9 +129,13 @@ export default function Cta() {
         </div>
         <div className="mb-10">
           <ul className="flex space-x-2 justify-center text-lg">
-            <li className="text-gray-500 dark:text-gray-300">{crown_release} {crown_package_type}</li>
+            <li className="text-gray-500 dark:text-gray-300">
+              {crown_release} {crown_package_type}
+            </li>
             <li className="text-gray-500 dark:text-gray-300">•</li>
-            <li className="text-gray-500 dark:text-gray-300">{crown_download_size}</li>
+            <li className="text-gray-500 dark:text-gray-300">
+              {crown_download_size}
+            </li>
             <li className="text-gray-500 dark:text-gray-300">•</li>
             <li>
               <a
