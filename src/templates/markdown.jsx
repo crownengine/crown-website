@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function MDTemplate({ data }) {
   const { markdownRemark } = data
@@ -9,7 +9,7 @@ export default function MDTemplate({ data }) {
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div
         className="markdown mb-4 mx-2 lg:mx-32 text-justify break-words"
         dangerouslySetInnerHTML={{ __html: html }}

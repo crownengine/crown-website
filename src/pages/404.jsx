@@ -1,12 +1,12 @@
 import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function NotFoundPage() {
   return (
     <Layout>
-      <SEO title="404: Not found" />
+      <Seo title="404: Not found" />
       <section className="py-8 px-4 text-center">
         <div className="max-w-auto md:max-w-lg mx-auto">
           <img

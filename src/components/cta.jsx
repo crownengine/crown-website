@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
 
-export default function CTA() {
+export default function Cta() {
   const [crown_version, setCrownVersion] = useState()
   const [crown_download_url, setCrownDownloadUrl] = useState()
   const [crown_package_type, setCrownPackageType] = useState()
@@ -71,7 +71,7 @@ export default function CTA() {
         setCrownDownloadSize(megs.toString() + "MiB");
         setCrownRelease(getOSName(os))
 
-        if (os == "windows")
+        if (os === "windows")
           setOtherOSes(getOSName("linux"))
         else
           setOtherOSes(getOSName("windows"))
