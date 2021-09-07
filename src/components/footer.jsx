@@ -19,18 +19,18 @@ export default function Footer() {
       themeValue = "dark"
     }
 
-    setTheme(themeValue)
+    if (themeValue) setTheme(themeValue)
   }, [])
 
   function toggleTheme() {
-    if (theme === null || theme === "dark") {
-      setTheme("light")
-      document.querySelector("html").classList.remove("dark")
-      localStorage.setItem("theme", "light")
-    } else {
+    if (theme === null || theme === "light") {
       setTheme("dark")
       document.querySelector("html").classList.add("dark")
       localStorage.setItem("theme", "dark")
+    } else {
+      setTheme("light")
+      document.querySelector("html").classList.remove("dark")
+      localStorage.setItem("theme", "light")
     }
   }
 
