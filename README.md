@@ -1,7 +1,6 @@
 # crown-website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eaa0c3a3-d868-4ada-b6b1-774c211ffa59/deploy-status)](https://app.netlify.com/sites/crown-website/deploys)
-<br>
+![Website](https://img.shields.io/website?down_message=down&up_message=up&url=https%3A%2F%2Fcrownengine.org)
 
 ## 🚀 Get up and running
 
