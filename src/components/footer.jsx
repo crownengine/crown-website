@@ -162,7 +162,7 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://discord.gg/CeXVWCT/"
+                href="https://discord.gg/invite/CeXVWCT"
                 title="Discord"
               >
                 <i className="fab fa-discord fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
