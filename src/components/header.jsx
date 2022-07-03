@@ -52,14 +52,12 @@ export default function Header() {
           >
             Manual
           </a>
-          <a
-            className="block sm:inline-block mt-4 sm:mt-0 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
-            rel="noreferrer"
-            target="_blank"
-            href="https://github.com/crownengine/crown/"
+          <Link
+            className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
+            to="/about"
           >
-            Source
-          </a>
+            About
+          </Link>
         </div>
       </nav>
     </Clamp>

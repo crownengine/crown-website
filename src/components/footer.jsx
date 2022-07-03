@@ -121,14 +121,19 @@ export default function Footer() {
         {/* About */}
         <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
-            Website
+            About
           </h1>
           <nav className="mt-4">
             <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <Link
+                to="/about"
+              >
+                The Crown Foundation
+              </Link>
+              <Link
                 to="/website-about"
               >
-                About
+                Website
               </Link>
               <Link
                 to="/privacy-policy"
