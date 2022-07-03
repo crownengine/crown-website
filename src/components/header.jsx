@@ -58,6 +58,31 @@ export default function Header() {
           >
             About
           </Link>
+          <Link
+            className="
+              block
+              sm:inline-block
+                 mt-4
+              sm:mt-0
+
+                   hover:text-white
+              dark:hover:bg-indigo-400
+                   text-white
+              dark:text-black
+
+                    bg-indigo-600
+               dark:bg-indigo-500
+              hover:bg-indigo-700
+
+              rounded
+              shadow
+              px-3
+              py-1
+              "
+            to="/fund"
+          >
+            <i className="fa fa-heart mr-2"></i>Donate
+          </Link>
         </div>
       </nav>
     </Clamp>
