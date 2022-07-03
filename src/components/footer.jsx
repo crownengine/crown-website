@@ -49,13 +49,14 @@ export default function Footer() {
   )
 
   return (
+    <div className="mt-auto bg-gray-300 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
     <Clamp>
       <div className="flex">
         <div className="flex-1">
-          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
-            Crown
+          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+            Download
           </h1>
-          <nav className="mt-4">
+          <nav className="mb-2">
             {/* Crown */}
             <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <a
@@ -69,21 +70,14 @@ export default function Footer() {
                   })
                 }}
               >
-                Download
-              </a>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://crownengine.github.io/crown/html/latest/"
-              >
-                Manual
+                Latest Crown
               </a>
               <a
                 rel="noreferrer"
                 target="_blank"
                 href="https://github.com/crownengine/crown/"
               >
-                Source
+                Source Code
               </a>
               <Link
                 className=""
@@ -95,8 +89,8 @@ export default function Footer() {
           </nav>
         </div>
         {/* <div>
-          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">Organization</h1>
-          <nav className="mt-4">
+          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">Organization</h1>
+          <nav className="mb-2">
             <div className="flex flex-col space-y-2 sm:text-left text-center">
               <a
                 rel="noreferrer"
@@ -120,10 +114,10 @@ export default function Footer() {
 
         {/* About */}
         <div className="flex-1">
-          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
+          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
             About
           </h1>
-          <nav className="mt-4">
+          <nav className="mb-2">
             <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <Link
                 to="/about"
@@ -149,12 +143,51 @@ export default function Footer() {
           </nav>
         </div>
 
+        {/* Support */}
+        <div className="flex-1">
+          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+            Support
+          </h1>
+          <nav className="mb-2">
+            <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://crownengine.github.io/crown/html/latest/"
+            >
+              User Manual
+            </a>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://trello.com/b/h88kbJNm/crown/"
+            >
+              Community
+            </a>
+            </div>
+          </nav>
+
+        {/* Donate */}
+          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+            Donate
+          </h1>
+          <nav className="mb-2">
+            <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
+              <Link
+                to="/fund"
+              >
+                One-time Donations
+              </Link>
+            </div>
+          </nav>
+        </div>
+
         {/* Follow Crown */}
         <div className="flex-1">
-          <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
+          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
             Follow Crown
           </h1>
-          <nav className="mt-4">
+          <nav className="mb-2">
           <div className="flex flex-col space-y-2 sm:text-left text-center text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <a
                 rel="noreferrer"
@@ -236,5 +269,6 @@ export default function Footer() {
         </div>
       </div>
     </Clamp>
+    </div>
   )
 }

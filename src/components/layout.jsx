@@ -16,9 +16,7 @@ export default function Layout({ children }) {
           <main className="flex-grow">
             {children}
           </main>
-          <div className="mt-auto bg-gray-300 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
-            <Footer />
-          </div>
+          <Footer />
         </div>
       </div>
     </>
