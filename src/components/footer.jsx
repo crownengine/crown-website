@@ -55,12 +55,12 @@ export default function Footer() {
             Crown
           </h1>
           <nav className="mt-4">
-            <div className="flex flex-col space-y-2 sm:text-left text-center">
+            {/* Crown */}
+            <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <a
                 rel="noreferrer"
                 target="_blank"
                 href="https://github.com/crownengine/crown/releases/latest"
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 onClick={_e => {
                   window.gtag("event", "click", {
                     category: "Download Button",
@@ -74,7 +74,6 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="https://crownengine.github.io/crown/html/latest/"
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
               >
                 Manual
               </a>
@@ -82,12 +81,11 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="https://github.com/crownengine/crown/"
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
               >
                 Source
               </a>
               <Link
-                className="lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
+                className=""
                 to="/crown-license"
               >
                 License
@@ -118,26 +116,25 @@ export default function Footer() {
             </div>
           </nav>
         </div> */}
+
+        {/* About */}
         <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Website
           </h1>
           <nav className="mt-4">
-            <div className="flex flex-col space-y-2 sm:text-left text-center">
+            <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <Link
-                className="lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 to="/website-about"
               >
                 About
               </Link>
               <Link
-                className="lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 to="/privacy-policy"
               >
                 Privacy Policy
               </Link>
               <Link
-                className="lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                 to="/cookie-policy"
               >
                 Cookie Policy
@@ -145,19 +142,22 @@ export default function Footer() {
             </div>
           </nav>
         </div>
+
+        {/* Follow Crown */}
         <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Follow Crown
           </h1>
           <nav className="mt-4">
-            <div className="space-x-3 sm:text-left text-center">
+          <div className="flex flex-col space-y-2 sm:text-left text-center text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
               <a
                 rel="noreferrer"
                 target="_blank"
                 href="https://github.com/crownengine/crown/"
                 title="GitHub"
               >
-                <i className="fab fa-github fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
+                <i className="fab fa-github mr-2"></i>
+                GitHub
               </a>
               <a
                 rel="noreferrer"
@@ -165,7 +165,8 @@ export default function Footer() {
                 href="https://discord.gg/invite/CeXVWCT"
                 title="Discord"
               >
-                <i className="fab fa-discord fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
+                <i className="fab fa-discord mr-2"></i>
+                Discord
               </a>
               <a
                 rel="noreferrer"
@@ -173,7 +174,8 @@ export default function Footer() {
                 href="https://www.twitter.com/crown_engine"
                 title="Twitter"
               >
-                <i className="fab fa-twitter fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
+                <i className="fab fa-twitter mr-2"></i>
+                Twitter
               </a>
               <a
                 rel="noreferrer"
@@ -181,22 +183,26 @@ export default function Footer() {
                 href="https://trello.com/b/h88kbJNm/crown/"
                 title="Trello"
               >
-                <i className="fab fa-trello fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
+                <i className="fab fa-trello mr-2"></i>
+                Trello
               </a>
               {/* Uncomment when content will be available.
               <a
                 rel="noreferrer"
                 target="_blank"
                 href="https://www.youtube.com/channel/UCmvDFWrznsSzStSvwqWaJJQ"
-                title="Trello"
+                title="YouTube"
               >
-                <i className="fab fa-youtube fa-2x text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"></i>
+                <i className="fab fa-youtube mr-2"></i>
+                YouTube
               </a>
 */}
             </div>
           </nav>
         </div>
       </div>
+
+      {/* Footer */}
       <div className="max-w-screen-xl mx-auto flex flex-col items-center mt-4">
         <div className="flex flex-row mt-4 place-items-center space-x-3">
           &copy;{new Date().getFullYear()} {data.site.siteMetadata.org_title}
