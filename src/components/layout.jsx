@@ -11,10 +11,14 @@ export default function Layout({ children }) {
         <link rel="icon" type="image/png" href={favicon} />
       </Helmet>
       <div className="dark:text-white">
-        <div className="container center mx-auto lg:w-8/12 flex flex-col h-screen justify-between">
+        <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="mb-auto">{children}</main>
-          <Footer />
+          <div className="container center mx-auto lg:w-5/11 flex flex-col">
+            <main className="mb-auto">{children}</main>
+          </div>
+          <div className="mt-auto bg-gray-300 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
+            <Footer />
+          </div>
         </div>
       </div>
     </>

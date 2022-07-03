@@ -48,9 +48,9 @@ export default function Footer() {
   )
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
-      <div className="max-w-screen-xl mx-auto grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-x-8 lg:px-8">
-        <div>
+    <footer className="container center mx-auto lg:w-5/11">
+      <div className="flex">
+        <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Crown
           </h1>
@@ -118,7 +118,7 @@ export default function Footer() {
             </div>
           </nav>
         </div> */}
-        <div>
+        <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Website
           </h1>
@@ -145,7 +145,7 @@ export default function Footer() {
             </div>
           </nav>
         </div>
-        <div>
+        <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
             Follow Crown
           </h1>
