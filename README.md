@@ -18,3 +18,7 @@ npm install
 ```shell
 gatsby develop
 ```
+## Deploy
+```shell
+npm run deploy
+````
