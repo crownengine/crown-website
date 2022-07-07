@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
+import Clamp from "./clamp"
 const axios = require("axios").default
 
 export default function Cta() {
@@ -92,6 +93,7 @@ export default function Cta() {
   )
 
   return (
+    <Clamp>
     <section className="py-12 px-4 text-center">
       <div className="w-full max-w-2xl mx-auto">
         {/* <span className="text-sm font-semibold">CROWN ENGINE</span> */}
@@ -161,5 +163,6 @@ export default function Cta() {
         </div>
       </div>
     </section>
+    </Clamp>
   )
 }

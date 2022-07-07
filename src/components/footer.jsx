@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useEffect, useState } from "react"
+import Clamp from "./clamp"
 
 export default function Footer() {
   const [theme, setTheme] = useState("light")
@@ -48,7 +49,7 @@ export default function Footer() {
   )
 
   return (
-    <footer className="container center mx-auto lg:w-5/11">
+    <Clamp>
       <div className="flex">
         <div className="flex-1">
           <h1 className="font-semibold uppercase mt-0 text-sm sm:text-left text-center">
@@ -229,6 +230,6 @@ export default function Footer() {
           </button>
         </div>
       </div>
-    </footer>
+    </Clamp>
   )
 }

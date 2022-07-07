@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import Clamp from "./clamp"
 
 export default function Header() {
   function menuClick() {
@@ -8,7 +9,7 @@ export default function Header() {
   }
 
   return (
-    <header className="container center mx-auto lg:w-5/11 flex flex-col">
+    <Clamp>
       <nav className="flex flex-wrap items-center justify-between py-4">
         <div className="sm:order-2">
           <Link className="header-logo h-12 sm:w-36 w-24" to="/"></Link>
@@ -61,6 +62,6 @@ export default function Header() {
           </a>
         </div>
       </nav>
-    </header>
+    </Clamp>
   )
 }

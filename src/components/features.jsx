@@ -1,7 +1,9 @@
 import React from "react"
+import Clamp from "./clamp"
 
 export default function Features() {
   return (
+    <Clamp>
     <section className="py-8 px-4 sm:text-left text-center">
       <div className="flex flex-wrap -mx-4 -mb-6">
         <div className="lg:w-1/3 px-4 mb-6">
@@ -58,5 +60,6 @@ export default function Features() {
         </div>
       </div>
     </section>
+    </Clamp>
   )
 }
