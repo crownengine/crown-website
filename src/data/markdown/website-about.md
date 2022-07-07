@@ -20,6 +20,11 @@ Supervision
 
 Daniele Bartolini
 
+Homepage Background
+-------------------
+
+Free SVG Background by <a target="_blank" href="https://bgjar.com">BGJar</a>
+
 Website Content License
 =======================
 

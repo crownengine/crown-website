@@ -93,19 +93,19 @@ export default function Cta() {
   )
 
   return (
+    <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
     <Clamp>
     <section className="py-12 px-4 text-center">
       <div className="w-full max-w-2xl mx-auto">
-        {/* <span className="text-sm font-semibold">CROWN ENGINE</span> */}
-        <h2 className="text-5xl mt-2 mb-2 leading-tight font-semibold">
+        <h1 className="text-5xl mt-2 mb-2 leading-tight font-semibold text-gray-200">
           {data.site.siteMetadata.subtitle}
-        </h2>
-        <p className="mb-10 text-lg text-gray-500 dark:text-gray-50 leading-relaxed">
+        </h1>
+        <p className="mb-10 text-xl text-gray-200 leading-relaxed">
           Crown is a general purpose and data-driven game engine, written in
           orthodox C++ with a minimalistic and data-oriented design philosophy
           in mind.{" "}
           <a
-            className="text-indigo-600 hover:underline dark:text-indigo-200"
+            className="text-gray-200 font-bold hover:underline"
             rel="noreferrer"
             target="_blank"
             href="https://crownengine.github.io/crown/html/latest/introduction.html"
@@ -113,9 +113,10 @@ export default function Cta() {
             Learn more...
           </a>
         </p>
+
         <div className="text-2xl">
           <OutboundLink
-            className="inline-block py-4 px-8 mb-2 leading-none text-white hover:text-white dark:text-black bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded shadow"
+            className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white dark:text-black bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded shadow"
             rel="noreferrer"
             target="_blank"
             href={crown_download_url}
@@ -129,19 +130,20 @@ export default function Cta() {
             Download Crown {crown_version}
           </OutboundLink>
         </div>
+
         <div className="mb-10">
           <ul className="flex space-x-2 justify-center text-lg">
-            <li className="text-gray-500 dark:text-gray-300">
+            <li className="text-gray-200">
               {crown_release} {crown_package_type}
             </li>
-            <li className="text-gray-500 dark:text-gray-300">•</li>
-            <li className="text-gray-500 dark:text-gray-300">
+            <li className="text-gray-200">•</li>
+            <li className="text-gray-200">
               {crown_download_size}
             </li>
-            <li className="text-gray-500 dark:text-gray-300">•</li>
+            <li className="text-gray-200">•</li>
             <li>
               <a
-                className="text-indigo-600 hover:underline dark:text-indigo-200"
+                className="text-gray-200 hover:underline font-bold"
                 rel="noreferrer"
                 target="_blank"
                 href="https://crownengine.github.io/crown/html/latest/changelog.html"
@@ -151,6 +153,7 @@ export default function Cta() {
             </li>
           </ul>
         </div>
+
         <div className="text-lg">
           <OutboundLink
             className="inline-block py-2 px-6 leading-none text-white bg-gray-600 dark:bg-gray-200 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-50 hover:text-white rounded shadow"
@@ -161,8 +164,10 @@ export default function Cta() {
             {other_oses} and other versions
           </OutboundLink>
         </div>
+
       </div>
     </section>
     </Clamp>
+    </div>
   )
 }
