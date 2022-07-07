@@ -1,13 +1,17 @@
+.markdown {
+  @apply container mx-auto px-4 py-16 2xl:w-5/11 xl:w-2/3 md:w-5/6;
+}
+
 .markdown h1 {
-  @apply mt-4 text-center text-lg font-bold;
+  @apply mb-12 text-5xl font-bold text-gray-700;
 }
 
 .markdown h2 {
-  @apply mt-4 text-lg;
+  @apply mb-4 text-3xl font-bold text-gray-700;
 }
 
 .markdown h4 {
-  @apply mt-4 font-bold;
+  @apply mb-4 font-bold;
 }
 
 .markdown a {
@@ -15,5 +19,5 @@
 }
 
 .markdown p {
-  @apply mt-4;
+  @apply mb-4 text-gray-700;
 }
