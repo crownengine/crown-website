@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "axios": "^0.25.0",
     "gatsby": "^4.6.2",
     "gatsby-plugin-google-gtag": "^4.6.0",
     "gatsby-plugin-image": "2.6.0",

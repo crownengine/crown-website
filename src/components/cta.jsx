@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
 import Clamp from "./clamp"
-const axios = require("axios").default
+import Releases from "../data/download/releases.json"
 
 export default function Cta() {
   const [crown_version, setCrownVersion] = useState()
@@ -68,16 +68,8 @@ export default function Cta() {
       }
     }
 
-    // FIXME: https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting
-    axios
-      .get("https://api.github.com/repos/crownengine/crown/releases/latest")
-      .then(result => {
-        setCrownVersion(result.data.tag_name)
-        setDownloadDetails(result.data.assets)
-      })
-      .catch(() => {
-        setCrownVersion(null)
-      })
+    setCrownVersion(Releases[0].tag_name)
+    setDownloadDetails(Releases[0].assets)
   }, [])
 
   const data = useStaticQuery(
