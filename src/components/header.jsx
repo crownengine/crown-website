@@ -10,13 +10,14 @@ export default function Header() {
 
   return (
     <Clamp>
-      <nav className="flex flex-wrap items-center justify-between py-4">
-        <div className="sm:order-2">
-          <Link className="header-logo h-12 sm:w-36 w-24" to="/"></Link>
+      <nav className="flex flex-wrap items-center justify-between py-2">
+        <div className="px-4">
+          <Link className="header-logo h-10 w-24 lg:w-36" to="/"></Link>
         </div>
-        <div className="block sm:hidden">
+
+        <div className="block lg:hidden px-4">
           <button
-            className="navbar-burger flex items-center py-2 px-3 text-indigo-500 dark:text-indigo-200  rounded border border-indigo-500"
+            className="navbar-burger flex items-center py-2 px-4 text-indigo-500 dark:text-indigo-200rounded border border-indigo-500"
             onClick={menuClick}
           >
             <svg
@@ -29,58 +30,66 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div className="navbar-menu hidden sm:order-3 sm:block w-full sm:w-2/3 sm:text-right text-center">
-          <a
-            className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
-            rel="noreferrer"
-            target="_blank"
-            href="https://github.com/crownengine/crown/releases/latest"
-            onClick={_e => {
-              window.gtag("event", "click", {
-                category: "Download Button",
-                action: "Click",
-              })
-            }}
-          >
-            Download
-          </a>
-          <Link
-            className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
-            to="/support"
-          >
-            Support
-          </Link>
-          <Link
-            className="block sm:inline-block mt-4 sm:mt-0 sm:mr-10 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50"
-            to="/about"
-          >
-            About
-          </Link>
-          <Link
-            className="
-              block
-              sm:inline-block
-                 mt-4
-              sm:mt-0
 
-                   hover:text-white
-              dark:hover:bg-indigo-400
-                   text-white
-              dark:text-black
+        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50">
+          <ul className="flex flex-col lg:flex-row">
+            <li>
+              <a
+                className="block py-2 pr-4 pl-3"
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/crownengine/crown/releases/latest"
+                onClick={_e => {
+                  window.gtag("event", "click", {
+                    category: "Download Button",
+                    action: "Click",
+                  })
 
-                    bg-indigo-600
-               dark:bg-indigo-500
-              hover:bg-indigo-700
+                  }}
+                >
+                  Download
+              </a>
+            </li>
 
-              rounded
-              shadow
-              px-3
-              py-1
-              "
-            to="/fund"
-          >
-            <i className="fa fa-heart mr-2"></i>Donate
-          </Link>
+            <li>
+              <Link
+                className="block py-2 pr-4 pl-3"
+                activeClassName="border-b-2 border-indigo-600"
+                to="/support">
+                  Support
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className="block py-2 pr-4 pl-3"
+                activeClassName="border-b-2 border-indigo-600"
+                to="/about">
+                  About
+                </Link>
+            </li>
+
+            <li>
+              <Link className="block py-2 pr-4 pl-3
+
+                       hover:text-white
+                  dark:hover:bg-indigo-400
+                       text-white
+                  dark:text-black
+
+                        bg-indigo-600
+                   dark:bg-indigo-500
+                  hover:bg-indigo-700
+
+                  rounded
+                  shadow
+                  "
+                to="/fund"
+              >
+                <i className="fa fa-heart mr-2"></i>Donate
+              </Link>
+            </li>
+          </ul>
         </div>
       </nav>
     </Clamp>
