@@ -34,21 +34,12 @@ export default function Header() {
         <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50">
           <ul className="flex flex-col lg:flex-row">
             <li>
-              <a
-                className="block py-2 pr-4 pl-3"
-                rel="noreferrer"
-                target="_blank"
-                href="https://github.com/crownengine/crown/releases/latest"
-                onClick={_e => {
-                  window.gtag("event", "click", {
-                    category: "Download Button",
-                    action: "Click",
-                  })
-
-                  }}
-                >
+              <Link
+                className="border-b-2 border-transparent block py-2 pr-4 pl-3"
+                activeClassName="border-b-2 border-indigo-600"
+                to="/download">
                   Download
-              </a>
+              </Link>
             </li>
 
             <li>

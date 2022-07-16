@@ -1,77 +1,9 @@
+import React from "react"
+import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
-import React, { useEffect, useState } from "react"
 import Clamp from "./clamp"
-import Releases from "../data/download/releases.json"
 
 export default function Cta() {
-  const [crown_version, setCrownVersion] = useState()
-  const [crown_download_url, setCrownDownloadUrl] = useState()
-  const [crown_package_type, setCrownPackageType] = useState()
-  const [crown_download_size, setCrownDownloadSize] = useState()
-  const [crown_release, setCrownRelease] = useState()
-  const [other_oses, setOtherOSes] = useState()
-
-  /* https://stackoverflow.com/questions/38241480/detect-macos-ios-windows-android-and-linux-os-with-js */
-  function getUserOS() {
-    var userAgent = window.navigator.userAgent,
-      platform = window.navigator.platform,
-      macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
-      windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
-      iosPlatforms = ["iPhone", "iPad", "iPod"],
-      os = null
-
-    if (macosPlatforms.indexOf(platform) !== -1) os = "osx"
-    else if (iosPlatforms.indexOf(platform) !== -1) os = "ios"
-    else if (windowsPlatforms.indexOf(platform) !== -1) os = "windows"
-    else if (/Android/.test(userAgent)) os = "android"
-    else if (!os && /Linux/.test(platform)) os = "linux"
-
-    return os
-  }
-
-  function getOSName(os) {
-    if (os === "linux") return "Linux"
-    else if (os === "osx") return "MacOS X"
-    else if (os === "windows") return "Windows"
-    else return "Unknown OS"
-  }
-
-  function getPackageType(ext) {
-    if (ext === "gz") return "Tarball"
-    else if (ext === "zip") return "ZIP"
-    else if (ext === "exe") return "Installer"
-    else return null
-  }
-
-  useEffect(() => {
-    function setDownloadDetails(github_assets) {
-      // Get details for Windows version by default because market share.
-      var os = getUserOS()
-      if (os !== "linux" && os !== "windows") os = "windows"
-
-      for (const asset of github_assets) {
-        if (asset.name.indexOf(os) !== -1) {
-          const url = asset.browser_download_url
-          setCrownDownloadUrl(url)
-          const url_ext =
-            url.substring(url.lastIndexOf(".") + 1, url.length) || url
-          setCrownPackageType(getPackageType(url_ext))
-          const megs = Math.floor(asset.size / 1024 / 1024)
-          setCrownDownloadSize(megs.toString() + "MiB")
-          setCrownRelease(getOSName(os))
-
-          if (os === "windows") setOtherOSes(getOSName("linux"))
-          else setOtherOSes(getOSName("windows"))
-          return
-        }
-      }
-    }
-
-    setCrownVersion(Releases[0].tag_name)
-    setDownloadDetails(Releases[0].assets)
-  }, [])
-
   const data = useStaticQuery(
     graphql`
       query {
@@ -107,32 +39,16 @@ export default function Cta() {
         </p>
 
         <div className="text-2xl">
-          <OutboundLink
+          <Link
             className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white dark:text-black bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded shadow"
-            rel="noreferrer"
-            target="_blank"
-            href={crown_download_url}
-            onClick={_e => {
-              window.gtag("event", "click", {
-                category: "Download Button",
-                action: "Click",
-              })
-            }}
+            to="/download"
           >
-            Download Crown {crown_version}
-          </OutboundLink>
+            Download Crown
+          </Link>
         </div>
 
         <div className="mb-10">
           <ul className="flex space-x-2 justify-center text-lg">
-            <li className="text-gray-200">
-              {crown_release} {crown_package_type}
-            </li>
-            <li className="text-gray-200">•</li>
-            <li className="text-gray-200">
-              {crown_download_size}
-            </li>
-            <li className="text-gray-200">•</li>
             <li>
               <a
                 className="text-gray-200 hover:underline font-bold"
@@ -145,18 +61,6 @@ export default function Cta() {
             </li>
           </ul>
         </div>
-
-        <div className="text-lg">
-          <OutboundLink
-            className="inline-block py-2 px-6 leading-none text-white bg-gray-600 dark:bg-gray-200 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-50 hover:text-white rounded shadow"
-            rel="noreferrer"
-            target="_blank"
-            href="https://github.com/crownengine/crown/releases/latest"
-          >
-            {other_oses} and other versions
-          </OutboundLink>
-        </div>
-
       </div>
     </section>
     </Clamp>
