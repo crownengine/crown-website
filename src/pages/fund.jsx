@@ -15,6 +15,7 @@ export default function Fund() {
 
         {/* GitHub Sponsors */}
         <div className="flex flex-col gap-6">
+        {/*
           <div className="rounded-lg shadow-lg p-6 bg-github-pink text-gray-700">
             <h2 className="text-3xl mb-2 font-semibold underline">
               <a href="https://github.com/sponsors/crownengine?preview=true">
@@ -50,6 +51,7 @@ export default function Fund() {
               Join Crown's GitHub Sponsors
             </a>
           </div>
+        */}
 
           {/* PayPal */}
           <div className="flex-1 rounded-lg shadow-lg p-6 bg-paypal-blue text-gray-200">
