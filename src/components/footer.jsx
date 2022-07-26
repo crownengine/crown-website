@@ -1,40 +1,8 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Clamp from "./clamp"
 
 export default function Footer() {
-  const [theme, setTheme] = useState("light")
-
-  function _isThemeKeyValid(value) {
-    if (value === null) return true
-    return typeof value === "string" && (value === "light" || value === "dark")
-  }
-
-  useEffect(() => {
-    let themeValue = localStorage.getItem("theme")
-    if (!_isThemeKeyValid(themeValue)) themeValue = "light"
-    if (
-      themeValue === null &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      themeValue = "dark"
-    }
-
-    if (themeValue) setTheme(themeValue)
-  }, [])
-
-  function toggleTheme() {
-    if (theme === null || theme === "light") {
-      setTheme("dark")
-      document.querySelector("html").classList.add("dark")
-      localStorage.setItem("theme", "dark")
-    } else {
-      setTheme("light")
-      document.querySelector("html").classList.remove("dark")
-      localStorage.setItem("theme", "light")
-    }
-  }
-
   const data = useStaticQuery(
     graphql`
       query {
@@ -256,16 +224,6 @@ export default function Footer() {
               src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
             />
           </Link>
-          <button
-            type="button"
-            className={`fas ${
-              theme === "dark" ? "fa-moon" : "fa-sun"
-            } fa-lg text-indigo-600 dark:text-indigo-200`}
-            title="Switch theme"
-            onClick={toggleTheme}
-          >
-            <span className="sr-only">Toggle theme</span>
-          </button>
         </div>
       </div>
     </Clamp>
