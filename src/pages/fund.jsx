@@ -23,7 +23,7 @@ export default function Fund() {
                 </a>
               </h2>
               <p className="mb-6">
-                This is the easiest way to support us if your already have a GitHub account.
+                This is the easiest way to support us if you already have a GitHub account.
               </p>
               <a
                 className="
