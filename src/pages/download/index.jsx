@@ -189,7 +189,7 @@ export default function Download() {
       </section>
 
       {/* All Versions */}
-      <section className="w-1/2 mx-auto">
+      <section className="w-3/4 lg:w-1/2 mx-auto">
         <h2 className="text-xl text-center mt-2 mb-10 leading-tight font-semibold text-gray-200">
           Other versions
         </h2>

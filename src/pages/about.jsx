@@ -62,35 +62,33 @@ export default function About() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex flex-row gap-6">
-              <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
-                <h2 className="text-3xl mb-4 font-semibold">
-                  Board Members
-                </h2>
-                <p className="mb-6 text-gray-700">
-                  <ul>
-                    <li>Daniele Bartolini (Founder and president)</li>
-                    <li>Michele Rossi (Founder and vice-president)</li>
-                    <li>Alessio Bianchetti (Founder)</li>
-                    <li>Simone Gazzoli (Founder)</li>
-                  </ul>
-                </p>
-              </div>
+            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
+              <h2 className="text-3xl mb-4 font-semibold">
+                Board Members
+              </h2>
+              <p className="mb-6 text-gray-700">
+                <ul>
+                  <li>Daniele Bartolini (Founder and president)</li>
+                  <li>Michele Rossi (Founder and vice-president)</li>
+                  <li>Alessio Bianchetti (Founder)</li>
+                  <li>Simone Gazzoli (Founder)</li>
+                </ul>
+              </p>
+            </div>
 
-              <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
-                <h2 className="text-3xl mb-4 font-semibold">
-                  Join the Foundation
-                </h2>
-                <p className="mb-6 text-gray-700">
-                  Members of The Crown Foundation will have access to the
-                  institutional meetings where they will be able to influence the
-                  Foundation's future directions in a fully inclusive and democratic
-                  environment.
-                </p>
-                <p className="mb-6 text-gray-700">
-                  Drop us a <a className="text-indigo-500" href="mailto:foundation@crownengine.org"><u>line</u></a> asking to join!
-                </p>
-              </div>
+            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
+              <h2 className="text-3xl mb-4 font-semibold">
+                Join the Foundation
+              </h2>
+              <p className="mb-6 text-gray-700">
+                Members of The Crown Foundation will have access to the
+                institutional meetings where they will be able to influence the
+                Foundation's future directions in a fully inclusive and democratic
+                environment.
+              </p>
+              <p className="mb-6 text-gray-700">
+                Drop us a <a className="text-indigo-500" href="mailto:foundation@crownengine.org"><u>line</u></a> asking to join!
+              </p>
             </div>
           </div>
         </div>
