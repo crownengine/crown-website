@@ -61,6 +61,12 @@ export default function Cta() {
             </li>
           </ul>
         </div>
+
+        <div className="flex place-content-center mb-10">
+          <iframe title="ghbtns-stars" src="https://ghbtns.com/github-btn.html?user=crownengine&repo=crown&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+          <iframe title="ghbtns-forks" src="https://ghbtns.com/github-btn.html?user=crownengine&repo=crown&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+        </div>
+
       </div>
     </section>
     </Clamp>
