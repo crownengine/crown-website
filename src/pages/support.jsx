@@ -23,17 +23,17 @@ export default function Support() {
             </p>
             <ul className="list-disc list-inside pl-6">
               <li>
-                <a className="text-indigo-500" href="https://crownengine.github.io/crown/html/latest">
+                <a className="text-indigo-500" href="https://docs.crownengine.org/html/latest">
                   <u>User Manual</u>
                 </a>
               </li>
               <li>
-                <a className="text-indigo-500" href="https://crownengine.github.io/crown/html/latest/lua_api.html">
+                <a className="text-indigo-500" href="https://docs.crownengine.org/html/latest/lua_api.html">
                   <u>Lua API reference</u>
                 </a>
               </li>
               <li>
-                <a className="text-indigo-500" href="https://crownengine.github.io/crown/html/latest/hackers">
+                <a className="text-indigo-500" href="https://docs.crownengine.org/html/latest/hackers">
                   <u>Developers manual</u>
                 </a>
               </li>

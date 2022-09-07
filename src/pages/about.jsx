@@ -43,7 +43,7 @@ export default function About() {
                 development of <a className="text-indigo-500"
                 href="https://github.com/crownengine/crown"><u>Crown Engine</u></a>, the
                 writing of its <a className="text-indigo-500"
-                href="https://crownengine.github.io/crown/html/latest"><u>manual</u></a>,
+                href="https://docs.crownengine.org/html/latest"><u>manual</u></a>,
                 the Foundation's overheads and the growth of the open-source
                 software community as a whole.
               </p>

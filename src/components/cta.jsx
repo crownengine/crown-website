@@ -32,7 +32,7 @@ export default function Cta() {
             className="text-gray-200 font-bold hover:underline"
             rel="noreferrer"
             target="_blank"
-            href="https://crownengine.github.io/crown/html/latest/introduction.html"
+            href="https://docs.crownengine.org/html/latest/introduction.html"
           >
             Learn more...
           </a>
@@ -54,7 +54,7 @@ export default function Cta() {
                 className="text-gray-200 hover:underline font-bold"
                 rel="noreferrer"
                 target="_blank"
-                href="https://crownengine.github.io/crown/html/latest/changelog.html"
+                href="https://docs.crownengine.org/html/latest/changelog.html"
               >
                 What's New?
               </a>

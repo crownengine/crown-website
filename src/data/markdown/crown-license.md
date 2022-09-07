@@ -34,4 +34,4 @@ License details
 ---------------
 
 Details regarding the license(s) can be found in the [Crown
-Manual](https://crownengine.github.io/crown/html/latest/copyright.html#license).
+Manual](https://docs.crownengine.org/html/latest/copyright.html#license).
