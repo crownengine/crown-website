@@ -18,7 +18,7 @@ export default function Fund() {
             {/* GitHub Sponsors */}
             <div className="flex-1 rounded-lg shadow-lg p-6 bg-github-pink text-gray-800">
               <h2 className="text-3xl mb-2 font-semibold">
-                <a href="https://github.com/sponsors/crownengine?preview=true">
+                <a href="https://github.com/sponsors/crownengine">
                   GitHub Sponsors
                 </a>
               </h2>
@@ -48,7 +48,7 @@ export default function Fund() {
                     w-full
                     text-center
                   "
-                href="https://github.com/sponsors/crownengine?preview=true"
+                href="https://github.com/sponsors/crownengine"
               >
                 Become a sponsor
               </a>
