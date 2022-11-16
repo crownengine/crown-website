@@ -143,7 +143,7 @@ export default function Download() {
 
   return (
     <Layout>
-      <Seo title="The Crown Foundation" />
+      <Seo title="Download" />
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
       <Clamp>
       <section className="py-12 px-4 text-center">
