@@ -27,19 +27,12 @@ export default function Footer() {
           <nav className="mb-2">
             {/* Crown */}
             <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://github.com/crownengine/crown/releases/latest"
-                onClick={_e => {
-                  window.gtag("event", "click", {
-                    category: "Download Button",
-                    action: "Click",
-                  })
-                }}
+              <Link
+                className=""
+                to="/download"
               >
                 Latest Crown
-              </a>
+              </Link>
               <a
                 rel="noreferrer"
                 target="_blank"
