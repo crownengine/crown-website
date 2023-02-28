@@ -177,15 +177,6 @@ export default function Footer() {
                 <i className="fab fa-twitter mr-2"></i>
                 Twitter
               </a>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://trello.com/b/h88kbJNm/crown/"
-                title="Trello"
-              >
-                <i className="fab fa-trello mr-2"></i>
-                Trello
-              </a>
               {/* Uncomment when content will be available.
               <a
                 rel="noreferrer"
