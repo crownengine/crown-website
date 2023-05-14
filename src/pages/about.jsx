@@ -7,15 +7,16 @@ export default function About() {
   return (
     <Layout>
       <Seo title="The Crown Foundation" />
+      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
       <Clamp>
-      <section className="py-16 px-4 text-left text-gray-700">
+      <section className="py-16 px-4 text-left text-gray-300">
         <h1 className="text-5xl mb-12 font-semibold">
           The Crown Foundation
         </h1>
 
         <div className="flex flex-col gap-6">
           <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
+            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700 bg-gray-200">
               <h2 className="text-3xl mb-4 font-semibold">
                 The Organization
               </h2>
@@ -34,7 +35,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
+            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700 bg-gray-200">
               <h2 className="text-3xl mb-4 font-semibold">
                 Donations
               </h2>
@@ -62,7 +63,7 @@ export default function About() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
+            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700 bg-gray-200">
               <h2 className="text-3xl mb-4 font-semibold">
                 Board Members
               </h2>
@@ -76,7 +77,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
+            <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700 bg-gray-200">
               <h2 className="text-3xl mb-4 font-semibold">
                 Join the Foundation
               </h2>
@@ -94,6 +95,7 @@ export default function About() {
         </div>
       </section>
     </Clamp>
+    </div>
     </Layout>
   )
 }

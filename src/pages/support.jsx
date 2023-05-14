@@ -7,14 +7,15 @@ export default function Support() {
   return (
     <Layout>
       <Seo title="Support" />
+      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
       <Clamp>
       <section className="py-16 px-4">
-        <h2 className="text-5xl mb-12 font-semibold text-gray-700">
+        <h2 className="text-5xl mb-12 font-semibold text-gray-300">
           Support
         </h2>
 
         <div className="grid grid-rows-3 2xl:grid-cols-3 gap-6">
-          <div className="rounded-lg shadow-lg p-6">
+          <div className="rounded-lg shadow-lg p-6 bg-gray-200">
             <h2 className="text-3xl mb-2 font-semibold text-gray-700">
               Documentation
             </h2>
@@ -39,7 +40,7 @@ export default function Support() {
               </li>
             </ul>
           </div>
-          <div className="rounded-lg shadow-lg p-6">
+          <div className="rounded-lg shadow-lg p-6 bg-gray-200">
             <h2 className="text-3xl mb-2 font-semibold text-gray-700">
               Community
             </h2>
@@ -59,7 +60,7 @@ export default function Support() {
               </li>
             </ul>
           </div>
-          <div className="rounded-lg shadow-lg p-6">
+          <div className="rounded-lg shadow-lg p-6 bg-gray-200">
             <h2 className="text-3xl mb-2 font-semibold text-gray-700">
               Report an issue
             </h2>
@@ -77,6 +78,7 @@ export default function Support() {
         </div>
       </section>
       </Clamp>
+      </div>
     </Layout>
   )
 }

@@ -7,9 +7,10 @@ export default function Fund() {
   return (
     <Layout>
       <Seo title="Donations" />
+      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
       <Clamp>
       <section className="py-16 px-4">
-        <h2 className="text-5xl mb-12 font-semibold text-gray-700">
+        <h2 className="text-5xl mb-12 font-semibold text-gray-300">
           Donations
         </h2>
 
@@ -131,6 +132,7 @@ export default function Fund() {
         </div>
       </section>
       </Clamp>
+      </div>
     </Layout>
   )
 }
