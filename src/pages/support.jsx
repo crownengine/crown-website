@@ -34,7 +34,7 @@ export default function Support() {
               </li>
               <li>
                 <a className="text-indigo-500" href="https://docs.crownengine.org/html/latest/hackers">
-                  <u>Developers manual</u>
+                  <u>Developer Manual</u>
                 </a>
               </li>
             </ul>

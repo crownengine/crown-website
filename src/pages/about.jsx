@@ -17,7 +17,7 @@ export default function About() {
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex-1 rounded-lg shadow-lg p-6 text-gray-700">
               <h2 className="text-3xl mb-4 font-semibold">
-                Organization
+                The Organization
               </h2>
               <p className="mb-6 text-gray-700">
                 The Crown Foundation (2020) is a non-profit organization committed to

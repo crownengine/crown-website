@@ -149,7 +149,7 @@ export default function Download() {
       <section className="py-12 px-4 text-center">
         <div className="w-full max-w-2xl mx-auto">
           <h1 className="text-5xl text-center mt-2 mb-10 leading-tight font-semibold text-gray-200">
-            Editor and runtime
+            Let Your Game Begin
           </h1>
 
           <div className="text-2xl">
@@ -191,7 +191,7 @@ export default function Download() {
       {/* All Versions */}
       <section className="w-3/4 lg:w-1/2 mx-auto">
         <h2 className="text-xl text-center mt-2 mb-10 leading-tight font-semibold text-gray-200">
-          Other versions
+          Other Platforms and Versions
         </h2>
         <div className="px-4 py-4 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
             { downloadEntries() }

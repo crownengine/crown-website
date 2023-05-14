@@ -95,14 +95,7 @@ export default function Fund() {
             </h3>
             <div className="flex flex-col sm:flex-row gap-6">
               <div className="flex-1 p-6 rounded shadow-lg bg-gray-300 text-gray-700">
-                <p className="pb-4">
-                  <strong>The Crown Foundation</strong>
-                  <br/>
-                  Contrada Cegli da Sole, 4, 63847
-                  <br/>
-                  Monte Vidon Combatte, Italy
-                  <br/>
-                </p>
+                <strong>The Crown Foundation</strong>
                 <p>
                   Tax Number: 90068000448
                   <br/>
@@ -112,14 +105,12 @@ export default function Fund() {
                 </p>
               </div>
               <div className="flex-1 p-6 rounded shadow-lg bg-gray-300 text-gray-700">
-                <p>
-                  <strong>Bank: Intesa Sanpaolo</strong>
-                  <br/>
-                  Via Spinozzi, 15, 63074
-                  <br/>
-                  San Benedetto Del Tronto AP, Italy
-                  <br/>
-                </p>
+                <strong>Bank: Intesa Sanpaolo</strong>
+                <br/>
+                Via Spinozzi, 15, 63074
+                <br/>
+                San Benedetto Del Tronto AP, Italy
+                <br/>
               </div>
             </div>
           </div>
