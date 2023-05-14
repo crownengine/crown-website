@@ -77,16 +77,47 @@ export default function Download() {
     var urlSizeList = Releases[0].assets.map(function(data) {
       var separator = lastOS !== "" && lastOS !== getPackageOS(data.name)
       lastOS = getPackageOS(data.name)
+      var valid = lastOS !== "Unknown OS";
 
-      return lastOS !== "Unknown OS" ? {
-        os: getPackageOS(data.name),
-        arch: getPackageArch(data.name),
+      return {
+        valid: valid,
+        os: valid ? getPackageOS(data.name) : "",
+        arch: valid ? getPackageArch(data.name) : "",
         url: data.browser_download_url,
         size: data.size,
         separator: separator,
-        valid: lastOS !== "Unknown OS"
-      } : {};
+        order: 0
+      };
     });
+
+    urlSizeList.push({
+      valid: true,
+      os: "Linux",
+      arch: "x64",
+      url: "https://aur.archlinux.org/packages/crown",
+      size: 0,
+      separator: false,
+      alt: "AUR",
+      order: 1
+    });
+
+    urlSizeList.sort(function(a, b) {
+        if (a.os < b.os) {
+          return -1;
+        }
+        if (a.os > b.os) {
+          return 1;
+        }
+
+        if (a.order < b.order) {
+          return -1;
+        }
+        if (a.order > b.order) {
+          return 1;
+        }
+
+        return 0;
+      });
 
     return urlSizeList.map((data, index) => {
       return (
@@ -106,10 +137,8 @@ export default function Download() {
                   {data.os} <span className="text-gray-600">{data.arch}</span>
                 </div>
                 <div className="flex-1 text-right">
-                  {
-                    Math.floor(data.size / 1024 / 1024) + " MiB"
-                    + ", " + getPackageType(data.url)
-                  }
+                  {data.alt != null && data.alt}
+                  {data.alt == null && Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
                 </div>
               </div>
             </OutboundLink>
