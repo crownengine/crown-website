@@ -63,7 +63,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 51450005,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2024-10-10T21:38:27Z",
         "updated_at": "2024-10-10T21:38:31Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.50.0/crown-0.50.0-linux-x64.tar.gz"
