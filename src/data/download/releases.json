@@ -1,5 +1,147 @@
 [
   {
+    "url": "https://api.github.com/repos/crownengine/crown/releases/179429114",
+    "assets_url": "https://api.github.com/repos/crownengine/crown/releases/179429114/assets",
+    "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/179429114/assets{?name,label}",
+    "html_url": "https://github.com/crownengine/crown/releases/tag/v0.50.0",
+    "id": 179429114,
+    "author": {
+      "login": "dbartolini",
+      "id": 2070946,
+      "node_id": "MDQ6VXNlcjIwNzA5NDY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2070946?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dbartolini",
+      "html_url": "https://github.com/dbartolini",
+      "followers_url": "https://api.github.com/users/dbartolini/followers",
+      "following_url": "https://api.github.com/users/dbartolini/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dbartolini/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dbartolini/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dbartolini/subscriptions",
+      "organizations_url": "https://api.github.com/users/dbartolini/orgs",
+      "repos_url": "https://api.github.com/users/dbartolini/repos",
+      "events_url": "https://api.github.com/users/dbartolini/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dbartolini/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOAFEyY84Ksd76",
+    "tag_name": "v0.50.0",
+    "target_commitish": "master",
+    "name": "",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2024-10-10T16:10:19Z",
+    "published_at": "2024-10-10T21:39:35Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/crownengine/crown/releases/assets/198277100",
+        "id": 198277100,
+        "node_id": "RA_kwDOAFEyY84L0Xfs",
+        "name": "crown-0.50.0-linux-x64.tar.gz",
+        "label": null,
+        "uploader": {
+          "login": "dbartolini",
+          "id": 2070946,
+          "node_id": "MDQ6VXNlcjIwNzA5NDY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2070946?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dbartolini",
+          "html_url": "https://github.com/dbartolini",
+          "followers_url": "https://api.github.com/users/dbartolini/followers",
+          "following_url": "https://api.github.com/users/dbartolini/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dbartolini/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dbartolini/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dbartolini/subscriptions",
+          "organizations_url": "https://api.github.com/users/dbartolini/orgs",
+          "repos_url": "https://api.github.com/users/dbartolini/repos",
+          "events_url": "https://api.github.com/users/dbartolini/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dbartolini/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "content_type": "application/gzip",
+        "state": "uploaded",
+        "size": 51450005,
+        "download_count": 0,
+        "created_at": "2024-10-10T21:38:27Z",
+        "updated_at": "2024-10-10T21:38:31Z",
+        "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.50.0/crown-0.50.0-linux-x64.tar.gz"
+      },
+      {
+        "url": "https://api.github.com/repos/crownengine/crown/releases/assets/198277089",
+        "id": 198277089,
+        "node_id": "RA_kwDOAFEyY84L0Xfh",
+        "name": "crown-0.50.0-windows-x64.zip",
+        "label": null,
+        "uploader": {
+          "login": "dbartolini",
+          "id": 2070946,
+          "node_id": "MDQ6VXNlcjIwNzA5NDY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2070946?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dbartolini",
+          "html_url": "https://github.com/dbartolini",
+          "followers_url": "https://api.github.com/users/dbartolini/followers",
+          "following_url": "https://api.github.com/users/dbartolini/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dbartolini/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dbartolini/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dbartolini/subscriptions",
+          "organizations_url": "https://api.github.com/users/dbartolini/orgs",
+          "repos_url": "https://api.github.com/users/dbartolini/repos",
+          "events_url": "https://api.github.com/users/dbartolini/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dbartolini/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "content_type": "application/zip",
+        "state": "uploaded",
+        "size": 83377667,
+        "download_count": 0,
+        "created_at": "2024-10-10T21:38:20Z",
+        "updated_at": "2024-10-10T21:38:27Z",
+        "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.50.0/crown-0.50.0-windows-x64.zip"
+      },
+      {
+        "url": "https://api.github.com/repos/crownengine/crown/releases/assets/198277111",
+        "id": 198277111,
+        "node_id": "RA_kwDOAFEyY84L0Xf3",
+        "name": "SHA256SUMS",
+        "label": null,
+        "uploader": {
+          "login": "dbartolini",
+          "id": 2070946,
+          "node_id": "MDQ6VXNlcjIwNzA5NDY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2070946?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dbartolini",
+          "html_url": "https://github.com/dbartolini",
+          "followers_url": "https://api.github.com/users/dbartolini/followers",
+          "following_url": "https://api.github.com/users/dbartolini/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dbartolini/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dbartolini/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dbartolini/subscriptions",
+          "organizations_url": "https://api.github.com/users/dbartolini/orgs",
+          "repos_url": "https://api.github.com/users/dbartolini/repos",
+          "events_url": "https://api.github.com/users/dbartolini/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dbartolini/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "content_type": "application/octet-stream",
+        "state": "uploaded",
+        "size": 195,
+        "download_count": 0,
+        "created_at": "2024-10-10T21:38:31Z",
+        "updated_at": "2024-10-10T21:38:32Z",
+        "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.50.0/SHA256SUMS"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.50.0",
+    "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.50.0",
+    "body": "[Changelog](https://docs.crownengine.org/html/latest/changelog.html#oct-2024)"
+  },
+  {
     "url": "https://api.github.com/repos/crownengine/crown/releases/131632082",
     "assets_url": "https://api.github.com/repos/crownengine/crown/releases/131632082/assets",
     "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/131632082/assets{?name,label}",
@@ -63,7 +205,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 47799099,
-        "download_count": 0,
+        "download_count": 221,
         "created_at": "2023-11-27T21:18:25Z",
         "updated_at": "2023-11-27T21:18:31Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.49.0/crown-0.49.0-linux-x64.tar.gz"
@@ -97,7 +239,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 78769617,
-        "download_count": 0,
+        "download_count": 761,
         "created_at": "2023-11-27T21:18:31Z",
         "updated_at": "2023-11-27T21:18:39Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.49.0/crown-0.49.0-windows-x64.zip"
@@ -131,7 +273,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 195,
-        "download_count": 0,
+        "download_count": 10,
         "created_at": "2023-11-27T21:18:39Z",
         "updated_at": "2023-11-27T21:18:39Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.49.0/SHA256SUMS"
@@ -205,7 +347,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 47450900,
-        "download_count": 72,
+        "download_count": 78,
         "created_at": "2023-07-31T22:49:50Z",
         "updated_at": "2023-07-31T22:49:56Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.48.0/crown-0.48.0-linux-x64.tar.gz"
@@ -239,7 +381,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 85131180,
-        "download_count": 184,
+        "download_count": 192,
         "created_at": "2023-07-31T22:49:56Z",
         "updated_at": "2023-07-31T22:50:05Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.48.0/crown-0.48.0-windows-x64.zip"
@@ -273,7 +415,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 195,
-        "download_count": 9,
+        "download_count": 14,
         "created_at": "2023-07-31T22:50:05Z",
         "updated_at": "2023-07-31T22:50:05Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.48.0/SHA256SUMS"
@@ -359,7 +501,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 10092005,
-        "download_count": 18,
+        "download_count": 23,
         "created_at": "2023-02-07T00:13:36Z",
         "updated_at": "2023-02-07T00:13:43Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.47.0/crown-0.47.0-android-arm.tar.gz"
@@ -393,7 +535,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 10137372,
-        "download_count": 14,
+        "download_count": 19,
         "created_at": "2023-02-07T00:13:43Z",
         "updated_at": "2023-02-07T00:13:49Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.47.0/crown-0.47.0-android-arm64.tar.gz"
@@ -427,7 +569,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 25447377,
-        "download_count": 114,
+        "download_count": 120,
         "created_at": "2023-02-07T00:13:49Z",
         "updated_at": "2023-02-07T00:14:05Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.47.0/crown-0.47.0-linux-x64.tar.gz"
@@ -461,7 +603,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36700674,
-        "download_count": 278,
+        "download_count": 286,
         "created_at": "2023-02-07T00:14:05Z",
         "updated_at": "2023-02-07T00:14:27Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.47.0/crown-0.47.0-windows-x64.zip"
@@ -495,7 +637,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 397,
-        "download_count": 9,
+        "download_count": 13,
         "created_at": "2023-02-07T00:14:27Z",
         "updated_at": "2023-02-07T00:14:27Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.47.0/SHA256SUMS"
@@ -569,7 +711,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9957176,
-        "download_count": 32,
+        "download_count": 36,
         "created_at": "2021-11-19T23:00:36Z",
         "updated_at": "2021-11-19T23:00:43Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.46.0/crown-0.46.0-android-arm.tar.gz"
@@ -603,7 +745,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9941656,
-        "download_count": 24,
+        "download_count": 28,
         "created_at": "2021-11-19T23:00:30Z",
         "updated_at": "2021-11-19T23:00:36Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.46.0/crown-0.46.0-android-arm64.tar.gz"
@@ -637,7 +779,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 23236083,
-        "download_count": 247,
+        "download_count": 253,
         "created_at": "2021-11-19T23:00:26Z",
         "updated_at": "2021-11-19T23:00:30Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.46.0/crown-0.46.0-linux-x64.tar.gz"
@@ -671,7 +813,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36930215,
-        "download_count": 500,
+        "download_count": 507,
         "created_at": "2021-11-19T23:00:06Z",
         "updated_at": "2021-11-19T23:00:26Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.46.0/crown-0.46.0-windows-x64.zip"
@@ -705,7 +847,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 389,
-        "download_count": 16,
+        "download_count": 18,
         "created_at": "2021-11-19T23:00:05Z",
         "updated_at": "2021-11-19T23:00:06Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.46.0/SHA256SUMS"
@@ -779,7 +921,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9957096,
-        "download_count": 10,
+        "download_count": 13,
         "created_at": "2021-07-30T15:52:17Z",
         "updated_at": "2021-07-30T15:52:20Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.45.0/crown-0.45.0-android-arm.tar.gz"
@@ -813,7 +955,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9941397,
-        "download_count": 13,
+        "download_count": 17,
         "created_at": "2021-07-30T15:52:20Z",
         "updated_at": "2021-07-30T15:52:21Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.45.0/crown-0.45.0-android-arm64.tar.gz"
@@ -847,7 +989,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 23235983,
-        "download_count": 66,
+        "download_count": 73,
         "created_at": "2021-07-30T15:52:21Z",
         "updated_at": "2021-07-30T15:52:23Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.45.0/crown-0.45.0-linux-x64.tar.gz"
@@ -881,7 +1023,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36929131,
-        "download_count": 175,
+        "download_count": 184,
         "created_at": "2021-07-30T15:52:23Z",
         "updated_at": "2021-07-30T15:52:26Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.45.0/crown-0.45.0-windows-x64.zip"
@@ -915,7 +1057,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 389,
-        "download_count": 9,
+        "download_count": 12,
         "created_at": "2021-07-30T15:52:26Z",
         "updated_at": "2021-07-30T15:52:27Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.45.0/SHA256SUMS"
@@ -989,7 +1131,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9957798,
-        "download_count": 10,
+        "download_count": 15,
         "created_at": "2021-05-13T21:16:28Z",
         "updated_at": "2021-05-13T21:16:31Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.44.0/crown-0.44.0-android-arm.tar.gz"
@@ -1023,7 +1165,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9941751,
-        "download_count": 12,
+        "download_count": 17,
         "created_at": "2021-05-13T21:16:31Z",
         "updated_at": "2021-05-13T21:16:33Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.44.0/crown-0.44.0-android-arm64.tar.gz"
@@ -1057,7 +1199,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 23234579,
-        "download_count": 53,
+        "download_count": 58,
         "created_at": "2021-05-13T21:16:33Z",
         "updated_at": "2021-05-13T21:16:40Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.44.0/crown-0.44.0-linux-x64.tar.gz"
@@ -1091,7 +1233,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36925872,
-        "download_count": 84,
+        "download_count": 90,
         "created_at": "2021-05-13T21:16:40Z",
         "updated_at": "2021-05-13T21:16:45Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.44.0/crown-0.44.0-windows-x64.zip"
@@ -1125,7 +1267,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 389,
-        "download_count": 9,
+        "download_count": 13,
         "created_at": "2021-05-13T21:16:45Z",
         "updated_at": "2021-05-13T21:16:45Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.44.0/SHA256SUMS"
@@ -1199,7 +1341,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9954237,
-        "download_count": 8,
+        "download_count": 11,
         "created_at": "2021-04-17T00:51:34Z",
         "updated_at": "2021-04-17T00:51:37Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.43.0/crown-0.43.0-android-arm.tar.gz"
@@ -1233,7 +1375,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9720503,
-        "download_count": 9,
+        "download_count": 12,
         "created_at": "2021-04-17T00:51:37Z",
         "updated_at": "2021-04-17T00:51:38Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.43.0/crown-0.43.0-android-arm64.tar.gz"
@@ -1267,7 +1409,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 22825173,
-        "download_count": 32,
+        "download_count": 35,
         "created_at": "2021-04-17T00:51:38Z",
         "updated_at": "2021-04-17T00:51:40Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.43.0/crown-0.43.0-linux-x64.tar.gz"
@@ -1301,7 +1443,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36545218,
-        "download_count": 38,
+        "download_count": 45,
         "created_at": "2021-04-17T00:51:40Z",
         "updated_at": "2021-04-17T00:51:51Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.43.0/crown-0.43.0-windows-x64.zip"
@@ -1335,7 +1477,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 389,
-        "download_count": 7,
+        "download_count": 11,
         "created_at": "2021-04-17T00:51:51Z",
         "updated_at": "2021-04-17T00:51:51Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.43.0/SHA256SUMS"
@@ -1409,7 +1551,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9928263,
-        "download_count": 7,
+        "download_count": 11,
         "created_at": "2021-03-05T17:42:52Z",
         "updated_at": "2021-03-05T17:44:17Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.42.0/crown-0.42.0-android-arm.tar.gz"
@@ -1443,7 +1585,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 9689353,
-        "download_count": 8,
+        "download_count": 12,
         "created_at": "2021-03-05T17:44:18Z",
         "updated_at": "2021-03-05T17:45:48Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.42.0/crown-0.42.0-android-arm64.tar.gz"
@@ -1477,7 +1619,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 22747647,
-        "download_count": 30,
+        "download_count": 34,
         "created_at": "2021-03-05T17:45:48Z",
         "updated_at": "2021-03-05T17:49:03Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.42.0/crown-0.42.0-linux-x64.tar.gz"
@@ -1511,7 +1653,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36479006,
-        "download_count": 52,
+        "download_count": 58,
         "created_at": "2021-03-05T17:49:03Z",
         "updated_at": "2021-03-05T17:54:03Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.42.0/crown-0.42.0-windows-x64.zip"
@@ -1545,7 +1687,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 389,
-        "download_count": 7,
+        "download_count": 14,
         "created_at": "2021-03-05T17:54:03Z",
         "updated_at": "2021-03-05T17:54:04Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.42.0/SHA256SUMS"
@@ -1619,7 +1761,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 22598060,
-        "download_count": 30,
+        "download_count": 33,
         "created_at": "2021-01-16T16:05:03Z",
         "updated_at": "2021-01-16T16:08:47Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.41.0/crown-0.41.0-linux-x64.tar.gz"
@@ -1653,7 +1795,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36217106,
-        "download_count": 52,
+        "download_count": 59,
         "created_at": "2021-01-16T16:08:47Z",
         "updated_at": "2021-01-16T16:13:59Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.41.0/crown-0.41.0-windows-x64.zip"
@@ -1687,7 +1829,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 191,
-        "download_count": 6,
+        "download_count": 10,
         "created_at": "2021-01-16T16:13:59Z",
         "updated_at": "2021-01-16T16:14:01Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.41.0/SHA256SUMS"
@@ -1761,7 +1903,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 22591584,
-        "download_count": 15,
+        "download_count": 18,
         "created_at": "2021-01-06T14:59:59Z",
         "updated_at": "2021-01-06T15:03:15Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.40.0/crown-0.40.0-linux-x64.tar.gz"
@@ -1795,7 +1937,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 36205348,
-        "download_count": 12,
+        "download_count": 18,
         "created_at": "2021-01-06T15:03:15Z",
         "updated_at": "2021-01-06T15:08:44Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.40.0/crown-0.40.0-windows-x64.zip"
@@ -1829,7 +1971,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 191,
-        "download_count": 6,
+        "download_count": 10,
         "created_at": "2021-01-06T15:08:44Z",
         "updated_at": "2021-01-06T15:08:45Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.40.0/SHA256SUMS"
@@ -1903,7 +2045,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 23550467,
-        "download_count": 44,
+        "download_count": 49,
         "created_at": "2020-10-26T16:17:01Z",
         "updated_at": "2020-10-26T16:20:22Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.39.0/crown-0.39.0-linux-x64.tar.gz"
@@ -1937,7 +2079,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 33699820,
-        "download_count": 62,
+        "download_count": 72,
         "created_at": "2020-10-24T20:00:32Z",
         "updated_at": "2020-10-24T20:05:53Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.39.0/crown-0.39.0-windows-x64.zip"
@@ -1971,7 +2113,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 191,
-        "download_count": 12,
+        "download_count": 15,
         "created_at": "2020-10-26T16:20:22Z",
         "updated_at": "2020-10-26T16:20:23Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.39.0/SHA256SUMS"
@@ -2045,7 +2187,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 23364623,
-        "download_count": 39,
+        "download_count": 45,
         "created_at": "2020-08-24T02:42:53Z",
         "updated_at": "2020-08-24T02:46:08Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.38.0/crown-0.38.0-linux-x64.tar.gz"
@@ -2079,7 +2221,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 96,
-        "download_count": 9,
+        "download_count": 14,
         "created_at": "2020-08-24T02:46:08Z",
         "updated_at": "2020-08-24T02:46:09Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.38.0/SHA256SUMS"
@@ -2153,7 +2295,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 23340565,
-        "download_count": 46,
+        "download_count": 53,
         "created_at": "2020-06-26T21:09:12Z",
         "updated_at": "2020-06-26T21:13:05Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.37.0/crown-0.37.0-linux-x64.tar.gz"
@@ -2187,7 +2329,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 96,
-        "download_count": 11,
+        "download_count": 15,
         "created_at": "2020-06-26T21:09:11Z",
         "updated_at": "2020-06-26T21:09:12Z",
         "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.37.0/SHA256SUMS"
