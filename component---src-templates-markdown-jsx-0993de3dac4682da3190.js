@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcrown_website=self.webpackChunkcrown_website||[]).push([[91],{403:function(e,t,n){n.r(t),n.d(t,{default:function(){return m}});var r=n(7294),a=n(2390),l=n(2059);function m(e){var t=e.data.markdownRemark,n=t.frontmatter,m=t.html;return r.createElement(a.Z,null,r.createElement(l.Z,{title:n.title}),r.createElement("div",{className:"markdown mb-4 mx-2 lg:mx-32 text-justify break-words",dangerouslySetInnerHTML:{__html:m}}))}}}]);
-//# sourceMappingURL=component---src-templates-markdown-jsx-0993de3dac4682da3190.js.map
