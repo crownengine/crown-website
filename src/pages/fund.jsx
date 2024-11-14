@@ -7,14 +7,21 @@ export default function Fund() {
   return (
     <Layout>
       <Seo title="Donations" />
-      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
+      <div className="bg-gradient-to-b from-gray-900 to-gray-800">
       <Clamp>
-      <section className="py-16 px-4">
-        <h2 className="text-5xl mb-12 font-semibold text-gray-300">
-          Donations
+      <section className="py-24 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
+        <h2 className="text-6xl mb-6 font-bold text-transparent">
+          Help Crown grow
+          <br/>
+          Stronger and Faster
         </h2>
+        <p className="text-2xl mb-24 text-gray-300">
+          Donations support Core Contributors at The Crown Foundation
+          <br/>
+          working on Features, Maintenance and Improvements &#x1F970;
+        </p>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 mb-10">
           <div className="flex flex-col sm:flex-row gap-6">
             {/* GitHub Sponsors */}
             <div className="flex-1 rounded-lg shadow-lg p-6 bg-github-pink text-gray-800">
@@ -51,7 +58,7 @@ export default function Fund() {
                   "
                 href="https://github.com/sponsors/crownengine"
               >
-                Become a sponsor
+                Become a Sponsor!
               </a>
             </div>
 
@@ -63,9 +70,7 @@ export default function Fund() {
               <div className="flex flex-col sm:flex-row">
                 <div className="flex-1 mb-6">
                   <p>
-                    The Crown Foundation accepts donations via PayPal.
-                    <br/>
-                    Pay with debit or credit cards.
+                    We happily accept donations via PayPal. Pay with debit or credit cards!
                   </p>
                 </div>
 
@@ -114,19 +119,6 @@ export default function Fund() {
                 <br/>
               </div>
             </div>
-          </div>
-
-          {/* Benevity */}
-          <div className="flex-1 rounded-lg shadow-lg p-6 bg-blue-400">
-            <h2 className="text-3xl mb-2 font-semibold">
-              Benevity
-            </h2>
-            <h3 className="mb-6">
-              Benevity is especially recommended if your employer matches donations!
-            </h3>
-            <a href="https://causes.benevity.org/causes/380-5650161165040_e6e4" className="underline">
-              Benevity Website
-            </a>
           </div>
 
         </div>

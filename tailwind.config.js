@@ -15,6 +15,10 @@ module.exports = {
       width: {
         '5/11': '45.4545454%',
       },
+      backgroundImage: {
+        bannerImage: "url('../images/index/crown-editor.png')",
+        blackOverlay: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8))",
+	  }
     },
   },
   variants: {

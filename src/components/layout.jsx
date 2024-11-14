@@ -1,7 +1,7 @@
 import React from "react"
 import Footer from "./footer"
 import Header from "./header"
-import favicon from "../images/crown-logo-kit/square/512x512/apps/crown.png"
+import favicon from "../images/crown-logo-kit/crown-black-socket.svg"
 import Helmet from 'react-helmet'
 
 export default function Layout({ children }) {
@@ -11,13 +11,11 @@ export default function Layout({ children }) {
         <link rel="icon" type="image/png" href={favicon} />
       </Helmet>
       <div className="dark:text-white bg-gray-100 dark:bg-gray-800">
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <Header />
+      <main>
+      {children}
+      </main>
+      <Footer />
       </div>
     </>
   )

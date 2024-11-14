@@ -18,7 +18,7 @@ export default function Footer() {
 
   return (
     <div className="mt-auto bg-gray-300 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
-    <Clamp>
+      <Clamp>
       <div className="flex">
         <div className="flex-1">
           <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
@@ -210,7 +210,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-    </Clamp>
+      </Clamp>
     </div>
   )
 }

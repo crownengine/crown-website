@@ -173,11 +173,11 @@ export default function Download() {
   return (
     <Layout>
       <Seo title="Download" />
-      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover py-16">
+      <div className="bg-gradient-to-b from-green-800 to-gray-800">
       <Clamp>
-      <section className="py-12 px-4 text-center">
-        <div className="w-full max-w-2xl mx-auto">
-          <h1 className="text-5xl text-center mt-2 mb-10 leading-tight font-semibold text-gray-200">
+      <section className="py-24 px-4 text-center">
+        <div className="w-full max-w-2xl mx-auto mb-32">
+          <h1 className="text-6xl text-center mt-2 mb-24 font-bold text-gray-300">
             Let Your Game Begin
           </h1>
 
@@ -204,7 +204,7 @@ export default function Download() {
               <li className="text-gray-200">•</li>
               <li>
                 <a
-                  className="text-gray-200 hover:underline font-bold"
+                  className="text-gray-200 underline font-bold"
                   rel="noreferrer"
                   target="_blank"
                   href="https://docs.crownengine.org/html/latest/changelog.html"
@@ -215,55 +215,65 @@ export default function Download() {
             </ul>
           </div>
         </div>
-      </section>
 
-      {/* All Versions */}
-      <section className="w-3/4 lg:w-1/2 mx-auto">
-        <h2 className="text-xl text-center mt-2 mb-10 leading-tight font-semibold text-gray-200">
-          Other Platforms and Versions
-        </h2>
-        <div className="px-4 py-4 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
-            { downloadEntries() }
-            { listSeparator() }
-            {
-              <OutboundLink
-                rel="noreferrer"
-                target="_blank"
-                href={Releases[0].tarball_url}
-              >
-                <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                  <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                    <i className="mr-2 fas fa-code"></i>
-                  </div>
-                  <div className="flex-1 text-left">
-                    Source Code
-                  </div>
-                  <div className="flex-1 text-right">
-                    {getPackageType("gz")}
-                  </div>
+        {/* All Versions */}
+        <div className="container mx-auto mb-4 px-4 py-4 w-6/12 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
+          <h2 className="text-xl text-center mb-4 leading-tight font-semibold text-gray-200">
+            Other Platforms and Versions
+          </h2>
+          { downloadEntries() }
+          { listSeparator() }
+          {
+            <OutboundLink
+              rel="noreferrer"
+              target="_blank"
+              href={Releases[0].tarball_url}
+            >
+              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
+                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                  <i className="mr-2 fas fa-code"></i>
                 </div>
-              </OutboundLink>
-            }
-            {
-              <OutboundLink
-                rel="noreferrer"
-                target="_blank"
-                href={Releases[0].zipball_url}
-              >
-                <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                  <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                    <i className="mr-2 fas fa-code"></i>
-                  </div>
-                  <div className="flex-1 text-left">
-                    Source Code
-                  </div>
-                  <div className="flex-1 text-right">
-                    {getPackageType("zip")}
-                  </div>
+                <div className="flex-1 text-left">
+                  Source Code
                 </div>
-              </OutboundLink>
-            }
-        </div>
+                <div className="flex-1 text-right">
+                  {getPackageType("gz")}
+                </div>
+              </div>
+            </OutboundLink>
+          }
+          {
+            <OutboundLink
+              rel="noreferrer"
+              target="_blank"
+              href={Releases[0].zipball_url}
+            >
+              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
+                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                  <i className="mr-2 fas fa-code"></i>
+                </div>
+                <div className="flex-1 text-left">
+                  Source Code
+                </div>
+                <div className="flex-1 text-right">
+                  {getPackageType("zip")}
+                </div>
+              </div>
+            </OutboundLink>
+          }
+      </div>
+
+      <p className="text-m text-center mb-24 leading-tight font-semibold text-gray-200">
+        Looking for <a
+            className="text-gray-200 underline font-bold"
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/crownengine/crown/releases"
+          >
+            previous versions
+          </a>?
+      </p>
+
       </section>
       </Clamp>
       </div>
