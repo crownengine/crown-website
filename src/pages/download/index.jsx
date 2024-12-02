@@ -74,7 +74,7 @@ export default function Download() {
 
   function downloadEntries() {
     var lastOS = ""
-    var urlSizeList = Releases[0].assets.map(function(data) {
+    var urlSizeList = Releases.assets.map(function(data) {
       var separator = lastOS !== "" && lastOS !== getPackageOS(data.name)
       lastOS = getPackageOS(data.name)
       var valid = lastOS !== "Unknown OS";
@@ -166,8 +166,8 @@ export default function Download() {
       }
     }
 
-    setCrownVersion(Releases[0].tag_name)
-    setDownloadDetails(Releases[0].assets)
+    setCrownVersion(Releases.tag_name)
+    setDownloadDetails(Releases.assets)
   }, [])
 
   return (
@@ -227,7 +227,7 @@ export default function Download() {
             <OutboundLink
               rel="noreferrer"
               target="_blank"
-              href={Releases[0].tarball_url}
+              href={Releases.tarball_url}
             >
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
@@ -246,7 +246,7 @@ export default function Download() {
             <OutboundLink
               rel="noreferrer"
               target="_blank"
-              href={Releases[0].zipball_url}
+              href={Releases.zipball_url}
             >
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
