@@ -12,7 +12,7 @@ module.exports = {
     siteUrl: `https://www.crownengine.org`,
     title: `Crown`,
     subtitle: `The Flexible Game Engine`,
-    description: `General purpose data-driven game engine.`,
+    description: `Crown is a complete and cross-platform game engine designed for flexibility, performance, and fast-iterations.`,
     org_title: `The Crown Foundation`,
     tcf_mail_address: `foundation@crownengine.org`,
   },
