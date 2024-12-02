@@ -17,7 +17,6 @@ module.exports = {
     tcf_mail_address: `foundation@crownengine.org`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

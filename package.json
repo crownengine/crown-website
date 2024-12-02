@@ -15,31 +15,31 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "gatsby": "^4.6.2",
-    "gatsby-plugin-google-gtag": "^4.6.0",
-    "gatsby-plugin-image": "2.6.0",
-    "gatsby-plugin-manifest": "^4.6.0",
-    "gatsby-plugin-offline": "^5.6.0",
-    "gatsby-plugin-postcss": "^5.6.0",
-    "gatsby-plugin-react-helmet": "^5.6.0",
-    "gatsby-plugin-robots-txt": "^1.7.0",
-    "gatsby-plugin-sharp": "^4.6.0",
-    "gatsby-plugin-sitemap": "^5.6.0",
-    "gatsby-source-filesystem": "^4.6.0",
-    "gatsby-transformer-remark": "^5.6.0",
-    "gatsby-transformer-sharp": "^4.6.0",
-    "postcss": "^8.4.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@fortawesome/fontawesome-free": "^6.7.1",
+    "gatsby": "^5.14.0",
+    "gatsby-plugin-google-gtag": "^5.14.0",
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-offline": "^6.14.0",
+    "gatsby-plugin-postcss": "^6.14.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-plugin-sitemap": "^6.14.0",
+    "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-remark": "^6.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
+    "postcss": "^8.4.49",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.3.1"
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
-    "gh-pages":"^3.2.3",
-    "html-loader": "^3.1.0",
-    "prettier": "2.5.1",
-    "tailwindcss": "^3.0.18"
+    "ajv": "^8.17.1",
+    "gh-pages": "^6.2.0",
+    "html-loader": "^5.1.0",
+    "prettier": "^3.4.1",
+    "tailwindcss": "^3.4.15"
   },
   "keywords": [
     "gatsby"
