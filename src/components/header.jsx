@@ -19,6 +19,7 @@ export default function Header() {
           <button
             className="navbar-burger flex items-center py-2 px-4 text-indigo-500 dark:text-indigo-200rounded border border-indigo-500"
             onClick={menuClick}
+            aria-label="Menu"
           >
             <svg
               className="fill-current h-3 w-3"
