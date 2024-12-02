@@ -154,7 +154,7 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="https://github.com/crownengine/crown/"
-                title="GitHub"
+                title="Crown Official GitHub page"
               >
                 <i className="fab fa-github mr-2"></i>
                 GitHub
@@ -163,7 +163,7 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="https://discord.gg/invite/CeXVWCT"
-                title="Discord"
+                title="Join Crown on Discord"
               >
                 <i className="fab fa-discord mr-2"></i>
                 Discord
@@ -172,10 +172,10 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="https://www.twitter.com/crown_engine"
-                title="Twitter"
+                title="Follow Crown on X"
               >
-                <i className="fab fa-twitter mr-2"></i>
-                Twitter
+                <i className="fab fa-x-twitter mr-2"></i>
+                X
               </a>
               {/* Uncomment when content will be available.
               <a
