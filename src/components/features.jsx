@@ -45,7 +45,7 @@ export default function Features() {
           <i className="fas fa-feather fa-2x text-indigo-600 dark:text-indigo-200"></i>
           <h3 className="text-2xl my-3 font-bold text-gray-700">Lightweight codebase</h3>
           <p className="text-gray-700 dark:text-gray-50 leading-relaxed sm:mx-0 mx-10">
-            Engine plus tools amounts to less than 50K LOC. Written in simple
+            Engine plus tools amounts to less than 60K LOC. Written in simple
             'C-style' C++. It is easy for anyone to understand and make
             modifications.
           </p>
