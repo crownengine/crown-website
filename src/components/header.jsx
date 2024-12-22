@@ -38,8 +38,9 @@ export default function Header() {
               <Link
                 className="border-b-2 border-transparent block py-2 pr-4 pl-3"
                 activeClassName="border-b-2 border-indigo-600"
-                to="/download">
-                  Download
+                to="/download"
+              >
+                Download
               </Link>
             </li>
 
@@ -47,8 +48,9 @@ export default function Header() {
               <Link
                 className="block py-2 pr-4 pl-3"
                 activeClassName="border-b-2 border-indigo-600"
-                to="/support">
-                  Support
+                to="/support"
+              >
+                Support
               </Link>
             </li>
 
@@ -56,13 +58,15 @@ export default function Header() {
               <Link
                 className="block py-2 pr-4 pl-3"
                 activeClassName="border-b-2 border-indigo-600"
-                to="/about">
-                  About
-                </Link>
+                to="/about"
+              >
+                About
+              </Link>
             </li>
 
             <li>
-              <Link className="block py-2 pr-4 pl-3
+              <Link
+                className="block py-2 pr-4 pl-3
 
                        hover:text-white
                   dark:hover:bg-indigo-400

@@ -8,13 +8,13 @@ export default function CookiePolicy() {
   return (
     <Layout pageInfo={{ pageName: "cookie-policy" }}>
       <Seo title="Cookie Policy" />
-        <Clamp>
-          <div
-            className="lexdo text-justify break-words px-4 py-16"
-            dangerouslySetInnerHTML={{
-              __html: content,
-            }}
-          ></div>
+      <Clamp>
+        <div
+          className="lexdo text-justify break-words px-4 py-16"
+          dangerouslySetInnerHTML={{
+            __html: content,
+          }}
+        ></div>
       </Clamp>
     </Layout>
   )

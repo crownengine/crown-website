@@ -1,4 +1,5 @@
 import { graphql } from "gatsby"
+import PropTypes from "prop-types"
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -18,8 +19,19 @@ export default function MDTemplate({ data }) {
   )
 }
 
+MDTemplate.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }).isRequired,
+      html: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+}
+
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {

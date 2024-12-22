@@ -1,8 +1,8 @@
 import React from "react"
+import Clamp from "../components/clamp"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import content from "../data/html/privacy_policy.html"
-import Clamp from "../components/clamp"
 
 export default function PrivacyPolicy() {
   return (
