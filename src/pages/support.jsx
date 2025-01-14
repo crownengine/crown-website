@@ -18,7 +18,7 @@ export default function Support() {
                 <p className="mb-2 text-gray-700">Crown's manual is available online.</p>
                 <ul className="list-disc list-inside pl-6">
                   <li>
-                    <a className="text-indigo-500" href="https://docs.crownengine.org/html/latest">
+                    <a className="text-indigo-500" href="https://docs.crownengine.org/html/latest/introduction.html">
                       <u>User Manual</u>
                     </a>
                   </li>
