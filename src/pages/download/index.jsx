@@ -217,7 +217,7 @@ export default function Download() {
         </div>
 
         {/* All Versions */}
-        <div className="container mx-auto mb-4 px-4 py-4 w-6/12 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
+        <div className="container mx-auto mb-4 px-4 py-4 w-10/12 sm:w-9/12 md:w-8/12 xl:w-6/12 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
           <h2 className="text-xl text-center mb-4 leading-tight font-semibold text-gray-200">
             Other Platforms and Versions
           </h2>
