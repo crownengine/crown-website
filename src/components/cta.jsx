@@ -1,6 +1,7 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Clamp from "./clamp"
+import DownloadButton from "../components/download-button"
 
 export default function Cta() {
   const data = useStaticQuery(graphql`
@@ -27,12 +28,7 @@ export default function Cta() {
               designed for flexibility, performance and fast-iterations.
             </p>
             <div className="text-2xl">
-              <Link
-                className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white dark:text-black bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded shadow"
-                to="/download"
-              >
-                Download Crown
-              </Link>
+              <DownloadButton></DownloadButton>
             </div>
           </section>
         </Clamp>

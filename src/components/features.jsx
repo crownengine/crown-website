@@ -1,10 +1,11 @@
 import React from "react"
 import Clamp from "./clamp"
+import DownloadButton from "../components/download-button"
 
 export default function Features() {
   return (
     <Clamp>
-      <section className="py-32 px-4 sm:text-left text-center">
+      <section className="mt-32 mb-16 px-4 sm:text-left text-center">
         <div className="flex flex-wrap -mx-4 -mb-6">
           <div className="lg:w-1/3 px-4 mb-6">
             <i className="fas fa-file-lines fa-2x text-indigo-600 dark:text-indigo-200"></i>
@@ -52,6 +53,11 @@ export default function Features() {
               Develop on your favorite desktop platform and ship to Android, HTML5, Linux or Windows.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="flex mb-16 justify-center">
+        <div>
+          <DownloadButton></DownloadButton>
         </div>
       </section>
     </Clamp>
