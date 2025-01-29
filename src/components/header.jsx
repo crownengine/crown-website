@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import Clamp from "./clamp"
+import DonateButton from "../components/donate-button"
 
 export default function Header() {
   function menuClick() {
@@ -65,25 +66,8 @@ export default function Header() {
             </li>
 
             <li>
-              <Link
-                className="block py-2 pr-4 pl-3
-
-                       hover:text-white
-                  dark:hover:bg-indigo-400
-                       text-white
-                  dark:text-black
-
-                        bg-indigo-600
-                   dark:bg-indigo-500
-                  hover:bg-indigo-700
-
-                  rounded
-                  shadow
-                  "
-                to="/fund"
-              >
-                <i className="fa fa-heart mr-2"></i>Donate
-              </Link>
+              <DonateButton>
+              </DonateButton>
             </li>
           </ul>
         </div>

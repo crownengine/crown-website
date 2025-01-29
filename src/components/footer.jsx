@@ -1,6 +1,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 import Clamp from "./clamp"
+import DonateButton from "../components/donate-button"
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
@@ -30,6 +31,9 @@ export default function Footer() {
                 </Link>
                 <a rel="noreferrer" target="_blank" href="https://github.com/crownengine/crown/">
                   Source Code
+                </a>
+                <a rel="noreferrer" target="_blank" href="https://docs.crownengine.org/html/latest/changelog.html">
+                  Changelog
                 </a>
                 <Link className="" to="/crown-license">
                   License
@@ -84,23 +88,20 @@ export default function Footer() {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://docs.crownengine.org/html/latest/"
+                  href="https://docs.crownengine.org/html/latest/introduction.html"
                 >
                   User Manual
                 </a>
-                <a rel="noreferrer" target="_blank" href="https://trello.com/b/h88kbJNm/crown/">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://docs.crownengine.org/html/latest/hackers/index.html"
+                >
+                  Developer Manual
+                </a>
+                <a rel="noreferrer" target="_blank" href="https://discord.gg/invite/CeXVWCT">
                   Community
                 </a>
-              </div>
-            </nav>
-
-            {/* Donate */}
-            <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
-              Donate
-            </h1>
-            <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
-                <Link to="/fund">One-time Donations</Link>
               </div>
             </nav>
           </div>
@@ -111,15 +112,14 @@ export default function Footer() {
               Follow Crown
             </h1>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
+              <div className="flex flex-row sm:text-left text-lg text-center text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
                 <a
                   rel="noreferrer"
                   target="_blank"
                   href="https://github.com/crownengine/crown/"
                   title="Crown Official GitHub page"
                 >
-                  <i className="fab fa-github mr-2"></i>
-                  GitHub
+                  <i className="fab fa-github mr-3"></i>
                 </a>
                 <a
                   rel="noreferrer"
@@ -127,8 +127,7 @@ export default function Footer() {
                   href="https://discord.gg/invite/CeXVWCT"
                   title="Join Crown on Discord"
                 >
-                  <i className="fab fa-discord mr-2"></i>
-                  Discord
+                  <i className="fab fa-discord mr-3"></i>
                 </a>
                 <a
                   rel="noreferrer"
@@ -136,7 +135,7 @@ export default function Footer() {
                   href="https://www.twitter.com/crown_engine"
                   title="Follow Crown on X"
                 >
-                  <i className="fab fa-x-twitter mr-2"></i>X
+                  <i className="fab fa-x-twitter mr-3"></i>
                 </a>
                 {/* Uncomment when content will be available.
               <a
@@ -146,9 +145,17 @@ export default function Footer() {
                 title="YouTube"
               >
                 <i className="fab fa-youtube mr-2"></i>
-                YouTube
               </a>
 */}
+              </div>
+            </nav>
+            {/* Donate */}
+            <h1 className="mt-4 font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+              Support Crown
+            </h1>
+            <nav className="mb-2">
+              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
+                <DonateButton></DonateButton>
               </div>
             </nav>
           </div>
