@@ -43,20 +43,12 @@ export default function Support() {
               <div className="rounded-lg shadow-lg p-6 text-lg bg-gray-200">
                 <h2 className="text-4xl mb-2 font-semibold text-gray-700">Community</h2>
                 <p className="mb-2 text-gray-700">
-                  Join the Crown community chat and discussion board to get development support.
+                  Join the Crown community chat to get development support.
                 </p>
                 <ul className="list-disc list-inside pl-6">
                   <li>
                     <a className="text-indigo-500" href="https://discord.gg/invite/CeXVWCT">
                       <u>Discord</u>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-indigo-500"
-                      href="https://github.com/crownengine/crown/discussions"
-                    >
-                      <u>GitHub Discussions</u>
                     </a>
                   </li>
                 </ul>
