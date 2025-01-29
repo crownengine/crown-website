@@ -44,15 +44,15 @@ export default function About() {
                   <p className="mb-6 text-gray-700">Your donations go towards:</p>
                   <ul className="list-disk list-inside mb-6 text-gray-700">
                     <li>
-                      * Core Contributors: Helping us grow the team with competitive salaries for
+                      <b>Core Contributors</b>: Helping us grow the team with competitive salaries for
                       full-time developers.
                     </li>
                     <li>
-                      * Infrastructure: Covering the costs of servers, tools, and other essential
+                      <b>Infrastructure</b>: Covering the costs of servers, tools, and other essential
                       overheads.
                     </li>
                     <li>
-                      * Outreach & Education: Creating tutorials, organizing events, and supporting
+                      <b>Outreach & Education</b>: Creating tutorials, organizing events, and supporting
                       educational initiatives for budding game engine developers.
                     </li>
                   </ul>
@@ -77,17 +77,17 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
-                  <h2 className="text-4xl mb-6 font-semibold">Board Members</h2>
-                  <p className="mb-8 text-gray-700">
-                    <ul>
-                      <li>Daniele Bartolini (Founder and president)</li>
-                      <li>Michele Rossi (Founder and vice-president)</li>
-                      <li>Alessio Bianchetti (Founder)</li>
-                      <li>Simone Gazzoli (Founder)</li>
-                    </ul>
-                  </p>
-                </div>
+              </div>
+              <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
+                <h2 className="text-4xl mb-6 font-semibold">Board Members</h2>
+                <p className="mb-8 text-gray-700">
+                  <ul>
+                    <li>Daniele Bartolini (Founder and president)</li>
+                    <li>Michele Rossi (Founder and vice-president)</li>
+                    <li>Alessio Bianchetti (Founder)</li>
+                    <li>Simone Gazzoli (Founder)</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </section>
