@@ -28,6 +28,8 @@ export default function Fund() {
               </div>
             </div>
           </section>
+          <div className="pb-64"></div>
+          <div className="pb-64"></div>
         </Clamp>
       </div>
     </Layout>
