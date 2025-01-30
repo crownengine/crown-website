@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
 import Layout from "../../components/layout"
@@ -123,7 +124,7 @@ export default function Download() {
       return (
         <>
           {data.valid && data.separator && listSeparator()}
-          {data.valid &&
+          {data.valid && data.alt === "AUR" &&
             <OutboundLink
               rel="noreferrer"
               target="_blank"
@@ -142,6 +143,25 @@ export default function Download() {
                 </div>
               </div>
             </OutboundLink>
+          }
+          {data.valid && data.alt !== "AUR" &&
+            <Link
+              to="/download/thanks"
+              state={{crown_download_url: data.url}}
+            >
+              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
+                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                  <i className={"fab fa-" + data.os.toLowerCase()}></i>
+                </div>
+                <div className="flex-1">
+                  {data.os} <span className="text-gray-600">{data.arch}</span>
+                </div>
+                <div className="flex-1 text-right">
+                  {data.alt != null && data.alt}
+                  {data.alt == null && Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
+                </div>
+              </div>
+            </Link>
           }
         </>
       )
@@ -182,14 +202,13 @@ export default function Download() {
           </h1>
 
           <div className="text-2xl">
-            <OutboundLink
+            <Link
               className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white dark:text-black bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 rounded shadow"
-              rel="noreferrer"
-              target="_blank"
-              href={crown_download_url}
+              to="/download/thanks"
+              state={{crown_download_url}}
             >
               Download Crown {crown_version}
-            </OutboundLink>
+            </Link>
           </div>
 
           <div className="mb-10">
