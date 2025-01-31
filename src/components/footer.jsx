@@ -112,16 +112,24 @@ export default function Footer() {
               Follow Crown
             </h1>
             <nav className="mb-2">
-              <div className="flex flex-row sm:text-left text-lg text-center text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50">
-                <a
+              <div className="flex flex-row sm:text-left text-lg text-center text-indigo-600">
+                <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://github.com/crownengine/crown/"
-                  title="Crown Official GitHub page"
+                  href="https://www.twitter.com/crown_engine"
+                  title="Follow Crown on X"
                 >
-                  <i className="fab fa-github mr-3"></i>
+                  <i className="fab fa-x-twitter mr-3"></i>
                 </a>
-                <a
+                <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://bsky.app/profile/crownengine.org"
+                  title="Follow Crown on Bluesky"
+                >
+                  <i className="fab fa-bluesky mr-3"></i>
+                </a>
+                <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                   rel="noreferrer"
                   target="_blank"
                   href="https://discord.gg/invite/CeXVWCT"
@@ -129,13 +137,13 @@ export default function Footer() {
                 >
                   <i className="fab fa-discord mr-3"></i>
                 </a>
-                <a
+                <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://www.twitter.com/crown_engine"
-                  title="Follow Crown on X"
+                  href="https://github.com/crownengine/crown/"
+                  title="Crown Official GitHub page"
                 >
-                  <i className="fab fa-x-twitter mr-3"></i>
+                  <i className="fab fa-github mr-3"></i>
                 </a>
                 {/* Uncomment when content will be available.
               <a
