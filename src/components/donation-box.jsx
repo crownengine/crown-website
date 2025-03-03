@@ -50,55 +50,58 @@ const DonationBox = () => {
   // Redirection logic for donation
   const handleDonate = () => {
     const amount = selectedAmount[frequency] || customAmount;
+    // const prefix = "https://donate.crownengine.org/b";
+    const prefix = "https://donate.stripe.com";
+
     if (frequency === "monthly") {
       switch (amount) {
         case 5:
           if (currency === "GBP")
-            window.location.href = "https://donate.crownengine.org/b/9AQdU78dqgi90sU3cn";
+            window.location.href = prefix + "/9AQdU78dqgi90sU3cn";
           else if (currency === "USD")
-            window.location.href = "https://donate.crownengine.org/b/14kdU78dq8PH8Zq3co";
+            window.location.href = prefix + "/14kdU78dq8PH8Zq3co";
           else
-            window.location.href = "https://donate.crownengine.org/b/cN22bpbpC3vn6Ri6oy";
+            window.location.href = prefix + "/cN22bpbpC3vn6Ri6oy";
           break;
         case 10:
           if (currency === "GBP")
-            window.location.href = "https://donate.crownengine.org/b/9AQaHVdxKaXPdfGbIX";
+            window.location.href = prefix + "/9AQaHVdxKaXPdfGbIX";
           else if (currency === "USD")
-            window.location.href = "https://donate.crownengine.org/b/cN2aHV65i3vncbCcN0";
+            window.location.href = prefix + "/cN2aHV65i3vncbCcN0";
           else
-            window.location.href = "https://donate.crownengine.org/b/bIYaHVgJW9TLcbCeV7";
+            window.location.href = prefix + "/bIYaHVgJW9TLcbCeV7";
           break;
         case 25:
           if (currency === "GBP")
-            window.location.href = "https://donate.crownengine.org/b/00gg2fctG5Dva3u00i";
+            window.location.href = prefix + "/00gg2fctG5Dva3u00i";
           else if (currency === "USD")
-            window.location.href = "https://donate.crownengine.org/b/28o6rFfFS1nfcbCfZf";
+            window.location.href = prefix + "/28o6rFfFS1nfcbCfZf";
           else
-            window.location.href = "https://donate.crownengine.org/b/5kA8zNbpC8PH1wYcN2";
+            window.location.href = prefix + "/5kA8zNbpC8PH1wYcN2";
           break;
         case 50:
           if (currency === "GBP")
-            window.location.href = "https://donate.crownengine.org/b/14k2bp0KY9TL8Zq9AV";
+            window.location.href = prefix + "/14k2bp0KY9TL8Zq9AV";
           else if (currency === "USD")
-            window.location.href = "https://donate.crownengine.org/b/fZe7vJdxK9TL3F64gA";
+            window.location.href = prefix + "/fZe7vJdxK9TL3F64gA";
           else
-            window.location.href = "https://donate.crownengine.org/b/9AQ6rFbpCaXPa3u6oH";
+            window.location.href = prefix + "/9AQ6rFbpCaXPa3u6oH";
           break;
         case 100:
           if (currency === "GBP")
-            window.location.href = "https://donate.crownengine.org/b/28o03hctG6HzejKfZm";
+            window.location.href = prefix + "/28o03hctG6HzejKfZm";
           else if (currency === "USD")
-            window.location.href = "https://donate.crownengine.org/b/7sI2bp0KY9TLgrS00n";
+            window.location.href = prefix + "/7sI2bp0KY9TLgrS00n";
           else
-            window.location.href = "https://donate.crownengine.org/b/bIYbLZ8dq2rjdfGdRc";
+            window.location.href = prefix + "/bIYbLZ8dq2rjdfGdRc";
           break;
         case 250:
           if (currency === "GBP")
-            window.location.href = "https://donate.crownengine.org/b/cN23ft79m0jb8Zq9B1";
+            window.location.href = prefix + "/cN23ft79m0jb8Zq9B1";
           else if (currency === "USD")
-            window.location.href = "https://donate.crownengine.org/b/6oEdU7fFSc1T8Zq5kK";
+            window.location.href = prefix + "/6oEdU7fFSc1T8Zq5kK";
           else
-            window.location.href = "https://donate.crownengine.org/b/14k9DRgJWea12B24gF";
+            window.location.href = prefix + "/14k9DRgJWea12B24gF";
           break;
         default:
           break;
@@ -106,11 +109,11 @@ const DonationBox = () => {
     } else if (frequency === "one-time") {
       const amountTimes100 = amount * 100;
       if (currency === "GBP")
-        window.location.href = `https://donate.crownengine.org/b/28o03h1P2fe54Ja008?__prefilled_amount=${amountTimes100}`;
+        window.location.href = `${prefix}/28o03h1P2fe54Ja008?__prefilled_amount=${amountTimes100}`;
       else if (currency === "USD")
-        window.location.href = `https://donate.crownengine.org/b/3cs4jx65id5Xb7y14b?__prefilled_amount=${amountTimes100}`;
+        window.location.href = `${prefix}/3cs4jx65id5Xb7y14b?__prefilled_amount=${amountTimes100}`;
       else
-        window.location.href = `https://donate.crownengine.org/b/dR67vJ2T62rj3F69AG?__prefilled_amount=${amountTimes100}`;
+        window.location.href = `${prefix}/dR67vJ2T62rj3F69AG?__prefilled_amount=${amountTimes100}`;
     }
   };
 
