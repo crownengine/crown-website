@@ -88,7 +88,7 @@ export default function Footer() {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://docs.crownengine.org/html/latest/introduction.html"
+                  href="https://docs.crownengine.org"
                 >
                   User Manual
                 </a>
