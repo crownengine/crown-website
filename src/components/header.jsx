@@ -46,6 +46,18 @@ export default function Header() {
             </li>
 
             <li>
+                <a
+                  className="block py-2 pr-4 pl-3"
+                  activeClassName="border-b-2 border-indigo-600"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://docs.crownengine.org"
+                >
+                  Manual
+                </a>
+            </li>
+
+            <li>
               <Link
                 className="block py-2 pr-4 pl-3"
                 activeClassName="border-b-2 border-indigo-600"
