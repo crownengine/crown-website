@@ -116,18 +116,10 @@ export default function Footer() {
                 <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://www.twitter.com/crown_engine"
-                  title="Follow Crown on X"
+                  href="https://github.com/crownengine/crown/"
+                  title="Crown Official GitHub page"
                 >
-                  <i className="fab fa-x-twitter mr-3"></i>
-                </a>
-                <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://bsky.app/profile/crownengine.org"
-                  title="Follow Crown on Bluesky"
-                >
-                  <i className="fab fa-bluesky mr-3"></i>
+                  <i className="fab fa-github mr-3"></i>
                 </a>
                 <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                   rel="noreferrer"
@@ -140,10 +132,18 @@ export default function Footer() {
                 <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://github.com/crownengine/crown/"
-                  title="Crown Official GitHub page"
+                  href="https://www.twitter.com/crown_engine"
+                  title="Follow Crown on X"
                 >
-                  <i className="fab fa-github mr-3"></i>
+                  <i className="fab fa-x-twitter mr-3"></i>
+                </a>
+                <a className="hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://bsky.app/profile/crownengine.org"
+                  title="Follow Crown on Bluesky"
+                >
+                  <i className="fab fa-bluesky mr-3"></i>
                 </a>
                 {/* Uncomment when content will be available.
               <a
