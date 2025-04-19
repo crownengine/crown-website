@@ -7,7 +7,6 @@ import DonationBox from "../components/donation-box"
 export default function Fund() {
   return (
     <Layout>
-      <Seo title="Donations" />
       <div className="bg-gradient-to-b from-gray-900 to-gray-800">
         <Clamp>
           <section className="py-24 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
@@ -35,3 +34,7 @@ export default function Fund() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="Donations" />
+)

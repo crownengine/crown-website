@@ -192,7 +192,6 @@ export default function Download() {
 
   return (
     <Layout>
-      <Seo title="Download" />
       <div className="bg-gradient-to-b from-green-800 to-gray-800">
       <Clamp>
       <section className="py-24 px-4 text-center">
@@ -299,3 +298,7 @@ export default function Download() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="Download" />
+)

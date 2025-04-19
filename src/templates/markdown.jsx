@@ -10,7 +10,6 @@ export default function MDTemplate({ data }) {
 
   return (
     <Layout>
-      <Seo title={frontmatter.title} />
       <div
         className="markdown mb-4 mx-2 lg:mx-32 text-justify break-words"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -40,3 +39,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = () => (
+  <Seo />
+)

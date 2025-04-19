@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 export default function About() {
   return (
     <Layout>
-      <Seo title="The Crown Foundation" />
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
         <Clamp>
           <section className="py-24 px-4 text-left text-gray-300">
@@ -96,3 +95,7 @@ export default function About() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="The Crown Foundation" />
+)

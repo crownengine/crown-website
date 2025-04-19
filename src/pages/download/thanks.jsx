@@ -17,7 +17,6 @@ export default function Thanks({location}) {
 
   return (
     <Layout>
-      <Seo title="Thanks" />
       <div className="bg-gradient-to-b from-gray-900 to-gray-800">
         <Clamp>
           <section className="py-24 px-4 text-center">
@@ -51,3 +50,6 @@ export default function Thanks({location}) {
   )
 }
 
+export const Head = () => (
+  <Seo title="Thanks" />
+)

@@ -7,7 +7,6 @@ import Clamp from "../components/clamp"
 export default function NotFoundPage() {
   return (
     <Layout>
-      <Seo title="404: Not found" />
       <Clamp>
         <section className="py-8 px-4 text-center">
           <div className="max-w-auto md:max-w-lg mx-auto">
@@ -25,3 +24,7 @@ export default function NotFoundPage() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="404: Not found" />
+)

@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 export default function Support() {
   return (
     <Layout>
-      <Seo title="Support" />
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
         <Clamp>
           <section className="py-24 px-4">
@@ -77,3 +76,7 @@ export default function Support() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="Support" />
+)

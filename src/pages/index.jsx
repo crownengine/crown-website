@@ -7,10 +7,13 @@ import Seo from "../components/seo"
 export default function Home() {
   return (
     <Layout>
-      <Seo title="Home" />
       <Cta />
       <Features />
       {/* <FAQ /> */}
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="Home" />
+)

@@ -7,7 +7,6 @@ import content from "../data/html/privacy_policy.html"
 export default function PrivacyPolicy() {
   return (
     <Layout>
-      <Seo title="Privacy Policy" />
       <Clamp>
         <div
           className="lexdo text-justify break-words px-4 py-16"
@@ -19,3 +18,7 @@ export default function PrivacyPolicy() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="Privacy Policy" />
+)

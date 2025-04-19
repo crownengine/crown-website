@@ -7,7 +7,6 @@ import Clamp from "../components/clamp"
 export default function CookiePolicy() {
   return (
     <Layout pageInfo={{ pageName: "cookie-policy" }}>
-      <Seo title="Cookie Policy" />
       <Clamp>
         <div
           className="lexdo text-justify break-words px-4 py-16"
@@ -19,3 +18,7 @@ export default function CookiePolicy() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="Cookie Policy" />
+)

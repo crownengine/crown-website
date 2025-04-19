@@ -1,15 +1,16 @@
 import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Helmet } from "react-helmet"
+import favicon from "../images/crown-logo-kit/crown-black-socket.svg"
 
-export default function Seo({ description, lang, meta, title }) {
+export default function Seo({ description, lang, meta, title, children }) {
   const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
           description
+          x_handle
         }
       }
     }
@@ -18,35 +19,20 @@ export default function Seo({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-      ].concat(meta)}
-    ></Helmet>
+    <>
+      <html lang={lang} />
+      <title>{title}</title>
+      <link rel="icon" type="image/svg+xml" href={favicon} />
+      <meta name="description" content={metaDescription} />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="og:title" content={title} />
+      <meta name="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:site" content={site.siteMetadata.x_handle} />
+      <meta name="twitter:title" content={title} />
+      {children}
+    </>
   )
 }
 
