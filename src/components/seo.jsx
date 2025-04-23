@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import favicon from "../images/crown-logo-kit/crown-black-socket.svg"
 
 export default function Seo({ description, lang, meta, title, children }) {
   const { site } = useStaticQuery(graphql`
@@ -22,7 +21,7 @@ export default function Seo({ description, lang, meta, title, children }) {
     <>
       <html lang={lang} />
       <title>{title}</title>
-      <link rel="icon" type="image/svg+xml" href={favicon} />
+      <link rel="icon" type="image/svg+xml" href="favicon.svg" />
       <meta name="description" content={metaDescription} />
       <meta name="og:description" content={metaDescription} />
       <meta name="og:title" content={title} />
