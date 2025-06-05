@@ -20,6 +20,15 @@ const DonationBox = () => {
     GBP: "£",
   };
 
+  const membershipTiers = {
+    5: { level: "bronze", badge: "Bronze membership badge.", benefit: null },
+    10: { level: "silver", badge: "Silver membership badge.", benefit: "Name on website." },
+    25: { level: "gold", badge: "Gold membership badge.", benefit: "Larger name on website." },
+    50: { level: "titanium", badge: "Titanium membership badge.", benefit: "Link on website." },
+    100: { level: "platinum", badge: "Platinum membership badge.", benefit: "Logo on website." },
+    250: { level: "diamond", badge: "Diamond membership badge.", benefit: "Larger logo on website." },
+  };
+
   const handlePresetClick = (amount) => {
     setSelectedAmount((prev) => ({
       ...prev,
@@ -156,6 +165,42 @@ const DonationBox = () => {
         ))}
       </div>
 
+      {frequency === "monthly" && membershipTiers[selectedAmount.monthly] && (
+        <div className="mb-4">
+          {/* Title */}
+          <h3 className="text-2xl text-gray-700 mb-3">
+            Become a <span className="font-bold capitalize">{membershipTiers[selectedAmount.monthly].level}</span> member
+          </h3>
+
+          {/* Icon + Benefits */}
+          <div className="flex items-start">
+            {/* Icon */}
+            <img
+              src={`/membership-logos/crown-${membershipTiers[selectedAmount.monthly].level}.png`}
+              alt={`${membershipTiers[selectedAmount.monthly].level} badge`}
+              className="w-20 h-20 flex-shrink-0"
+            />
+
+            {/* Benefits List */}
+            <ul className="ml-4 text-gray-600 font-medium space-y-1">
+              <li>✓ {membershipTiers[selectedAmount.monthly].badge}</li>
+              {membershipTiers[selectedAmount.monthly].benefit && (
+                <li>✓ {membershipTiers[selectedAmount.monthly].benefit}</li>
+              )}
+            </ul>
+          </div>
+        </div>
+      )}
+
+      {frequency === "one-time" && membershipTiers[selectedAmount.monthly] && (
+        <div className="mb-6">
+          {/* Title */}
+          <h3 className="text-2xl text-gray-700 mb-3">
+            Donate <span className="font-bold">once</span> today
+          </h3>
+        </div>
+      )}
+
       {/* Custom Amount and Donate Button for One-time */}
       {frequency === "one-time" && (
         <div className="mb-6 grid grid-cols-3 gap-4">
@@ -184,7 +229,7 @@ const DonationBox = () => {
           {/* Donate Button */}
           <div className="col-span-2">
             <button
-              className={`w-full px-6 py-2 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 ${
+              className={`w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 ${
                 !isCustomAmountValid ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={!isCustomAmountValid}
@@ -201,7 +246,7 @@ const DonationBox = () => {
         <div className="mb-6 grid grid-cols-3 gap-4">
           <div className="col-span-3">
             <button
-              className="w-full px-6 py-2 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600"
+              className="w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600"
               onClick={handleDonate}
             >
               Donate Monthly <i className="fa fa-heart"></i>
