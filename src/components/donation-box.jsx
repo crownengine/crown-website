@@ -229,7 +229,7 @@ const DonationBox = () => {
           {/* Donate Button */}
           <div className="col-span-2">
             <button
-              className={`w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 ${
+              className={`w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 ${
                 !isCustomAmountValid ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={!isCustomAmountValid}
@@ -246,7 +246,7 @@ const DonationBox = () => {
         <div className="mb-6 grid grid-cols-3 gap-4">
           <div className="col-span-3">
             <button
-              className="w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600"
+              className="w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-500"
               onClick={handleDonate}
             >
               Donate Monthly <i className="fa fa-heart"></i>
