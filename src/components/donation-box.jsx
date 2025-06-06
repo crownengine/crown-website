@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "@reach/router";
 
-const DonationBox = () => {
-  const [frequency, setFrequency] = useState("one-time");
-  const [selectedAmount, setSelectedAmount] = useState({ "one-time": 100, monthly: 25 });
-  const [customAmount, setCustomAmount] = useState("100");
+const DonationBox = ({ frequency: propFreq, initialAmount }) => {
+  const [frequency, setFrequency] = useState(propFreq || "one-time");
+  const [selectedAmount, setSelectedAmount] = useState({
+    "one-time": propFreq === "one-time" ? initialAmount : 100,
+    monthly: propFreq === "monthly" ? initialAmount : 25,
+  });
+  const [customAmount, setCustomAmount] = useState(
+    propFreq === "one-time" ? initialAmount.toString() : "100"
+  );
   const [currency, setCurrency] = useState("EUR");
   const [isCustomAmountValid, setIsCustomAmountValid] = useState(true);
 
@@ -21,13 +27,55 @@ const DonationBox = () => {
   };
 
   const membershipTiers = {
-    5: { level: "bronze", badge: "Bronze membership badge.", benefit: null },
-    10: { level: "silver", badge: "Silver membership badge.", benefit: "Name on website." },
-    25: { level: "gold", badge: "Gold membership badge.", benefit: "Larger name on website." },
-    50: { level: "titanium", badge: "Titanium membership badge.", benefit: "Link on website." },
-    100: { level: "platinum", badge: "Platinum membership badge.", benefit: "Logo on website." },
-    250: { level: "diamond", badge: "Diamond membership badge.", benefit: "Larger logo on website." },
+    5: { level: "bronze", badge: "Bronze membership badge/discord role.", benefit: null },
+    10: { level: "silver", badge: "Silver membership badge/discord role.", benefit: "Name on website." },
+    25: { level: "gold", badge: "Gold membership badge/discord role.", benefit: "Larger name on website." },
+    50: { level: "titanium", badge: "Titanium membership badge/discord role.", benefit: "Link on website." },
+    100: { level: "platinum", badge: "Platinum membership badge/discord role.", benefit: "Logo on website." },
+    250: { level: "diamond", badge: "Diamond membership badge/discord role.", benefit: "Larger logo on website." },
   };
+
+  // Whenever parent props change, override internal state.
+  useEffect(() => {
+    if (propFreq) {
+      setFrequency(propFreq);
+
+      setSelectedAmount((prev) => ({
+        ...prev,
+        [propFreq]: initialAmount,
+      }));
+
+      if (propFreq === "one-time") {
+        setCustomAmount(initialAmount.toString());
+        setIsCustomAmountValid(true);
+      }
+    }
+  }, [propFreq, initialAmount]);
+
+  const location = useLocation();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const freq = params.get("frequency");
+    const amt = params.get("amount");
+
+    if (freq === "monthly" || freq === "one-time") {
+      setFrequency(freq);
+    }
+
+    if (amt) {
+      const numAmt = parseInt(amt, 10);
+      if (!isNaN(numAmt)) {
+        setSelectedAmount((prev) => ({
+          ...prev,
+          [freq || frequency]: numAmt,
+        }));
+        if ((freq || frequency) === "one-time") {
+          setCustomAmount(numAmt.toString());
+          setIsCustomAmountValid(true);
+        }
+      }
+    }
+  }, [location.search]);
 
   const handlePresetClick = (amount) => {
     setSelectedAmount((prev) => ({
