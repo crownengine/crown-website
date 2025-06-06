@@ -10,9 +10,9 @@ export default function Fund() {
       <div className="bg-gradient-to-b from-gray-900 to-gray-800">
         <Clamp>
           <section className="py-24 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-10">
+            <div className="grid md:grid-cols-6 gap-6 mb-40">
 
-              <div className="grid col-span-1 md:col-span-3 gap-6">
+              <div className="col-span-6 md:col-span-3 flex flex-col gap-6">
                 <h2 className="text-6xl font-bold text-transparent">
                   Help Crown grow Stronger and Faster
                 </h2>
@@ -21,9 +21,8 @@ export default function Fund() {
                 </p>
               </div>
 
-              <div className="grid col-span-1 md:col-span-3 gap-6">
-                <DonationBox>
-                </DonationBox>
+              <div className="col-span-6 md:col-span-3 flex flex-col gap-6 relative">
+                <DonationBox />
               </div>
             </div>
           </section>
