@@ -30,7 +30,7 @@ const StatsBanner = () => {
   const floatsRef = useRef(stats.map(() => 0));
 
   useEffect(() => {
-    const duration = 3000;
+    const duration = 1500;
     const intervalMs = 33;
 
     // Per-tick increment so all finish in exactly 'duration'.
