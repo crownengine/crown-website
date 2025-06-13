@@ -10,7 +10,7 @@ const StatsBanner = () => {
     },
     {
       label: "Releases",
-      value: 20,
+      value: 21,
       link: "https://github.com/crownengine/crown/releases",
     },
     {

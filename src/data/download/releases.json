@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/crownengine/crown/releases/223076767",
-  "assets_url": "https://api.github.com/repos/crownengine/crown/releases/223076767/assets",
-  "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/223076767/assets{?name,label}",
-  "html_url": "https://github.com/crownengine/crown/releases/tag/v0.56.0",
-  "id": 223076767,
+  "url": "https://api.github.com/repos/crownengine/crown/releases/225108020",
+  "assets_url": "https://api.github.com/repos/crownengine/crown/releases/225108020/assets",
+  "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/225108020/assets{?name,label}",
+  "html_url": "https://github.com/crownengine/crown/releases/tag/v0.57.0",
+  "id": 225108020,
   "author": {
     "login": "dbartolini",
     "id": 2070946,
@@ -25,20 +25,20 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOAFEyY84NS-Gf",
-  "tag_name": "v0.56.0",
+  "node_id": "RE_kwDOAFEyY84NauA0",
+  "tag_name": "v0.57.0",
   "target_commitish": "master",
   "name": "",
   "draft": false,
   "prerelease": false,
-  "created_at": "2025-06-04T12:54:56Z",
-  "published_at": "2025-06-04T14:29:09Z",
+  "created_at": "2025-06-13T08:06:50Z",
+  "published_at": "2025-06-13T09:27:42Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/260907122",
-      "id": 260907122,
-      "node_id": "RA_kwDOAFEyY84PjSBy",
-      "name": "crown-0.56.0-linux-x64.tar.gz",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/263578522",
+      "id": 263578522,
+      "node_id": "RA_kwDOAFEyY84PteOa",
+      "name": "crown-0.57.0-linux-x64.tar.gz",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -63,18 +63,18 @@
       },
       "content_type": "application/gzip",
       "state": "uploaded",
-      "size": 56012823,
-      "digest": "sha256:d14bc3d858e82ee32a3bd88dc59de9e1e82854ba7185f59da8b6ab96d7bdf0fa",
+      "size": 56007977,
+      "digest": "sha256:7eeaacc3d2c57a9357577a26e9815390da508e2d1b0eb7dadaaa6cebb7d82c0b",
       "download_count": 0,
-      "created_at": "2025-06-04T13:38:01Z",
-      "updated_at": "2025-06-04T13:38:05Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.56.0/crown-0.56.0-linux-x64.tar.gz"
+      "created_at": "2025-06-13T09:27:21Z",
+      "updated_at": "2025-06-13T09:27:25Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.57.0/crown-0.57.0-linux-x64.tar.gz"
     },
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/260907138",
-      "id": 260907138,
-      "node_id": "RA_kwDOAFEyY84PjSCC",
-      "name": "crown-0.56.0-windows-x64.zip",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/263578534",
+      "id": 263578534,
+      "node_id": "RA_kwDOAFEyY84PteOm",
+      "name": "crown-0.57.0-windows-x64.zip",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -99,17 +99,17 @@
       },
       "content_type": "application/zip",
       "state": "uploaded",
-      "size": 92884196,
-      "digest": "sha256:7ae715ee13dc3c04450120e48311cab3e214949b204a1b1dd1bab418e1a5a44e",
+      "size": 98228475,
+      "digest": "sha256:5c60183e094bc43e4aa376bc7d30f98e876c91a93265f70a2e135b69e3642077",
       "download_count": 0,
-      "created_at": "2025-06-04T13:38:05Z",
-      "updated_at": "2025-06-04T13:38:12Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.56.0/crown-0.56.0-windows-x64.zip"
+      "created_at": "2025-06-13T09:27:25Z",
+      "updated_at": "2025-06-13T09:27:31Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.57.0/crown-0.57.0-windows-x64.zip"
     },
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/260907191",
-      "id": 260907191,
-      "node_id": "RA_kwDOAFEyY84PjSC3",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/263578547",
+      "id": 263578547,
+      "node_id": "RA_kwDOAFEyY84PteOz",
       "name": "SHA256SUMS",
       "label": null,
       "uploader": {
@@ -136,14 +136,14 @@
       "content_type": "application/octet-stream",
       "state": "uploaded",
       "size": 191,
-      "digest": "sha256:a66da80fea15271f4ad1dfdb1f4c4d7d2a133cdddbf7484941b8e9bccb86287f",
+      "digest": "sha256:c1d26b0e7b2338a8d228c4de7292ce02e2a62ef8f634701260bdabb19f8f7303",
       "download_count": 0,
-      "created_at": "2025-06-04T13:38:12Z",
-      "updated_at": "2025-06-04T13:38:12Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.56.0/SHA256SUMS"
+      "created_at": "2025-06-13T09:27:31Z",
+      "updated_at": "2025-06-13T09:27:31Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.57.0/SHA256SUMS"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.56.0",
-  "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.56.0",
-  "body": "Crown 0.56 is out with cascaded shadow mapping, OGG/Vorbis sound streaming, improved text rendering and many important fixes:\r\n\r\n:scroll: [Changelog](https://docs.crownengine.org/html/latest/changelog.html#jun-2025)\r\n:floppy_disk: [Download](https://crownengine.org/download)\r\n:heart: [Donate](https://crownengine.org/fund)\r\n\r\n![image](https://github.com/user-attachments/assets/cf6ba86e-af06-4f74-9bf7-e1a500a557d8)\r\n"
+  "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.57.0",
+  "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.57.0",
+  "body": "Crown 0.57 is out! This is a maintenance release with fixed shadow maps, hot-reloading and outlines rendering on Windows, plus various QoL tweaks.\r\n\r\n:scroll: [Changelog](https://docs.crownengine.org/html/latest/changelog.html#jun-2025)\r\n:floppy_disk: [Download](https://crownengine.org/download)\r\n:heart: [Donate](https://crownengine.org/fund)"
 }
