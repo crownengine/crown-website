@@ -3,6 +3,7 @@ import Clamp from "../../components/clamp"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import DonationBox from "../../components/donation-box"
+import StatsBanner from "../../components/stats-banner"
 
 export default function Thanks({location}) {
   const download_url = location.state?.crown_download_url || "none";
@@ -28,7 +29,7 @@ export default function Thanks({location}) {
           </section>
         </Clamp>
         <Clamp>
-          <section className="py-24 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
+          <section className="py-2 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
             <div className="grid md:grid-cols-6 gap-6 mb-40">
               <div className="col-span-6 md:col-span-3 flex flex-col gap-6">
                 <h2 className="text-6xl font-bold text-transparent">
@@ -44,6 +45,14 @@ export default function Thanks({location}) {
               </div>
             </div>
           </section>
+        </Clamp>
+      </div>
+
+      <div className="bg-gradient-to-b from-gray-900 to-gray-800 py-0">
+        <Clamp>
+        <section className="p-8 text-white">
+          <StatsBanner/>
+        </section>
         </Clamp>
       </div>
     </Layout>
