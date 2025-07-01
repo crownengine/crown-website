@@ -21,8 +21,8 @@ export default function Thanks({location}) {
         <Clamp>
           <section className="py-0 md:py-24 px-4 text-center">
             <div className="w-full max-w-2xl mx-auto">
-              <p className="mt-48 text-lg text-gray-300">
-                Your download will start automatically. If it didn't, click here to start it <a className="underline" href={download_url}>manually</a>.
+              <p className="mt-28 text-lg text-gray-300">
+                Your download will start soon. If it didn't, click here to start it <a className="underline" href={download_url}>manually</a>.
               </p>
             </div>
           </section>
