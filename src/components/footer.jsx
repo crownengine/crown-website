@@ -16,7 +16,7 @@ export default function Footer() {
   `)
 
   return (
-    <div className="mt-auto bg-gray-300 dark:bg-gray-900 px-6 lg:px-8 py-8 text-sm">
+    <div className="mt-auto bg-gray-300 dark:bg-gray-900 px-6 lg:px-8 py-20 text-sm">
       <Clamp>
         <div className="flex">
           <div className="flex-1">
