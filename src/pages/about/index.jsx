@@ -80,17 +80,6 @@ export default function About() {
                 </div>
 
               </div>
-              <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
-                <h2 className="text-4xl mb-6 font-semibold">Board Members</h2>
-                <p className="mb-8 text-gray-700">
-                  <ul>
-                    <li>Daniele Bartolini (Founder and president)</li>
-                    <li>Michele Rossi (Founder and vice-president)</li>
-                    <li>Alessio Bianchetti (Founder)</li>
-                    <li>Simone Gazzoli (Founder)</li>
-                  </ul>
-                </p>
-              </div>
             </div>
           </section>
         </Clamp>
