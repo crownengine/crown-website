@@ -64,6 +64,16 @@ module.exports = {
         link: `/fund`,
       },
     ],
+    about_menu: [
+      {
+        label: `The Crown Foundation`,
+        link: `/about`,
+      },
+      {
+        label: `Credits`,
+        link: `/about/credits`,
+      },
+    ],
   },
   plugins: [
     {

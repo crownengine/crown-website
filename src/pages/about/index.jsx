@@ -1,12 +1,15 @@
 import React from "react"
-import Clamp from "../components/clamp"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Clamp from "../../components/clamp"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import AboutMenu from "../../components/about-menu.jsx"
 
 export default function About() {
   return (
     <Layout>
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
+        <AboutMenu />
+
         <Clamp>
           <section className="py-24 px-4 text-left text-gray-300">
             <h1 className="text-6xl mb-6 font-bold">The Crown Foundation</h1>
