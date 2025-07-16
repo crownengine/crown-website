@@ -85,6 +85,9 @@ export default function Footer() {
                   to="/about">The Crown Foundation
                 </Link>
                 <Link className="hover:text-indigo-800"
+                  to="/about/credits">Credits
+                </Link>
+                <Link className="hover:text-indigo-800"
                   to="/website-about">Website
                 </Link>
                 <Link className="hover:text-indigo-800"
