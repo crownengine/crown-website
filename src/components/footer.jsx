@@ -25,17 +25,28 @@ export default function Footer() {
             </h1>
             <nav className="mb-2">
               {/* Crown */}
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700">
-                <Link className="" to="/download">
+              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600">
+                <Link className="hover:text-indigo-800"
+                  to="/download">
                   Latest Crown
                 </Link>
-                <a rel="noreferrer" target="_blank" href="https://github.com/crownengine/crown/">
+                <a className="hover:text-indigo-800"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://github.com/crownengine/crown/"
+                >
                   Source Code
                 </a>
-                <a rel="noreferrer" target="_blank" href="https://docs.crownengine.org/html/latest/changelog.html">
+                <a className="hover:text-indigo-800"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://docs.crownengine.org/html/latest/changelog.html"
+                >
                   Changelog
                 </a>
-                <Link className="" to="/crown-license">
+                <Link className="hover:text-indigo-800"
+                  className=""
+                  to="/crown-license">
                   License
                 </Link>
               </div>
@@ -69,11 +80,19 @@ export default function Footer() {
           <div className="flex-1">
             <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">About</h1>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700">
-                <Link to="/about">The Crown Foundation</Link>
-                <Link to="/website-about">Website</Link>
-                <Link to="/privacy-policy">Privacy Policy</Link>
-                <Link to="/cookie-policy">Cookie Policy</Link>
+              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600">
+                <Link className="hover:text-indigo-800"
+                  to="/about">The Crown Foundation
+                </Link>
+                <Link className="hover:text-indigo-800"
+                  to="/website-about">Website
+                </Link>
+                <Link className="hover:text-indigo-800"
+                  to="/privacy-policy">Privacy Policy
+                </Link>
+                <Link className="hover:text-indigo-800"
+                  to="/cookie-policy">Cookie Policy
+                </Link>
               </div>
             </nav>
           </div>
@@ -84,22 +103,26 @@ export default function Footer() {
               Support
             </h1>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700">
-                <a
+              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600">
+                <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
                   href="https://docs.crownengine.org"
                 >
                   User Manual
                 </a>
-                <a
+                <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
                   href="https://docs.crownengine.org/html/latest/hackers/index.html"
                 >
                   Developer Manual
                 </a>
-                <a rel="noreferrer" target="_blank" href="https://discord.gg/invite/CeXVWCT">
+                <a className="hover:text-indigo-800"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://discord.gg/invite/CeXVWCT"
+                >
                   Community
                 </a>
               </div>
@@ -113,7 +136,7 @@ export default function Footer() {
             </h1>
             <nav className="mb-2">
               <div className="flex flex-row sm:text-left text-lg text-center text-indigo-600">
-                <a className="hover:text-indigo-700"
+                <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
                   href="https://github.com/crownengine/crown/"
@@ -121,7 +144,7 @@ export default function Footer() {
                 >
                   <i className="fab fa-github mr-3"></i>
                 </a>
-                <a className="hover:text-indigo-700"
+                <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
                   href="https://discord.gg/invite/CeXVWCT"
@@ -129,7 +152,7 @@ export default function Footer() {
                 >
                   <i className="fab fa-discord mr-3"></i>
                 </a>
-                <a className="hover:text-indigo-700"
+                <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
                   href="https://www.twitter.com/crown_engine"
@@ -137,7 +160,7 @@ export default function Footer() {
                 >
                   <i className="fab fa-x-twitter mr-3"></i>
                 </a>
-                <a className="hover:text-indigo-700"
+                <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
                   href="https://bsky.app/profile/crownengine.org"

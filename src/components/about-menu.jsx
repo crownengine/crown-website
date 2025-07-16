@@ -46,13 +46,13 @@ export default function Header() {
 
       <Clamp>
         {/* Main menu */}
-        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-100 hover:text-indigo-400">
+        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-100">
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map(item => {
               const is_external = !item.link.startsWith("/")
 
               return (
-                <li>
+                <li className="hover:text-indigo-400">
                   {is_external ? (
                     <a
                       className="block py-2 pr-4 pl-3"

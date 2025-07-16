@@ -51,7 +51,7 @@ export default function AboutMenu() {
         </div>
 
         {/* Main menu */}
-        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-blue-900 hover:text-indigo-700">
+        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-900">
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map(item => {
               if (item.label === "Donate") {
@@ -63,7 +63,7 @@ export default function AboutMenu() {
               const is_external = !item.link.startsWith("/")
 
               return (
-                <li>
+                <li className="hover:text-indigo-600">
                   {is_external ? (
                     <a
                       className="block py-2 pr-4 pl-3"
