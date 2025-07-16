@@ -29,7 +29,7 @@ export default function Header() {
     <nav className="flex flex-wrap items-center justify-between py-2 bg-gray-800">
       <div className="block lg:hidden px-4">
         <button
-          className="navbar-burger flex items-center py-2 px-4 text-indigo-500 dark:text-indigo-200rounded border border-indigo-500"
+          className="navbar-burger flex items-center py-2 px-4 text-indigo-500 rounded border border-indigo-500"
           onClick={menuClick}
           aria-label="Menu"
         >
@@ -46,7 +46,7 @@ export default function Header() {
 
       <Clamp>
         {/* Main menu */}
-        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-100 dark:text-indigo-200 hover:text-indigo-400 dark:hover:text-indigo-50">
+        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-100 hover:text-indigo-400">
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map(item => {
               const is_external = !item.link.startsWith("/")

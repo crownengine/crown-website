@@ -3,16 +3,10 @@
 @tailwind utilities;
 
 body {
-  @apply antialiased dark:bg-gray-800;
+  @apply antialiased;
 }
 
 .header-logo {
-  background: url(../images/crown-logo-kit/crown-black-socket.svg) no-repeat;
-  background-size: contain;
-  display: block;
-}
-
-.dark .header-logo {
   background: url(../images/crown-logo-kit/crown-black-socket.svg) no-repeat;
   background-size: contain;
   display: block;

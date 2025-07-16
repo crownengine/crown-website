@@ -6,7 +6,7 @@ import Header from "./header"
 export default function Layout({ children }) {
   return (
     <>
-      <div className="dark:text-white bg-gray-100 dark:bg-gray-800">
+      <div className="bg-gray-100">
         <Header />
         <main>{children}</main>
         <Footer />

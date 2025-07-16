@@ -15,7 +15,7 @@
 }
 
 .markdown a {
-  @apply text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-50;
+  @apply text-indigo-600 hover:text-indigo-700;
 }
 
 .markdown p {

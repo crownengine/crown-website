@@ -35,7 +35,7 @@ export default function AboutMenu() {
 
         <div className="block lg:hidden px-4">
           <button
-            className="navbar-burger flex items-center py-2 px-4 text-indigo-500 dark:text-indigo-200rounded border border-indigo-500"
+            className="navbar-burger flex items-center py-2 px-4 text-indigo-500 border border-indigo-500"
             onClick={menuClick}
             aria-label="Menu"
           >
@@ -51,7 +51,7 @@ export default function AboutMenu() {
         </div>
 
         {/* Main menu */}
-        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-blue-900 dark:text-indigo-200 hover:text-indigo-700 dark:hover:text-indigo-50">
+        <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-blue-900 hover:text-indigo-700">
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map(item => {
               if (item.label === "Donate") {
