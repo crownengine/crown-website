@@ -16,6 +16,28 @@ module.exports = {
     org_title: `The Crown Foundation`,
     x_handle: `@crown_engine`,
     tcf_mail_address: `foundation@crownengine.org`,
+    menu: [
+      {
+        label: `Download`,
+        link: `/download`,
+      },
+      {
+        label: `Manual`,
+        link: `https://docs.crownengine.org`,
+      },
+      {
+        label: `Support`,
+        link: `/support`,
+      },
+      {
+        label: `About`,
+        link: `/about`,
+      },
+      {
+        label: `Donate`,
+        link: `/fund`,
+      },
+    ],
   },
   plugins: [
     {
