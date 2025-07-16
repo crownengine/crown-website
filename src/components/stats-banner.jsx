@@ -1,30 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 const StatsBanner = () => {
-  const stats = [
-    {
-      label: "GitHub Stars",
-      value: 2200,
-      suffix: "+",
-      link: "https://github.com/crownengine/crown/stargazers",
-    },
-    {
-      label: "Releases",
-      value: 21,
-      link: "https://github.com/crownengine/crown/releases",
-    },
-    {
-      label: "Discord Members",
-      value: 100,
-      suffix: "+",
-      link: "https://discord.gg/invite/CeXVWCT",
-    },
-    {
-      label: "Platforms Supported",
-      value: 4,
-      link: "https://docs.crownengine.org/html/latest/introduction.html",
-    },
-  ];
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          stats {
+            label
+            value
+            suffix
+            link
+          }
+        }
+      }
+    }
+  `)
+
+  const stats = data.site.siteMetadata.stats
 
   const [counters, setCounters] = useState(stats.map(() => 0));
   const floatsRef = useRef(stats.map(() => 0));
@@ -60,22 +54,35 @@ const StatsBanner = () => {
   return (
     <div className="my-2">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-        {stats.map((s, i) => (
-          <div key={s.label}>
-            <div className="text-6xl font-extrabold leading-tight">
-              {counters[i].toLocaleString()}
-              {s.suffix || ""}
+        {stats.map((item, i) => {
+          const is_external = !item.link.startsWith("/")
+
+          return (
+            <div key={item.label}>
+              <div className="text-6xl font-extrabold leading-tight">
+                {counters[i].toLocaleString()}
+                {item.suffix || ""}
+              </div>
+              {is_external ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block uppercase tracking-wide text-base font-bold text-gray-400 hover:text-gray-200"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  className="mt-2 block uppercase tracking-wide text-base font-bold text-gray-400 hover:text-gray-200"
+                  to={item.link}
+                >
+                  {item.label}
+                </Link>
+              )}
             </div>
-            <a
-              href={s.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 block uppercase tracking-wide text-base font-bold text-gray-400 hover:text-gray-200"
-            >
-              {s.label}
-            </a>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   );

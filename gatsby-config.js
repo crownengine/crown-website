@@ -16,6 +16,32 @@ module.exports = {
     org_title: `The Crown Foundation`,
     x_handle: `@crown_engine`,
     tcf_mail_address: `foundation@crownengine.org`,
+    stats: [
+      {
+        label: "GitHub Stars",
+        value: 2200,
+        suffix: "+",
+        link: "https://github.com/crownengine/crown/stargazers",
+      },
+      {
+        label: "Releases",
+        value: 21,
+        suffix: "",
+        link: "https://github.com/crownengine/crown/releases",
+      },
+      {
+        label: "Discord Members",
+        value: 110,
+        suffix: "+",
+        link: "https://discord.gg/invite/CeXVWCT",
+      },
+      {
+        label: "Platforms Supported",
+        value: 4,
+        suffix: "",
+        link: "https://docs.crownengine.org/html/latest/introduction.html",
+      },
+    ],
     menu: [
       {
         label: `Download`,
