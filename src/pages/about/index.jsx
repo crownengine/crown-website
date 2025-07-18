@@ -5,6 +5,20 @@ import Seo from "../../components/seo"
 import AboutMenu from "../../components/about-menu.jsx"
 
 export default function About() {
+  const handleJoinUsClick = () => {
+    const email = "foundation@crownengine.org";
+    const subject = encodeURIComponent("Admission Request");
+    const body = encodeURIComponent(`
+      Hey, I want to join The Crown Foundation!\n
+      Full Name:
+      Date of Birth (dd/mm/yyyy):
+      Place of Birth:
+      City:
+      Email:`.trim());
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <Layout>
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
@@ -70,15 +84,14 @@ export default function About() {
                     direction. We believe in a transparent and democratic process, and we welcome
                     new voices!
                   </p>
-                  <p className="mb-6 text-gray-700">
-                    Email us at{" "}
-                    <a className="text-indigo-500" href="mailto:foundation@crownengine.org">
-                      <u>foundation@crownengine.org</u>
-                    </a>{" "}
-                    to learn more.
-                  </p>
-                </div>
 
+                  <button
+                    onClick={handleJoinUsClick}
+                    className="inline-block py-4 px-8 mb-2 font-semibold leading-none text-gray-200 hover:text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow"
+                  >
+                    Join Us Now!
+                  </button>
+                </div>
               </div>
             </div>
           </section>
