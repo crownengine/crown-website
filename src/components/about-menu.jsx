@@ -26,7 +26,7 @@ export default function Header() {
   }
 
   return (
-    <nav className="flex flex-wrap items-center justify-between py-2 bg-gray-800">
+    <nav className="flex flex-wrap items-center justify-between bg-gray-800">
       <div className="block lg:hidden px-4">
         <button
           className="navbar-burger flex items-center py-2 px-4 text-indigo-500 rounded border border-indigo-500"

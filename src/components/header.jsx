@@ -27,7 +27,7 @@ export default function AboutMenu() {
 
   return (
     <Clamp>
-      <nav className="flex flex-wrap items-center justify-between py-2">
+      <nav className="flex flex-wrap items-center justify-between">
         {/* Logo */}
         <div className="px-4">
           <Link className="header-logo h-10 w-24 lg:w-36" to="/"></Link>
@@ -56,7 +56,7 @@ export default function AboutMenu() {
             {menu_items.map(item => {
               if (item.label === "Donate") {
                 return (
-                  <li><DonateButton/></li>
+                  <li className="py-2 pl-2 pr-2"><DonateButton/></li>
                 )
               }
 
@@ -66,8 +66,8 @@ export default function AboutMenu() {
                 <li className="hover:text-indigo-600">
                   {is_external ? (
                     <a
-                      className="block py-2 pr-4 pl-3"
-                      activeClassName="border-b-2 border-indigo-600"
+                      className="block py-4 pl-2 pr-2"
+                      activeClassName="border-b-4 border-indigo-600"
                       partiallyActive="true"
                       rel="noreferrer"
                       target="_blank"
@@ -77,8 +77,8 @@ export default function AboutMenu() {
                     </a>
                   ) : (
                     <Link
-                      className="block py-2 pr-4 pl-3"
-                      activeClassName="border-b-2 border-indigo-600"
+                      className="block py-4 pl-2 pr-2"
+                      activeClassName="border-b-4 border-indigo-600"
                       partiallyActive="true"
                       to={item.link}
                     >
