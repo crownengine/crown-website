@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import Clamp from "./clamp"
-import DonateButton from "../components/donate-button"
 import { useStaticQuery, graphql } from "gatsby"
 
 export default function Header() {

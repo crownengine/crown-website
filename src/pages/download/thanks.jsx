@@ -14,7 +14,7 @@ export default function Thanks({location}) {
     }, 400);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [download_url]);
 
   return (
     <Layout>

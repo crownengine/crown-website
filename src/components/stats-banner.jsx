@@ -49,7 +49,7 @@ const StatsBanner = () => {
     }, intervalMs);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [stats]);
 
   return (
     <div className="my-2">

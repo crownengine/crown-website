@@ -75,7 +75,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         }
       }
     }
-  }, [location.search]);
+  }, [location.search, frequency]);
 
   const handlePresetClick = (amount) => {
     setSelectedAmount((prev) => ({
