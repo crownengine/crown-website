@@ -55,7 +55,6 @@ export default function Header() {
                   {is_external ? (
                     <a
                       className="block py-2 pr-4 pl-3"
-                      activeClassName="border-b-2 border-indigo-600"
                       rel="noreferrer"
                       target="_blank"
                       href={item.link}
@@ -65,7 +64,7 @@ export default function Header() {
                   ) : (
                     <Link
                       className="block py-2 pr-4 pl-3"
-                      activeClassName="border-b-2 border-indigo-600"
+                      activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
                       to={item.link}
                     >
                       {item.label}

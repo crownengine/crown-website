@@ -67,8 +67,6 @@ export default function AboutMenu() {
                   {is_external ? (
                     <a
                       className="block py-4 pl-2 pr-2"
-                      activeClassName="border-b-4 border-indigo-600"
-                      partiallyActive="true"
                       rel="noreferrer"
                       target="_blank"
                       href={item.link}
@@ -78,7 +76,7 @@ export default function AboutMenu() {
                   ) : (
                     <Link
                       className="block py-4 pl-2 pr-2"
-                      activeClassName="border-b-4 border-indigo-600"
+                      activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
                       partiallyActive="true"
                       to={item.link}
                     >
