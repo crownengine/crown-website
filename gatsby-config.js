@@ -18,19 +18,19 @@ module.exports = {
     tcf_mail_address: `foundation@crownengine.org`,
     stats: [
       {
-        label: "GitHub Stars",
-        value: 2200,
+        label: "Downloads",
+        value: 5500,
         suffix: "+",
-        link: "https://github.com/crownengine/crown/stargazers",
+        link: "/download",
       },
       {
         label: "Releases",
         value: 21,
         suffix: "",
-        link: "https://github.com/crownengine/crown/releases",
+        link: "/download",
       },
       {
-        label: "Discord Members",
+        label: "Community Members",
         value: 110,
         suffix: "+",
         link: "https://discord.gg/invite/CeXVWCT",
