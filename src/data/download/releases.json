@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/crownengine/crown/releases/225108020",
-  "assets_url": "https://api.github.com/repos/crownengine/crown/releases/225108020/assets",
-  "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/225108020/assets{?name,label}",
-  "html_url": "https://github.com/crownengine/crown/releases/tag/v0.57.0",
-  "id": 225108020,
+  "url": "https://api.github.com/repos/crownengine/crown/releases/236896597",
+  "assets_url": "https://api.github.com/repos/crownengine/crown/releases/236896597/assets",
+  "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/236896597/assets{?name,label}",
+  "html_url": "https://github.com/crownengine/crown/releases/tag/v0.58.0",
+  "id": 236896597,
   "author": {
     "login": "dbartolini",
     "id": 2070946,
@@ -25,20 +25,21 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOAFEyY84NauA0",
-  "tag_name": "v0.57.0",
+  "node_id": "RE_kwDOAFEyY84OHsFV",
+  "tag_name": "v0.58.0",
   "target_commitish": "master",
-  "name": "",
+  "name": "v0.58",
   "draft": false,
+  "immutable": false,
   "prerelease": false,
-  "created_at": "2025-06-13T08:06:50Z",
-  "published_at": "2025-06-13T09:27:42Z",
+  "created_at": "2025-08-01T12:35:50Z",
+  "published_at": "2025-08-01T14:08:18Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/263578522",
-      "id": 263578522,
-      "node_id": "RA_kwDOAFEyY84PteOa",
-      "name": "crown-0.57.0-linux-x64.tar.gz",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/278459890",
+      "id": 278459890,
+      "node_id": "RA_kwDOAFEyY84QmPXy",
+      "name": "crown-0.58.0-linux-x64.tar.gz",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -63,18 +64,18 @@
       },
       "content_type": "application/gzip",
       "state": "uploaded",
-      "size": 56007977,
-      "digest": "sha256:7eeaacc3d2c57a9357577a26e9815390da508e2d1b0eb7dadaaa6cebb7d82c0b",
+      "size": 56104410,
+      "digest": "sha256:9f9fc6f347e705f948f38ca8873851728726defe465f87c350f0bdc51d198d04",
       "download_count": 0,
-      "created_at": "2025-06-13T09:27:21Z",
-      "updated_at": "2025-06-13T09:27:25Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.57.0/crown-0.57.0-linux-x64.tar.gz"
+      "created_at": "2025-08-01T13:50:06Z",
+      "updated_at": "2025-08-01T13:50:10Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.58.0/crown-0.58.0-linux-x64.tar.gz"
     },
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/263578534",
-      "id": 263578534,
-      "node_id": "RA_kwDOAFEyY84PteOm",
-      "name": "crown-0.57.0-windows-x64.zip",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/278459928",
+      "id": 278459928,
+      "node_id": "RA_kwDOAFEyY84QmPYY",
+      "name": "crown-0.58.0-windows-x64.zip",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -99,17 +100,17 @@
       },
       "content_type": "application/zip",
       "state": "uploaded",
-      "size": 98228475,
-      "digest": "sha256:5c60183e094bc43e4aa376bc7d30f98e876c91a93265f70a2e135b69e3642077",
+      "size": 98380040,
+      "digest": "sha256:cf192e2aa8ffef5ad1254da6b09b0232e3be7f973d1b5a0b97582f474e0f59ce",
       "download_count": 0,
-      "created_at": "2025-06-13T09:27:25Z",
-      "updated_at": "2025-06-13T09:27:31Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.57.0/crown-0.57.0-windows-x64.zip"
+      "created_at": "2025-08-01T13:50:10Z",
+      "updated_at": "2025-08-01T13:50:16Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.58.0/crown-0.58.0-windows-x64.zip"
     },
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/263578547",
-      "id": 263578547,
-      "node_id": "RA_kwDOAFEyY84PteOz",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/278459955",
+      "id": 278459955,
+      "node_id": "RA_kwDOAFEyY84QmPYz",
       "name": "SHA256SUMS",
       "label": null,
       "uploader": {
@@ -136,14 +137,14 @@
       "content_type": "application/octet-stream",
       "state": "uploaded",
       "size": 191,
-      "digest": "sha256:c1d26b0e7b2338a8d228c4de7292ce02e2a62ef8f634701260bdabb19f8f7303",
+      "digest": "sha256:2c4f15ea8c24cc4736a9b0aee43828411d8d08813c6df1f834cf044e3e0fca8c",
       "download_count": 0,
-      "created_at": "2025-06-13T09:27:31Z",
-      "updated_at": "2025-06-13T09:27:31Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.57.0/SHA256SUMS"
+      "created_at": "2025-08-01T13:50:16Z",
+      "updated_at": "2025-08-01T13:50:17Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.58.0/SHA256SUMS"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.57.0",
-  "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.57.0",
-  "body": "Crown 0.57 is out! This is a maintenance release with fixed shadow maps, hot-reloading and outlines rendering on Windows, plus various QoL tweaks.\r\n\r\n:scroll: [Changelog](https://docs.crownengine.org/html/latest/changelog.html#jun-2025)\r\n:floppy_disk: [Download](https://crownengine.org/download)\r\n:heart: [Donate](https://crownengine.org/fund)"
+  "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.58.0",
+  "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.58.0",
+  "body": "Crown v0.58 is out with a new fog simulation component, improved resource importing experience, greatly optimized mesh data compilation times and the usual load of fixes.\r\n\r\n📜 Changelog: https://docs.crownengine.org/html/latest/changelog.html#aug-2025\r\n💾 Download: https://crownengine.org/download\r\n❤️ Donate: https://crownengine.org/fund"
 }
