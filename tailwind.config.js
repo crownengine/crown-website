@@ -14,6 +14,11 @@ module.exports = {
         bannerImage: "url('../images/index/crown-editor.jpeg')",
         blackOverlay: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8))",
       },
+      screens: {
+        "3xl": "1920px",
+        "4xl": "2560px",
+        "5xl": "3840px"
+      },
     },
   },
   variants: {
