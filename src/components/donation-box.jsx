@@ -23,6 +23,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   const currencySymbols = {
     EUR: "€",
     USD: "$",
+    BTC: "$",
   };
 
   const membershipTiers = {
@@ -76,6 +77,16 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
     }
   }, [location.search, frequency]);
 
+  // When BTC is selected, monthly subscriptions are not supported.
+  useEffect(() => {
+    if (currency === "BTC" && frequency === "monthly") {
+      setFrequency("one-time");
+      setSelectedAmount((prev) => ({ ...prev, ["one-time"]: amounts["one-time"][0] }));
+      setCustomAmount(amounts["one-time"][0].toString());
+      setIsCustomAmountValid(true);
+    }
+  }, [currency]);
+
   const handlePresetClick = (amount) => {
     setSelectedAmount((prev) => ({
       ...prev,
@@ -93,9 +104,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
 
     // Validate the custom amount
     const numericValue = parseFloat(value);
-    const isValid =
-      !isNaN(numericValue) && numericValue >= 1 && numericValue <= 10000 && Number.isInteger(numericValue);
-
+    const isValid = !isNaN(numericValue) && numericValue >= 1 && numericValue <= 10000 && Number.isInteger(numericValue);
     setIsCustomAmountValid(isValid);
     setSelectedAmount((prev) => ({
       ...prev,
@@ -107,6 +116,13 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   const handleDonate = () => {
     const amount = selectedAmount[frequency] || customAmount;
     // const prefix = "https://donate.crownengine.org/b";
+
+    if (currency === "BTC") {
+      const usdAmount = typeof amount === "number" ? amount : parseInt(amount, 10);
+      window.location.href = `/fund/donate-btc?amount_usd=${usdAmount}`;
+      return;
+    }
+
     const prefix = "https://donate.stripe.com";
 
     if (frequency === "monthly") {
@@ -168,6 +184,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
             frequency === "monthly" ? "bg-indigo-500 text-white" : "bg-gray-200 text-gray-700"
           } rounded-l-lg`}
           onClick={() => setFrequency("monthly")}
+          disabled={currency === "BTC"}
         >
           Monthly
         </button>
@@ -180,6 +197,12 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
           One-time
         </button>
       </div>
+
+      {currency === "BTC" && (
+        <div className="mb-4 text-sm text-yellow-700 bg-yellow-100 p-2 rounded">
+          Bitcoin donations: amounts are displayed in <strong>USD</strong>. Monthly subscriptions are not supported for BTC.
+        </div>
+      )}
 
       {/* Preset Amount Buttons */}
       <div className="grid grid-cols-3 gap-4 mb-6">
@@ -297,6 +320,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         >
           <option value="EUR">EUR</option>
           <option value="USD">USD</option>
+          <option value="BTC">BTC</option>
         </select>
       </div>
     </div>
