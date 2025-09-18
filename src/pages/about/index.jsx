@@ -28,16 +28,7 @@ export default function About() {
           <section className="py-24 px-4 text-left text-gray-300">
             <h1 className="text-6xl mb-6 font-bold">The Crown Foundation</h1>
             <p className="text-2xl mb-24 text-gray-300">
-              We create, distribute and promote{" "}
-              <a
-                className="text-gray-200 underline"
-                rel="noreferrer"
-                target="_blank"
-                href="https://github.com/crownengine/crown"
-              >
-                Crown
-              </a>
-              .
+              Open tools for real-time worlds.
             </p>
 
             <div className="flex flex-col gap-6">
