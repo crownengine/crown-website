@@ -19,19 +19,19 @@ module.exports = {
     stats: [
       {
         label: "Downloads",
-        value: 5600,
+        value: 6000,
         suffix: "+",
         link: "/download",
       },
       {
         label: "Releases",
-        value: 22,
+        value: 23,
         suffix: "",
         link: "/download",
       },
       {
         label: "Community Members",
-        value: 110,
+        value: 120,
         suffix: "+",
         link: "https://discord.gg/invite/CeXVWCT",
       },
