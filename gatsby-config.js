@@ -48,6 +48,10 @@ module.exports = {
         link: `/download`,
       },
       {
+        label: `Play`,
+        link: `/play`,
+      },
+      {
         label: `Support`,
         link: `/support`,
       },
