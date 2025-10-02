@@ -48,10 +48,6 @@ module.exports = {
         link: `/download`,
       },
       {
-        label: `Manual`,
-        link: `https://docs.crownengine.org`,
-      },
-      {
         label: `Support`,
         link: `/support`,
       },
