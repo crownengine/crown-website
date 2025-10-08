@@ -170,6 +170,14 @@ export default function Footer() {
                 >
                   <i className="fab fa-bluesky mr-3" aria-label="Bluesky"></i>
                 </a>
+                <a className="hover:text-indigo-800"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.linkedin.com/company/crownengine"
+                  title="Follow Crown on LinkedIn"
+                >
+                  <i className="fab fa-linkedin mr-3" aria-label="LinkedIn"></i>
+                </a>
                 {/* Uncomment when content will be available.
               <a
                 rel="noreferrer"
