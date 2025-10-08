@@ -35,7 +35,7 @@ export default function AboutMenu() {
 
         <div className="block lg:hidden px-4">
           <button
-            className="navbar-burger flex items-center py-2 px-4 text-indigo-500 border border-indigo-500"
+            className="navbar-burger flex items-center py-2 px-4 my-2 text-indigo-500 border border-indigo-500"
             onClick={menuClick}
             aria-label="Menu"
           >
