@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/crownengine/crown/releases/251809274",
-  "assets_url": "https://api.github.com/repos/crownengine/crown/releases/251809274/assets",
-  "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/251809274/assets{?name,label}",
-  "html_url": "https://github.com/crownengine/crown/releases/tag/v0.59.0",
-  "id": 251809274,
+  "url": "https://api.github.com/repos/crownengine/crown/releases/254099880",
+  "assets_url": "https://api.github.com/repos/crownengine/crown/releases/254099880/assets",
+  "upload_url": "https://uploads.github.com/repos/crownengine/crown/releases/254099880/assets{?name,label}",
+  "html_url": "https://github.com/crownengine/crown/releases/tag/v0.59.1",
+  "id": 254099880,
   "author": {
     "login": "dbartolini",
     "id": 2070946,
@@ -25,22 +25,22 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "node_id": "RE_kwDOAFEyY84PAk36",
-  "tag_name": "v0.59.0",
+  "node_id": "RE_kwDOAFEyY84PJUGo",
+  "tag_name": "v0.59.1",
   "target_commitish": "master",
-  "name": "v0.59",
+  "name": "v0.59.1",
   "draft": false,
   "immutable": false,
   "prerelease": false,
-  "created_at": "2025-10-02T15:58:07Z",
-  "updated_at": "2025-10-02T17:52:50Z",
-  "published_at": "2025-10-02T17:52:50Z",
+  "created_at": "2025-10-13T12:10:00Z",
+  "updated_at": "2025-10-13T14:53:04Z",
+  "published_at": "2025-10-13T14:53:04Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/299813636",
-      "id": 299813636,
-      "node_id": "RA_kwDOAFEyY84R3ssE",
-      "name": "crown-0.59.0-linux-x64.tar.gz",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/303754913",
+      "id": 303754913,
+      "node_id": "RA_kwDOAFEyY84SGu6h",
+      "name": "crown-0.59.1-linux-x64.tar.gz",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -65,18 +65,18 @@
       },
       "content_type": "application/gzip",
       "state": "uploaded",
-      "size": 60502524,
-      "digest": "sha256:919e53de15d2561a465b1f0585282f4c098d1b60a9144dda69d708fed66ac850",
+      "size": 60508914,
+      "digest": "sha256:825043fed2b605550e3afb7376d15f50262776f792c0d4c5bc319f5dcf14175a",
       "download_count": 0,
-      "created_at": "2025-10-02T17:52:23Z",
-      "updated_at": "2025-10-02T17:52:29Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.59.0/crown-0.59.0-linux-x64.tar.gz"
+      "created_at": "2025-10-13T14:48:17Z",
+      "updated_at": "2025-10-13T14:48:21Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.59.1/crown-0.59.1-linux-x64.tar.gz"
     },
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/299813663",
-      "id": 299813663,
-      "node_id": "RA_kwDOAFEyY84R3ssf",
-      "name": "crown-0.59.0-windows-x64.zip",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/303754885",
+      "id": 303754885,
+      "node_id": "RA_kwDOAFEyY84SGu6F",
+      "name": "crown-0.59.1-windows-x64.zip",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -101,18 +101,18 @@
       },
       "content_type": "application/zip",
       "state": "uploaded",
-      "size": 104014989,
-      "digest": "sha256:7097b16b1930fc2175f7f920fb6ae1d7c9ef608590120531fc04c22246ac866c",
+      "size": 104631566,
+      "digest": "sha256:b31c015ce47bbec8a2ab935243ffa26a4e0f3d1fe52ea1305866b32c7b764e2a",
       "download_count": 0,
-      "created_at": "2025-10-02T17:52:29Z",
-      "updated_at": "2025-10-02T17:52:35Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.59.0/crown-0.59.0-windows-x64.zip"
+      "created_at": "2025-10-13T14:48:09Z",
+      "updated_at": "2025-10-13T14:48:17Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.59.1/crown-0.59.1-windows-x64.zip"
     },
     {
-      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/299813633",
-      "id": 299813633,
-      "node_id": "RA_kwDOAFEyY84R3ssB",
-      "name": "crown-0.59.0.sha256",
+      "url": "https://api.github.com/repos/crownengine/crown/releases/assets/303754922",
+      "id": 303754922,
+      "node_id": "RA_kwDOAFEyY84SGu6q",
+      "name": "crown-0.59.1.sha256",
       "label": null,
       "uploader": {
         "login": "dbartolini",
@@ -138,14 +138,14 @@
       "content_type": "application/octet-stream",
       "state": "uploaded",
       "size": 191,
-      "digest": "sha256:d8357d0d4e6f9007deb8e7769b152fc69caa0048799b6b178b6415361f955797",
+      "digest": "sha256:a93837d8205c3d569694909455bcf1387307011235a8485fc1aab3f1d0175e84",
       "download_count": 0,
-      "created_at": "2025-10-02T17:52:23Z",
-      "updated_at": "2025-10-02T17:52:23Z",
-      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.59.0/crown-0.59.0.sha256"
+      "created_at": "2025-10-13T14:48:21Z",
+      "updated_at": "2025-10-13T14:48:22Z",
+      "browser_download_url": "https://github.com/crownengine/crown/releases/download/v0.59.1/crown-0.59.1.sha256"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.59.0",
-  "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.59.0",
-  "body": "Crown 0.59 is out! This is a massive update with many rendering-related additions (spotlight shadows, global lighting, bloom, MSAA to name a few), a new physics Mover for controlling characters, improved 3D sound spatialization, redesigned scripting component callbacks, a new Writing Gameplay manual section and the usual batch of bug fixes.\r\n\r\nMoreover, the 01-physics sample has been updated to showcase several new features. Play it on your browser at https://www.crownengine.org/play\r\n\r\n📜 [Changelog](https://docs.crownengine.org/html/latest/changelog.html#oct-2025)\r\n💾 [Download](https://crownengine.org/download)\r\n❤️ [Donate](https://crownengine.org/fund)\r\n\r\n![physics](https://github.com/user-attachments/assets/e7db7636-c28d-45a5-b292-f71c7dc81e20)\r\n"
+  "tarball_url": "https://api.github.com/repos/crownengine/crown/tarball/v0.59.1",
+  "zipball_url": "https://api.github.com/repos/crownengine/crown/zipball/v0.59.1",
+  "body": "Crown v0.59.1 is out! This is a tiny release with fixed state machine creation, improved compatibility with Linux systems and better input detection on Windows.\r\n\r\n📜 [Changelog](https://docs.crownengine.org/html/v0.59.0/changelog.html#v0-59-1)\r\n💾 [Download](https://crownengine.org/download)"
 }
