@@ -18,14 +18,14 @@ export default function Footer() {
   return (
     <div className="mt-auto bg-gray-300 px-6 lg:px-8 py-20 text-sm">
       <Clamp>
-        <div className="flex">
-          <div className="flex-1">
-            <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+        <div className="flex flex-wrap">
+          <div className="w-1/2 md:w-1/4">
+            <h1 className="font-semibold uppercase pb-1 text-sm">
               Download
             </h1>
             <nav className="mb-2">
-              {/* Crown */}
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600">
+              {/* Download */}
+              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
                 <Link className="hover:text-indigo-800"
                   to="/download">
                   Latest Crown
@@ -52,9 +52,9 @@ export default function Footer() {
             </nav>
           </div>
           {/* <div>
-          <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">Organization</h1>
+          <h1 className="font-semibold uppercase pb-1 text-sm">Organization</h1>
           <nav className="mb-2">
-            <div className="flex flex-col space-y-2 sm:text-left text-center">
+            <div className="flex flex-col space-y-2">
               <a
                 rel="noreferrer"
                 target="_blank"
@@ -76,10 +76,10 @@ export default function Footer() {
         </div> */}
 
           {/* About */}
-          <div className="flex-1">
-            <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">About</h1>
+          <div className="w-1/2 md:w-1/4">
+            <h1 className="font-semibold uppercase pb-1 text-sm">About</h1>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
                 <Link className="hover:text-indigo-800"
                   to="/about">The Crown Foundation
                 </Link>
@@ -100,12 +100,12 @@ export default function Footer() {
           </div>
 
           {/* Support */}
-          <div className="flex-1">
-            <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+          <div className="w-1/2 md:w-1/4">
+            <h1 className="font-semibold uppercase pb-1 text-sm">
               Support
             </h1>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
                 <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
@@ -132,12 +132,12 @@ export default function Footer() {
           </div>
 
           {/* Follow Crown */}
-          <div className="flex-1">
-            <h1 className="font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+          <div className="w-1/2 md:w-1/4">
+            <h1 className="font-semibold uppercase pb-1 text-sm">
               Follow Crown
             </h1>
             <nav className="mb-2">
-              <div className="flex flex-row sm:text-left text-lg text-center text-indigo-600">
+              <div className="flex flex-row text-lg text-indigo-600">
                 <a className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
@@ -191,11 +191,11 @@ export default function Footer() {
               </div>
             </nav>
             {/* Donate */}
-            <h1 className="mt-4 font-semibold uppercase pb-1 text-sm sm:text-left text-center">
+            <h1 className="mt-4 font-semibold uppercase pb-1 text-sm">
               Support Crown
             </h1>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 sm:text-left text-center lg:mt-0 text-indigo-600 hover:text-indigo-700">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600 hover:text-indigo-700">
                 <DonateButton></DonateButton>
               </div>
             </nav>
