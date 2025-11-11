@@ -92,7 +92,6 @@
             "frequency": "yearly",
             "channels": ["crown-fund"]
         },{
-        },{
             "guid": "corporate-bronze",
             "status": "active",
             "name": "Corporate Bronze Sponsor",
@@ -100,7 +99,6 @@
             "currency": "EUR",
             "frequency": "yearly",
             "channels": ["crown-fund"]
-        },{
         }]
     }
 }
