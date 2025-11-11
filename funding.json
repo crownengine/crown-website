@@ -21,7 +21,7 @@
             "url": "https://www.crownengine.org/"
         },
         "repositoryUrl": {
-            "url": "https://www.github.com/crownengine/crown",
+            "url": "https://github.com/crownengine/crown",
             "wellKnown": "https://github.com/crownengine/crown/blob/master/.well-known/funding-manifest-urls"
         },
         "licenses": ["spdx:MIT", "spdx:GPL-3.0-or-later"],
