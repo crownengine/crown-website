@@ -22,7 +22,7 @@
         },
         "repositoryUrl": {
             "url": "https://www.github.com/crownengine/crown",
-            "well-known"
+            "wellKnown": "https://github.com/crownengine/crown/blob/master/.well-known/funding-manifest-urls"
         },
         "licenses": ["spdx:MIT", "spdx:GPL-3.0-or-later"],
         "tags": ["gaming", "animation", "graphics", "design", "developer-tools", "data-visualization", "api"]
