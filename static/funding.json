@@ -1,0 +1,106 @@
+{
+    "$schema": "https://fundingjson.org/schema/v1.1.0.json",
+    "version": "v1.0.0",
+
+    "entity": {
+        "type": "organisation",
+        "role": "maintainer",
+        "name": "The Crown Foundation",
+        "email": "foundation@crownengine.org",
+        "description": "The Crown Foundation is a non-profit organization dedicated to building a free and open-source technology that advances the world of game development and real-time multimedia applications.",
+        "webpageUrl": {
+            "url": "https://www.crownengine.org/"
+        }
+    },
+
+    "projects": [{
+        "guid": "crown",
+        "name": "Crown",
+        "description": "Crown is a complete and cross-platform game engine designed for flexibility, performance and fast-iterations.",
+        "webpageUrl": {
+            "url": "https://www.crownengine.org/"
+        },
+        "repositoryUrl": {
+            "url": "https://www.github.com/crownengine/crown",
+            "well-known"
+        },
+        "licenses": ["spdx:MIT", "spdx:GPL-3.0-or-later"],
+        "tags": ["gaming", "animation", "graphics", "design", "developer-tools", "data-visualization", "api"]
+    }],
+
+    "funding": {
+        "channels": [{
+            "guid": "crown-fund",
+            "type": "other",
+            "address": "https://www.crownengine.org/fund",
+            "description": "DebitCard, CreditCard donations."
+        },{
+            "guid": "crown-bitcoin-fund",
+            "type": "other",
+            "address": "https://www.crownengine.org/fund",
+            "description": "Bitcoin one-time donations."
+        }
+        ],
+
+        "plans": [{
+            "guid": "crown-fund-one-time",
+            "status": "active",
+            "name": "One-time donation",
+            "description": "Donate once today",
+            "amount": 0,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund", "crown-bitcoin-fund"]
+        },{
+            "guid": "corporate-diamond",
+            "status": "active",
+            "name": "Corporate Diamond Sponsor",
+            "amount": 150000,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund"]
+        },{
+            "guid": "corporate-platinum",
+            "status": "active",
+            "name": "Corporate Platinum Sponsor",
+            "amount": 60000,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund"]
+        },{
+            "guid": "corporate-titanium",
+            "status": "active",
+            "name": "Corporate Titanium Sponsor",
+            "amount": 30000,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund"]
+        },{
+            "guid": "corporate-gold",
+            "status": "active",
+            "name": "Corporate Gold Sponsor",
+            "amount": 15000,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund"]
+        },{
+            "guid": "corporate-silver",
+            "status": "active",
+            "name": "Corporate Silver Sponsor",
+            "amount": 6000,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund"]
+        },{
+        },{
+            "guid": "corporate-bronze",
+            "status": "active",
+            "name": "Corporate Bronze Sponsor",
+            "amount": 3000,
+            "currency": "EUR",
+            "frequency": "yearly",
+            "channels": ["crown-fund"]
+        },{
+        }]
+    }
+}
