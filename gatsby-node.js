@@ -31,9 +31,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const markDownTemplate = require.resolve(`./src/templates/markdown.jsx`)
-
-  const result = await graphql(`
+  // Random markdown files.
+  const markdowns = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -47,16 +46,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  // Handle errors
-  if (result.errors) {
+  if (markdowns.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  markdowns.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
-      component: markDownTemplate,
+      component: require.resolve(`./src/templates/markdown.jsx`),
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
