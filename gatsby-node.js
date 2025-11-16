@@ -61,4 +61,45 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+
+  // News.
+  const newsTemplate = require.resolve(`./src/templates/news.jsx`)
+
+  const news_query = await graphql(`
+    query {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+              title
+            }
+            internal {
+              contentFilePath
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (news_query.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const news = news_query.data.allMdx.edges
+
+  news.forEach(({ node }, index) => {
+    createPage({
+      path: node.frontmatter.slug,
+      component: `${newsTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
+      context: {
+        id: node.id,
+        prev: index === news.length - 1 ? null : news[index + 1].node,
+        next: index === 0 ? null : news[index - 1].node,
+      },
+    })
+  })
 }

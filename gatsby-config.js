@@ -98,6 +98,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `news`,
+        path: path.join(__dirname, `src`, `news`),
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         footnotes: true,
@@ -132,5 +139,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-mdx`,
   ],
 }
