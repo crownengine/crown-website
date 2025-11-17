@@ -47,11 +47,11 @@ export default function Header() {
         {/* Main menu */}
         <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-100">
           <ul className="flex flex-col lg:flex-row">
-            {menu_items.map(item => {
+            {menu_items.map((item, index) => {
               const is_external = !item.link.startsWith("/")
 
               return (
-                <li className="hover:text-indigo-400">
+                <li key={index} className="hover:text-indigo-400">
                   {is_external ? (
                     <a
                       className="block py-2 pr-4 pl-3"

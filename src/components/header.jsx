@@ -53,17 +53,17 @@ export default function AboutMenu() {
         {/* Main menu */}
         <div className="navbar-menu hidden w-full lg:block lg:w-auto px-4 text-gray-900">
           <ul className="flex flex-col lg:flex-row">
-            {menu_items.map(item => {
+            {menu_items.map((item, index) => {
               if (item.label === "Donate") {
                 return (
-                  <li className="py-2 pl-2 pr-2"><DonateButton/></li>
+                  <li key={index} className="py-2 pl-2 pr-2"><DonateButton/></li>
                 )
               }
 
               const is_external = !item.link.startsWith("/")
 
               return (
-                <li className="hover:text-indigo-600">
+                <li key={index} className="hover:text-indigo-600">
                   {is_external ? (
                     <a
                       className="block py-4 pl-2 pr-2"
@@ -77,7 +77,7 @@ export default function AboutMenu() {
                     <Link
                       className="block py-4 pl-2 pr-2"
                       activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
-                      partiallyActive="true"
+                      partiallyActive={true}
                       to={item.link}
                     >
                       {item.label}

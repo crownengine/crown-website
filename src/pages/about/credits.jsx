@@ -23,9 +23,9 @@ export default function About() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
                   <h2 className="text-4xl mb-6 font-semibold">Current Release</h2>
-                  {Latest.map(item => {
+                  {Latest.map((item, index) => {
                     return (
-                      <p className="mb-6 text-gray-700">
+                      <p key={index} className="mb-6 text-gray-700">
                         {item.author}, {item.commits} {item.commits === "1" ? 'commit' : 'commits'} ({item.years})
                       </p>
                     )
@@ -34,9 +34,9 @@ export default function About() {
 
                 <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
                   <h2 className="text-4xl mb-6 font-semibold">All-time Contributors</h2>
-                  {AllTime.map(item => {
+                  {AllTime.map((item, index) => {
                     return (
-                      <p className="text-gray-700">
+                      <p key={index} className="text-gray-700">
                         {item.author}, {item.commits} {item.commits === "1" ? 'commit' : 'commits'} ({item.years})
                       </p>
                     )
