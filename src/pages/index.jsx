@@ -3,6 +3,7 @@ import Cta from "../components/cta"
 import Features from "../components/features"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { graphql } from 'gatsby'
 
 export default function Home() {
   return (
@@ -14,6 +15,20 @@ export default function Home() {
   )
 }
 
-export const Head = () => (
-  <Seo title="Home" />
-)
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description_short
+      }
+    }
+  }
+`
+
+export const Head = ({ data }) => {
+  const title = data.site.siteMetadata.title
+  const description = data.site.siteMetadata.description_short
+  const fulltitle = title + " - " + description
+  return <Seo title={fulltitle}/>
+}
