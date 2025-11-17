@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Clamp from "../components/clamp"
 import Seo from "../components/seo"
 import MDXComponents from "../components/mdx";
+import { getSrc } from "gatsby-plugin-image"
 
 export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
   const prevNews = pageContext.prev ? { url: `${pageContext.prev.frontmatter.slug}`, title: pageContext.prev.frontmatter.title } : null
@@ -58,6 +59,11 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 1280, placeholder: BLURRED)
+          }
+        }
       }
       excerpt(pruneLength: 280)
     }
@@ -67,5 +73,6 @@ export const query = graphql`
 export const Head = ({ data }) => {
   const title = data.mdx.frontmatter.title
   const excerpt = data.mdx.excerpt
-  return <Seo title={title} description={excerpt}/>
+  const image = getSrc(data.mdx.frontmatter.image);
+  return <Seo title={title} description={excerpt} image={image}/>
 }
