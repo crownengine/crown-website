@@ -52,6 +52,10 @@ module.exports = {
         link: `/play`,
       },
       {
+        label: `News`,
+        link: `/news`,
+      },
+      {
         label: `Support`,
         link: `/support`,
       },
