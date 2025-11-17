@@ -59,11 +59,13 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
       }
+      excerpt(pruneLength: 280)
     }
   }
 `
 
 export const Head = ({ data }) => {
   const title = data.mdx.frontmatter.title
-  return <Seo title={title} />
+  const excerpt = data.mdx.excerpt
+  return <Seo title={title} description={excerpt}/>
 }
