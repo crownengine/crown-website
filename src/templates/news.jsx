@@ -16,34 +16,34 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
     <Layout>
       <Clamp>
         {/* Header */}
-        <section className="px-40 pt-16 text-left text-gray-600">
+        <section className="md:px-40 px-6 pt-16 text-left text-gray-600">
           <span className="text-1xl text-gray-500 mb-4">{mdx.frontmatter.date}</span>
           <h1 className="text-5xl font-bold mb-12">{mdx.frontmatter.title}</h1>
         </section>
 
         {/* Content */}
-        <section className="px-40 text-left mb-8 text-gray-800">
+        <section className="md:px-40 px-6 text-left mb-8 text-gray-800">
           <MDXProvider components={MDXComponents}>
             {children}
           </MDXProvider>
         </section>
 
-        {/* Prev/next news*/}
-        <section className="flex px-40 text-gray-800">
-         {prevNews && (
-            <Link className="flex justify-start w-full inline-block py-4 px-8 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+        {/* Prev/next news */}
+        <section className="flex flex-col md:flex-row md:px-40 px-6 text-gray-800">
+          {prevNews && (
+            <Link className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
               to={prevNews.url}
             >
-               <span>&lt; {prevNews.title}</span>
+              &lt; {prevNews.title}
             </Link>
-         )}
-         {nextNews && (
-            <Link className="flex justify-end w-full inline-block py-4 px-8 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+          )}
+          {nextNews && (
+            <Link className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
               to={nextNews.url}
             >
-               <span>{nextNews.title} &gt;</span>
+              {nextNews.title} &gt;
             </Link>
-         )}
+          )}
         </section>
       </Clamp>
 
