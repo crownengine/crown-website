@@ -3,17 +3,24 @@ import { Link, graphql } from "gatsby"
 import Clamp from "../../components/clamp"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
+import NewsCard from "../../components/news-card.jsx"
+import { getImage } from "gatsby-plugin-image"
 
 // See: https://www.gatsbyjs.com/docs/adding-a-list-of-markdown-blog-posts/
 export default function NewsIndex({ data: { allMdx: { edges } }}) {
   const News = edges
     .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge =>
-      <p className="font-bold">
+    .map((edge, index) =>
+      <div key={index} className="flex-1 min-w-[300px]">
         <Link to={edge.node.frontmatter.slug}>
-          {edge.node.frontmatter.title} — {edge.node.frontmatter.date}
+          <NewsCard
+            image={getImage(edge.node.frontmatter.image?.childImageSharp?.gatsbyImageData)}
+            title={edge.node.frontmatter.title}
+            excerpt={edge.node.excerpt}
+            date={edge.node.frontmatter.date}
+          />
         </Link>
-      </p>
+      </div>
     )
 
   return (
@@ -21,12 +28,11 @@ export default function NewsIndex({ data: { allMdx: { edges } }}) {
       <Clamp>
         {/* News list */}
         <section className="py-16 px-4 text-left text-gray-600">
-          <h1 className="text-6xl mb-6 font-bold">News</h1>
-          {News}
+          <div className="flex flex-wrap gap-4">
+            {News}
+          </div>
         </section>
       </Clamp>
-      {/* Padding */}
-      <section className="py-48"></section>
     </Layout>
   )
 }
@@ -41,7 +47,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 1280, placeholder: DOMINANT_COLOR)
+              }
+            }
           }
+          excerpt(pruneLength: 80)
         }
       }
     }
@@ -49,6 +61,5 @@ export const pageQuery = graphql`
 `
 
 export const Head = () => (
-  <Seo title="Crown Engine News" />
+  <Seo title="Crown - Latest News" />
 )
-
