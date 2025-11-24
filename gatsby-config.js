@@ -12,7 +12,7 @@ module.exports = {
     siteUrl: `https://www.crownengine.org`,
     title: `Crown Engine`,
     subtitle: `The Flexible Game Engine`,
-    description: `Crown is a complete and cross-platform game engine designed for flexibility, performance, and fast-iterations.`,
+    description: `A complete and cross-platform game engine designed for flexibility, performance, and fast-iterations.`,
     description_short: `Flexible, performant and fast-iterations focused game engine.`,
     image: `/placeholder.png`,
     org_title: `The Crown Foundation`,
