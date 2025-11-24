@@ -36,9 +36,9 @@ export default function About() {
                 <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
                   <h2 className="text-4xl mb-6 font-semibold">The Organization</h2>
                   <p className="mb-6 text-gray-700">
-                    The Crown Foundation (2020) is a non-profit organization dedicated to building a
-                    free and open-source technology that advances the world of game development and
-                    real-time multimedia applications.
+                    The Crown Foundation is a nonprofit organization dedicated to developing free,
+                    open-source technologies that advance the fields of game development and real-time multimedia
+                    applications.
                   </p>
                   <p className="mb-6 text-gray-700">
                     By supporting us, you are not just funding a game engine — you are fueling
