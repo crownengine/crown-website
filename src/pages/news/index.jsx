@@ -1,36 +1,18 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Clamp from "../../components/clamp"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
-import NewsCard from "../../components/news-card.jsx"
-import { getImage } from "gatsby-plugin-image"
+import NewsList from "../../components/news-list.jsx"
 
 // See: https://www.gatsbyjs.com/docs/adding-a-list-of-markdown-blog-posts/
-export default function NewsIndex({ data: { allMdx: { edges } }}) {
-  const News = edges
-    .filter(edge => !!edge.node.frontmatter.date)
-    .map((edge, index) =>
-      <div key={index} className="flex-1 min-w-[300px]">
-        <Link to={edge.node.frontmatter.slug}>
-          <NewsCard
-            image={getImage(edge.node.frontmatter.image?.childImageSharp?.gatsbyImageData)}
-            title={edge.node.frontmatter.title}
-            excerpt={edge.node.excerpt}
-            date={edge.node.frontmatter.date}
-          />
-        </Link>
-      </div>
-    )
-
+export default function NewsIndex({ data }) {
   return (
     <Layout>
       <Clamp>
-        {/* News list */}
-        <section className="py-16 px-4 text-left text-gray-600">
-          <div className="flex flex-wrap gap-4">
-            {News}
-          </div>
+        <section className="mt-12 mb-16 px-4">
+          <h1 className="text-2xl font-bold mb-6 text-gray-600">News</h1>
+          <NewsList edges={data.allMdx.edges}/>
         </section>
       </Clamp>
     </Layout>
