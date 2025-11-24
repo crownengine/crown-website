@@ -15,7 +15,7 @@ export default function Cta() {
   `)
 
   return (
-    <div className="bg-bannerImage bg-left-top bg-cover">
+    <div className="bg-bannerImage bg-left-top bg-cover mb-16">
       <div className="bg-blackOverlay">
         <Clamp>
           <section className="py-32 px-4">

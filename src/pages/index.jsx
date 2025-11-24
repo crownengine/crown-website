@@ -2,25 +2,57 @@ import React from "react"
 import Cta from "../components/cta"
 import Features from "../components/features"
 import Layout from "../components/layout"
+import NewsList from "../components/news-list"
+import Clamp from "../components/clamp.jsx"
 import Seo from "../components/seo"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <Layout>
       <Cta />
+      <Clamp>
+        <section className="mb-16 px-4">
+          <h1 className="">
+            <Link
+              className="block text-2xl font-bold mb-6 text-gray-600"
+              to="/news"
+            >
+              Latest News
+            </Link>
+          </h1>
+          <NewsList edges={data.allMdx.edges} limit={3} />
+        </section>
+      </Clamp>
       <Features />
-      {/* <FAQ /> */}
     </Layout>
   )
 }
 
-export const query = graphql`
+export const data = graphql`
   query {
     site {
       siteMetadata {
         title
         description_short
+      }
+    }
+    allMdx(sort: { frontmatter: { date: DESC }}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 1280, placeholder: DOMINANT_COLOR)
+              }
+            }
+          }
+          excerpt(pruneLength: 80)
+        }
       }
     }
   }
