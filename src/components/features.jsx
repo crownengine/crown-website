@@ -57,7 +57,7 @@ export default function Features() {
             <i className="fas fa-brands fa-osi fa-2x text-indigo-600"></i>
             <h3 className="text-2xl my-3 font-bold text-gray-700">Free and Open Source</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
-              Crown is a public, collaborative project, owned by its contributors.
+              Crown is a public, collaborative project, owned by its contributors and free forever.
             </p>
           </div>
         </div>
