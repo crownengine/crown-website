@@ -9,7 +9,7 @@ export default function Thanks({location}) {
   const download_url = location.state?.crown_download_url || window.location.href;
 
   useEffect(() => {
-    if (download_url == window.location.href)
+    if (download_url === window.location.href)
       return;
 
     const timer = setTimeout(() => {
