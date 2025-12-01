@@ -176,7 +176,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
       {/* Frequency Toggle */}
       <div className="flex justify-center mb-6">
         <button

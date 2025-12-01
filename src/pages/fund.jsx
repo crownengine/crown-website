@@ -41,10 +41,12 @@ export default function Fund() {
               </div>
 
               <div className="col-span-6 md:col-span-3 flex flex-col gap-6 relative" id="donation-box">
-                <DonationBox
-                  frequency={currentFrequency}
-                  initialAmount={currentAmount}
-                />
+                <div className="absolute top-0 left-0 w-full">
+                  <DonationBox
+                    frequency={currentFrequency}
+                    initialAmount={currentAmount}
+                  />
+                </div>
               </div>
             </div>
           </section>

@@ -44,7 +44,9 @@ export default function Thanks({location}) {
               </div>
 
               <div className="col-span-6 md:col-span-3 flex flex-col gap-6 relative" id="donation-box">
-                <DonationBox/>
+                <div className="absolute top-0 left-0 w-full">
+                  <DonationBox/>
+                </div>
               </div>
             </div>
           </section>
