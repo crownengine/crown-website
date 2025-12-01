@@ -14,41 +14,43 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
 
   return (
     <Layout>
-      <Clamp>
-        {/* Header */}
-        <section className="md:px-40 px-6 pt-16 text-left text-gray-600">
-          <span className="text-1xl text-gray-500 mb-4">{mdx.frontmatter.date}</span>
-          <h1 className="text-5xl font-bold mb-12">{mdx.frontmatter.title}</h1>
-        </section>
+      <div className="bg-gray-200">
+        <Clamp>
+          {/* Header */}
+          <section className="md:px-40 px-6 pt-16 text-left text-gray-700">
+            <span className="text-1xl text-gray-500 mb-4">{mdx.frontmatter.date}</span>
+            <h1 className="text-5xl font-bold mb-12">{mdx.frontmatter.title}</h1>
+          </section>
 
-        {/* Content */}
-        <section className="md:px-40 px-6 text-left mb-8 text-gray-800">
-          <MDXProvider components={MDXComponents}>
-            {children}
-          </MDXProvider>
-        </section>
+          {/* Content */}
+          <section className="md:px-40 px-6 text-left mb-8 text-gray-700">
+            <MDXProvider components={MDXComponents}>
+              {children}
+            </MDXProvider>
+          </section>
 
-        {/* Prev/next news */}
-        <section className="flex flex-col md:flex-row md:px-40 px-6 text-gray-800">
-          {prevNews && (
-            <Link className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
-              to={prevNews.url}
-            >
-              &lt; {prevNews.title}
-            </Link>
-          )}
-          {nextNews && (
-            <Link className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
-              to={nextNews.url}
-            >
-              {nextNews.title} &gt;
-            </Link>
-          )}
-        </section>
-      </Clamp>
+          {/* Prev/next news */}
+          <section className="flex flex-col md:flex-row md:px-40 px-6 text-gray-700">
+            {prevNews && (
+              <Link className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+                to={prevNews.url}
+              >
+                &lt; {prevNews.title}
+              </Link>
+            )}
+            {nextNews && (
+              <Link className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+                to={nextNews.url}
+              >
+                {nextNews.title} &gt;
+              </Link>
+            )}
+          </section>
+        </Clamp>
 
-      {/* Padding */}
-      <section className="py-32"></section>
+        {/* Padding */}
+        <section className="py-32"/>
+      </div>
     </Layout>
   )
 }
