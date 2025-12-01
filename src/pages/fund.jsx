@@ -9,7 +9,7 @@ export default function Fund() {
   const searchParams = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
   const initialFreq = searchParams?.get("frequency") === "monthly" ? "monthly" : "one-time";
   const amtParam = searchParams?.get("amount");
-  const initialAmt = amtParam && !isNaN(parseInt(amtParam)) ? parseInt(amtParam) : 10;
+  const initialAmt = amtParam && !isNaN(parseInt(amtParam)) ? parseInt(amtParam) : 25;
 
   const [currentFrequency, setCurrentFrequency] = React.useState(initialFreq);
   const [currentAmount, setCurrentAmount] = React.useState(initialAmt);
