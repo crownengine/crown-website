@@ -6,9 +6,12 @@ import DonationBox from "../../components/donation-box"
 import StatsBanner from "../../components/stats-banner"
 
 export default function Thanks({location}) {
-  const download_url = location.state?.crown_download_url || "none";
+  const download_url = location.state?.crown_download_url || window.location.href;
 
   useEffect(() => {
+    if (download_url == window.location.href)
+      return;
+
     const timer = setTimeout(() => {
       window.location.href = download_url;
     }, 400);
