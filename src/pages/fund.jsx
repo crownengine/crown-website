@@ -76,7 +76,7 @@ export default function Fund() {
               Diamond
             </h3>
             <div className="flex flex-wrap justify-center gap-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-              {["ShinyMcSparkle", "GlitterGuru", "FacetMaster"].map((name, i) => (
+              {["Take", "The", "Lead"].map((name, i) => (
                 <button
                   key={i}
                   onClick={() => handleTierClick(250, "monthly")}
@@ -95,7 +95,7 @@ export default function Fund() {
               Platinum
             </h3>
             <div className="flex flex-wrap justify-center gap-8 opacity-80 hover:opacity-100 transition-opacity duration-300">
-              {["PlatinaPirate", "SilverSlayer", "RingMaster", "PlatinumPledge"].map((name, i) => (
+              {["Make", "The", "First", "Gift"].map((name, i) => (
                 <button
                   key={i}
                   onClick={() => handleTierClick(100, "monthly")}
@@ -114,7 +114,7 @@ export default function Fund() {
               Titanium
             </h3>
             <div className="flex flex-wrap justify-center gap-6 text-gray-900 text-2xl">
-              {["Titan Tim", "Tina Titanium", "Ti Master"].map((name, i) => (
+              {["Kick", "It", "Off"].map((name, i) => (
                 <button
                   key={i}
                   onClick={() => handleTierClick(50, "monthly")}
@@ -133,7 +133,7 @@ export default function Fund() {
               Gold
             </h3>
             <div className="flex flex-wrap justify-center gap-4 text-gray-800 text-xl font-medium">
-              {["Goldie Locks", "Auric Annie", "Midas Mike"].map((name, i) => (
+              {["Start", "The", "Giving"].map((name, i) => (
                 <button
                   key={i}
                   onClick={() => handleTierClick(25, "monthly")}
@@ -152,7 +152,7 @@ export default function Fund() {
               Silver
             </h3>
             <div className="flex flex-wrap justify-center gap-3 text-gray-600">
-              {["Silvy Silverstein", "Agent Argent", "Quicksilver Quinn", "Sterling Stella"].map((name, i) => (
+              {["Set", "The", "Example", "Today"].map((name, i) => (
                 <button
                   key={i}
                   onClick={() => handleTierClick(10, "monthly")}

@@ -40,10 +40,6 @@ export default function About() {
                     open-source technologies that advance the fields of game development and real-time multimedia
                     applications.
                   </p>
-                  <p className="mb-6 text-gray-700">
-                    By supporting us, you are not just funding a game engine — you are fueling
-                    innovation, accessibility, and the next generation of game developers.
-                  </p>
                 </div>
 
                 <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
@@ -51,16 +47,12 @@ export default function About() {
                   <p className="mb-6 text-gray-700">Your donations go towards:</p>
                   <ul className="list-disk list-inside mb-6 text-gray-700">
                     <li>
-                      <b>Core Contributors</b>: Helping us grow the team with competitive salaries for
-                      full-time developers.
+                      • Core Contributors: Helping us <b>grow the team</b> with competitive salaries for
+                      full-time developers and artists.
                     </li>
                     <li>
-                      <b>Infrastructure</b>: Covering the costs of servers, tools, and other essential
-                      overheads.
-                    </li>
-                    <li>
-                      <b>Outreach & Education</b>: Creating tutorials, organizing events, and supporting
-                      educational initiatives for budding game engine developers.
+                      • Infrastructure: Covering the costs of <b>hardware for testing and development</b>,
+                        this <b>web domain</b>, banking services and other essential overheads.
                     </li>
                   </ul>
                 </div>
