@@ -21,7 +21,7 @@ module.exports = {
     stats: [
       {
         label: "Downloads",
-        value: 6400,
+        value: 6500,
         suffix: "+",
         link: "/download",
       },
@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         label: "Community Members",
-        value: 120,
+        value: 130,
         suffix: "+",
         link: "https://discord.gg/invite/CeXVWCT",
       },
