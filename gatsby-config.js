@@ -21,7 +21,7 @@ module.exports = {
     stats: [
       {
         label: "Downloads",
-        value: 6500,
+        value: 6700,
         suffix: "+",
         link: "/download",
       },
