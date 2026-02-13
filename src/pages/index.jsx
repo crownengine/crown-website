@@ -21,7 +21,31 @@ export default function Home({ data }) {
               Latest News
             </Link>
           </h1>
-          <NewsList edges={data.allMdx.edges} limit={3} />
+          {/* Latest news card.*/}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flow-root lg:items-stretch">
+            <div className="lg:col-span-3">
+              <NewsList
+                edges={data.allMdx.edges}
+                start={0}
+                limit={1}
+                variant="regular"
+                listClassName=""
+                itemClassName=""
+              />
+            </div>
+
+            {/* Older news cards. */}
+            <div className="lg:col-span-2">
+              <NewsList
+                edges={data.allMdx.edges}
+                start={1}
+                limit={3}
+                variant="row"
+                listClassName="flex flex-col gap-4 md:h-full"
+                itemClassName="md:flex-1"
+              />
+            </div>
+          </div>
         </section>
       </Clamp>
       <Features />
