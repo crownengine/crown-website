@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react";
+import React from "react"
 
 const DonateButton = () => {
   return (
@@ -19,7 +19,7 @@ const DonateButton = () => {
     >
       <i className="fa fa-heart mr-2"></i>Donate
     </Link>
-  );
-};
+  )
+}
 
-export default DonateButton;
+export default DonateButton

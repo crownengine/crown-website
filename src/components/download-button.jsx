@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React from "react";
+import React from "react"
 
 const DownloadButton = () => {
   return (
@@ -9,8 +9,7 @@ const DownloadButton = () => {
     >
       Download Crown
     </Link>
-  );
-};
+  )
+}
 
-export default DownloadButton;
-
+export default DownloadButton

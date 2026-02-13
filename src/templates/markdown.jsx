@@ -40,6 +40,4 @@ export const pageQuery = graphql`
   }
 `
 
-export const Head = () => (
-  <Seo />
-)
+export const Head = () => <Seo />

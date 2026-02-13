@@ -47,9 +47,8 @@ export default function Download() {
   }
 
   function getPackageType(package_name) {
-    const ext = package_name.substring(package_name.lastIndexOf(".") + 1
-      , package_name.length)
-      || package_name
+    const ext =
+      package_name.substring(package_name.lastIndexOf(".") + 1, package_name.length) || package_name
 
     if (ext === "gz") return "Tarball"
     else if (ext === "zip") return "ZIP"
@@ -70,15 +69,15 @@ export default function Download() {
   }
 
   function listSeparator() {
-    return <div className="flex-1 border-b-2 border-b-gray-600"></div>;
+    return <div className="flex-1 border-b-2 border-b-gray-600"></div>
   }
 
   function downloadEntries() {
     var lastOS = ""
-    var urlSizeList = Releases.assets.map(function(data) {
+    var urlSizeList = Releases.assets.map(function (data) {
       var separator = lastOS !== "" && lastOS !== getPackageOS(data.name)
       lastOS = getPackageOS(data.name)
-      var valid = lastOS !== "Unknown OS";
+      var valid = lastOS !== "Unknown OS"
 
       return {
         valid: valid,
@@ -87,9 +86,9 @@ export default function Download() {
         url: data.browser_download_url,
         size: data.size,
         separator: separator,
-        order: 0
-      };
-    });
+        order: 0,
+      }
+    })
 
     urlSizeList.push({
       valid: true,
@@ -99,37 +98,33 @@ export default function Download() {
       size: 0,
       separator: false,
       alt: "AUR",
-      order: 1
-    });
+      order: 1,
+    })
 
-    urlSizeList.sort(function(a, b) {
-        if (a.os < b.os) {
-          return -1;
-        }
-        if (a.os > b.os) {
-          return 1;
-        }
+    urlSizeList.sort(function (a, b) {
+      if (a.os < b.os) {
+        return -1
+      }
+      if (a.os > b.os) {
+        return 1
+      }
 
-        if (a.order < b.order) {
-          return -1;
-        }
-        if (a.order > b.order) {
-          return 1;
-        }
+      if (a.order < b.order) {
+        return -1
+      }
+      if (a.order > b.order) {
+        return 1
+      }
 
-        return 0;
-      });
+      return 0
+    })
 
     return urlSizeList.map((data, index) => {
       return (
         <>
           {data.valid && data.separator && listSeparator()}
-          {data.valid && data.alt === "AUR" &&
-            <OutboundLink
-              rel="noreferrer"
-              target="_blank"
-              href={data.url}
-            >
+          {data.valid && data.alt === "AUR" && (
+            <OutboundLink rel="noreferrer" target="_blank" href={data.url}>
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
                   <i className={"fab fa-" + data.os.toLowerCase()}></i>
@@ -139,16 +134,14 @@ export default function Download() {
                 </div>
                 <div className="flex-1 text-right">
                   {data.alt != null && data.alt}
-                  {data.alt == null && Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
+                  {data.alt == null &&
+                    Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
                 </div>
               </div>
             </OutboundLink>
-          }
-          {data.valid && data.alt !== "AUR" &&
-            <Link
-              to="/download/thanks"
-              state={{crown_download_url: data.url}}
-            >
+          )}
+          {data.valid && data.alt !== "AUR" && (
+            <Link to="/download/thanks" state={{ crown_download_url: data.url }}>
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
                   <i className={"fab fa-" + data.os.toLowerCase()}></i>
@@ -158,11 +151,12 @@ export default function Download() {
                 </div>
                 <div className="flex-1 text-right">
                   {data.alt != null && data.alt}
-                  {data.alt == null && Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
+                  {data.alt == null &&
+                    Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
                 </div>
               </div>
             </Link>
-          }
+          )}
         </>
       )
     })
@@ -193,112 +187,93 @@ export default function Download() {
   return (
     <Layout>
       <div className="bg-gradient-to-b from-green-800 to-gray-800">
-      <Clamp>
-      <section className="py-24 px-4 text-center">
-        <div className="w-full max-w-2xl mx-auto mb-32">
-          <h1 className="text-6xl text-center mt-2 mb-24 font-bold text-gray-300">
-            Let Your Game Begin
-          </h1>
+        <Clamp>
+          <section className="py-24 px-4 text-center">
+            <div className="w-full max-w-2xl mx-auto mb-32">
+              <h1 className="text-6xl text-center mt-2 mb-24 font-bold text-gray-300">
+                Let Your Game Begin
+              </h1>
 
-          <div className="text-2xl">
-            <Link
-              className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow"
-              to="/download/thanks"
-              state={{crown_download_url}}
-            >
-              Download Crown {crown_version}
-            </Link>
-          </div>
-
-          <div className="mb-10">
-            <ul className="flex space-x-2 justify-center text-lg">
-              <li className="text-gray-200">
-                {crown_release} {crown_package_type}
-              </li>
-              <li className="text-gray-200">•</li>
-              <li className="text-gray-200">
-                {crown_download_size}
-              </li>
-              <li className="text-gray-200">•</li>
-              <li>
-                <a
-                  className="text-gray-200 underline font-bold"
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://docs.crownengine.org/html/latest/changelog.html"
+              <div className="text-2xl">
+                <Link
+                  className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow"
+                  to="/download/thanks"
+                  state={{ crown_download_url }}
                 >
-                  What's New?
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* All Versions */}
-        <div className="container mx-auto mb-4 px-4 py-4 w-10/12 sm:w-9/12 md:w-8/12 xl:w-6/12 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
-          <h2 className="text-xl text-center mb-4 leading-tight font-semibold text-gray-200">
-            Other Platforms and Versions
-          </h2>
-          { downloadEntries() }
-          { listSeparator() }
-          {
-            <OutboundLink
-              rel="noreferrer"
-              target="_blank"
-              href={Releases.tarball_url}
-            >
-              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                  <i className="mr-2 fas fa-code"></i>
-                </div>
-                <div className="flex-1 text-left">
-                  Source Code
-                </div>
-                <div className="flex-1 text-right">
-                  {getPackageType("gz")}
-                </div>
+                  Download Crown {crown_version}
+                </Link>
               </div>
-            </OutboundLink>
-          }
-          {
-            <OutboundLink
-              rel="noreferrer"
-              target="_blank"
-              href={Releases.zipball_url}
-            >
-              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                  <i className="mr-2 fas fa-code"></i>
-                </div>
-                <div className="flex-1 text-left">
-                  Source Code
-                </div>
-                <div className="flex-1 text-right">
-                  {getPackageType("zip")}
-                </div>
+
+              <div className="mb-10">
+                <ul className="flex space-x-2 justify-center text-lg">
+                  <li className="text-gray-200">
+                    {crown_release} {crown_package_type}
+                  </li>
+                  <li className="text-gray-200">•</li>
+                  <li className="text-gray-200">{crown_download_size}</li>
+                  <li className="text-gray-200">•</li>
+                  <li>
+                    <a
+                      className="text-gray-200 underline font-bold"
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://docs.crownengine.org/html/latest/changelog.html"
+                    >
+                      What's New?
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </OutboundLink>
-          }
-      </div>
+            </div>
 
-      <p className="text-m text-center mb-24 leading-tight font-semibold text-gray-200">
-        Looking for <a
-            className="text-gray-200 underline font-bold"
-            rel="noreferrer"
-            target="_blank"
-            href="https://github.com/crownengine/crown/releases"
-          >
-            previous versions
-          </a>?
-      </p>
+            {/* All Versions */}
+            <div className="container mx-auto mb-4 px-4 py-4 w-10/12 sm:w-9/12 md:w-8/12 xl:w-6/12 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
+              <h2 className="text-xl text-center mb-4 leading-tight font-semibold text-gray-200">
+                Other Platforms and Versions
+              </h2>
+              {downloadEntries()}
+              {listSeparator()}
+              {
+                <OutboundLink rel="noreferrer" target="_blank" href={Releases.tarball_url}>
+                  <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
+                    <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                      <i className="mr-2 fas fa-code"></i>
+                    </div>
+                    <div className="flex-1 text-left">Source Code</div>
+                    <div className="flex-1 text-right">{getPackageType("gz")}</div>
+                  </div>
+                </OutboundLink>
+              }
+              {
+                <OutboundLink rel="noreferrer" target="_blank" href={Releases.zipball_url}>
+                  <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
+                    <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                      <i className="mr-2 fas fa-code"></i>
+                    </div>
+                    <div className="flex-1 text-left">Source Code</div>
+                    <div className="flex-1 text-right">{getPackageType("zip")}</div>
+                  </div>
+                </OutboundLink>
+              }
+            </div>
 
-      </section>
-      </Clamp>
+            <p className="text-m text-center mb-24 leading-tight font-semibold text-gray-200">
+              Looking for{" "}
+              <a
+                className="text-gray-200 underline font-bold"
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/crownengine/crown/releases"
+              >
+                previous versions
+              </a>
+              ?
+            </p>
+          </section>
+        </Clamp>
       </div>
     </Layout>
   )
 }
 
-export const Head = () => (
-  <Seo title="Download" />
-)
+export const Head = () => <Seo title="Download" />

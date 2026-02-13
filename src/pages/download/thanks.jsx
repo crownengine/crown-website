@@ -5,19 +5,18 @@ import Seo from "../../components/seo"
 import DonationBox from "../../components/donation-box"
 import StatsBanner from "../../components/stats-banner"
 
-export default function Thanks({location}) {
-  const download_url = location.state?.crown_download_url || "none";
+export default function Thanks({ location }) {
+  const download_url = location.state?.crown_download_url || "none"
 
   useEffect(() => {
-    if (download_url === "none")
-      return;
+    if (download_url === "none") return
 
     const timer = setTimeout(() => {
-      window.location.href = download_url;
-    }, 400);
+      window.location.href = download_url
+    }, 400)
 
-    return () => clearTimeout(timer);
-  }, [download_url]);
+    return () => clearTimeout(timer)
+  }, [download_url])
 
   return (
     <Layout>
@@ -26,7 +25,11 @@ export default function Thanks({location}) {
           <section className="py-0 md:py-24 px-4 text-center">
             <div className="w-full max-w-2xl mx-auto">
               <p className="mt-28 text-lg text-gray-300">
-                Your download will start soon. If it didn't, click here to start it <a className="underline" href={download_url}>manually</a>.
+                Your download will start soon. If it didn't, click here to start it{" "}
+                <a className="underline" href={download_url}>
+                  manually
+                </a>
+                .
               </p>
             </div>
           </section>
@@ -39,13 +42,17 @@ export default function Thanks({location}) {
                   Help Crown grow Stronger and Faster
                 </h2>
                 <p className="text-2xl text-gray-300">
-                  Donations support Core Contributors working on Features, Maintenance and Improvements &#x1F970;
+                  Donations support Core Contributors working on Features, Maintenance and
+                  Improvements &#x1F970;
                 </p>
               </div>
 
-              <div className="col-span-6 md:col-span-3 flex flex-col gap-6 relative" id="donation-box">
+              <div
+                className="col-span-6 md:col-span-3 flex flex-col gap-6 relative"
+                id="donation-box"
+              >
                 <div className="absolute top-0 left-0 w-full">
-                  <DonationBox/>
+                  <DonationBox />
                 </div>
               </div>
             </div>
@@ -55,15 +62,13 @@ export default function Thanks({location}) {
 
       <div className="bg-gradient-to-b from-gray-900 to-gray-800 py-0">
         <Clamp>
-        <section className="p-8 text-white">
-          <StatsBanner/>
-        </section>
+          <section className="p-8 text-white">
+            <StatsBanner />
+          </section>
         </Clamp>
       </div>
     </Layout>
   )
 }
 
-export const Head = () => (
-  <Seo title="Thanks" />
-)
+export const Head = () => <Seo title="Thanks" />

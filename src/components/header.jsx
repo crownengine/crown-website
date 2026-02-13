@@ -56,7 +56,9 @@ export default function AboutMenu() {
             {menu_items.map((item, index) => {
               if (item.label === "Donate") {
                 return (
-                  <li key={index} className="py-2 pl-2 pr-2"><DonateButton/></li>
+                  <li key={index} className="py-2 pl-2 pr-2">
+                    <DonateButton />
+                  </li>
                 )
               }
 

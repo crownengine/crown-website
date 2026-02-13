@@ -6,18 +6,20 @@ import AboutMenu from "../../components/about-menu.jsx"
 
 export default function About() {
   const handleJoinUsClick = () => {
-    const email = "foundation@crownengine.org";
-    const subject = encodeURIComponent("Admission Request");
-    const body = encodeURIComponent(`
+    const email = "foundation@crownengine.org"
+    const subject = encodeURIComponent("Admission Request")
+    const body = encodeURIComponent(
+      `
       Hey, I want to join The Crown Foundation!\n
       Full Name:
       Date of Birth (dd/mm/yyyy):
       Place of Birth:
       City:
-      Email:`.trim());
+      Email:`.trim(),
+    )
 
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-  };
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`
+  }
 
   return (
     <Layout>
@@ -27,9 +29,7 @@ export default function About() {
         <Clamp>
           <section className="py-24 px-4 text-left text-gray-300">
             <h1 className="text-6xl mb-6 font-bold">The Crown Foundation</h1>
-            <p className="text-2xl mb-24 text-gray-300">
-              Open tools for real-time worlds.
-            </p>
+            <p className="text-2xl mb-24 text-gray-300">Open tools for real-time worlds.</p>
 
             <div className="flex flex-col gap-6">
               <div className="flex flex-col sm:flex-row gap-6">
@@ -37,8 +37,8 @@ export default function About() {
                   <h2 className="text-4xl mb-6 font-semibold">The Organization</h2>
                   <p className="mb-6 text-gray-700">
                     The Crown Foundation is a nonprofit organization dedicated to developing free,
-                    open-source technologies that advance the fields of game development and real-time multimedia
-                    applications.
+                    open-source technologies that advance the fields of game development and
+                    real-time multimedia applications.
                   </p>
                 </div>
 
@@ -47,12 +47,13 @@ export default function About() {
                   <p className="mb-6 text-gray-700">Your donations go towards:</p>
                   <ul className="list-disk list-inside mb-6 text-gray-700">
                     <li>
-                      • Core Contributors: Helping us <b>grow the team</b> with competitive salaries for
-                      full-time developers and artists.
+                      • Core Contributors: Helping us <b>grow the team</b> with competitive salaries
+                      for full-time developers and artists.
                     </li>
                     <li>
-                      • Infrastructure: Covering the costs of <b>hardware for testing and development</b>,
-                        this <b>web domain</b>, banking services and other essential overheads.
+                      • Infrastructure: Covering the costs of{" "}
+                      <b>hardware for testing and development</b>, this <b>web domain</b>, banking
+                      services and other essential overheads.
                     </li>
                   </ul>
                 </div>
@@ -84,6 +85,4 @@ export default function About() {
   )
 }
 
-export const Head = () => (
-  <Seo title="The Crown Foundation" />
-)
+export const Head = () => <Seo title="The Crown Foundation" />

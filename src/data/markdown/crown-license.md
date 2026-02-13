@@ -2,11 +2,10 @@
 slug: "/crown-license"
 title: "Crown license"
 ---
-License
-=======
 
-Crown
------
+# License
+
+## Crown
 
 Crown is released under the [MIT](https://spdx.org/licenses/MIT.html) License.
 
@@ -18,8 +17,7 @@ License](https://spdx.org/licenses/FTL.html).
 
 </br>
 
-Your Game or Application
-------------------------
+## Your Game or Application
 
 What you create with Crown is your sole property. All the data (textures,
 models, materials, levels etc.) and code you produce (including data and code
@@ -30,8 +28,7 @@ how big - to make commercial games and applications without any restriction.
 
 </br>
 
-License details
----------------
+## License details
 
 Details regarding the license(s) can be found in the [Crown
 Manual](https://docs.crownengine.org/html/latest/copyright.html#license).

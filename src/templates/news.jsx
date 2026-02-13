@@ -5,12 +5,16 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Clamp from "../components/clamp"
 import Seo from "../components/seo"
-import MDXComponents from "../components/mdx";
+import MDXComponents from "../components/mdx"
 import { getSrc } from "gatsby-plugin-image"
 
 export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
-  const prevNews = pageContext.prev ? { url: `${pageContext.prev.frontmatter.slug}`, title: pageContext.prev.frontmatter.title } : null
-  const nextNews = pageContext.next ? { url: `${pageContext.next.frontmatter.slug}`, title: pageContext.next.frontmatter.title } : null
+  const prevNews = pageContext.prev
+    ? { url: `${pageContext.prev.frontmatter.slug}`, title: pageContext.prev.frontmatter.title }
+    : null
+  const nextNews = pageContext.next
+    ? { url: `${pageContext.next.frontmatter.slug}`, title: pageContext.next.frontmatter.title }
+    : null
 
   return (
     <Layout>
@@ -24,22 +28,22 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
 
           {/* Content */}
           <section className="md:px-40 px-6 text-left mb-8 text-gray-700">
-            <MDXProvider components={MDXComponents}>
-              {children}
-            </MDXProvider>
+            <MDXProvider components={MDXComponents}>{children}</MDXProvider>
           </section>
 
           {/* Prev/next news */}
           <section className="flex flex-col md:flex-row md:px-40 px-6 text-gray-700">
             {prevNews && (
-              <Link className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+              <Link
+                className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
                 to={prevNews.url}
               >
                 &lt; {prevNews.title}
               </Link>
             )}
             {nextNews && (
-              <Link className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+              <Link
+                className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
                 to={nextNews.url}
               >
                 {nextNews.title} &gt;
@@ -49,14 +53,14 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
         </Clamp>
 
         {/* Padding */}
-        <section className="py-32"/>
+        <section className="py-32" />
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
@@ -75,6 +79,6 @@ export const query = graphql`
 export const Head = ({ data }) => {
   const title = data.mdx.frontmatter.title
   const excerpt = data.mdx.excerpt
-  const image = getSrc(data.mdx.frontmatter.image);
-  return <Seo title={title} description={excerpt} image={image}/>
+  const image = getSrc(data.mdx.frontmatter.image)
+  return <Seo title={title} description={excerpt} image={image} />
 }

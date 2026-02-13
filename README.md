@@ -5,20 +5,25 @@
 ## 🚀 Get up and running
 
 1. **Install Gatsby client.**
+
 ```shell
 npm install -g gatsby-cli
 ```
 
 2. **Install project dependencies.**
+
 ```shell
 npm install
 ```
 
 3. **Start development server.**
+
 ```shell
 gatsby develop
 ```
+
 ## Deploy
+
 ```shell
 npm run deploy
-````
+```

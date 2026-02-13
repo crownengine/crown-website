@@ -14,20 +14,20 @@ export default function NewsList({
   itemClassName = "flex-1 min-w-[300px]",
   listClassName = "flex flex-wrap gap-4",
 }) {
-  const allItems = (nodes || edges?.map((e) => e.node) || []).filter(
-    (node) => !!node?.frontmatter?.date
-  );
+  const allItems = (nodes || edges?.map(e => e.node) || []).filter(
+    node => !!node?.frontmatter?.date,
+  )
 
-  const items = allItems.slice(start, start + limit);
+  const items = allItems.slice(start, start + limit)
 
-  if (!items.length) return null;
+  if (!items.length) return null
 
   return (
     <section className="text-left text-gray-600">
       <div className={listClassName}>
-        {items.map((node) => {
-          const fm = node.frontmatter || {};
-          const key = node.id || fm.slug || fm.title;
+        {items.map(node => {
+          const fm = node.frontmatter || {}
+          const key = node.id || fm.slug || fm.title
 
           return (
             <div key={key} className={`${itemClassName}`}>

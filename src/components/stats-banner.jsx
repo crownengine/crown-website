@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
@@ -20,36 +20,36 @@ const StatsBanner = () => {
 
   const stats = data.site.siteMetadata.stats
 
-  const [counters, setCounters] = useState(stats.map(() => 0));
-  const floatsRef = useRef(stats.map(() => 0));
+  const [counters, setCounters] = useState(stats.map(() => 0))
+  const floatsRef = useRef(stats.map(() => 0))
 
   useEffect(() => {
-    const duration = 1000;
-    const intervalMs = 33;
+    const duration = 1000
+    const intervalMs = 33
 
     // Per-tick increment so all finish in exactly 'duration'.
-    const increments = stats.map(s => (s.value * intervalMs) / duration);
+    const increments = stats.map(s => (s.value * intervalMs) / duration)
 
     const interval = setInterval(() => {
-      let allDone = true;
+      let allDone = true
 
       const next = stats.map((s, i) => {
-        floatsRef.current[i] += increments[i];
+        floatsRef.current[i] += increments[i]
         if (floatsRef.current[i] < s.value) {
-          allDone = false;
-          return Math.floor(floatsRef.current[i]);
+          allDone = false
+          return Math.floor(floatsRef.current[i])
         } else {
-          return s.value;
+          return s.value
         }
-      });
+      })
 
-      setCounters(next);
+      setCounters(next)
 
-      if (allDone) clearInterval(interval);
-    }, intervalMs);
+      if (allDone) clearInterval(interval)
+    }, intervalMs)
 
-    return () => clearInterval(interval);
-  }, [stats]);
+    return () => clearInterval(interval)
+  }, [stats])
 
   return (
     <div className="my-2">
@@ -85,7 +85,7 @@ const StatsBanner = () => {
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default StatsBanner;
+export default StatsBanner

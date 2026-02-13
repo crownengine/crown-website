@@ -6,24 +6,24 @@ import DonationBox from "../components/donation-box"
 import StatsBanner from "../components/stats-banner"
 
 export default function Fund() {
-  const searchParams = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null;
-  const initialFreq = searchParams?.get("frequency") === "monthly" ? "monthly" : "one-time";
-  const amtParam = searchParams?.get("amount");
-  const initialAmt = amtParam && !isNaN(parseInt(amtParam)) ? parseInt(amtParam) : 25;
+  const searchParams =
+    typeof window !== "undefined" ? new URLSearchParams(window.location.search) : null
+  const initialFreq = searchParams?.get("frequency") === "monthly" ? "monthly" : "one-time"
+  const amtParam = searchParams?.get("amount")
+  const initialAmt = amtParam && !isNaN(parseInt(amtParam)) ? parseInt(amtParam) : 25
 
-  const [currentFrequency, setCurrentFrequency] = React.useState(initialFreq);
-  const [currentAmount, setCurrentAmount] = React.useState(initialAmt);
+  const [currentFrequency, setCurrentFrequency] = React.useState(initialFreq)
+  const [currentAmount, setCurrentAmount] = React.useState(initialAmt)
 
   const handleTierClick = (amount, frequency = "monthly") => {
     // → instead of touching the URL, just update our state:
-    setCurrentFrequency(frequency);
-    setCurrentAmount(amount);
+    setCurrentFrequency(frequency)
+    setCurrentAmount(amount)
 
     // Scroll to the donation box
-    const el = document.getElementById("donation-box");
-    if (el)
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+    const el = document.getElementById("donation-box")
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
 
   return (
     <Layout>
@@ -36,16 +36,17 @@ export default function Fund() {
                   Help Crown grow Stronger and Faster
                 </h2>
                 <p className="text-2xl text-gray-300">
-                  Donations support Core Contributors working on Features, Maintenance and Improvements &#x1F970;
+                  Donations support Core Contributors working on Features, Maintenance and
+                  Improvements &#x1F970;
                 </p>
               </div>
 
-              <div className="col-span-6 md:col-span-3 flex flex-col gap-6 relative" id="donation-box">
+              <div
+                className="col-span-6 md:col-span-3 flex flex-col gap-6 relative"
+                id="donation-box"
+              >
                 <div className="absolute top-0 left-0 w-full">
-                  <DonationBox
-                    frequency={currentFrequency}
-                    initialAmount={currentAmount}
-                  />
+                  <DonationBox frequency={currentFrequency} initialAmount={currentAmount} />
                 </div>
               </div>
             </div>
@@ -55,9 +56,9 @@ export default function Fund() {
 
       <div className="bg-gradient-to-b from-gray-900 to-gray-800 py-0">
         <Clamp>
-        <section className="p-8 text-white">
-          <StatsBanner/>
-        </section>
+          <section className="p-8 text-white">
+            <StatsBanner />
+          </section>
         </Clamp>
       </div>
 
@@ -65,9 +66,7 @@ export default function Fund() {
         <Clamp>
           {/* Credits Header */}
           <section>
-            <h3 className="text-5xl font-extrabold capitalize">
-              Credits
-            </h3>
+            <h3 className="text-5xl font-extrabold capitalize">Credits</h3>
           </section>
 
           {/* Diamond */}
@@ -170,6 +169,4 @@ export default function Fund() {
   )
 }
 
-export const Head = () => (
-  <Seo title="Donations" />
-)
+export const Head = () => <Seo title="Donations" />

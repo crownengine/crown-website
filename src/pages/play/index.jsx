@@ -18,10 +18,17 @@ export default function Play() {
             </p>
 
             <a href="https://play.crownengine.org/physics">
-              <HeroImage {...{ src: "/play/physics.jpg", title: "Physics", subtitle: "First-person character mover, fast dynamic objects, kinematic platforms, triggers and raycasts.", heightClass: "h-96" }} />
+              <HeroImage
+                {...{
+                  src: "/play/physics.jpg",
+                  title: "Physics",
+                  subtitle:
+                    "First-person character mover, fast dynamic objects, kinematic platforms, triggers and raycasts.",
+                  heightClass: "h-96",
+                }}
+              />
             </a>
-            <p className="mb-32"/>
-
+            <p className="mb-32" />
           </section>
         </Clamp>
       </div>
@@ -30,5 +37,5 @@ export default function Play() {
 }
 
 export const Head = () => (
-  <Seo title="Play" description="Play a selection of interactive demos in-browser."/>
+  <Seo title="Play" description="Play a selection of interactive demos in-browser." />
 )

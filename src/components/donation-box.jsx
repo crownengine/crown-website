@@ -1,179 +1,191 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "@reach/router";
+import React, { useState, useEffect } from "react"
+import { useLocation } from "@reach/router"
 
 const DonationBox = ({ frequency: propFreq, initialAmount }) => {
-  const [frequency, setFrequency] = useState(propFreq || "one-time");
+  const [frequency, setFrequency] = useState(propFreq || "one-time")
   const [selectedAmount, setSelectedAmount] = useState({
     "one-time": propFreq === "one-time" ? initialAmount : 100,
     monthly: propFreq === "monthly" ? initialAmount : 25,
-  });
+  })
   const [customAmount, setCustomAmount] = useState(
-    propFreq === "one-time" ? initialAmount.toString() : "100"
-  );
-  const [currency, setCurrency] = useState("EUR");
-  const [isCustomAmountValid, setIsCustomAmountValid] = useState(true);
+    propFreq === "one-time" ? initialAmount.toString() : "100",
+  )
+  const [currency, setCurrency] = useState("EUR")
+  const [isCustomAmountValid, setIsCustomAmountValid] = useState(true)
 
   // Define amounts for each frequency
   const amounts = {
     monthly: [5, 10, 25, 50, 100, 250],
     "one-time": [25, 50, 100, 150, 250, 500],
-  };
+  }
 
   // Currency symbol map
   const currencySymbols = {
     EUR: "€",
     USD: "$",
     BTC: "$",
-  };
+  }
 
   const membershipTiers = {
     5: { level: "bronze", badge: "Bronze membership badge/discord role.", benefit: null },
-    10: { level: "silver", badge: "Silver membership badge/discord role.", benefit: "Name on website." },
-    25: { level: "gold", badge: "Gold membership badge/discord role.", benefit: "Larger name on website." },
-    50: { level: "titanium", badge: "Titanium membership badge/discord role.", benefit: "Link on website." },
-    100: { level: "platinum", badge: "Platinum membership badge/discord role.", benefit: "Logo on website." },
-    250: { level: "diamond", badge: "Diamond membership badge/discord role.", benefit: "Larger logo on website." },
-  };
+    10: {
+      level: "silver",
+      badge: "Silver membership badge/discord role.",
+      benefit: "Name on website.",
+    },
+    25: {
+      level: "gold",
+      badge: "Gold membership badge/discord role.",
+      benefit: "Larger name on website.",
+    },
+    50: {
+      level: "titanium",
+      badge: "Titanium membership badge/discord role.",
+      benefit: "Link on website.",
+    },
+    100: {
+      level: "platinum",
+      badge: "Platinum membership badge/discord role.",
+      benefit: "Logo on website.",
+    },
+    250: {
+      level: "diamond",
+      badge: "Diamond membership badge/discord role.",
+      benefit: "Larger logo on website.",
+    },
+  }
 
   // Whenever parent props change, override internal state.
   useEffect(() => {
     if (propFreq) {
-      setFrequency(propFreq);
+      setFrequency(propFreq)
 
-      setSelectedAmount((prev) => ({
+      setSelectedAmount(prev => ({
         ...prev,
         [propFreq]: initialAmount,
-      }));
+      }))
 
       if (propFreq === "one-time") {
-        setCustomAmount(initialAmount.toString());
-        setIsCustomAmountValid(true);
+        setCustomAmount(initialAmount.toString())
+        setIsCustomAmountValid(true)
       }
     }
-  }, [propFreq, initialAmount]);
+  }, [propFreq, initialAmount])
 
-  const location = useLocation();
+  const location = useLocation()
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const freq = params.get("frequency");
-    const amt = params.get("amount");
+    const params = new URLSearchParams(location.search)
+    const freq = params.get("frequency")
+    const amt = params.get("amount")
 
     if (freq === "monthly" || freq === "one-time") {
-      setFrequency(freq);
+      setFrequency(freq)
     }
 
     if (amt) {
-      const numAmt = parseInt(amt, 10);
+      const numAmt = parseInt(amt, 10)
       if (!isNaN(numAmt)) {
-        setSelectedAmount((prev) => ({
+        setSelectedAmount(prev => ({
           ...prev,
           [freq || frequency]: numAmt,
-        }));
+        }))
         if ((freq || frequency) === "one-time") {
-          setCustomAmount(numAmt.toString());
-          setIsCustomAmountValid(true);
+          setCustomAmount(numAmt.toString())
+          setIsCustomAmountValid(true)
         }
       }
     }
-  }, [location.search, frequency]);
+  }, [location.search, frequency])
 
   // When BTC is selected, monthly subscriptions are not supported.
   useEffect(() => {
     if (currency === "BTC" && frequency === "monthly") {
-      setFrequency("one-time");
-      setSelectedAmount((prev) => ({ ...prev, ["one-time"]: amounts["one-time"][0] }));
-      setCustomAmount(amounts["one-time"][0].toString());
-      setIsCustomAmountValid(true);
+      setFrequency("one-time")
+      setSelectedAmount(prev => ({ ...prev, ["one-time"]: amounts["one-time"][0] }))
+      setCustomAmount(amounts["one-time"][0].toString())
+      setIsCustomAmountValid(true)
     }
-  }, [currency]);
+  }, [currency])
 
-  const handlePresetClick = (amount) => {
-    setSelectedAmount((prev) => ({
+  const handlePresetClick = amount => {
+    setSelectedAmount(prev => ({
       ...prev,
       [frequency]: amount,
-    }));
+    }))
     if (frequency === "one-time") {
-      setCustomAmount(amount); // Fill custom amount in One-time mode
-      setIsCustomAmountValid(true); // Ensure button is enabled
+      setCustomAmount(amount) // Fill custom amount in One-time mode
+      setIsCustomAmountValid(true) // Ensure button is enabled
     }
-  };
+  }
 
-  const handleCustomAmountChange = (e) => {
-    const value = e.target.value;
-    setCustomAmount(value);
+  const handleCustomAmountChange = e => {
+    const value = e.target.value
+    setCustomAmount(value)
 
     // Validate the custom amount
-    const numericValue = parseFloat(value);
-    const isValid = !isNaN(numericValue) && numericValue >= 1 && numericValue <= 10000 && Number.isInteger(numericValue);
-    setIsCustomAmountValid(isValid);
-    setSelectedAmount((prev) => ({
+    const numericValue = parseFloat(value)
+    const isValid =
+      !isNaN(numericValue) &&
+      numericValue >= 1 &&
+      numericValue <= 10000 &&
+      Number.isInteger(numericValue)
+    setIsCustomAmountValid(isValid)
+    setSelectedAmount(prev => ({
       ...prev,
       [frequency]: null, // Deselect preset button when custom value is entered
-    }));
-  };
+    }))
+  }
 
   // Redirection logic for donation
   const handleDonate = () => {
-    const amount = selectedAmount[frequency] || customAmount;
+    const amount = selectedAmount[frequency] || customAmount
     // const prefix = "https://donate.crownengine.org/b";
 
     if (currency === "BTC") {
-      const usdAmount = typeof amount === "number" ? amount : parseInt(amount, 10);
-      window.location.href = `/fund/donate-btc?amount_usd=${usdAmount}`;
-      return;
+      const usdAmount = typeof amount === "number" ? amount : parseInt(amount, 10)
+      window.location.href = `/fund/donate-btc?amount_usd=${usdAmount}`
+      return
     }
 
-    const prefix = "https://donate.stripe.com";
+    const prefix = "https://donate.stripe.com"
 
     if (frequency === "monthly") {
       switch (amount) {
         case 5:
-          if (currency === "USD")
-            window.location.href = prefix + "/14kdU78dq8PH8Zq3co";
-          else
-            window.location.href = prefix + "/cN22bpbpC3vn6Ri6oy";
-          break;
+          if (currency === "USD") window.location.href = prefix + "/14kdU78dq8PH8Zq3co"
+          else window.location.href = prefix + "/cN22bpbpC3vn6Ri6oy"
+          break
         case 10:
-          if (currency === "USD")
-            window.location.href = prefix + "/cN2aHV65i3vncbCcN0";
-          else
-            window.location.href = prefix + "/bIYaHVgJW9TLcbCeV7";
-          break;
+          if (currency === "USD") window.location.href = prefix + "/cN2aHV65i3vncbCcN0"
+          else window.location.href = prefix + "/bIYaHVgJW9TLcbCeV7"
+          break
         case 25:
-          if (currency === "USD")
-            window.location.href = prefix + "/28o6rFfFS1nfcbCfZf";
-          else
-            window.location.href = prefix + "/5kA8zNbpC8PH1wYcN2";
-          break;
+          if (currency === "USD") window.location.href = prefix + "/28o6rFfFS1nfcbCfZf"
+          else window.location.href = prefix + "/5kA8zNbpC8PH1wYcN2"
+          break
         case 50:
-          if (currency === "USD")
-            window.location.href = prefix + "/fZe7vJdxK9TL3F64gA";
-          else
-            window.location.href = prefix + "/9AQ6rFbpCaXPa3u6oH";
-          break;
+          if (currency === "USD") window.location.href = prefix + "/fZe7vJdxK9TL3F64gA"
+          else window.location.href = prefix + "/9AQ6rFbpCaXPa3u6oH"
+          break
         case 100:
-          if (currency === "USD")
-            window.location.href = prefix + "/7sI2bp0KY9TLgrS00n";
-          else
-            window.location.href = prefix + "/bIYbLZ8dq2rjdfGdRc";
-          break;
+          if (currency === "USD") window.location.href = prefix + "/7sI2bp0KY9TLgrS00n"
+          else window.location.href = prefix + "/bIYbLZ8dq2rjdfGdRc"
+          break
         case 250:
-          if (currency === "USD")
-            window.location.href = prefix + "/6oEdU7fFSc1T8Zq5kK";
-          else
-            window.location.href = prefix + "/14k9DRgJWea12B24gF";
-          break;
+          if (currency === "USD") window.location.href = prefix + "/6oEdU7fFSc1T8Zq5kK"
+          else window.location.href = prefix + "/14k9DRgJWea12B24gF"
+          break
         default:
-          break;
+          break
       }
     } else if (frequency === "one-time") {
-      const amountTimes100 = amount * 100;
+      const amountTimes100 = amount * 100
       if (currency === "USD")
-        window.location.href = `${prefix}/3cs4jx65id5Xb7y14b?__prefilled_amount=${amountTimes100}`;
+        window.location.href = `${prefix}/3cs4jx65id5Xb7y14b?__prefilled_amount=${amountTimes100}`
       else
-        window.location.href = `${prefix}/dR67vJ2T62rj3F69AG?__prefilled_amount=${amountTimes100}`;
+        window.location.href = `${prefix}/dR67vJ2T62rj3F69AG?__prefilled_amount=${amountTimes100}`
     }
-  };
+  }
 
   return (
     <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
@@ -200,13 +212,14 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
 
       {currency === "BTC" && (
         <div className="mb-4 text-sm text-yellow-700 bg-yellow-100 p-2 rounded">
-          Bitcoin donations: amounts are displayed in <strong>USD</strong>. Monthly subscriptions are not supported for BTC.
+          Bitcoin donations: amounts are displayed in <strong>USD</strong>. Monthly subscriptions
+          are not supported for BTC.
         </div>
       )}
 
       {/* Preset Amount Buttons */}
       <div className="grid grid-cols-3 gap-4 mb-6">
-        {amounts[frequency].map((amount) => (
+        {amounts[frequency].map(amount => (
           <button
             key={amount}
             className={`py-2 rounded-lg font-semibold border-2 text-center ${
@@ -225,7 +238,11 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         <div className="mb-4">
           {/* Title */}
           <h3 className="text-2xl text-gray-700 mb-3">
-            Become a <span className="font-bold capitalize">{membershipTiers[selectedAmount.monthly].level}</span> member
+            Become a{" "}
+            <span className="font-bold capitalize">
+              {membershipTiers[selectedAmount.monthly].level}
+            </span>{" "}
+            member
           </h3>
 
           {/* Icon + Benefits */}
@@ -316,7 +333,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         <select
           className="px-3 py-2 border rounded-lg bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
           value={currency}
-          onChange={(e) => setCurrency(e.target.value)}
+          onChange={e => setCurrency(e.target.value)}
         >
           <option value="EUR">EUR</option>
           <option value="USD">USD</option>
@@ -324,7 +341,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         </select>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DonationBox;
+export default DonationBox

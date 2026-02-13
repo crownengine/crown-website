@@ -12,7 +12,7 @@ export default function NewsIndex({ data }) {
       <Clamp>
         <section className="mt-12 mb-16 px-4">
           <h1 className="text-2xl font-bold mb-6 text-gray-600">News</h1>
-          <NewsList edges={data.allMdx.edges}/>
+          <NewsList edges={data.allMdx.edges} />
         </section>
       </Clamp>
     </Layout>
@@ -21,7 +21,7 @@ export default function NewsIndex({ data }) {
 
 export const pageQuery = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC }}) {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id
@@ -42,6 +42,4 @@ export const pageQuery = graphql`
   }
 `
 
-export const Head = () => (
-  <Seo title="Crown - Latest News" />
-)
+export const Head = () => <Seo title="Crown - Latest News" />

@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import NewsList from "../components/news-list"
 import Clamp from "../components/clamp.jsx"
 import Seo from "../components/seo"
-import { graphql, Link } from 'gatsby'
+import { graphql, Link } from "gatsby"
 
 export default function Home({ data }) {
   return (
@@ -14,10 +14,7 @@ export default function Home({ data }) {
       <Clamp>
         <section className="mb-16 px-4">
           <h1 className="">
-            <Link
-              className="block text-2xl font-bold mb-6 text-gray-600"
-              to="/news"
-            >
+            <Link className="block text-2xl font-bold mb-6 text-gray-600" to="/news">
               Latest News
             </Link>
           </h1>
@@ -61,7 +58,7 @@ export const data = graphql`
         description_short
       }
     }
-    allMdx(sort: { frontmatter: { date: DESC }}) {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id
@@ -86,5 +83,5 @@ export const Head = ({ data }) => {
   const title = data.site.siteMetadata.title
   const description = data.site.siteMetadata.description_short
   const fulltitle = title + " - " + description
-  return <Seo title={fulltitle}/>
+  return <Seo title={fulltitle} />
 }

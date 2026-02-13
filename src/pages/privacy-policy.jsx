@@ -19,6 +19,4 @@ export default function PrivacyPolicy() {
   )
 }
 
-export const Head = () => (
-  <Seo title="Privacy Policy" />
-)
+export const Head = () => <Seo title="Privacy Policy" />

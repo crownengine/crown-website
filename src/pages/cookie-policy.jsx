@@ -19,6 +19,4 @@ export default function CookiePolicy() {
   )
 }
 
-export const Head = () => (
-  <Seo title="Cookie Policy" />
-)
+export const Head = () => <Seo title="Cookie Policy" />

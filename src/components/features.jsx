@@ -6,9 +6,7 @@ export default function Features() {
   return (
     <Clamp>
       <section className="mt-32 mb-16 px-4 sm:text-left text-center">
-        <h1 className="text-6xl font-extrabold mb-12 text-gray-600">
-          Sensible Game Development
-        </h1>
+        <h1 className="text-6xl font-extrabold mb-12 text-gray-600">Sensible Game Development</h1>
         <div className="flex flex-wrap -mx-4 -mb-6 justify-center">
           <div className="lg:w-1/3 px-4 mb-6">
             <i className="fas fa-user-edit fa-2x text-indigo-600"></i>
