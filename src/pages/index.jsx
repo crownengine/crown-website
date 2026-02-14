@@ -13,10 +13,19 @@ export default function Home({ data }) {
       <Cta />
       <Clamp>
         <section className="mb-16 px-4">
-          <h1 className="">
-            <Link className="block text-2xl font-bold mb-6 text-gray-600" to="/news">
+          <h1 className="flex mb-6 text-2xl font-bold text-gray-600">
+            <Link className="block" to="/news">
               Latest News
             </Link>
+            <a
+              className="ml-2 hover:text-indigo-800"
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.crownengine.org/rss.xml"
+              title="News RSS feed"
+            >
+              <i className="fa-solid fa-square-rss" aria-label="News RSS feed"></i>
+            </a>
           </h1>
           {/* Latest news card.*/}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flow-root lg:items-stretch">
