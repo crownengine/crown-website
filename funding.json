@@ -7,7 +7,7 @@
     "role": "maintainer",
     "name": "The Crown Foundation",
     "email": "foundation@crownengine.org",
-    "description": "The Crown Foundation is a non-profit organization dedicated to building a free and open-source technology that advances the world of game development and real-time multimedia applications.",
+    "description": "The Crown Foundation is a nonprofit organization dedicated to developing free, open-source technologies that advance the fields of game development and real-time multimedia applications.",
     "webpageUrl": {
       "url": "https://www.crownengine.org/"
     }
@@ -17,7 +17,7 @@
     {
       "guid": "crown",
       "name": "Crown",
-      "description": "Crown is a complete and cross-platform game engine designed for flexibility, performance and fast-iterations.",
+      "description": "Crown is a complete and cross-platform game engine designed for flexibility, performance, and fast-iterations. It isn't tied to any specific game type or genre; instead, it provides versatile tools and general primitives suitable for building a wide range of 3D and 2D games.",
       "webpageUrl": {
         "url": "https://www.crownengine.org/"
       },
