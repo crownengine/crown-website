@@ -191,7 +191,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-image`,
+      options: {
+        quality: 90,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-postcss`,

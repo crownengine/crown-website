@@ -77,7 +77,7 @@ export const data = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(width: 1280, placeholder: DOMINANT_COLOR)
+                gatsbyImageData(quality: 90, width: 1280, placeholder: DOMINANT_COLOR)
               }
             }
           }
