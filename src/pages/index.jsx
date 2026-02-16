@@ -81,7 +81,7 @@ export const data = graphql`
               }
             }
           }
-          excerpt(pruneLength: 80)
+          excerpt(pruneLength: 120)
         }
       }
     }
