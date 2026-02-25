@@ -204,4 +204,4 @@ export default function Support() {
   )
 }
 
-export const Head = () => <Seo title="Support" />
+export const Head = () => <Seo title="Support" description="Crown's manual is freely available online and continuously updated." />

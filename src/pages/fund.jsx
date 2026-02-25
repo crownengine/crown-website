@@ -169,4 +169,4 @@ export default function Fund() {
   )
 }
 
-export const Head = () => <Seo title="Donations" />
+export const Head = () => <Seo title="Donations" description="Join the Development Fund - help keep the project moving." />

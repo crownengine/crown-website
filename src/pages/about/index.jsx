@@ -85,4 +85,4 @@ export default function About() {
   )
 }
 
-export const Head = () => <Seo title="The Crown Foundation" />
+export const Head = () => <Seo title="The Crown Foundation" description="We develop free, open-source technologies that advance the fields of game development." />
