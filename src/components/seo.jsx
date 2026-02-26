@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { useLocation } from '@reach/router';
 
 export default function Seo({ description, lang, meta, title, image, children }) {
   const { site } = useStaticQuery(graphql`
@@ -19,6 +20,7 @@ export default function Seo({ description, lang, meta, title, image, children })
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage = site.siteMetadata.siteUrl + (image || site.siteMetadata.image)
+  const canonicalUrl = `${site.siteMetadata.siteUrl}${useLocation().pathname}`
 
   return (
     <>
@@ -30,6 +32,7 @@ export default function Seo({ description, lang, meta, title, image, children })
       <meta name="og:title" content={title} />
       <meta name="og:type" content="website" />
       <meta name="og:image" content={metaImage} />
+      <meta name="og:url" content={canonicalUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:site" content={site.siteMetadata.x_handle} />
