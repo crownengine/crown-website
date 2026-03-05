@@ -26,7 +26,7 @@ export default function Thanks({ location }) {
             <div className="w-full max-w-2xl mx-auto">
               <p className="mt-28 text-lg text-gray-300">
                 Your download will start soon. If it didn't, click here to start it{" "}
-                <a className="underline" href={download_url}>
+                <a className="underline" href={download_url === "none" ? "https://github.com/crownengine/crown/releases" : download_url}>
                   manually
                 </a>
                 .
