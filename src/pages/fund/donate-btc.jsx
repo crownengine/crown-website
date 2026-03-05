@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import QRCode from "qrcode"
+import Seo from "../../components/seo"
 
 const bitcoinAddress = "bc1qhqqka8uj4wk5kn6c2675tggdgykwrr96szg8v2"
 const RECEIVER = "The Crown Foundation"
@@ -310,3 +311,5 @@ export default function DonateBTC({ location }) {
     </main>
   )
 }
+
+export const Head = () => <Seo title="The Crown Foundation" />
