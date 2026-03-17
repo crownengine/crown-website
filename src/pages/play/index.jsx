@@ -23,7 +23,7 @@ export default function Play() {
                   src: "/play/physics.jpg",
                   title: "Physics",
                   subtitle:
-                    "First-person character mover, fast dynamic objects, kinematic platforms, triggers and raycasts.",
+                    "First/third-person controls, kinematic platforms, slopes, stairs, triggers, raycasts and more.",
                   heightClass: "h-96",
                 }}
               />
