@@ -12,7 +12,7 @@ module.exports = {
       },
       backgroundImage: {
         bannerImage: "url('../images/index/crown-editor.jpeg')",
-        blackOverlay: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8))",
+        blackOverlay: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9))",
       },
       screens: {
         "3xl": "1920px",

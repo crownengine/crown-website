@@ -9,6 +9,7 @@ export default function Cta() {
       site {
         siteMetadata {
           subtitle
+          description
         }
       }
     }
@@ -19,13 +20,11 @@ export default function Cta() {
       <div className="bg-blackOverlay">
         <Clamp>
           <section className="py-32 px-4">
-            <h1 className="text-6xl mt-24 mb-6 font-bold text-gray-200">
+            <h1 className="text-6xl mt-24 mb-4 font-bold text-gray-100">
               {data.site.siteMetadata.subtitle}
             </h1>
-            <p className="text-2xl mb-8 text-gray-300">
-              Crown is a complete and cross-platform game engine
-              <br />
-              designed for flexibility, performance and fast-iterations.
+            <p className="text-2xl mb-4 text-gray-100 max-w-4xl">
+              {data.site.siteMetadata.description}
             </p>
             <div className="text-2xl">
               <DownloadButton></DownloadButton>
