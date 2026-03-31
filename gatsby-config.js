@@ -58,6 +58,10 @@ module.exports = {
         link: `/news`,
       },
       {
+        label: `Roadmap`,
+        link: `/roadmap`,
+      },
+      {
         label: `Support`,
         link: `/support`,
       },

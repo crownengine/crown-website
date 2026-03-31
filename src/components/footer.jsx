@@ -87,6 +87,9 @@ export default function Footer() {
                 <Link className="hover:text-indigo-800" to="/website-about">
                   Website
                 </Link>
+                <Link className="hover:text-indigo-800" to="/roadmap">
+                  Roadmap
+                </Link>
                 <Link className="hover:text-indigo-800" to="/privacy-policy">
                   Privacy Policy
                 </Link>
