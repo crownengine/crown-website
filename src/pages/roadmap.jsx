@@ -126,10 +126,10 @@ export default function Roadmap() {
           <section className="px-4 py-24 text-gray-300">
             <div>
               <h1 className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-6xl">
-                2026 Roadmap
+                Crown 2026 Roadmap
               </h1>
               <p className="mb-24 text-2xl text-gray-300">
-                A timeline of the next major Crown Engine milestones on the road to Crown 1.0.
+                A timeline of the next major milestones on the road to Crown 1.0.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ export default function Roadmap() {
 
 export const Head = () => (
   <Seo
-    title="2026 Roadmap"
+    title="Crown 2026 Roadmap"
     description="Upcoming Crown Engine milestones from Q2 2026 through Q1 2027."
   />
 )
