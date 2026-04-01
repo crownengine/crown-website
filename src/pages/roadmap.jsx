@@ -253,7 +253,7 @@ export default function Roadmap({ data }) {
 
             <ContentSection
               title="Road to 1.0"
-              description="The roadmap focuses on building the systems Crown needs to be fully production-ready for the demands of developing smaller-scope games."
+              description="Crown 1.0 aims to make the engine production-ready for smaller-scope commercial games."
             >
               <div className="mt-10 grid gap-6 md:grid-cols-2">
                 {roadToOneItems.map(({ question, answer }) => (
