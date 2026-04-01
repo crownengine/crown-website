@@ -1,6 +1,8 @@
 import React from "react"
+import { graphql, Link } from "gatsby"
 import Clamp from "../components/clamp"
 import Layout from "../components/layout"
+import NewsList from "../components/news-list.jsx"
 import Seo from "../components/seo"
 
 const accentClasses = {
@@ -28,8 +30,7 @@ const roadmapItems = [
     dates: "April 1-June 30, 2026",
     title: "Saves & Settings",
     accent: "emerald",
-    summary:
-      "Give games a built-in way to store progress, profiles, and player options.",
+    summary: "Give games a built-in way to store progress, profiles, and player options.",
     unlocks:
       "Reliable saves, graphics settings, and user preferences without custom engine plumbing.",
   },
@@ -50,8 +51,7 @@ const roadmapItems = [
     accent: "amber",
     summary:
       "Add a particle system and expand the rendering stack with missing effects like SSAO, color grading, and other post effects.",
-    unlocks:
-      "Richer visuals, more atmosphere, and a more complete built-in effects toolset.",
+    unlocks: "Richer visuals, more atmosphere, and a more complete built-in effects toolset.",
   },
   {
     label: "Crown 1.0",
@@ -59,10 +59,32 @@ const roadmapItems = [
     title: "Advanced Animation",
     labelVariant: "milestone",
     accent: "rose",
-    summary:
-      "Round out the animation stack with blending, layering, and masking.",
+    summary: "Round out the animation stack with blending, layering, and masking.",
     unlocks:
       "Smoother transitions, more natural motion, and the ability to combine movement and actions cleanly, marking the final step toward Crown 1.0.",
+  },
+]
+
+const roadToOneItems = [
+  {
+    question: "Why these four, why now",
+    answer:
+      "These milestones focus on the core systems needed to build real projects in Crown: gameplay state, content workflow, visual polish, and animation.",
+  },
+  {
+    question: "What Crown 1.0 means",
+    answer:
+      "Crown 1.0 is aimed at being ready for production on a smaller-scope commercial game, especially single-player and local multiplayer projects.",
+  },
+  {
+    question: "Not planned before 1.0",
+    answer:
+      "Crown 1.0 stays focused on features that directly support building and shipping games. Features outside that scope may be postponed until after 1.0.",
+  },
+  {
+    question: "Acceptance criteria",
+    answer:
+      "A milestone is complete when it is implemented, documented, and usable in a real project.",
   },
 ]
 
@@ -70,10 +92,53 @@ const goldBadgeClass =
   "inline-flex w-fit items-center whitespace-nowrap rounded-full bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 font-black uppercase text-amber-950 shadow-[0_0_24px_rgba(251,191,36,0.45)] ring-1 ring-amber-100/60"
 const milestoneClass = `${goldBadgeClass} px-4 py-2 text-sm tracking-[0.18em] sm:ml-auto`
 const timelineMilestoneClass = `${goldBadgeClass} px-5 py-3 text-2xl tracking-[0.12em]`
-const timelineLabelClass = "inline-flex items-center text-5xl font-black uppercase tracking-[0.18em]"
+const timelineLabelClass =
+  "inline-flex items-center text-5xl font-black uppercase tracking-[0.18em]"
 const timelineDotClass = "z-10 h-4 w-4 rounded-full border-4 border-gray-950"
 const articleClass =
   "relative overflow-hidden rounded-3xl border border-white/10 bg-gray-950/70 p-6 shadow-2xl backdrop-blur sm:p-8"
+const contentSectionClass = "mx-auto mt-24 max-w-5xl border-t border-white/10 pt-16"
+const contentCardClass = `${articleClass} h-full border-white/10 bg-gray-950/60`
+const sectionHeadingClass = "text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+const sectionDescriptionClass = "mt-4 text-lg leading-8 text-gray-300"
+const cardHeadingClass = "text-2xl font-semibold tracking-tight text-white"
+const roadToOneBodyClass = "mt-4 text-base leading-7 text-gray-300"
+const progressBodyClass = "mt-5 text-base leading-7 text-gray-300"
+const newsLinkClass =
+  "text-sm font-semibold uppercase tracking-[0.18em] text-amber-200 transition hover:text-amber-100"
+
+const recentProgressItems = [
+  {
+    title: "2025 was the most productive year in Crown's history.",
+    body: (
+      <p className={progressBodyClass}>
+        Crown shipped <span className="font-semibold text-white">14 releases</span> in 2025, from
+        Crown 0.54 in January to Crown 0.60 in December. Major additions included a new PBR
+        pipeline, support for FBX scenes, local and cascaded shadows, OGG streaming, a dedicated
+        kinematic character controller, improved prefab workflows, and many new resource editors.
+      </p>
+    ),
+  },
+  {
+    title: "Commit Velocity",
+    body: (
+      <p className={progressBodyClass}>
+        In the 12 months ending February 2026, the project recorded{" "}
+        <span className="font-semibold text-white">1,047 commits</span>, up{" "}
+        <span className="font-semibold text-white">83% year over year</span>.
+      </p>
+    ),
+  },
+  {
+    title: "2026 Momentum",
+    body: (
+      <p className={progressBodyClass}>
+        The year began with the release of Crown 0.61, followed by three bugfix releases ending with
+        Crown 0.61.3. Work is now underway on Crown 0.62.
+      </p>
+    ),
+  },
+]
 
 function RoadmapEntry({ item }) {
   const { label, dates, title, summary, unlocks, milestone, labelVariant, accent } = item
@@ -118,7 +183,50 @@ function RoadmapEntry({ item }) {
   )
 }
 
-export default function Roadmap() {
+function ContentSection({ title, description, children }) {
+  return (
+    <section className={contentSectionClass}>
+      <div>
+        <h2 className={sectionHeadingClass}>{title}</h2>
+        <p className={sectionDescriptionClass}>{description}</p>
+      </div>
+      {children}
+    </section>
+  )
+}
+
+function ContentCard({ title, children }) {
+  return (
+    <article className={contentCardClass}>
+      <h3 className={cardHeadingClass}>{title}</h3>
+      {children}
+    </article>
+  )
+}
+
+function LatestNews({ edges }) {
+  return (
+    <div className="mt-16">
+      <div className="flex items-center justify-between gap-4">
+        <h3 className={cardHeadingClass}>Latest News</h3>
+        <Link to="/news" className={newsLinkClass}>
+          View All News
+        </Link>
+      </div>
+
+      <div className="mt-8">
+        <NewsList
+          edges={edges}
+          limit={3}
+          listClassName="grid gap-6 lg:grid-cols-3"
+          itemClassName=""
+        />
+      </div>
+    </div>
+  )
+}
+
+export default function Roadmap({ data }) {
   return (
     <Layout>
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
@@ -142,12 +250,62 @@ export default function Roadmap() {
                 ))}
               </div>
             </div>
+
+            <ContentSection
+              title="Road to 1.0"
+              description="The roadmap focuses on building the systems Crown needs to be fully production-ready for the demands of developing smaller-scope games."
+            >
+              <div className="mt-10 grid gap-6 md:grid-cols-2">
+                {roadToOneItems.map(({ question, answer }) => (
+                  <ContentCard key={question} title={question}>
+                    <p className={roadToOneBodyClass}>{answer}</p>
+                  </ContentCard>
+                ))}
+              </div>
+            </ContentSection>
+
+            <ContentSection
+              title="Recent Progress"
+              description="Crown has accelerated sharply over the last year, with a higher release pace, broader engine capabilities, and continued momentum into 2026."
+            >
+              <div className="mt-10 space-y-6">
+                {recentProgressItems.map(({ title, body }) => (
+                  <ContentCard key={title} title={title}>
+                    {body}
+                  </ContentCard>
+                ))}
+              </div>
+              <LatestNews edges={data.allMdx.edges} />
+            </ContentSection>
           </section>
         </Clamp>
       </div>
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: 3) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 1280, placeholder: DOMINANT_COLOR)
+              }
+            }
+          }
+          excerpt(pruneLength: 120)
+        }
+      }
+    }
+  }
+`
 
 export const Head = () => (
   <Seo
