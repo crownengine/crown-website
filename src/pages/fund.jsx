@@ -127,7 +127,7 @@ export default function Fund() {
               Silver
             </h3>
             <div className="flex flex-wrap justify-center gap-3 text-gray-600">
-              {["Bourdon Noel"].map((name, i) => (
+              {["Gallonigher"].map((name, i) => (
                 <span key={i}>
                   {name}
                 </span>
@@ -148,7 +148,7 @@ export default function Fund() {
               Founding Supporter
             </h3>
             <div className="flex flex-wrap justify-center gap-3 text-gray-600">
-              {["Oscar Fernandez Casas", "Bourdon Noel"].map((name, i) => (
+              {["Oscar Fernandez Casas", "Gallonigher"].map((name, i) => (
                 <span key={i}>
                   {name}
                 </span>
