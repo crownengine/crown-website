@@ -13,8 +13,9 @@ function wrap(Tag, baseClasses) {
 }
 
 export const h1 = wrap("h1", "text-4xl font-extrabold mt-8 mb-6")
-export const h2 = wrap("h2", "text-3xl font-bold mt-6 mb-3")
-export const h3 = wrap("h3", "text-2xl font-semibold mt-4 mb-2")
+export const h2 = wrap("h2", "text-4xl font-extrabold mt-8 mb-6")
+export const h3 = wrap("h3", "text-3xl font-bold mt-6 mb-3")
+export const h4 = wrap("h4", "text-2xl font-semibold mt-4 mb-2")
 
 export const p = wrap("p", "leading-relaxed mb-10 mt-10")
 export const a = wrap("a", "text-blue-600 underline hover:text-blue-800")
@@ -40,6 +41,7 @@ export default {
   h1,
   h2,
   h3,
+  h4,
   p,
   a,
   img,

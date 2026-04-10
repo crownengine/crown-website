@@ -13,7 +13,7 @@ export default function Home({ data }) {
       <Cta />
       <Clamp>
         <section className="mb-16 px-4">
-          <h1 className="flex mb-6 text-2xl font-bold text-gray-600">
+          <h2 className="flex mb-6 text-2xl font-bold text-gray-600">
             <Link className="block" to="/news">
               Latest News
             </Link>
@@ -26,7 +26,7 @@ export default function Home({ data }) {
             >
               <i className="fa-solid fa-square-rss" aria-label="News RSS feed"></i>
             </a>
-          </h1>
+          </h2>
           {/* Latest news card.*/}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flow-root lg:items-stretch">
             <div className="lg:col-span-3">

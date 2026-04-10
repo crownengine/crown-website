@@ -22,9 +22,9 @@ export default function Fund() {
           <section className="py-24 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
             <div className="grid md:grid-cols-6 gap-6 mb-40">
               <div className="col-span-6 md:col-span-3 flex flex-col gap-6">
-                <h2 className="text-6xl font-bold text-transparent">
+                <h1 className="text-6xl font-bold text-transparent">
                   Help Crown grow Stronger and Faster
-                </h2>
+                </h1>
                 <p className="text-2xl text-gray-300">
                   Donations support Core Contributors working on Features, Maintenance and
                   Improvements &#x1F970;
@@ -56,7 +56,7 @@ export default function Fund() {
         <Clamp>
           {/* Credits Header */}
           <section className="mb-6">
-            <h3 className="text-5xl font-extrabold capitalize">Credits</h3>
+            <h2 className="text-5xl font-extrabold capitalize">Credits</h2>
           </section>
 
           {/* Diamond */}

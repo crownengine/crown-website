@@ -20,7 +20,7 @@ export default function Footer() {
       <Clamp>
         <div className="flex flex-wrap">
           <div className="w-1/2 md:w-1/4">
-            <h1 className="font-semibold uppercase pb-1 text-sm">Download</h1>
+            <h2 className="font-semibold uppercase pb-1 text-sm">Download</h2>
             <nav className="mb-2">
               {/* Download */}
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
@@ -50,7 +50,7 @@ export default function Footer() {
             </nav>
           </div>
           {/* <div>
-          <h1 className="font-semibold uppercase pb-1 text-sm">Organization</h1>
+          <h2 className="font-semibold uppercase pb-1 text-sm">Organization</h2>
           <nav className="mb-2">
             <div className="flex flex-col space-y-2">
               <a
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* About */}
           <div className="w-1/2 md:w-1/4">
-            <h1 className="font-semibold uppercase pb-1 text-sm">About</h1>
+            <h2 className="font-semibold uppercase pb-1 text-sm">About</h2>
             <nav className="mb-2">
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
                 <Link className="hover:text-indigo-800" to="/about">
@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Support */}
           <div className="w-1/2 md:w-1/4">
-            <h1 className="font-semibold uppercase pb-1 text-sm">Support</h1>
+            <h2 className="font-semibold uppercase pb-1 text-sm">Support</h2>
             <nav className="mb-2">
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
                 <a
@@ -135,7 +135,7 @@ export default function Footer() {
 
           {/* Follow Crown */}
           <div className="w-1/2 md:w-1/4">
-            <h1 className="font-semibold uppercase pb-1 text-sm">Follow Crown</h1>
+            <h2 className="font-semibold uppercase pb-1 text-sm">Follow Crown</h2>
             <nav className="mb-2">
               <div className="flex flex-row text-lg text-indigo-600">
                 <a
@@ -196,7 +196,7 @@ export default function Footer() {
               </div>
             </nav>
             {/* Donate */}
-            <h1 className="mt-4 font-semibold uppercase pb-1 text-sm">Support Crown</h1>
+            <h2 className="mt-4 font-semibold uppercase pb-1 text-sm">Support Crown</h2>
             <nav className="mb-2">
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600 hover:text-indigo-700">
                 <DonateButton></DonateButton>

@@ -9,7 +9,7 @@ export default function Support() {
       <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
         <Clamp>
           <section className="py-24 px-4">
-            <h2 className="text-6xl mb-24 font-bold text-gray-300">Support & Development</h2>
+            <h1 className="text-6xl mb-24 font-bold text-gray-300">Support & Development</h1>
 
             <div className="grid grid-rows-1 2xl:grid-cols-2 gap-6">
               <div className="rounded-lg shadow-lg p-6 text-lg bg-gray-200">
