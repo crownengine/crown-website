@@ -25,7 +25,7 @@ export default function About() {
                   <h2 className="text-4xl mb-6 font-semibold">Current Release</h2>
                   {Latest.map((item, index) => {
                     return (
-                      <p key={index} className="mb-6 text-gray-700">
+                      <p key={index} className="text-gray-700">
                         {item.author}, {item.commits} {item.commits === "1" ? "commit" : "commits"}{" "}
                         ({item.years})
                       </p>
