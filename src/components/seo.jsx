@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { useLocation } from '@reach/router';
 
-export default function Seo({ description, lang, meta, title, image, children }) {
+export default function Seo({ description, lang = "en", meta, title, image, children }) {
   const { site } = useStaticQuery(graphql`
     query {
       site {
