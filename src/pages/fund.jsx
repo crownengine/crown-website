@@ -64,7 +64,7 @@ export default function Fund() {
             <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-500 mb-8 capitalize">
               Diamond
             </h3>
-            <div className="flex flex-wrap justify-center gap-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
               {["Take", "The", "Lead"].map((name, i) => (
                 <div
                   key={i}
@@ -81,7 +81,7 @@ export default function Fund() {
             <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-700 via-gray-500 to-gray-600 mb-8 capitalize">
               Platinum
             </h3>
-            <div className="flex flex-wrap justify-center gap-8 opacity-80 hover:opacity-100 transition-opacity duration-300">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
               {["Make", "The", "First", "Gift"].map((name, i) => (
                 <div
                   key={i}
@@ -98,7 +98,7 @@ export default function Fund() {
             <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-700 via-gray-600 to-slate-500 mb-6 capitalize">
               Titanium
             </h3>
-            <div className="flex flex-wrap justify-center gap-6 text-gray-900 text-2xl">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-900 text-2xl">
               {["Kick", "It", "Off"].map((name, i) => (
                 <span key={i} className="underline">
                   {name}
@@ -112,7 +112,7 @@ export default function Fund() {
             <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-400 mb-6 capitalize">
               Gold
             </h3>
-            <div className="flex flex-wrap justify-center gap-4 text-gray-800 text-xl font-medium">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-800 text-xl font-medium">
               {["Start", "The", "Giving"].map((name, i) => (
                 <span key={i} className="px-4">
                   {name}
@@ -126,7 +126,7 @@ export default function Fund() {
             <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 mb-4 capitalize">
               Silver
             </h3>
-            <div className="flex flex-wrap justify-center gap-3 text-gray-600">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-600">
               {["Gallonigher"].map((name, i) => (
                 <span key={i}>
                   {name}
@@ -147,7 +147,7 @@ export default function Fund() {
             >
               Founding Supporter
             </h3>
-            <div className="flex flex-wrap justify-center gap-3 text-gray-600">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-600">
               {["Oscar Fernandez Casas", "Gallonigher", "Simon DaRocha"].map((name, i) => (
                 <span key={i}>
                   {name}
