@@ -21,13 +21,13 @@ module.exports = {
     stats: [
       {
         label: "Downloads",
-        value: 7100,
+        value: 7200,
         suffix: "+",
         link: "/download",
       },
       {
         label: "Major Releases",
-        value: 25,
+        value: 26,
         suffix: "",
         link: "/download",
       },
