@@ -151,7 +151,7 @@ export default function Support() {
                     and project lead of Crown Engine, with deep knowledge of its architecture and
                     over 20 years of experience engineering interactive systems.
                   </p>
-                  <p classname="text-gray-700">
+                  <p className="text-gray-700">
                     He offers consulting, custom engine work, priority bug fixes, and gameplay
                     programming. Contact:
                     <a
