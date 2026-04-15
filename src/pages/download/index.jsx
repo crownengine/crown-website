@@ -205,14 +205,14 @@ export default function Download() {
               </div>
 
               <div className="mb-10">
-                <ul className="flex space-x-2 justify-center text-lg">
-                  <li className="text-gray-200">
+                <div className="flex space-x-2 justify-center text-lg">
+                  <span className="text-gray-200">
                     {crown_release} {crown_package_type}
-                  </li>
-                  <li className="text-gray-200">•</li>
-                  <li className="text-gray-200">{crown_download_size}</li>
-                  <li className="text-gray-200">•</li>
-                  <li>
+                  </span>
+                  <span className="text-gray-200">•</span>
+                  <span className="text-gray-200">{crown_download_size}</span>
+                  <span className="text-gray-200">•</span>
+                  <span>
                     <a
                       className="text-gray-200 underline font-bold"
                       rel="noreferrer"
@@ -221,9 +221,10 @@ export default function Download() {
                     >
                       What's New?
                     </a>
-                  </li>
-                </ul>
+                  </span>
+                </div>
               </div>
+
             </div>
 
             {/* All Versions */}
