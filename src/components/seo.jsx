@@ -38,6 +38,8 @@ export default function Seo({ description, lang = "en", meta, title, image, chil
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:site" content={site.siteMetadata.x_handle} />
       <meta name="twitter:title" content={title} />
+      <meta name="fediverse:creator" content="@crownengine@mastodon.gamedev.place" />
+      <link rel="me" href="https://mastodon.gamedev.place/@crownengine" />
       {children}
     </>
   )
