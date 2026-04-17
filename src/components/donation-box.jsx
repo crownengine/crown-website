@@ -1,6 +1,46 @@
 import React, { useState, useEffect } from "react"
 import { useLocation } from "@reach/router"
 
+const amounts = {
+  monthly: [5, 10, 25, 50, 100, 250],
+  "one-time": [25, 50, 100, 150, 250, 500],
+}
+
+const currencySymbols = {
+  EUR: "€",
+  USD: "$",
+  BTC: "$",
+}
+
+const membershipTiers = {
+  5: { level: "bronze", badge: "Bronze membership badge/discord role.", benefit: null },
+  10: {
+    level: "silver",
+    badge: "Silver membership badge/discord role.",
+    benefit: "Name on website.",
+  },
+  25: {
+    level: "gold",
+    badge: "Gold membership badge/discord role.",
+    benefit: "Larger name on website.",
+  },
+  50: {
+    level: "titanium",
+    badge: "Titanium membership badge/discord role.",
+    benefit: "Link on website.",
+  },
+  100: {
+    level: "platinum",
+    badge: "Platinum membership badge/discord role.",
+    benefit: "Logo on website.",
+  },
+  250: {
+    level: "diamond",
+    badge: "Diamond membership badge/discord role.",
+    benefit: "Larger logo on website.",
+  },
+}
+
 const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   const [frequency, setFrequency] = useState(propFreq || "one-time")
   const [selectedAmount, setSelectedAmount] = useState({
@@ -12,48 +52,6 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   )
   const [currency, setCurrency] = useState("EUR")
   const [isCustomAmountValid, setIsCustomAmountValid] = useState(true)
-
-  // Define amounts for each frequency
-  const amounts = {
-    monthly: [5, 10, 25, 50, 100, 250],
-    "one-time": [25, 50, 100, 150, 250, 500],
-  }
-
-  // Currency symbol map
-  const currencySymbols = {
-    EUR: "€",
-    USD: "$",
-    BTC: "$",
-  }
-
-  const membershipTiers = {
-    5: { level: "bronze", badge: "Bronze membership badge/discord role.", benefit: null },
-    10: {
-      level: "silver",
-      badge: "Silver membership badge/discord role.",
-      benefit: "Name on website.",
-    },
-    25: {
-      level: "gold",
-      badge: "Gold membership badge/discord role.",
-      benefit: "Larger name on website.",
-    },
-    50: {
-      level: "titanium",
-      badge: "Titanium membership badge/discord role.",
-      benefit: "Link on website.",
-    },
-    100: {
-      level: "platinum",
-      badge: "Platinum membership badge/discord role.",
-      benefit: "Logo on website.",
-    },
-    250: {
-      level: "diamond",
-      badge: "Diamond membership badge/discord role.",
-      benefit: "Larger logo on website.",
-    },
-  }
 
   // Whenever parent props change, override internal state.
   useEffect(() => {
@@ -101,11 +99,11 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   useEffect(() => {
     if (currency === "BTC" && frequency === "monthly") {
       setFrequency("one-time")
-      setSelectedAmount(prev => ({ ...prev, ["one-time"]: amounts["one-time"][0] }))
+      setSelectedAmount(prev => ({ ...prev, "one-time": amounts["one-time"][0] }))
       setCustomAmount(amounts["one-time"][0].toString())
       setIsCustomAmountValid(true)
     }
-  }, [currency])
+  }, [currency, frequency])
 
   const handlePresetClick = amount => {
     setSelectedAmount(prev => ({
