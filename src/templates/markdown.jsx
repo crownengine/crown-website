@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 
 export default function MDTemplate({ data }) {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { html } = markdownRemark
 
   return (
     <Layout>
