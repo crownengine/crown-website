@@ -37,7 +37,7 @@ export const code = function Code({ className = "", ...props }) {
   return <code className={`px-1 py-0.5 rounded bg-gray-200 text-sm ${className}`} {...props} />
 }
 
-export default {
+const MDXComponents = {
   h1,
   h2,
   h3,
@@ -52,3 +52,5 @@ export default {
   pre,
   code,
 }
+
+export default MDXComponents
