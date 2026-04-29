@@ -64,7 +64,7 @@ export default function About() {
                   <h2 className="text-4xl mb-4 font-semibold">Join the Foundation</h2>
                   <p className="mb-6 text-gray-700">
                     Want to get more involved? Members of The Crown Foundation can participate in
-                    our internal discussions and have a voice in deciding the Foundation’s
+                    our internal discussions and have a voice in deciding the Foundation's
                     direction. We believe in a transparent and democratic process, and we welcome
                     new voices!
                   </p>

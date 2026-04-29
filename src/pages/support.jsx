@@ -71,7 +71,7 @@ export default function Support() {
               <div className="rounded-lg shadow-lg p-6 text-lg bg-gray-200">
                 <h2 className="text-4xl mb-2 font-semibold text-gray-700">Community</h2>
                 <p className="mb-2 text-gray-700">
-                  If you have any questions or need help, join us on our Discord server. Don’t
+                  If you have any questions or need help, join us on our Discord server. Don't
                   forget to follow us for the latest news!
                 </p>
                 <p className="mb-2 font-medium text-gray-700">
