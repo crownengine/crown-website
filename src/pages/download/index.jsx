@@ -7,7 +7,7 @@ import Seo from "../../components/seo"
 import Releases from "../../data/download/releases.json"
 
 export default function Download() {
-  const [crown_version, setCrownVersion] = useState()
+  const [crown_version, setCrownVersion] = useState(Releases.tag_name)
   const [crown_download_url, setCrownDownloadUrl] = useState()
   const [crown_package_type, setCrownPackageType] = useState()
   const [crown_download_size, setCrownDownloadSize] = useState()
@@ -70,6 +70,10 @@ export default function Download() {
 
   function listSeparator() {
     return <div className="flex-1 border-b-2 border-b-gray-600"></div>
+  }
+
+  function thanksPath(download_url) {
+    return `/download/thanks?url=${encodeURIComponent(download_url)}`
   }
 
   function downloadEntries() {
@@ -141,7 +145,7 @@ export default function Download() {
             </OutboundLink>
           )}
           {data.valid && data.alt !== "AUR" && (
-            <Link to="/download/thanks" state={{ crown_download_url: data.url }}>
+            <Link to={thanksPath(data.url)}>
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
                   <i className={"fab fa-" + data.os.toLowerCase()}></i>
@@ -195,13 +199,18 @@ export default function Download() {
               </h1>
 
               <div className="text-2xl">
-                <Link
-                  className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow"
-                  to="/download/thanks"
-                  state={{ crown_download_url }}
-                >
-                  Download Crown {crown_version}
-                </Link>
+                {crown_download_url ? (
+                  <Link
+                    className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow"
+                    to={thanksPath(crown_download_url)}
+                  >
+                    Download Crown {crown_version}
+                  </Link>
+                ) : (
+                  <span className="inline-block py-4 px-8 mb-2 leading-none text-gray-400 bg-gray-700 rounded shadow">
+                    Download Crown {crown_version}
+                  </span>
+                )}
               </div>
 
               <div className="mb-10">

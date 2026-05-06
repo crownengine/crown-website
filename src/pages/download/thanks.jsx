@@ -1,22 +1,31 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Clamp from "../../components/clamp"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import DonationBox from "../../components/donation-box"
 import StatsBanner from "../../components/stats-banner"
 
-export default function Thanks({ location }) {
-  const download_url = location.state?.crown_download_url || "none"
+const RELEASES_URL = "https://github.com/crownengine/crown/releases"
+
+export default function Thanks() {
+  const [download_url, setDownloadUrl] = useState()
 
   useEffect(() => {
-    if (download_url === "none") return
+    const params = new URLSearchParams(window.location.search)
+    const next_download_url = params.get("url")
+
+    window.history.replaceState(window.history.state, "", window.location.pathname)
+
+    if (!next_download_url) return
+
+    setDownloadUrl(next_download_url)
 
     const timer = setTimeout(() => {
-      window.location.href = download_url
+      window.location.assign(next_download_url)
     }, 400)
 
     return () => clearTimeout(timer)
-  }, [download_url])
+  }, [])
 
   return (
     <Layout>
@@ -26,7 +35,7 @@ export default function Thanks({ location }) {
             <div className="w-full max-w-2xl mx-auto">
               <p className="mt-28 text-lg text-gray-300">
                 Your download will start soon. If it didn't, click here to start it{" "}
-                <a className="underline" href={download_url === "none" ? "https://github.com/crownengine/crown/releases" : download_url}>
+                <a className="underline" href={download_url || RELEASES_URL}>
                   manually
                 </a>
                 .
