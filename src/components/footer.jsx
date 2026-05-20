@@ -19,7 +19,7 @@ export default function Footer() {
     <div className="mt-auto bg-gray-300 px-6 lg:px-8 py-20 text-sm">
       <Clamp>
         <div className="flex flex-wrap">
-          <div className="w-1/2 md:w-1/4">
+          <div className="w-1/2 md:w-1/5">
             <h2 className="font-semibold uppercase pb-1 text-sm">Download</h2>
             <nav className="mb-2">
               {/* Download */}
@@ -74,7 +74,7 @@ export default function Footer() {
         </div> */}
 
           {/* About */}
-          <div className="w-1/2 md:w-1/4">
+          <div className="w-1/2 md:w-1/5">
             <h2 className="font-semibold uppercase pb-1 text-sm">About</h2>
             <nav className="mb-2">
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
@@ -101,7 +101,7 @@ export default function Footer() {
           </div>
 
           {/* Support */}
-          <div className="w-1/2 md:w-1/4">
+          <div className="w-1/2 md:w-1/5">
             <h2 className="font-semibold uppercase pb-1 text-sm">Support</h2>
             <nav className="mb-2">
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
@@ -133,8 +133,20 @@ export default function Footer() {
             </nav>
           </div>
 
+          {/* News */}
+          <div className="w-1/2 md:w-1/5">
+            <h2 className="font-semibold uppercase pb-1 text-sm">News</h2>
+            <nav className="mb-2">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
+                <Link className="hover:text-indigo-800" to="/news">
+                  Latest News
+                </Link>
+              </div>
+            </nav>
+          </div>
+
           {/* Follow Crown */}
-          <div className="w-1/2 md:w-1/4">
+          <div className="w-1/2 md:w-1/5">
             <h2 className="font-semibold uppercase pb-1 text-sm">Follow Crown</h2>
             <nav className="mb-2">
               <div className="flex flex-row text-lg text-indigo-600">
