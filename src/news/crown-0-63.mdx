@@ -1,0 +1,92 @@
+---
+title: Crown 0.63
+slug: /news/crown-0-63
+date: 2026-06-03
+author: Daniele Bartolini
+image: crown-0-63.png
+---
+
+import DonationBox from "../components/donation-box.jsx"
+import DownloadButton from "../components/download-button.jsx"
+import dragVideo from "./crown-0-63-drag.mp4"
+import physicsDebug from "./crown-0-63-physics-debug.mp4"
+import lodUnitEditor from "./crown-0-63-lod-unit-editor.mp4"
+
+## What's New
+
+After almost two months of development, The Crown Foundation is proud to present **Crown 0.63** to
+the gamedev community!
+
+This release adds a new **LOD Group component** that lets you optimize performance by dynamically
+choosing which mesh a Unit should render based on its distance from the camera. The LOD Group
+component can be fine-tuned in the Unit Editor and is automatically imported from scene files.
+
+Speaking of scene files, Crown 0.63 introduces support for the **OBJ mesh format**, improves the
+existing FBX importer with **MikkTSpace tangent-space calculation**, and also brings many
+corrections to texture and material extraction (special thanks to Gallonigher, one of our community
+members, for his valuable testing efforts!).
+
+<video autoPlay muted loop playsInline controls>
+  <source src={lodUnitEditor} type="video/mp4" />
+</video>
+<span className="block text-center">A test unit with dummy LODs in the Unit Editor.</span>
+
+This new version also introduces several **new physics joint components**. These include the **Fixed
+Joint** for simple physics-based unit parenting, the **Spring Joint** to simulate bouncy behavior, a
+**Limb Joint** dedicated to ragdoll simulation, the highly configurable general-purpose **D6
+Joint**, and more!
+
+As part of the new joints work, Crown 0.63 also brings the ability to customize more [physics
+simulation
+parameters](https://docs.crownengine.org/html/v0.63.0/reference/boot_config.html#physics-configurations)
+as well as a **new physics command** to access useful physics debugging visualizations.
+
+<video autoPlay muted loop playsInline controls>
+  <source src={physicsDebug} type="video/mp4" />
+</video>
+<span className="block text-center">Debug visualization for a chain of units connected via the new Limb Joint.</span>
+
+Overall, the level-editing experience has been greatly improved with the introduction of numerous
+enhancements throughout the toolset: the flythrough **camera speed can now be easily adjusted** via
+dedicated keybinds, objects and resources have gained **drag & drop support**, and **hide and lock
+controls** in the Level Tree are now **smoother and more fun to use** thanks to the ability to
+toggle them in bulk with a simple click-and-drag gesture.
+
+<video autoPlay muted loop playsInline controls>
+  <source src={dragVideo} type="video/mp4" />
+</video>
+<span className="block text-center">You can now just click and drag over hide/lock controls to toggle them in bulk.</span>
+
+## Roadmap Updates
+
+An important item has been checked off the [roadmap](https://www.crownengine.org/roadmap) with the
+introduction of the new **SaveGame system** that provides a [simple asynchronous
+API](https://docs.crownengine.org/html/v0.63.0/lua_api.html#savegame) for persisting the game state
+on all supported platforms. Another significant step forward is the relaxation of **cross-resource
+reference checks**, which now trigger a warning without hard-stopping the Data Compiler
+unnecessarily.
+
+Some time has also been spent on cementing the **hot-reloading support**, which has been **expanded
+to almost all resource types** with the addition of meshes, sounds, fonts, sprites and sprite
+animations.
+
+## Legacy Hardware Support
+
+This release brings back the good old **OpenGL renderer** on Linux, in addition to the recently
+introduced one based on Vulkan. A new [boot config
+option](https://docs.crownengine.org/html/v0.63.0/reference/boot_config.html#renderer-configurations)
+has been added to choose between the two. The Vulkan renderer remains the default on Linux, with
+automatic fallback to GL.
+
+This release also includes **30 corrections** for issues present in the previous version. Check out
+the [latest changelog](https://docs.crownengine.org/html/v0.63.0/changelog.html#v0-63-0) for the
+complete list of improvements and fixes.
+
+<span className="block text-center"><DownloadButton /></span>
+
+## Join the Development Fund
+
+If you're enjoying Crown and want to see more, consider chipping in - it helps
+keep the project moving.
+
+<DonationBox />
