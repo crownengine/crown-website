@@ -172,6 +172,15 @@ export default function Footer() {
                   className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
+                  href="https://mastodon.gamedev.place/@crownengine"
+                  title="Follow Crown on Mastodon"
+                >
+                  <i className="fab fa-mastodon mr-3" aria-label="Mastodon"></i>
+                </a>
+                <a
+                  className="hover:text-indigo-800"
+                  rel="noreferrer"
+                  target="_blank"
                   href="https://www.twitter.com/crown_engine"
                   title="Follow Crown on X"
                 >
