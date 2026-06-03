@@ -133,8 +133,10 @@ const recentProgressItems = [
     title: "2026 Momentum",
     body: (
       <p className={progressBodyClass}>
-        The year began with the release of Crown 0.61, followed by three bugfix releases ending with
-        Crown 0.61.3. Work is now underway on Crown 0.62.
+        Crown 0.61 modernized Linux rendering with Vulkan and expanded the manual. Crown 0.62
+        improved everyday editor workflows, input support, and performance in large scenes. Crown
+        0.63 kept that pace by shipping the first roadmap item ahead of time, adding LOD groups and
+        physics joints, broadening hot-reloading, and closing 30 issues.
       </p>
     ),
   },
