@@ -172,15 +172,6 @@ export default function Footer() {
                   className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://mastodon.gamedev.place/@crownengine"
-                  title="Follow Crown on Mastodon"
-                >
-                  <i className="fab fa-mastodon mr-3" aria-label="Mastodon"></i>
-                </a>
-                <a
-                  className="hover:text-indigo-800"
-                  rel="noreferrer"
-                  target="_blank"
                   href="https://www.twitter.com/crown_engine"
                   title="Follow Crown on X"
                 >
@@ -190,19 +181,28 @@ export default function Footer() {
                   className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://bsky.app/profile/crownengine.org"
-                  title="Follow Crown on Bluesky"
+                  href="https://www.linkedin.com/company/crownengine"
+                  title="Follow Crown on LinkedIn"
                 >
-                  <i className="fab fa-bluesky mr-3" aria-label="Bluesky"></i>
+                  <i className="fab fa-linkedin mr-3" aria-label="LinkedIn"></i>
                 </a>
                 <a
                   className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://www.linkedin.com/company/crownengine"
-                  title="Follow Crown on LinkedIn"
+                  href="https://mastodon.gamedev.place/@crownengine"
+                  title="Follow Crown on Mastodon"
                 >
-                  <i className="fab fa-linkedin mr-3" aria-label="LinkedIn"></i>
+                  <i className="fab fa-mastodon mr-3" aria-label="Mastodon"></i>
+                </a>
+                <a
+                  className="hover:text-indigo-800"
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://bsky.app/profile/crownengine.org"
+                  title="Follow Crown on Bluesky"
+                >
+                  <i className="fab fa-bluesky mr-3" aria-label="Bluesky"></i>
                 </a>
                 {/* Uncomment when content will be available.
               <a
