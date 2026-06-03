@@ -126,6 +126,16 @@ export default function Support() {
                   <li>
                     <a
                       className="text-indigo-500"
+                      href="https://mastodon.gamedev.place/@crownengine"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <u>Mastodon</u>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-indigo-500"
                       href="https://bsky.app/profile/crownengine.org"
                       rel="noreferrer"
                       target="_blank"
