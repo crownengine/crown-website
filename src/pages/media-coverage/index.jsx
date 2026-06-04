@@ -6,6 +6,14 @@ import Seo from "../../components/seo"
 const articles = [
   {
     outlet: "Phoronix",
+    title: "Crown Engine 0.63 Restores Its OpenGL Renderer For Legacy Hardware Support",
+    author: "Michael Larabel",
+    date: "June 4, 2026",
+    url: "https://www.phoronix.com/news/Crown-Engine-0.63",
+    screenshot: "/media-coverage/phoronix-crown-engine-0.60.png",
+  },
+  {
+    outlet: "Phoronix",
     title: "Open-Source Crown Game Engine v0.60 Released",
     author: "Michael Larabel",
     date: "December 31, 2025",
