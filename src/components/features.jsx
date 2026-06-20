@@ -52,6 +52,13 @@ export default function Features() {
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
+            <i className="fas fa-language fa-2x text-indigo-600"></i>
+            <h3 className="text-2xl my-3 font-bold text-gray-700">Polyglot</h3>
+            <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
+              Editors are available in four languages, with additional ones on the roadmap.
+            </p>
+          </div>
+          <div className="lg:w-1/3 px-4 mb-6">
             <i className="fas fa-brands fa-osi fa-2x text-indigo-600"></i>
             <h3 className="text-2xl my-3 font-bold text-gray-700">Free and Open Source</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
