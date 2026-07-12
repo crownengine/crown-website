@@ -98,7 +98,7 @@ export default function Download() {
       valid: true,
       os: "Linux",
       arch: "x64",
-      url: "https://aur.archlinux.org/packages/crown",
+      url: "https://aur.archlinux.org/packages/crown-bin",
       size: 0,
       separator: false,
       alt: "AUR",
