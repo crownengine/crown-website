@@ -12,7 +12,11 @@ export default function NewsIndex({ data }) {
       <Clamp>
         <section className="mt-12 mb-16 px-4">
           <h1 className="text-2xl font-bold mb-6 text-gray-600">News</h1>
-          <NewsList edges={data.allMdx.edges} />
+          <NewsList
+            edges={data.allMdx.edges}
+            listClassName="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
+            itemClassName=""
+          />
         </section>
       </Clamp>
     </Layout>
