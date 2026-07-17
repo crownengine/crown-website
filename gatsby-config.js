@@ -29,7 +29,7 @@ module.exports = {
         label: "Major Releases",
         value: 27,
         suffix: "",
-        link: "/download",
+        link: "/news",
       },
       {
         label: "Community Members",
