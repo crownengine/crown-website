@@ -80,4 +80,8 @@ export default function Thanks() {
   )
 }
 
-export const Head = () => <Seo title="Thanks" />
+export const Head = () => (
+  <Seo title="Thanks">
+    <meta name="robots" content="noindex" />
+  </Seo>
+)

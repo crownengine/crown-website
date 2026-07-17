@@ -312,4 +312,8 @@ export default function DonateBTC({ location }) {
   )
 }
 
-export const Head = () => <Seo title="The Crown Foundation" />
+export const Head = () => (
+  <Seo title="The Crown Foundation">
+    <meta name="robots" content="noindex" />
+  </Seo>
+)

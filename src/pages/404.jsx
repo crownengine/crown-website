@@ -25,4 +25,8 @@ export default function NotFoundPage() {
   )
 }
 
-export const Head = () => <Seo title="404: Not found" />
+export const Head = () => (
+  <Seo title="404: Not found">
+    <meta name="robots" content="noindex" />
+  </Seo>
+)

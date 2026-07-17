@@ -192,7 +192,12 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/download/thanks`, `/fund/donate-btc`],
+      },
+    },
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     {
