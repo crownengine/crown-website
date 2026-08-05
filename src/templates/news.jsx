@@ -8,7 +8,17 @@ import Seo from "../components/seo"
 import MDXComponents from "../components/mdx"
 import { getSrc } from "gatsby-plugin-image"
 
+function ShowcaseParagraph({ className = "", ...props }) {
+  return <p className={`leading-relaxed mb-5 text-xl ${className}`.trim()} {...props} />
+}
+
+const ShowcaseMDXComponents = {
+  ...MDXComponents,
+  p: ShowcaseParagraph,
+}
+
 export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
+  const isShowcase = mdx.frontmatter.showcase === true
   const prevNews = pageContext.prev
     ? { url: `${pageContext.prev.frontmatter.slug}`, title: pageContext.prev.frontmatter.title }
     : null
@@ -18,24 +28,24 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
 
   return (
     <Layout>
-      <div className="bg-gray-200">
+      <div className="bg-gray-950">
         <Clamp>
           {/* Header */}
-          <section className="md:px-40 px-6 pt-16 text-left text-gray-700">
-            <span className="text-1xl text-gray-500 mb-4">{mdx.frontmatter.date}</span>
-            <h1 className="text-5xl font-bold mb-12">{mdx.frontmatter.title}</h1>
+          <section className={isShowcase ? "px-4 pt-32 text-left text-gray-200" : "px-4 pt-16 text-left text-gray-200"}>
+            <span className="text-1xl text-gray-400 mb-4">{mdx.frontmatter.date}</span>
+            <h1 className={isShowcase ? "text-8xl font-extrabold mb-4" : "text-5xl font-bold mb-12"}>{mdx.frontmatter.title}</h1>
           </section>
 
           {/* Content */}
-          <section className="md:px-40 px-6 text-left mb-8 text-gray-700">
-            <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+          <section className={isShowcase ? "px-4 text-left mb-8 text-lg text-gray-200" : "px-4 text-left mb-8 text-gray-200"}>
+            <MDXProvider components={isShowcase ? ShowcaseMDXComponents : MDXComponents}>{children}</MDXProvider>
           </section>
 
           {/* Prev/next news */}
-          <section className="flex flex-col md:flex-row md:px-40 px-6 text-gray-700">
+          <section className="flex flex-col md:flex-row px-4 text-gray-200">
             {prevNews && (
               <Link
-                className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+                className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-400 hover:text-white hover:bg-indigo-700 rounded"
                 to={prevNews.url}
               >
                 &lt; {prevNews.title}
@@ -43,7 +53,7 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
             )}
             {nextNews && (
               <Link
-                className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-600 hover:text-white hover:bg-indigo-700 rounded"
+                className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-400 hover:text-white hover:bg-indigo-700 rounded"
                 to={nextNews.url}
               >
                 {nextNews.title} &gt;
@@ -64,6 +74,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        showcase
         date(formatString: "MMMM DD, YYYY")
         image {
           childImageSharp {
