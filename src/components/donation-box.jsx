@@ -300,13 +300,45 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
           {/* Donate Button */}
           <div className="col-span-2">
             <button
-              className={`w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 ${
-                !isCustomAmountValid ? "opacity-50 cursor-not-allowed" : ""
-              }`}
+              className={`group relative isolate w-full overflow-hidden rounded-lg
+                bg-green-600 px-6 py-2 font-semibold text-white shadow-md
+                transition-colors duration-300
+                focus-visible:outline-none focus-visible:ring-2
+                focus-visible:ring-green-400 focus-visible:ring-offset-2
+                ${
+                  isCustomAmountValid
+                    ? "hover:bg-green-500"
+                    : "cursor-not-allowed opacity-50"
+                }
+              `}
               disabled={!isCustomAmountValid}
               onClick={handleDonate}
             >
-              Donate <i className="fa fa-heart"></i>
+              {isCustomAmountValid && (
+                <span
+                  aria-hidden="true"
+                  className="
+                    pointer-events-none absolute inset-0
+                    -translate-x-full
+                    bg-gradient-to-r
+                    from-transparent via-white/35 to-transparent
+
+                    transition-transform duration-0 ease-out
+                    group-hover:translate-x-full
+                    group-hover:duration-700
+
+                    group-focus-visible:translate-x-full
+                    group-focus-visible:duration-700
+
+                    motion-reduce:transition-none
+                  "
+                />
+              )}
+
+              <span className="relative z-10">
+                Donate{" "}
+                <i className="fa fa-heart" aria-hidden="true" />
+              </span>
             </button>
           </div>
         </div>
