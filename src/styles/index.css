@@ -4,6 +4,7 @@
 
 body {
   @apply antialiased;
+  font-family: "Inter Variable", sans-serif;
 }
 
 .header-logo {
