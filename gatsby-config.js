@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.crownengine.org`,
     title: `Crown Engine`,
-    subtitle: `Crown 0.63`,
+    subtitle: `Crown 0.64`,
     description: `A complete and cross-platform game engine designed for flexibility, performance and fast iteration.`,
     description_short: `Flexible, performant and fast-iterations focused game engine.`,
     image: `/placeholder.png`,
@@ -21,13 +21,13 @@ module.exports = {
     stats: [
       {
         label: "Downloads",
-        value: 7600,
+        value: 8200,
         suffix: "+",
         link: "/download",
       },
       {
         label: "Major Releases",
-        value: 27,
+        value: 28,
         suffix: "",
         link: "/news",
       },
