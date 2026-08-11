@@ -12,6 +12,20 @@ function ShowcaseParagraph({ className = "", ...props }) {
   return <p className={`leading-relaxed mb-5 text-xl ${className}`.trim()} {...props} />
 }
 
+function NewsHeading({ className = "", ...props }) {
+  return <h2 className={`text-[42px] font-extrabold mt-8 mb-6 ${className}`.trim()} {...props} />
+}
+
+function NewsParagraph({ className = "", ...props }) {
+  return <p className={`leading-relaxed mb-10 mt-10 text-xl ${className}`.trim()} {...props} />
+}
+
+const NewsMDXComponents = {
+  ...MDXComponents,
+  h2: NewsHeading,
+  p: NewsParagraph,
+}
+
 const ShowcaseMDXComponents = {
   ...MDXComponents,
   p: ShowcaseParagraph,
@@ -33,12 +47,12 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
           {/* Header */}
           <section className={isShowcase ? "px-4 pt-32 text-left text-gray-200" : "px-4 pt-16 text-left text-gray-200"}>
             <span className="text-1xl text-gray-400 mb-4">{mdx.frontmatter.date}</span>
-            <h1 className={isShowcase ? "text-8xl font-extrabold mb-4" : "text-5xl font-bold mb-12"}>{mdx.frontmatter.title}</h1>
+            <h1 className={isShowcase ? "text-8xl font-extrabold mb-4" : "text-8xl font-bold mb-12"}>{mdx.frontmatter.title}</h1>
           </section>
 
           {/* Content */}
           <section className={isShowcase ? "px-4 text-left mb-8 text-lg text-gray-200" : "px-4 text-left mb-8 text-gray-200"}>
-            <MDXProvider components={isShowcase ? ShowcaseMDXComponents : MDXComponents}>{children}</MDXProvider>
+            <MDXProvider components={isShowcase ? ShowcaseMDXComponents : NewsMDXComponents}>{children}</MDXProvider>
           </section>
 
           {/* Prev/next news */}
