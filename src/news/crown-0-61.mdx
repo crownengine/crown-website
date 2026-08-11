@@ -8,12 +8,16 @@ image: crown-0-61-crown-vulkan.png
 
 import DonationBox from "../components/donation-box.jsx"
 import DownloadButton from "../components/download-button.jsx"
+import DonateButton from "../components/donate-button.jsx"
 
 This release upgrades the Linux rendering backend of Crown to a
 full **Vulkan** solution. That gives us a clean path for future performance
 work and fixes compatibility issues with tricky but increasingly common
 setups like **XWayland + NVIDIA** where the old GL backend wasn't doing
 well.
+<div className="flex flex-wrap gap-4 whitespace-nowrap">
+  <DownloadButton>Download Crown 0.61</DownloadButton> <DonateButton/>
+</div>
 
 ![crown-vulkan](./crown-0-61-crown-vulkan.png)
 <span className="block text-center">Crown now uses Vulkan for rendering on Linux!</span>

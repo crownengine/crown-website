@@ -8,6 +8,7 @@ image: crown-0-63.png
 
 import DonationBox from "../components/donation-box.jsx"
 import DownloadButton from "../components/download-button.jsx"
+import DonateButton from "../components/donate-button.jsx"
 import dragVideo from "./crown-0-63-drag.mp4"
 import physicsDebug from "./crown-0-63-physics-debug.mp4"
 import lodUnitEditor from "./crown-0-63-lod-unit-editor.mp4"
@@ -15,6 +16,9 @@ import lodUnitEditor from "./crown-0-63-lod-unit-editor.mp4"
 This release adds a new **LOD Group component** that lets you optimize performance by dynamically
 choosing which mesh a Unit should render based on its distance from the camera. The LOD Group
 component can be fine-tuned in the Unit Editor and is automatically imported from scene files.
+<div className="flex flex-wrap gap-4 whitespace-nowrap">
+  <DownloadButton>Download Crown 0.63</DownloadButton> <DonateButton/>
+</div>
 
 Speaking of scene files, Crown 0.63 introduces support for the **OBJ mesh format**, improves the
 existing FBX importer with **MikkTSpace tangent-space calculation**, and also brings many
