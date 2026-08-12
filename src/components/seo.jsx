@@ -21,13 +21,17 @@ export default function Seo({ description, lang = "en", meta, title, image, chil
   const metaDescription = description || site.siteMetadata.description
   const metaImage = site.siteMetadata.siteUrl + (image || site.siteMetadata.image)
   const canonicalUrl = `${site.siteMetadata.siteUrl}${useLocation().pathname}`
-  const faviconUrl = `${site.siteMetadata.siteUrl}/favicon.svg`
+  const faviconIcoUrl = `${site.siteMetadata.siteUrl}/favicon.ico`
+  const faviconPngUrl = `${site.siteMetadata.siteUrl}/favicon.png`
+  const faviconSvgUrl = `${site.siteMetadata.siteUrl}/favicon.svg`
 
   return (
     <>
       <html lang={lang} />
       <title>{title}</title>
-      <link rel="icon" type="image/svg+xml" href={faviconUrl} />
+      <link rel="icon" href={faviconIcoUrl} />
+      <link rel="icon" type="image/png" sizes="96x96" href={faviconPngUrl} />
+      <link rel="icon" type="image/svg+xml" href={faviconSvgUrl} />
       <meta name="description" content={metaDescription} />
       <meta name="og:description" content={metaDescription} />
       <meta name="og:title" content={title} />
