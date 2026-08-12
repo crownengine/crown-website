@@ -79,7 +79,7 @@ export default function Footer() {
             <nav className="mb-2">
               <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
                 <Link className="hover:text-indigo-800" to="/about">
-                  The Crown Foundation
+                  Mission & Activities
                 </Link>
                 <Link className="hover:text-indigo-800" to="/about/credits">
                   Credits

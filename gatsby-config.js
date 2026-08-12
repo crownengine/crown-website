@@ -62,11 +62,11 @@ module.exports = {
         link: `/roadmap`,
       },
       {
-        label: `Support`,
+        label: `Get Involved`,
         link: `/support`,
       },
       {
-        label: `About`,
+        label: `Foundation`,
         link: `/about`,
       },
       {
