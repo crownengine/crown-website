@@ -361,7 +361,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
       {/* Currency Selector */}
       <div className="flex justify-end">
         <select
-          className="px-3 py-2 border rounded-lg bg-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+          className="px-3 py-2 border rounded-lg bg-white text-gray-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
           value={currency}
           onChange={e => setCurrency(e.target.value)}
         >
