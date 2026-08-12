@@ -286,4 +286,4 @@ export default function Download() {
   )
 }
 
-export const Head = () => <Seo title="Download" description="No setup, no account, no internet required. Get a copy, unzip it and start creating." />
+export const Head = () => <Seo title="Download" description="No account, no internet required. Get a copy, unzip it and start building games." />

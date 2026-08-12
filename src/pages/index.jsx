@@ -61,12 +61,6 @@ export default function Home({ data }) {
 
 export const data = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-        description_short
-      }
-    }
     allMdx(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
@@ -88,9 +82,6 @@ export const data = graphql`
   }
 `
 
-export const Head = ({ data }) => {
-  const title = data.site.siteMetadata.title
-  const description = data.site.siteMetadata.description_short
-  const fulltitle = title + " - " + description
-  return <Seo title={fulltitle} />
+export const Head = () => {
+  return <Seo title="A Game Engine that Focuses on What Matters" />
 }

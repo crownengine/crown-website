@@ -23,6 +23,7 @@ MDTemplate.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
+        noindex: PropTypes.bool,
       }).isRequired,
       html: PropTypes.string.isRequired,
     }).isRequired,
@@ -35,9 +36,18 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        noindex
       }
     }
   }
 `
 
-export const Head = () => <Seo />
+export const Head = ({ data }) => {
+  const { title, noindex } = data.markdownRemark.frontmatter
+
+  return (
+    <Seo title={title}>
+      {noindex && <meta name="robots" content="noindex, follow" />}
+    </Seo>
+  )
+}

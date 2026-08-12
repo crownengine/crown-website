@@ -147,7 +147,10 @@ export default function Support() {
               </div>
             </div>
 
-            <div className="mt-6 rounded-lg shadow-lg p-6 text-lg bg-gray-200">
+            <div
+              className="mt-6 rounded-lg shadow-lg p-6 text-lg bg-gray-200"
+              data-nosnippet
+            >
               <h2 className="text-4xl mb-2 font-semibold text-gray-700">Paid support</h2>
               <p className="mb-4 text-gray-700">
                 This is a list of Crown core developers that are available for employment or

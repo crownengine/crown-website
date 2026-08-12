@@ -48,7 +48,7 @@ export default function Features() {
             <i className="fas fa-plug fa-2x text-indigo-600"></i>
             <h3 className="text-2xl my-3 font-bold text-gray-700">Plug-and-play</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
-              No setup, no account, no internet required. Get a copy, unzip it and start creating.
+              No account, no internet required. Get a copy, unzip it and start building games.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">

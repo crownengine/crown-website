@@ -195,7 +195,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: [`/download/thanks`, `/fund/donate-btc`],
+        excludes: [`/crown-license`, `/download/thanks`, `/fund/donate-btc`, `/website-about`],
       },
     },
     `gatsby-plugin-robots-txt`,

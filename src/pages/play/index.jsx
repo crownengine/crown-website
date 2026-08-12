@@ -17,7 +17,7 @@ export default function Play() {
               Play a selection of interactive demos in-browser.
             </p>
 
-            <a href="https://play.crownengine.org/physics">
+            <a href="https://play.crownengine.org/physics" data-nosnippet>
               <HeroImage
                 {...{
                   src: "/play/physics.jpg",
@@ -37,5 +37,8 @@ export default function Play() {
 }
 
 export const Head = () => (
-  <Seo title="Play" description="Play a selection of interactive demos in-browser." />
+  <Seo
+    title="Play"
+    description="Play a selection of interactive demos without leaving the browser."
+  />
 )

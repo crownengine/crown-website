@@ -1,6 +1,7 @@
 ---
 slug: "/crown-license"
 title: "Crown license"
+noindex: true
 ---
 
 # License

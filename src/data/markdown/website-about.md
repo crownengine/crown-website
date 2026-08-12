@@ -1,6 +1,7 @@
 ---
 slug: "/website-about"
 title: "Website about"
+noindex: true
 ---
 
 # Website Credits

@@ -34,7 +34,7 @@ export default function About() {
             <div className="flex flex-col gap-6">
               <div className="flex flex-col sm:flex-row gap-6">
                 <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
-                  <h2 className="text-4xl mb-6 font-semibold">The Organization</h2>
+                  <h2 className="text-4xl mb-6 font-semibold">About the Foundation</h2>
                   <p className="mb-6 text-gray-700">
                     The Crown Foundation is a nonprofit organization dedicated to developing free,
                     open-source technologies that advance the fields of game development and
@@ -85,4 +85,9 @@ export default function About() {
   )
 }
 
-export const Head = () => <Seo title="The Crown Foundation" description="We develop free, open-source technologies that advance the fields of game development." />
+export const Head = () => (
+  <Seo
+    title="The Crown Foundation"
+    description="We develop free, open-source technologies that advance the fields of game development."
+  />
+)
