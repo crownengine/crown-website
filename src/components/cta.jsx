@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Clamp from "./clamp"
 import DownloadButton from "../components/download-button"
@@ -16,22 +17,33 @@ export default function Cta() {
   `)
 
   return (
-    <div className="bg-bannerImage bg-left-top bg-cover mb-16">
-      <div className="bg-blackOverlay">
-        <Clamp>
-          <section className="py-32 px-4">
-            <h1 className="text-6xl sm:text-7xl mt-24 mb-4 font-extrabold text-gray-100">
-              {data.site.siteMetadata.subtitle}
-            </h1>
-            <p className="text-2xl mb-4 text-gray-100 max-w-4xl">
-              {data.site.siteMetadata.description}
-            </p>
-            <div className="text-2xl">
-              <DownloadButton></DownloadButton>
-            </div>
-          </section>
-        </Clamp>
-      </div>
+    <div className="relative mb-16 overflow-hidden bg-gray-950">
+      <StaticImage
+        className="!absolute inset-0 h-full w-full"
+        imgClassName="object-cover"
+        src="../images/index/crown-editor.jpeg"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        placeholder="dominantColor"
+        quality={75}
+        formats={["auto", "webp", "avif"]}
+      />
+      <div className="absolute inset-0 bg-blackOverlay"></div>
+
+      <Clamp>
+        <section className="relative py-32 px-4">
+          <h1 className="text-6xl sm:text-7xl mt-24 mb-4 font-extrabold text-gray-100">
+            {data.site.siteMetadata.subtitle}
+          </h1>
+          <p className="text-2xl mb-4 text-gray-100 max-w-4xl">
+            {data.site.siteMetadata.description}
+          </p>
+          <div className="text-2xl">
+            <DownloadButton>Download Crown</DownloadButton>
+          </div>
+        </section>
+      </Clamp>
     </div>
   )
 }

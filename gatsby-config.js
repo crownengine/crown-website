@@ -130,7 +130,7 @@ module.exports = {
           anonymize_ip: true,
         },
         pluginConfig: {
-          head: true,
+          head: false,
           respectDNT: true,
         },
       },
@@ -203,7 +203,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-image`,
       options: {
-        quality: 90,
+        quality: 82,
       },
     },
     `gatsby-plugin-sharp`,
@@ -217,8 +217,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
-              quality: 90,
-              withWebp: { quality: 90 },
+              quality: 82,
+              withWebp: { quality: 82 },
             },
           },
         ],

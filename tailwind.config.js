@@ -11,7 +11,6 @@ module.exports = {
         "5/11": "45.4545454%",
       },
       backgroundImage: {
-        bannerImage: "url('../images/index/crown-editor.jpeg')",
         blackOverlay: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9))",
       },
       screens: {
