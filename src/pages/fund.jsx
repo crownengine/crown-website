@@ -47,7 +47,7 @@ export default function Fund() {
       <div className="bg-gradient-to-b from-gray-900 to-gray-800 py-0">
         <Clamp>
           <section className="p-8 text-white">
-            <StatsBanner />
+            <StatsBanner animate />
           </section>
         </Clamp>
       </div>
