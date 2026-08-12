@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FaHeart } from "react-icons/fa6"
 
 const DonateButton = () => {
   return (
@@ -33,8 +34,7 @@ const DonateButton = () => {
           motion-reduce:transition-none
         "
       />
-
-      <i className="fa fa-heart mr-2" />
+      <FaHeart className="mr-2 inline" aria-hidden="true" />
       Donate
     </Link>
   )

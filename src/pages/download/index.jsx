@@ -1,10 +1,23 @@
 import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React, { useEffect, useState } from "react"
+import { FaAndroid, FaApple, FaCode, FaLinux, FaWindows } from "react-icons/fa6"
 import Layout from "../../components/layout"
 import Clamp from "../../components/clamp"
 import Seo from "../../components/seo"
 import Releases from "../../data/download/releases.json"
+
+const platformIcons = {
+  Android: FaAndroid,
+  Linux: FaLinux,
+  "MacOS X": FaApple,
+  Windows: FaWindows,
+}
+
+function PlatformIcon({ os }) {
+  const Icon = platformIcons[os]
+  return Icon ? <Icon aria-hidden="true" /> : null
+}
 
 export default function Download() {
   const [crown_version, setCrownVersion] = useState(Releases.tag_name)
@@ -131,7 +144,7 @@ export default function Download() {
             <OutboundLink rel="noreferrer" target="_blank" href={data.url}>
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                  <i className={"fab fa-" + data.os.toLowerCase()}></i>
+                  <PlatformIcon os={data.os} />
                 </div>
                 <div className="flex-1">
                   {data.os} <span className="text-gray-600">{data.arch}</span>
@@ -148,7 +161,7 @@ export default function Download() {
             <Link to={thanksPath(data.url)}>
               <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                 <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                  <i className={"fab fa-" + data.os.toLowerCase()}></i>
+                  <PlatformIcon os={data.os} />
                 </div>
                 <div className="flex-1">
                   {data.os} <span className="text-gray-600">{data.arch}</span>
@@ -247,7 +260,7 @@ export default function Download() {
                 <OutboundLink rel="noreferrer" target="_blank" href={Releases.tarball_url}>
                   <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                     <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                      <i className="mr-2 fas fa-code"></i>
+                      <FaCode aria-hidden="true" />
                     </div>
                     <div className="flex-1 text-left">Source Code</div>
                     <div className="flex-1 text-right">{getPackageType("gz")}</div>
@@ -258,7 +271,7 @@ export default function Download() {
                 <OutboundLink rel="noreferrer" target="_blank" href={Releases.zipball_url}>
                   <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
                     <div className="mr-2 flex-none w-6 h-6 text-gray-500">
-                      <i className="mr-2 fas fa-code"></i>
+                      <FaCode aria-hidden="true" />
                     </div>
                     <div className="flex-1 text-left">Source Code</div>
                     <div className="flex-1 text-right">{getPackageType("zip")}</div>

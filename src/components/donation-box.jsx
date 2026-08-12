@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useLocation } from "@reach/router"
+import { FaHeart } from "react-icons/fa6"
 
 const amounts = {
   monthly: [5, 10, 25, 50, 100, 250],
@@ -336,8 +337,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
               )}
 
               <span className="relative z-10">
-                Donate{" "}
-                <i className="fa fa-heart" aria-hidden="true" />
+                Donate <FaHeart className="inline" aria-hidden="true" />
               </span>
             </button>
           </div>
@@ -352,7 +352,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
               className="w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-500"
               onClick={handleDonate}
             >
-              Donate Monthly <i className="fa fa-heart"></i>
+              Donate Monthly <FaHeart className="inline" aria-hidden="true" />
             </button>
           </div>
         </div>

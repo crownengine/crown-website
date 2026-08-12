@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
+import { FaBluesky, FaDiscord, FaGithub, FaLinkedin, FaMastodon, FaXTwitter } from "react-icons/fa6"
 import Clamp from "./clamp"
 import DonateButton from "../components/donate-button"
 
@@ -157,7 +158,7 @@ export default function Footer() {
                   href="https://github.com/crownengine/crown/"
                   title="Crown Official GitHub page"
                 >
-                  <i className="fab fa-github mr-3" aria-label="GitHub"></i>
+                  <FaGithub className="mr-3" aria-label="GitHub" />
                 </a>
                 <a
                   className="hover:text-indigo-800"
@@ -166,7 +167,7 @@ export default function Footer() {
                   href="https://discord.gg/invite/CeXVWCT"
                   title="Join Crown on Discord"
                 >
-                  <i className="fab fa-discord mr-3" aria-label="Discord"></i>
+                  <FaDiscord className="mr-3" aria-label="Discord" />
                 </a>
                 <a
                   className="hover:text-indigo-800"
@@ -175,7 +176,7 @@ export default function Footer() {
                   href="https://www.twitter.com/crown_engine"
                   title="Follow Crown on X"
                 >
-                  <i className="fab fa-x-twitter mr-3" aria-label="X"></i>
+                  <FaXTwitter className="mr-3" aria-label="X" />
                 </a>
                 <a
                   className="hover:text-indigo-800"
@@ -184,7 +185,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/crownengine"
                   title="Follow Crown on LinkedIn"
                 >
-                  <i className="fab fa-linkedin mr-3" aria-label="LinkedIn"></i>
+                  <FaLinkedin className="mr-3" aria-label="LinkedIn" />
                 </a>
                 <a
                   className="hover:text-indigo-800"
@@ -193,7 +194,7 @@ export default function Footer() {
                   href="https://mastodon.gamedev.place/@crownengine"
                   title="Follow Crown on Mastodon"
                 >
-                  <i className="fab fa-mastodon mr-3" aria-label="Mastodon"></i>
+                  <FaMastodon className="mr-3" aria-label="Mastodon" />
                 </a>
                 <a
                   className="hover:text-indigo-800"
@@ -202,18 +203,8 @@ export default function Footer() {
                   href="https://bsky.app/profile/crownengine.org"
                   title="Follow Crown on Bluesky"
                 >
-                  <i className="fab fa-bluesky mr-3" aria-label="Bluesky"></i>
+                  <FaBluesky className="mr-3" aria-label="Bluesky" />
                 </a>
-                {/* Uncomment when content will be available.
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href="https://www.youtube.com/channel/UCmvDFWrznsSzStSvwqWaJJQ"
-                title="YouTube"
-              >
-                <i className="fab fa-youtube mr-2" aria-label="YouTube"></i>
-              </a>
-              */}
               </div>
             </nav>
             {/* Donate */}

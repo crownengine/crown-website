@@ -6,6 +6,7 @@ import NewsList from "../components/news-list"
 import Clamp from "../components/clamp.jsx"
 import Seo from "../components/seo"
 import { graphql, Link } from "gatsby"
+import { FaSquareRss } from "react-icons/fa6"
 
 export default function Home({ data }) {
   return (
@@ -24,7 +25,7 @@ export default function Home({ data }) {
               href="https://www.crownengine.org/rss.xml"
               title="News RSS feed"
             >
-              <i className="fa-solid fa-square-rss" aria-label="News RSS feed"></i>
+              <FaSquareRss aria-label="News RSS feed" />
             </a>
           </h2>
           {/* Latest news card.*/}

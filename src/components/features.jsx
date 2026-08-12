@@ -1,4 +1,14 @@
 import React from "react"
+import {
+  FaCubes,
+  FaFileLines,
+  FaJetFighter,
+  FaLanguage,
+  FaMicrochip,
+  FaOsi,
+  FaPlug,
+  FaUserPen,
+} from "react-icons/fa6"
 import Clamp from "./clamp"
 import DownloadButton from "../components/download-button"
 
@@ -9,35 +19,35 @@ export default function Features() {
         <h2 className="text-6xl font-extrabold mb-12 text-gray-600">Sensible Game Development</h2>
         <div className="flex flex-wrap -mx-4 -mb-6 justify-center">
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-user-edit fa-2x text-indigo-600"></i>
+            <FaUserPen className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Batteries Included</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Complete Editor with importers, level editor, deployers, Lua REPL, and much more.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-fighter-jet fa-2x text-indigo-600"></i>
+            <FaJetFighter className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Fast iteration times</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Everything is hot-reloadable in less than a second, gameplay code included.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-cubes fa-2x text-indigo-600"></i>
+            <FaCubes className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Multi-platform</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Dev on your favorite desktop platform and ship to Android, HTML5, Linux or Windows.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-square-binary fa-2x text-indigo-600"></i>
+            <FaMicrochip className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Performance-first</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Runtime data is carefully arranged to reach maximum gameplay performance all the time.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-file-lines fa-2x text-indigo-600"></i>
+            <FaFileLines className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Simple and hackable</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Projects are just text files that are compiled into optimized binaries before
@@ -45,21 +55,21 @@ export default function Features() {
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-plug fa-2x text-indigo-600"></i>
+            <FaPlug className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Plug-and-play</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               No account, no internet required. Get a copy, unzip it and start building games.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-language fa-2x text-indigo-600"></i>
+            <FaLanguage className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Polyglot</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Editors are available in four languages, with additional ones on the roadmap.
             </p>
           </div>
           <div className="lg:w-1/3 px-4 mb-6">
-            <i className="fas fa-brands fa-osi fa-2x text-indigo-600"></i>
+            <FaOsi className="text-indigo-600" size={32} aria-hidden="true" />
             <h3 className="text-2xl my-3 font-bold text-gray-700">Free and Open Source</h3>
             <p className="text-gray-700 leading-relaxed sm:mx-0 mx-10">
               Crown is a public, collaborative project, owned by its contributors and free forever.
