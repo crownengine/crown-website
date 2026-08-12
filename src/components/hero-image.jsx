@@ -8,7 +8,7 @@ export default function HeroImage({
   heightClass = "h-96",
 }) {
   return (
-    <section className={`relative w-full ${heightClass} overflow-hidden`}>
+    <section className={`relative w-full ${heightClass} overflow-hidden rounded-xl`}>
       <img src={src} alt={alt} loading="lazy" className="w-full h-full object-cover" />
 
       <div
