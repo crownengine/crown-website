@@ -10,14 +10,14 @@ export default function Footer() {
       site {
         siteMetadata {
           org_title
-          tcf_mail_address
+          org_tax_id
         }
       }
     }
   `)
 
   return (
-    <div className="mt-auto bg-gray-300 px-6 lg:px-8 py-20 text-sm">
+    <footer className="mt-auto bg-gray-300 px-6 py-16 text-sm lg:px-8">
       <Clamp>
         <div className="flex flex-wrap">
           <div className="w-1/2 md:w-1/4">
@@ -218,23 +218,20 @@ export default function Footer() {
         </div>
 
         {/* Footer */}
-        <div className="max-w-screen-xl mx-auto flex flex-col items-center mt-4">
-          <div className="flex flex-row mt-4 place-items-center space-x-3">
-            &copy;{new Date().getFullYear()} {data.site.siteMetadata.org_title}
-            <Link
-              className="lg:mt-0 text-indigo-600 hover:text-indigo-700 ml-4"
-              to="/website-about"
-            >
-              <img
-                alt="Creative Commons License"
-                width="80"
-                height="15"
-                src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
-              />
+        <div className="mx-auto mt-4 flex max-w-screen-xl flex-col items-center">
+          <div className="mt-4 flex flex-wrap place-items-center justify-center gap-x-3 gap-y-2">
+            <span>
+              &copy;{new Date().getFullYear()} {data.site.siteMetadata.org_title}
+            </span>
+            <span aria-hidden="true">·</span>
+            <span>Tax Code/VAT No. {data.site.siteMetadata.org_tax_id}</span>
+            <span aria-hidden="true">·</span>
+            <Link className="text-indigo-600 hover:text-indigo-700" to="/website-about">
+              Website credits and license
             </Link>
           </div>
         </div>
       </Clamp>
-    </div>
+    </footer>
   )
 }
