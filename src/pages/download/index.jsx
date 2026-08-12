@@ -19,6 +19,11 @@ function PlatformIcon({ os }) {
   return Icon ? <Icon aria-hidden="true" /> : null
 }
 
+function releaseNewsPath(version) {
+  const [major, minor] = version.replace(/^v/, "").split(".")
+  return `/news/crown-${major}-${minor}`
+}
+
 export default function Download() {
   const [crown_version, setCrownVersion] = useState(Releases.tag_name)
   const [crown_download_url, setCrownDownloadUrl] = useState()
@@ -235,14 +240,12 @@ export default function Download() {
                   <span className="text-gray-200">{crown_download_size}</span>
                   <span className="text-gray-200">•</span>
                   <span>
-                    <a
+                    <Link
                       className="text-gray-200 underline font-bold"
-                      rel="noreferrer"
-                      target="_blank"
-                      href="https://docs.crownengine.org/html/latest/changelog.html"
+                      to={releaseNewsPath(crown_version)}
                     >
                       What's New?
-                    </a>
+                    </Link>
                   </span>
                 </div>
               </div>
