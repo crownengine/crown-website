@@ -32,7 +32,7 @@ export default function Support() {
                   <li>
                     <a
                       className="text-indigo-500"
-                      href="https://docs.crownengine.org/html/latest/getting_started/index.html"
+                      href="https://docs.crownengine.org/html/latest/getting_started/basic_concepts.html"
                     >
                       <u>Getting Started</u>
                     </a>
@@ -53,7 +53,7 @@ export default function Support() {
                   <li>
                     <a
                       className="text-indigo-500"
-                      href="https://docs.crownengine.org/html/latest/hackers/"
+                      href="https://docs.crownengine.org/html/latest/hackers/contributing.html"
                     >
                       <u>Engine Hackers</u>
                     </a>

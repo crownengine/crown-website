@@ -117,7 +117,7 @@ export default function Footer() {
                   className="hover:text-indigo-800"
                   rel="noreferrer"
                   target="_blank"
-                  href="https://docs.crownengine.org/html/latest/hackers/index.html"
+                  href="https://docs.crownengine.org/html/latest/hackers/contributing.html"
                 >
                   Developer Manual
                 </a>
