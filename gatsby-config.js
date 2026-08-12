@@ -16,6 +16,8 @@ module.exports = {
     description_short: `Flexible, performant and fast-iterations focused game engine.`,
     image: `/placeholder.png`,
     org_title: `The Crown Foundation`,
+    org_description: `A nonprofit organization developing free, open-source technologies for game development and real-time multimedia.`,
+    org_tax_id: `90068000448`,
     x_handle: `@crown_engine`,
     tcf_mail_address: `foundation@crownengine.org`,
     stats: [
