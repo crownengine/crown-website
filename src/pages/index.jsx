@@ -7,15 +7,16 @@ import Clamp from "../components/clamp.jsx"
 import Seo from "../components/seo"
 import { graphql, Link } from "gatsby"
 import { FaSquareRss } from "react-icons/fa6"
+import CrownLogo from "../images/crown-logo-kit/crown-black-socket.svg"
 
 export default function Home({ data }) {
   return (
     <Layout>
       <Cta />
       <Clamp>
-        <section className="mb-16 px-4">
-          <h2 className="flex mb-6 text-2xl font-bold text-gray-600">
-            <Link className="block" to="/news">
+        <section className="mb-16 px-4" aria-labelledby="latest-news">
+          <h2 className="mb-6 flex text-3xl font-bold text-gray-600">
+            <Link id="latest-news" className="block" to="/news">
               Latest News
             </Link>
             <a
@@ -52,6 +53,41 @@ export default function Home({ data }) {
                 itemClassName="md:flex-1"
               />
             </div>
+          </div>
+        </section>
+
+        <section className="mb-16 px-4" aria-labelledby="crown-foundation">
+          <div className="flex flex-col gap-6 rounded-lg bg-gray-200 p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex-1">
+              <h2 id="crown-foundation" className="text-3xl font-bold text-gray-700">
+                The Crown Foundation
+              </h2>
+              <p className="mt-2 max-w-4xl text-gray-700">
+                The nonprofit behind Crown keeps game development open and accessible. We develop
+                Crown Engine, publish ready-to-use releases, and maintain free resources that help
+                people build awesome games.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-4">
+                <Link
+                  className="inline-block whitespace-nowrap rounded bg-indigo-600 px-6 py-3 text-center font-semibold text-white shadow transition hover:bg-indigo-700"
+                  to="/about"
+                >
+                  About the Foundation
+                </Link>
+                <Link
+                  className="inline-block whitespace-nowrap rounded border border-indigo-600 px-6 py-3 text-center font-semibold text-indigo-700 transition hover:bg-indigo-100 hover:text-indigo-900"
+                  to="/fund"
+                >
+                  Help our Mission
+                </Link>
+              </div>
+            </div>
+            <img
+              className="h-24 w-24 shrink-0 self-center drop-shadow-md sm:h-32 sm:w-32"
+              src={CrownLogo}
+              alt=""
+              aria-hidden="true"
+            />
           </div>
         </section>
       </Clamp>
