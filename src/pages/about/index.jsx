@@ -35,8 +35,8 @@ export default function About() {
                 The Crown Foundation
               </h1>
               <p className="max-w-4xl text-2xl leading-10 text-gray-200">
-                Our mission is to develop and sustain free, open-source technologies that make game
-                development and real-time multimedia creation more accessible.
+                We develop and sustain awesome, free, open-source technologies that make game
+                development and real-time multimedia creation accessible to everyone.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
