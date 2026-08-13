@@ -9,16 +9,18 @@ import NewsList from "../../components/news-list.jsx"
 export default function NewsIndex({ data }) {
   return (
     <Layout>
-      <Clamp>
-        <section className="mt-12 mb-16 px-4">
-          <h1 className="text-2xl font-bold mb-6 text-gray-600">News</h1>
-          <NewsList
-            edges={data.allMdx.edges}
-            listClassName="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
-            itemClassName=""
-          />
-        </section>
-      </Clamp>
+      <div className="bg-gray-950">
+        <Clamp>
+          <section className="px-4 pb-16 pt-12">
+            <h1 className="mb-6 text-2xl font-bold text-gray-200">News</h1>
+            <NewsList
+              edges={data.allMdx.edges}
+              listClassName="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
+              itemClassName=""
+            />
+          </section>
+        </Clamp>
+      </div>
     </Layout>
   )
 }
