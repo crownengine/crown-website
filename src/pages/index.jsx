@@ -64,9 +64,8 @@ export default function Home({ data }) {
                 The Crown Foundation
               </h2>
               <p className="mt-2 max-w-4xl text-lg text-gray-700">
-                The nonprofit behind Crown keeps game development open and accessible. We develop
-                Crown Engine, publish ready-to-use releases, and maintain free resources that help
-                people build awesome games.
+                We develop Crown Engine, publish ready-to-use releases, and maintain free resources
+                that help people build awesome games.
               </p>
               <div className="mt-5 flex flex-wrap gap-4">
                 <Link
