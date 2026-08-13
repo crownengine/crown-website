@@ -85,9 +85,6 @@ export default function Footer() {
                 <Link className="hover:text-gray-900" to="/about/credits">
                   Credits
                 </Link>
-                <Link className="hover:text-gray-900" to="/website-about">
-                  Website
-                </Link>
                 <Link className="hover:text-gray-900" to="/roadmap">
                   Roadmap
                 </Link>
@@ -227,7 +224,7 @@ export default function Footer() {
             <span>Tax Code/VAT No. {data.site.siteMetadata.org_tax_id}</span>
             <span aria-hidden="true">·</span>
             <Link className="text-gray-700 hover:text-gray-900" to="/website-about">
-              Website credits and license
+              Website Credits
             </Link>
           </div>
         </div>
