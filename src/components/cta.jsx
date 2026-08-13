@@ -33,7 +33,7 @@ export default function Cta() {
 
       <Clamp>
         <section className="relative py-32 px-4">
-          <h1 className="text-6xl sm:text-7xl mt-24 mb-4 font-extrabold text-gray-100">
+          <h1 className="text-[5rem] mt-24 mb-4 font-extrabold text-gray-100">
             {data.site.siteMetadata.subtitle}
           </h1>
           <p className="text-2xl mb-4 text-gray-100 max-w-4xl">

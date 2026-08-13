@@ -7,7 +7,6 @@ import Clamp from "../components/clamp.jsx"
 import Seo from "../components/seo"
 import { graphql, Link } from "gatsby"
 import { FaSquareRss } from "react-icons/fa6"
-import CrownLogo from "../images/crown-logo-kit/crown-black-socket.svg"
 
 export default function Home({ data }) {
   return (
@@ -15,12 +14,12 @@ export default function Home({ data }) {
       <Cta />
       <Clamp>
         <section className="mb-16 px-4" aria-labelledby="latest-news">
-          <h2 className="mb-6 flex text-3xl font-bold text-gray-600">
+          <h2 className="mb-6 flex text-[42px] font-bold text-gray-600">
             <Link id="latest-news" className="block" to="/news">
               Latest News
             </Link>
             <a
-              className="ml-2 hover:text-indigo-800"
+              className="ml-2 flex items-center text-3xl hover:text-indigo-800"
               rel="noreferrer"
               target="_blank"
               href="https://www.crownengine.org/rss.xml"
@@ -37,6 +36,7 @@ export default function Home({ data }) {
                 start={0}
                 limit={1}
                 variant="regular"
+                excerptClassName="text-base"
                 listClassName=""
                 itemClassName=""
               />
@@ -49,6 +49,7 @@ export default function Home({ data }) {
                 start={1}
                 limit={3}
                 variant="row"
+                excerptClassName="text-base"
                 listClassName="flex flex-col gap-4 md:h-full"
                 itemClassName="md:flex-1"
               />
@@ -59,10 +60,10 @@ export default function Home({ data }) {
         <section className="mb-16 px-4" aria-labelledby="crown-foundation">
           <div className="flex flex-col gap-6 rounded-lg bg-gray-200 px-6 py-14 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div className="flex-1">
-              <h2 id="crown-foundation" className="text-3xl font-bold text-gray-700">
+              <h2 id="crown-foundation" className="text-[42px] font-bold text-gray-700">
                 The Crown Foundation
               </h2>
-              <p className="mt-2 max-w-4xl text-gray-700">
+              <p className="mt-2 max-w-4xl text-lg text-gray-700">
                 The nonprofit behind Crown keeps game development open and accessible. We develop
                 Crown Engine, publish ready-to-use releases, and maintain free resources that help
                 people build awesome games.
@@ -82,12 +83,6 @@ export default function Home({ data }) {
                 </Link>
               </div>
             </div>
-            <img
-              className="h-32 w-32 shrink-0 self-center drop-shadow-md sm:h-40 sm:w-40"
-              src={CrownLogo}
-              alt=""
-              aria-hidden="true"
-            />
           </div>
         </section>
       </Clamp>

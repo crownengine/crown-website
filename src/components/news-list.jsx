@@ -11,6 +11,7 @@ export default function NewsList({
   start = 0,
   Card = NewsCard,
   variant = "regular",
+  excerptClassName,
   itemClassName = "flex-1 min-w-[300px]",
   listClassName = "flex flex-wrap gap-4",
 }) {
@@ -36,6 +37,7 @@ export default function NewsList({
                   image={getImage(fm.image?.childImageSharp?.gatsbyImageData)}
                   title={fm.title}
                   excerpt={node.excerpt}
+                  excerptClassName={excerptClassName}
                   date={fm.date}
                   variant={variant}
                 />
@@ -55,6 +57,7 @@ NewsList.propTypes = {
   start: PropTypes.number,
   Card: PropTypes.elementType,
   variant: PropTypes.string,
+  excerptClassName: PropTypes.string,
   itemClassName: PropTypes.string,
   listClassName: PropTypes.string,
 }

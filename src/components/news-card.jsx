@@ -1,7 +1,14 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export default function NewsCard({ title, excerpt, date, image, variant = "regular" }) {
+export default function NewsCard({
+  title,
+  excerpt,
+  excerptClassName = "text-sm",
+  date,
+  image,
+  variant = "regular",
+}) {
   if (variant === "regular") {
     return (
       <article className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full">
@@ -15,7 +22,9 @@ export default function NewsCard({ title, excerpt, date, image, variant = "regul
         {/* Title and Date */}
         <div className="p-4 flex-1 flex flex-col justify-end">
           <h3 className="text-lg font-semibold mb-2">{title}</h3>
-          {excerpt && <p className="text-sm text-gray-700 mb-2 line-clamp-3">{excerpt}</p>}
+          {excerpt && (
+            <p className={`${excerptClassName} text-gray-700 mb-2 line-clamp-3`}>{excerpt}</p>
+          )}
           <p className="text-sm text-gray-500">{date}</p>
         </div>
       </article>
@@ -34,7 +43,9 @@ export default function NewsCard({ title, excerpt, date, image, variant = "regul
 
       <div className="p-3 flex-1 flex flex-col justify-center">
         <h3 className="text-base font-semibold leading-snug mb-1 line-clamp-2">{title}</h3>
-        {excerpt && <p className="text-sm text-gray-700 mb-1 line-clamp-2">{excerpt}</p>}
+        {excerpt && (
+          <p className={`${excerptClassName} text-gray-700 mb-1 line-clamp-2`}>{excerpt}</p>
+        )}
         <p className="text-xs text-gray-500 mt-auto">{date}</p>
       </div>
     </article>
