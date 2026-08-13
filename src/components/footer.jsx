@@ -24,12 +24,12 @@ export default function Footer() {
             <h2 className="font-semibold uppercase pb-1 text-sm">Download</h2>
             <nav className="mb-2">
               {/* Download */}
-              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
-                <Link className="hover:text-indigo-800" to="/download">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-gray-700">
+                <Link className="hover:text-gray-900" to="/download">
                   Latest Crown
                 </Link>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://github.com/crownengine/crown/"
@@ -37,14 +37,14 @@ export default function Footer() {
                   Source Code
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://docs.crownengine.org/html/latest/changelog.html"
                 >
                   Changelog
                 </a>
-                <Link className="hover:text-indigo-800" to="/crown-license">
+                <Link className="hover:text-gray-900" to="/crown-license">
                   License
                 </Link>
               </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="#"
-                className="text-indigo-600 hover:text-indigo-700"
+                className="text-gray-700 hover:text-gray-900"
               >
                 Foundation
               </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                 rel="noreferrer"
                 target="_blank"
                 href="#"
-                className="text-indigo-600 hover:text-indigo-700"
+                className="text-gray-700 hover:text-gray-900"
               >
                 Support
               </a>
@@ -78,23 +78,23 @@ export default function Footer() {
           <div className="w-1/2 md:w-1/4">
             <h2 className="font-semibold uppercase pb-1 text-sm">About</h2>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
-                <Link className="hover:text-indigo-800" to="/about">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-gray-700">
+                <Link className="hover:text-gray-900" to="/about">
                   Mission & Activities
                 </Link>
-                <Link className="hover:text-indigo-800" to="/about/credits">
+                <Link className="hover:text-gray-900" to="/about/credits">
                   Credits
                 </Link>
-                <Link className="hover:text-indigo-800" to="/website-about">
+                <Link className="hover:text-gray-900" to="/website-about">
                   Website
                 </Link>
-                <Link className="hover:text-indigo-800" to="/roadmap">
+                <Link className="hover:text-gray-900" to="/roadmap">
                   Roadmap
                 </Link>
-                <Link className="hover:text-indigo-800" to="/privacy-policy">
+                <Link className="hover:text-gray-900" to="/privacy-policy">
                   Privacy Policy
                 </Link>
-                <Link className="hover:text-indigo-800" to="/cookie-policy">
+                <Link className="hover:text-gray-900" to="/cookie-policy">
                   Cookie Policy
                 </Link>
               </div>
@@ -105,9 +105,9 @@ export default function Footer() {
           <div className="w-1/2 md:w-1/4">
             <h2 className="font-semibold uppercase pb-1 text-sm">Support</h2>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-gray-700">
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://docs.crownengine.org"
@@ -115,7 +115,7 @@ export default function Footer() {
                   User Manual
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://docs.crownengine.org/html/latest/hackers/contributing.html"
@@ -123,7 +123,7 @@ export default function Footer() {
                   Developer Manual
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://discord.gg/invite/CeXVWCT"
@@ -135,11 +135,11 @@ export default function Footer() {
 
             <h2 className="mt-4 font-semibold uppercase pb-1 text-sm">News</h2>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600">
-                <Link className="hover:text-indigo-800" to="/news">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-gray-700">
+                <Link className="hover:text-gray-900" to="/news">
                   Latest News
                 </Link>
-                <Link className="hover:text-indigo-800" to="/media-coverage">
+                <Link className="hover:text-gray-900" to="/media-coverage">
                   Media Coverage
                 </Link>
               </div>
@@ -150,9 +150,9 @@ export default function Footer() {
           <div className="w-1/2 md:w-1/4">
             <h2 className="font-semibold uppercase pb-1 text-sm">Follow Crown</h2>
             <nav className="mb-2">
-              <div className="flex flex-row text-lg text-indigo-600">
+              <div className="flex flex-row text-lg text-gray-700">
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://github.com/crownengine/crown/"
@@ -161,7 +161,7 @@ export default function Footer() {
                   <FaGithub className="mr-3" aria-label="GitHub" />
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://discord.gg/invite/CeXVWCT"
@@ -170,7 +170,7 @@ export default function Footer() {
                   <FaDiscord className="mr-3" aria-label="Discord" />
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://www.twitter.com/crown_engine"
@@ -179,7 +179,7 @@ export default function Footer() {
                   <FaXTwitter className="mr-3" aria-label="X" />
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://www.linkedin.com/company/crownengine"
@@ -188,7 +188,7 @@ export default function Footer() {
                   <FaLinkedin className="mr-3" aria-label="LinkedIn" />
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://mastodon.gamedev.place/@crownengine"
@@ -197,7 +197,7 @@ export default function Footer() {
                   <FaMastodon className="mr-3" aria-label="Mastodon" />
                 </a>
                 <a
-                  className="hover:text-indigo-800"
+                  className="hover:text-gray-900"
                   rel="noreferrer"
                   target="_blank"
                   href="https://bsky.app/profile/crownengine.org"
@@ -210,7 +210,7 @@ export default function Footer() {
             {/* Donate */}
             <h2 className="mt-4 font-semibold uppercase pb-1 text-sm">Support Crown</h2>
             <nav className="mb-2">
-              <div className="flex flex-col space-y-2 lg:mt-0 text-indigo-600 hover:text-indigo-700">
+              <div className="flex flex-col space-y-2 lg:mt-0 text-gray-700 hover:text-gray-900">
                 <DonateButton></DonateButton>
               </div>
             </nav>
@@ -226,7 +226,7 @@ export default function Footer() {
             <span aria-hidden="true">·</span>
             <span>Tax Code/VAT No. {data.site.siteMetadata.org_tax_id}</span>
             <span aria-hidden="true">·</span>
-            <Link className="text-indigo-600 hover:text-indigo-700" to="/website-about">
+            <Link className="text-gray-700 hover:text-gray-900" to="/website-about">
               Website credits and license
             </Link>
           </div>
