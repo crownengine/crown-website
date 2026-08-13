@@ -50,7 +50,7 @@ export default function Features() {
               loading="lazy"
               placeholder="dominantColor"
               quality={80}
-              formats={["auto", "webp", "avif"]}
+              formats={["auto", "webp"]}
             />
           </Feature>
 
@@ -67,7 +67,7 @@ export default function Features() {
               loading="lazy"
               placeholder="dominantColor"
               quality={80}
-              formats={["auto", "webp", "avif"]}
+              formats={["auto", "webp"]}
             />
           </Feature>
 
@@ -83,7 +83,7 @@ export default function Features() {
               loading="lazy"
               placeholder="dominantColor"
               quality={80}
-              formats={["auto", "webp", "avif"]}
+              formats={["auto", "webp"]}
             />
           </Feature>
 
@@ -100,7 +100,7 @@ export default function Features() {
               loading="lazy"
               placeholder="dominantColor"
               quality={80}
-              formats={["auto", "webp", "avif"]}
+              formats={["auto", "webp"]}
             />
           </Feature>
 
@@ -116,7 +116,7 @@ export default function Features() {
               loading="lazy"
               placeholder="dominantColor"
               quality={80}
-              formats={["auto", "webp", "avif"]}
+              formats={["auto", "webp"]}
             />
           </Feature>
 
@@ -155,7 +155,7 @@ export default function Features() {
               loading="lazy"
               placeholder="dominantColor"
               quality={80}
-              formats={["auto", "webp", "avif"]}
+              formats={["auto", "webp"]}
             />
           </Feature>
 

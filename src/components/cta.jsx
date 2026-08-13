@@ -28,7 +28,7 @@ export default function Cta() {
         fetchPriority="high"
         placeholder="dominantColor"
         quality={75}
-        formats={["auto", "webp", "avif"]}
+        formats={["auto", "webp"]}
       />
       <div className="absolute inset-0 bg-blackOverlay"></div>
 
