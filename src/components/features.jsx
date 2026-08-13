@@ -8,7 +8,7 @@ function Feature({ accentClassName, children, description, imageOnLeft = false, 
   const text = (
     <div className="w-full md:w-1/2">
       <FadeIn direction={imageOnLeft ? "from-right" : "from-left"}>
-        <h3 className={`mb-5 text-[48px] font-extrabold leading-tight ${accentClassName}`}>
+        <h3 className={`mb-5 text-[44px] font-extrabold leading-tight ${accentClassName}`}>
           {title}
         </h3>
         <p className="text-xl leading-relaxed text-gray-200">{description}</p>

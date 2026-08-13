@@ -14,7 +14,7 @@ export default function Home({ data }) {
       <Cta />
       <Clamp>
         <section className="mb-16 px-4" aria-labelledby="latest-news">
-          <h2 className="mb-6 flex text-[42px] font-bold text-gray-600">
+          <h2 className="mb-6 flex text-[40px] font-bold text-gray-600">
             <Link id="latest-news" className="block" to="/news">
               Latest News
             </Link>
@@ -60,7 +60,7 @@ export default function Home({ data }) {
         <section className="mb-16 px-4" aria-labelledby="crown-foundation">
           <div className="flex flex-col gap-6 rounded-lg bg-gray-200 px-6 py-14 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div className="flex-1">
-              <h2 id="crown-foundation" className="text-[42px] font-bold text-gray-700">
+              <h2 id="crown-foundation" className="text-[40px] font-bold text-gray-700">
                 The Crown Foundation
               </h2>
               <p className="mt-2 max-w-4xl text-lg text-gray-700">
