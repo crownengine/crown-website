@@ -45,7 +45,7 @@ export default function Cta() {
               className="inline-block rounded border border-gray-300 px-8 py-2 font-semibold text-gray-100 transition hover:border-white hover:bg-white/10 hover:text-white"
               to="/news/crown-0-64"
             >
-              Learn More
+              See Highlights
             </Link>
           </div>
         </section>
