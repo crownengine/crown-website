@@ -120,5 +120,5 @@ export const data = graphql`
 `
 
 export const Head = () => {
-  return <Seo title="A Game Engine that Focuses on What Matters" />
+  return <Seo title="A Game Engine Focused on What Matters" />
 }
