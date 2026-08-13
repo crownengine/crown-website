@@ -57,7 +57,7 @@ export default function Home({ data }) {
         </section>
 
         <section className="mb-16 px-4" aria-labelledby="crown-foundation">
-          <div className="flex flex-col gap-6 rounded-lg bg-gray-200 p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-6 rounded-lg bg-gray-200 px-6 py-14 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div className="flex-1">
               <h2 id="crown-foundation" className="text-3xl font-bold text-gray-700">
                 The Crown Foundation
@@ -83,7 +83,7 @@ export default function Home({ data }) {
               </div>
             </div>
             <img
-              className="h-24 w-24 shrink-0 self-center drop-shadow-md sm:h-32 sm:w-32"
+              className="h-32 w-32 shrink-0 self-center drop-shadow-md sm:h-40 sm:w-40"
               src={CrownLogo}
               alt=""
               aria-hidden="true"
