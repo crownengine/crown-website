@@ -25,6 +25,7 @@ export default function Cta() {
         alt=""
         aria-hidden="true"
         loading="eager"
+        fetchPriority="high"
         placeholder="dominantColor"
         quality={75}
         formats={["auto", "webp", "avif"]}
