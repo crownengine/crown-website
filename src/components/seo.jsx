@@ -30,7 +30,7 @@ export default function Seo({ description, lang = "en", meta, title, image, chil
   const faviconSvgUrl = `${site.siteMetadata.siteUrl}/favicon.svg`
   const documentTitle = title.includes(site.siteMetadata.title)
     ? title
-    : `${title} | ${site.siteMetadata.title}`
+    : `${title} — ${site.siteMetadata.title}`
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
