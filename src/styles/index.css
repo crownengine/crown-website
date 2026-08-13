@@ -7,6 +7,11 @@ body {
   font-family: "Inter Variable", sans-serif;
 }
 
+.gatsby-image-wrapper [data-main-image],
+.gatsby-image-wrapper [data-placeholder-image] {
+  transition: none !important;
+}
+
 .header-logo {
   background: url(../images/crown-logo-kit/crown-black-socket.svg) no-repeat;
   background-size: contain;
