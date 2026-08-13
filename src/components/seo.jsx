@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
+import interFontUrl from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
 import PropTypes from "prop-types"
 import React from "react"
 import { useLocation } from "@reach/router"
@@ -57,6 +58,13 @@ export default function Seo({ description, lang = "en", meta, title, image, chil
       <link rel="icon" href={faviconIcoUrl} />
       <link rel="icon" type="image/png" sizes="96x96" href={faviconPngUrl} />
       <link rel="icon" type="image/svg+xml" href={faviconSvgUrl} />
+      <link
+        rel="preload"
+        href={interFontUrl}
+        as="font"
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
       <meta name="description" content={metaDescription} />
       <meta name="og:description" content={metaDescription} />
       <meta name="og:title" content={documentTitle} />
