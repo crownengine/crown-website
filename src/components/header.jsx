@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import Clamp from "./clamp"
 import DonateButton from "../components/donate-button"
 import { useStaticQuery, graphql } from "gatsby"
+import { FaHeart } from "react-icons/fa6"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,7 +24,10 @@ export default function Header() {
 
   return (
     <Clamp>
-      <nav className="flex flex-wrap items-center justify-between" aria-label="Primary navigation">
+      <nav
+        className="relative flex flex-wrap items-center justify-between"
+        aria-label="Primary navigation"
+      >
         {/* Logo */}
         <div className="px-4">
           <Link
@@ -55,14 +59,29 @@ export default function Header() {
         {/* Main menu */}
         <div
           id="primary-navigation"
-          className={`${isOpen ? "block" : "hidden"} w-full lg:block lg:w-auto px-4 text-gray-900`}
+          className={`${isOpen ? "block" : "hidden"} absolute left-0 top-full z-50 w-full bg-gray-100 px-4 text-gray-900 shadow-lg lg:static lg:z-auto lg:block lg:w-auto lg:bg-transparent lg:shadow-none`}
         >
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map((item, index) => {
               if (item.label === "Donate") {
                 return (
-                  <li key={index} className="py-2 pl-2 pr-2">
-                    <DonateButton />
+                  <li
+                    key={index}
+                    className="border-b border-gray-300 hover:text-indigo-600 lg:border-b-0"
+                  >
+                    <Link
+                      className="block py-4 pl-2 pr-2 lg:hidden"
+                      activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
+                      partiallyActive={true}
+                      to={item.link}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <FaHeart className="mr-2 inline" aria-hidden="true" />
+                      {item.label}
+                    </Link>
+                    <div className="hidden py-2 pl-2 pr-2 lg:block">
+                      <DonateButton />
+                    </div>
                   </li>
                 )
               }
@@ -70,7 +89,10 @@ export default function Header() {
               const is_external = !item.link.startsWith("/")
 
               return (
-                <li key={index} className="hover:text-indigo-600">
+                <li
+                  key={index}
+                  className="border-b border-gray-300 hover:text-indigo-600 lg:border-b-0"
+                >
                   {is_external ? (
                     <a
                       className="block py-4 pl-2 pr-2"
