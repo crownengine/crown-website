@@ -29,13 +29,13 @@ export default function Home({ data }) {
             </a>
           </h2>
           {/* Latest news card.*/}
-          <div className="grid grid-cols-1 gap-6 flow-root lg:grid-cols-4 lg:items-stretch">
+          <div className="grid grid-cols-1 gap-6 flow-root lg:min-h-[402px] lg:grid-cols-4 lg:items-stretch">
             <div className="lg:col-span-3 lg:h-full">
               <NewsList
                 edges={data.allMdx.edges}
                 start={0}
                 limit={1}
-                variant="regular"
+                variant="featured"
                 excerptClassName="text-body"
                 sectionClassName="h-full"
                 listClassName="h-full"
@@ -53,7 +53,7 @@ export default function Home({ data }) {
                 variant="overlay"
                 sectionClassName="lg:h-full"
                 listClassName="flex flex-col gap-4 lg:h-full"
-                itemClassName="lg:flex-1"
+                itemClassName="lg:flex-none"
                 linkClassName="block h-full"
               />
             </div>
