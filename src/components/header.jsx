@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <Clamp>
       <nav
-        className="relative flex flex-wrap items-center justify-between"
+        className="relative flex flex-wrap items-center justify-between py-1 lg:py-0"
         aria-label="Primary navigation"
       >
         {/* Logo */}
