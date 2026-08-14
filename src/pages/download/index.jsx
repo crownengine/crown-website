@@ -156,8 +156,14 @@ export default function Download() {
                 </div>
                 <div className="flex-1 text-right">
                   {data.alt != null && data.alt}
-                  {data.alt == null &&
-                    Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
+                  {data.alt == null && (
+                    <>
+                      <span className="max-[399px]:hidden">
+                        {Math.floor(data.size / 1024 / 1024)} MiB,{" "}
+                      </span>
+                      {getPackageType(data.url)}
+                    </>
+                  )}
                 </div>
               </div>
             </OutboundLink>
@@ -173,8 +179,14 @@ export default function Download() {
                 </div>
                 <div className="flex-1 text-right">
                   {data.alt != null && data.alt}
-                  {data.alt == null &&
-                    Math.floor(data.size / 1024 / 1024) + " MiB, " + getPackageType(data.url)}
+                  {data.alt == null && (
+                    <>
+                      <span className="max-[399px]:hidden">
+                        {Math.floor(data.size / 1024 / 1024)} MiB,{" "}
+                      </span>
+                      {getPackageType(data.url)}
+                    </>
+                  )}
                 </div>
               </div>
             </Link>
@@ -229,14 +241,20 @@ export default function Download() {
               </div>
 
               <div className="mb-10">
-                <div className="flex space-x-2 justify-center text-lead">
-                  <span className="text-inverse">
-                    {crown_release} {crown_package_type}
-                  </span>
-                  <span className="text-inverse">•</span>
-                  <span className="text-inverse">{crown_download_size}</span>
-                  <span className="text-inverse">•</span>
-                  <span>
+                <div className="flex flex-wrap justify-center gap-x-2 text-lead">
+                  {crown_download_url && (
+                    <span className="flex gap-x-2 text-inverse">
+                      <span>
+                        {crown_release} {crown_package_type}
+                      </span>
+                      <span>•</span>
+                      <span>{crown_download_size}</span>
+                    </span>
+                  )}
+                  <span className="flex gap-x-2 max-[399px]:basis-full max-[399px]:justify-center">
+                    {crown_download_url && (
+                      <span className="text-inverse max-[399px]:hidden">•</span>
+                    )}
                     <Link
                       className="text-inverse underline font-bold"
                       to={releaseNewsPath(crown_version)}
@@ -249,7 +267,7 @@ export default function Download() {
             </div>
 
             {/* All Versions */}
-            <div className="widget container mx-auto mb-4 flex w-10/12 flex-col space-y-2 px-4 py-4 font-bold text-inverse sm:w-9/12 md:w-8/12 xl:w-6/12">
+            <div className="widget container mx-auto mb-4 flex w-11/12 flex-col space-y-2 px-4 py-4 font-bold text-inverse sm:w-9/12 md:w-8/12 xl:w-6/12">
               <h2 className="text-lead text-center mb-4 leading-tight font-semibold text-inverse">
                 Other Platforms and Versions
               </h2>
