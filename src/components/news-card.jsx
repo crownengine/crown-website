@@ -26,7 +26,7 @@ export default function NewsCard({
             <GatsbyImage
               image={image}
               alt={title}
-              className={`${featured ? "lg:absolute lg:inset-0" : ""} h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100`}
+              className={`${featured ? "lg:!absolute lg:inset-0" : ""} h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100`}
             />
           )}
         </div>
@@ -58,7 +58,7 @@ export default function NewsCard({
           <GatsbyImage
             image={image}
             alt={title}
-            className="absolute inset-0 h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
+            className="!absolute inset-0 h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
           />
         ) : (
           <div className="absolute inset-0 bg-panel" />
