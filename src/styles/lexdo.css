@@ -1,5 +1,5 @@
 .lexdo h1 {
-  @apply text-center text-lg font-bold;
+  @apply text-center text-lead font-bold;
 }
 
 .lexdo h4 {
@@ -7,7 +7,7 @@
 }
 
 .lexdo a {
-  @apply text-indigo-600 hover:text-indigo-700;
+  @apply text-brand hover:text-brand-hover;
 }
 
 .lexdo p {

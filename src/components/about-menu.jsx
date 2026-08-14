@@ -22,12 +22,12 @@ export default function AboutMenu() {
 
   return (
     <nav
-      className="flex flex-wrap items-center justify-between bg-gray-800"
+      className="flex flex-wrap items-center justify-between bg-dark"
       aria-label="Foundation navigation"
     >
       <div className="block lg:hidden px-4">
         <button
-          className="navbar-burger flex items-center py-2 px-4 my-2 text-indigo-500 rounded border border-indigo-500"
+          className="button button-secondary button-compact navbar-burger my-2"
           onClick={() => setIsOpen(open => !open)}
           aria-label="Menu"
           aria-controls="foundation-navigation"
@@ -48,14 +48,14 @@ export default function AboutMenu() {
         {/* Main menu */}
         <div
           id="foundation-navigation"
-          className={`${isOpen ? "block" : "hidden"} w-full lg:block lg:w-auto px-4 text-gray-100`}
+          className={`${isOpen ? "block" : "hidden"} w-full lg:block lg:w-auto px-4 text-inverse`}
         >
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map((item, index) => {
               const is_external = !item.link.startsWith("/")
 
               return (
-                <li key={index} className="hover:text-indigo-400">
+                <li key={index} className="hover:text-brand-hover">
                   {is_external ? (
                     <a
                       className="block py-2 pr-4 pl-3"
@@ -68,7 +68,7 @@ export default function AboutMenu() {
                   ) : (
                     <Link
                       className="block py-2 pr-4 pl-3"
-                      activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
+                      activeClassName="font-semibold text-brand-light"
                       to={item.link}
                       onClick={() => setIsOpen(false)}
                     >

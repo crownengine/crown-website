@@ -13,7 +13,9 @@ export default function NewsList({
   variant = "regular",
   excerptClassName,
   itemClassName = "flex-1 min-w-[300px]",
+  linkClassName = "",
   listClassName = "flex flex-wrap gap-4",
+  sectionClassName = "",
 }) {
   const allItems = (nodes || edges?.map(e => e.node) || []).filter(
     node => !!node?.frontmatter?.date,
@@ -24,7 +26,7 @@ export default function NewsList({
   if (!items.length) return null
 
   return (
-    <section className="text-left text-gray-600">
+    <section className={`text-left text-muted ${sectionClassName}`.trim()}>
       <div className={listClassName}>
         {items.map(node => {
           const fm = node.frontmatter || {}
@@ -32,7 +34,7 @@ export default function NewsList({
 
           return (
             <div key={key} className={`${itemClassName}`}>
-              <Link to={fm.slug} aria-label={fm.title}>
+              <Link className={linkClassName} to={fm.slug} aria-label={fm.title}>
                 <Card
                   image={getImage(fm.image?.childImageSharp?.gatsbyImageData)}
                   title={fm.title}
@@ -59,5 +61,7 @@ NewsList.propTypes = {
   variant: PropTypes.string,
   excerptClassName: PropTypes.string,
   itemClassName: PropTypes.string,
+  linkClassName: PropTypes.string,
   listClassName: PropTypes.string,
+  sectionClassName: PropTypes.string,
 }

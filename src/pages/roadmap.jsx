@@ -5,31 +5,11 @@ import Layout from "../components/layout"
 import NewsList from "../components/news-list.jsx"
 import Seo from "../components/seo"
 
-const accentClasses = {
-  emerald: {
-    text: "text-emerald-200",
-    dot: "bg-emerald-300",
-  },
-  sky: {
-    text: "text-sky-200",
-    dot: "bg-sky-300",
-  },
-  amber: {
-    text: "text-amber-200",
-    dot: "bg-amber-300",
-  },
-  rose: {
-    text: "text-rose-200",
-    dot: "bg-rose-300",
-  },
-}
-
 const roadmapItems = [
   {
     label: "Q2",
     dates: "April 1-June 30, 2026",
     title: "Saves & Settings",
-    accent: "emerald",
     summary: "Give games a built-in way to store progress, profiles, and player options.",
     unlocks:
       "Reliable saves, graphics settings, and user preferences without custom engine plumbing.",
@@ -38,7 +18,6 @@ const roadmapItems = [
     label: "Q3",
     dates: "July 1-September 30, 2026",
     title: "Asset Workflow",
-    accent: "sky",
     summary:
       "Make it easy to rename and move assets in the editor, inspect dependencies, and reorganize projects efficiently.",
     unlocks:
@@ -48,7 +27,6 @@ const roadmapItems = [
     label: "Q4",
     dates: "October 1-December 31, 2026",
     title: "Visual Effects",
-    accent: "amber",
     summary:
       "Add a particle system and expand the rendering stack with missing effects like SSAO, color grading, and other post effects.",
     unlocks: "Richer visuals, more atmosphere, and a more complete built-in effects toolset.",
@@ -58,7 +36,6 @@ const roadmapItems = [
     dates: "January 1-March 31, 2027",
     title: "Advanced Animation",
     labelVariant: "milestone",
-    accent: "rose",
     summary: "Round out the animation stack with blending, layering, and masking.",
     unlocks:
       "Smoother transitions, more natural motion, and the ability to combine movement and actions cleanly, marking the final step toward Crown 1.0.",
@@ -88,31 +65,30 @@ const roadToOneItems = [
   },
 ]
 
-const goldBadgeClass =
-  "inline-flex w-fit items-center whitespace-nowrap rounded-full bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 font-black uppercase text-amber-950 shadow-[0_0_24px_rgba(251,191,36,0.45)] ring-1 ring-amber-100/60"
-const milestoneClass = `${goldBadgeClass} px-4 py-2 text-sm tracking-[0.18em] sm:ml-auto`
-const timelineMilestoneClass = `${goldBadgeClass} px-5 py-3 text-2xl tracking-[0.12em]`
+const milestoneBadgeClass =
+  "inline-flex w-fit items-center whitespace-nowrap rounded-widget bg-brand-surface font-bold uppercase text-brand"
+const milestoneClass = `${milestoneBadgeClass} px-4 py-2 text-small tracking-wide sm:ml-auto`
+const timelineMilestoneClass = `${milestoneBadgeClass} px-5 py-3 text-lead tracking-wide`
 const timelineLabelClass =
-  "inline-flex items-center text-5xl font-black uppercase tracking-[0.18em]"
-const timelineDotClass = "z-10 h-4 w-4 rounded-full border-4 border-gray-950"
-const articleClass =
-  "relative overflow-hidden rounded-3xl border border-white/10 bg-gray-950/70 p-6 shadow-2xl backdrop-blur sm:p-8"
-const contentSectionClass = "mx-auto mt-24 max-w-5xl border-t border-white/10 pt-16"
-const contentCardClass = `${articleClass} h-full border-white/10 bg-gray-950/60`
-const sectionHeadingClass = "text-3xl font-semibold tracking-tight text-white sm:text-4xl"
-const sectionDescriptionClass = "mt-4 text-lg leading-8 text-gray-300"
-const cardHeadingClass = "text-2xl font-semibold tracking-tight text-white"
-const roadToOneBodyClass = "mt-4 text-base leading-7 text-gray-300"
-const progressBodyClass = "mt-5 text-base leading-7 text-gray-300"
+  "inline-flex items-center text-title font-bold uppercase tracking-wide text-brand-light"
+const timelineDotClass = "z-10 h-4 w-4 rounded-full border-4 border-deepest"
+const articleClass = "widget relative overflow-hidden p-6 backdrop-blur sm:p-8"
+const contentSectionClass = "mx-auto mt-24 max-w-5xl border-t border-line pt-16"
+const contentCardClass = `${articleClass} h-full`
+const sectionHeadingClass = "text-title font-semibold tracking-normal text-inverse sm:text-title"
+const sectionDescriptionClass = "mt-4 text-lead leading-relaxed text-inverse-muted"
+const cardHeadingClass = "text-lead font-semibold tracking-normal text-inverse"
+const roadToOneBodyClass = "mt-4 text-body leading-relaxed text-inverse-muted"
+const progressBodyClass = "mt-5 text-body leading-relaxed text-inverse-muted"
 const newsLinkClass =
-  "text-sm font-semibold uppercase tracking-[0.18em] text-amber-200 transition hover:text-amber-100"
+  "text-small font-semibold uppercase tracking-wide text-brand-light transition hover:text-inverse"
 
 const recentProgressItems = [
   {
     title: "2025 was the most productive year in Crown's history.",
     body: (
       <p className={progressBodyClass}>
-        Crown shipped <span className="font-semibold text-white">14 releases</span> in 2025, from
+        Crown shipped <span className="font-semibold text-inverse">14 releases</span> in 2025, from
         Crown 0.54 in January to Crown 0.60 in December. Major additions included a new PBR
         pipeline, support for FBX scenes, local and cascaded shadows, OGG streaming, a dedicated
         kinematic character controller, improved prefab workflows, and many new resource editors.
@@ -124,8 +100,8 @@ const recentProgressItems = [
     body: (
       <p className={progressBodyClass}>
         In the 12 months ending February 2026, the project recorded{" "}
-        <span className="font-semibold text-white">1,047 commits</span>, up{" "}
-        <span className="font-semibold text-white">83% year over year</span>.
+        <span className="font-semibold text-inverse">1,047 commits</span>, up{" "}
+        <span className="font-semibold text-inverse">83% year over year</span>.
       </p>
     ),
   },
@@ -143,8 +119,7 @@ const recentProgressItems = [
 ]
 
 function RoadmapEntry({ item }) {
-  const { label, dates, title, summary, unlocks, milestone, labelVariant, accent } = item
-  const { text: textClass, dot: dotClass } = accentClasses[accent]
+  const { label, dates, title, summary, unlocks, milestone, labelVariant } = item
   const isMilestoneLabel = labelVariant === "milestone"
 
   return (
@@ -153,32 +128,32 @@ function RoadmapEntry({ item }) {
         {isMilestoneLabel ? (
           <span className={timelineMilestoneClass}>{label}</span>
         ) : (
-          <span className={`${timelineLabelClass} ${textClass}`}>{label}</span>
+          <span className={timelineLabelClass}>{label}</span>
         )}
       </div>
 
       <div className="hidden sm:flex sm:justify-center sm:pt-10">
-        <span className={`${timelineDotClass} ${dotClass}`}></span>
+        <span className={`${timelineDotClass} bg-brand-surface-hover`}></span>
       </div>
 
       <div
-        className={`absolute left-[-2rem] top-9 ${timelineDotClass} sm:hidden ${dotClass}`}
+        className={`absolute left-[-2rem] top-9 ${timelineDotClass} bg-brand-surface-hover sm:hidden`}
       ></div>
 
       <article className={articleClass}>
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-line to-transparent"></div>
 
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-400">{dates}</p>
+          <p className="text-small font-semibold uppercase tracking-wide text-muted">{dates}</p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="text-3xl font-semibold tracking-tight text-white">{title}</h2>
+            <h2 className="text-title font-semibold tracking-normal text-inverse">{title}</h2>
             {milestone && <span className={milestoneClass}>{milestone}</span>}
           </div>
-          <p className="mt-4 text-lg leading-8 text-gray-300">{summary}</p>
+          <p className="mt-4 text-lead leading-relaxed text-inverse-muted">{summary}</p>
         </div>
 
-        <p className="mt-6 text-base leading-7 text-gray-200">
-          <span className={`font-semibold ${textClass}`}>What it unlocks:</span> {unlocks}
+        <p className="mt-6 text-body leading-relaxed text-inverse">
+          <span className="font-semibold text-brand-light">What it unlocks:</span> {unlocks}
         </p>
       </article>
     </div>
@@ -231,20 +206,20 @@ function LatestNews({ edges }) {
 export default function Roadmap({ data }) {
   return (
     <Layout>
-      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
+      <div className="bg-dark">
         <Clamp>
-          <section className="px-4 py-24 text-gray-300">
+          <section className="px-4 py-24 text-inverse-muted">
             <div>
-              <h1 className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-6xl">
+              <h1 className="mb-6 text-display font-bold tracking-normal text-inverse sm:text-display">
                 Crown 2026 Roadmap
               </h1>
-              <p className="mb-24 text-2xl text-gray-300">
+              <p className="mb-24 text-lead text-inverse-muted">
                 A timeline of the next major milestones on the road to Crown 1.0.
               </p>
             </div>
 
             <div className="relative mx-auto max-w-5xl pl-10 sm:pl-0 sm:pr-28 lg:pr-48">
-              <div className="absolute bottom-0 left-4 top-0 w-px bg-gradient-to-b from-emerald-300 via-sky-300 via-55% to-rose-300 sm:left-[15rem]"></div>
+              <div className="absolute bottom-0 left-4 top-0 w-px bg-brand-surface-hover sm:left-[15rem]"></div>
 
               <div className="space-y-8">
                 {roadmapItems.map(item => (

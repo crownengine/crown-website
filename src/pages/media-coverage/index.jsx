@@ -24,35 +24,35 @@ const articles = [
 
 function MediaCoverageCard({ article }) {
   return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200">
+    <article className="widget group flex h-full flex-col overflow-hidden">
       <a
-        className="block bg-gray-900"
+        className="block bg-deepest"
         href={article.url}
         rel="noreferrer"
         target="_blank"
         aria-label={article.title}
       >
         <img
-          className="w-full aspect-video object-cover opacity-90 hover:opacity-100 transition-opacity"
+          className="aspect-video w-full transform-gpu object-cover opacity-90 transition duration-200 ease-out group-hover:scale-[1.04] group-hover:opacity-100 motion-reduce:group-hover:scale-100"
           src={article.screenshot}
           alt={`${article.outlet} article screenshot`}
         />
       </a>
 
       <div className="p-6 flex-1 flex flex-col">
-        <p className="text-xs font-semibold mb-4 flex items-center gap-2">
-          <span className="uppercase text-indigo-600">{article.outlet}</span>
-          <span className="text-gray-300" aria-hidden="true">
+        <p className="text-caption font-semibold mb-4 flex items-center gap-2">
+          <span className="uppercase text-brand">{article.outlet}</span>
+          <span className="text-inverse-muted" aria-hidden="true">
             |
           </span>
-          <span className="text-gray-500">{article.date}</span>
+          <span className="text-muted">{article.date}</span>
         </p>
-        <h2 className="text-xl font-semibold text-gray-700 mb-3 leading-snug">
-          <a className="hover:text-indigo-700" href={article.url} rel="noreferrer" target="_blank">
+        <h2 className="text-lead font-semibold text-ink mb-3 leading-tight">
+          <a className="hover:text-brand-hover" href={article.url} rel="noreferrer" target="_blank">
             {article.title}
           </a>
         </h2>
-        <div className="mt-auto text-sm text-gray-500">
+        <div className="mt-auto text-small text-muted">
           <p>By {article.author}</p>
         </div>
       </div>
@@ -65,8 +65,8 @@ export default function MediaCoverageIndex() {
     <Layout>
       <Clamp>
         <section className="mt-12 mb-16 px-4">
-          <h1 className="text-2xl font-bold mb-6 text-gray-600">Media Coverage</h1>
-          <div className="text-left text-gray-600">
+          <h1 className="mb-6 text-title font-bold text-ink">Media Coverage</h1>
+          <div className="text-left text-muted">
             <div className="grid gap-5 md:grid-cols-2 lg:max-w-[75%]">
               {articles.map(article => (
                 <MediaCoverageCard key={article.url} article={article} />

@@ -29,11 +29,11 @@ export default function Thanks() {
 
   return (
     <Layout>
-      <div className="pb-80 md:pb-0 bg-gradient-to-b from-gray-900 to-gray-800">
+      <div className="pb-80 md:pb-0 bg-gradient-to-b from-deepest to-dark">
         <Clamp>
           <section className="py-0 md:py-24 px-4 text-center">
             <div className="w-full max-w-2xl mx-auto">
-              <p className="mt-28 text-lg text-gray-300">
+              <p className="mt-28 text-lead text-inverse-muted">
                 Your download will start soon. If it didn't, click here to start it{" "}
                 <a className="underline" href={download_url || RELEASES_URL}>
                   manually
@@ -44,13 +44,13 @@ export default function Thanks() {
           </section>
         </Clamp>
         <Clamp>
-          <section className="py-2 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
+          <section className="px-4 py-2">
             <div className="grid md:grid-cols-6 gap-6 mb-40">
               <div className="col-span-6 md:col-span-3 flex flex-col gap-6">
-                <h2 className="text-6xl font-bold text-transparent">
+                <h2 className="text-display font-bold text-brand-light">
                   Help Crown grow Stronger and Faster
                 </h2>
-                <p className="text-2xl text-gray-300">
+                <p className="text-lead text-inverse-muted">
                   Donations support Core Contributors working on Features, Maintenance and
                   Improvements &#x1F970;
                 </p>
@@ -69,9 +69,9 @@ export default function Thanks() {
         </Clamp>
       </div>
 
-      <div className="bg-gradient-to-b from-gray-900 to-gray-800 py-0">
+      <div className="bg-gradient-to-b from-deepest to-dark py-0">
         <Clamp>
-          <section className="p-8 text-white">
+          <section className="p-8 text-inverse">
             <StatsBanner />
           </section>
         </Clamp>

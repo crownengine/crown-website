@@ -42,7 +42,7 @@ const membershipTiers = {
   },
 }
 
-const DonationBox = ({ frequency: propFreq, initialAmount }) => {
+const DonationBox = ({ frequency: propFreq, initialAmount, className = "" }) => {
   const [frequency, setFrequency] = useState(propFreq || "one-time")
   const [selectedAmount, setSelectedAmount] = useState({
     "one-time": propFreq === "one-time" ? initialAmount : 100,
@@ -187,22 +187,26 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
   }
 
   return (
-    <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
+    <div className={`widget p-6 ${className}`.trim()}>
       {/* Frequency Toggle */}
-      <div className="flex justify-center mb-6">
+      <div className="mb-6 flex justify-center overflow-hidden rounded-widget border border-ink/5">
         <button
-          className={`w-1/2 py-2 font-semibold ${
-            frequency === "monthly" ? "bg-indigo-500 text-white" : "bg-gray-200 text-gray-700"
-          } rounded-l-lg`}
+          className={`button-segment ${
+            frequency === "monthly"
+              ? "bg-cool-horizon-600 text-cool-horizon-50"
+              : "bg-cool-horizon-950 text-brand"
+          }`}
           onClick={() => setFrequency("monthly")}
           disabled={currency === "BTC"}
         >
           Monthly
         </button>
         <button
-          className={`w-1/2 py-2 font-semibold ${
-            frequency === "one-time" ? "bg-indigo-500 text-white" : "bg-gray-200 text-gray-700"
-          } rounded-r-lg`}
+          className={`button-segment ${
+            frequency === "one-time"
+              ? "bg-cool-horizon-600 text-cool-horizon-50"
+              : "bg-cool-horizon-950 text-brand"
+          }`}
           onClick={() => setFrequency("one-time")}
         >
           One-time
@@ -210,7 +214,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
       </div>
 
       {currency === "BTC" && (
-        <div className="mb-4 text-sm text-yellow-700 bg-yellow-100 p-2 rounded">
+        <div className="mb-4 rounded-widget bg-warning-surface p-2 text-small text-warning">
           Bitcoin donations: amounts are displayed in <strong>USD</strong>. Monthly subscriptions
           are not supported for BTC.
         </div>
@@ -221,10 +225,8 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         {amounts[frequency].map(amount => (
           <button
             key={amount}
-            className={`py-2 rounded-lg font-semibold border-2 text-center ${
-              selectedAmount[frequency] === amount
-                ? "bg-indigo-500 text-white border-indigo-500"
-                : "bg-white text-gray-700 border-gray-300"
+            className={`button w-full ${
+              selectedAmount[frequency] === amount ? "button-primary" : "button-secondary"
             }`}
             onClick={() => handlePresetClick(amount)}
           >
@@ -236,7 +238,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
       {frequency === "monthly" && membershipTiers[selectedAmount.monthly] && (
         <div className="mb-4">
           {/* Title */}
-          <h3 className="text-2xl text-gray-700 mb-3">
+          <h3 className="text-lead text-ink mb-3">
             Become a{" "}
             <span className="font-bold capitalize">
               {membershipTiers[selectedAmount.monthly].level}
@@ -254,7 +256,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
             />
 
             {/* Benefits List */}
-            <ul className="ml-4 text-gray-600 font-medium space-y-1">
+            <ul className="ml-4 text-muted font-semibold space-y-1">
               <li>✓ {membershipTiers[selectedAmount.monthly].badge}</li>
               {membershipTiers[selectedAmount.monthly].benefit && (
                 <li>✓ {membershipTiers[selectedAmount.monthly].benefit}</li>
@@ -267,7 +269,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
       {frequency === "one-time" && membershipTiers[selectedAmount.monthly] && (
         <div className="mb-6">
           {/* Title */}
-          <h3 className="text-2xl text-gray-700 mb-3">
+          <h3 className="text-lead text-ink mb-3">
             Donate <span className="font-bold">once</span> today
           </h3>
         </div>
@@ -278,20 +280,18 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
         <div className="mb-6 grid grid-cols-3 gap-4">
           {/* Custom Amount Field */}
           <div className="col-span-1 relative">
-            <span className="absolute left-4 top-2/4 transform -translate-y-2/4 font-semibold text-gray-500">
+            <span className="absolute left-4 top-2/4 transform -translate-y-2/4 font-semibold text-muted">
               {currencySymbols[currency]}
             </span>
             <input
               type="text" // Use text to allow any input
-              className={`w-full pl-8 pr-4 py-2 border rounded-lg focus:ring-2 focus:outline-none font-semibold text-center text-indigo-600 ${
-                isCustomAmountValid ? "focus:ring-indigo-500" : "border-red-500"
-              }`}
+              className="control w-full pl-8 text-center font-semibold text-brand"
               value={customAmount}
               onChange={handleCustomAmountChange}
             />
             {!isCustomAmountValid && (
-              <div className="absolute top-12 left-0 w-full text-sm text-red-500">
-                <span className="inline-block p-2 bg-black text-white rounded-lg">
+              <div className="absolute top-12 left-0 w-full text-small text-danger">
+                <span className="inline-block rounded-widget bg-deepest p-2 text-inverse">
                   Please enter a value between 1 and 10000.
                 </span>
               </div>
@@ -301,44 +301,11 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
           {/* Donate Button */}
           <div className="col-span-2">
             <button
-              className={`group relative isolate w-full overflow-hidden rounded-lg
-                bg-green-600 px-6 py-2 font-semibold text-white shadow-md
-                transition-colors duration-300
-                focus-visible:outline-none focus-visible:ring-2
-                focus-visible:ring-green-400 focus-visible:ring-offset-2
-                ${
-                  isCustomAmountValid
-                    ? "hover:bg-green-500"
-                    : "cursor-not-allowed opacity-50"
-                }
-              `}
+              className="button button-primary button-donate w-full"
               disabled={!isCustomAmountValid}
               onClick={handleDonate}
             >
-              {isCustomAmountValid && (
-                <span
-                  aria-hidden="true"
-                  className="
-                    pointer-events-none absolute inset-0
-                    -translate-x-full
-                    bg-gradient-to-r
-                    from-transparent via-white/35 to-transparent
-
-                    transition-transform duration-0 ease-out
-                    group-hover:translate-x-full
-                    group-hover:duration-700
-
-                    group-focus-visible:translate-x-full
-                    group-focus-visible:duration-700
-
-                    motion-reduce:transition-none
-                  "
-                />
-              )}
-
-              <span className="relative z-10">
-                Donate <FaHeart className="inline" aria-hidden="true" />
-              </span>
+              Donate <FaHeart className="ml-2 inline" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -348,11 +315,8 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
       {frequency === "monthly" && (
         <div className="mb-6 grid grid-cols-3 gap-4">
           <div className="col-span-3">
-            <button
-              className="w-full px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-500"
-              onClick={handleDonate}
-            >
-              Donate Monthly <FaHeart className="inline" aria-hidden="true" />
+            <button className="button button-primary button-donate w-full" onClick={handleDonate}>
+              Donate Monthly <FaHeart className="ml-2 inline" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -360,11 +324,7 @@ const DonationBox = ({ frequency: propFreq, initialAmount }) => {
 
       {/* Currency Selector */}
       <div className="flex justify-end">
-        <select
-          className="px-3 py-2 border rounded-lg bg-white text-gray-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-          value={currency}
-          onChange={e => setCurrency(e.target.value)}
-        >
+        <select className="control" value={currency} onChange={e => setCurrency(e.target.value)}>
           <option value="EUR">EUR</option>
           <option value="USD">USD</option>
           <option value="BTC">BTC</option>

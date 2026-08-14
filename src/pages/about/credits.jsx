@@ -9,23 +9,23 @@ import AllTime from "../../data/about/credits/alltime.json"
 export default function About() {
   return (
     <Layout>
-      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
+      <div className="bg-dark">
         <AboutMenu />
 
         <Clamp>
-          <section className="py-24 px-4 text-left text-gray-300">
-            <h1 className="text-6xl mb-6 font-bold">Crown Credits</h1>
-            <p className="text-2xl mb-24 text-gray-300">
+          <section className="py-24 px-4 text-left text-inverse-muted">
+            <h1 className="text-display mb-6 font-bold text-ink">Crown Credits</h1>
+            <p className="text-lead mb-24 text-inverse-muted">
               Code contributors since Crown became public in 2012.
             </p>
 
             <div className="flex flex-col gap-6">
               <div className="flex flex-col sm:flex-row gap-6">
-                <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
-                  <h2 className="text-4xl mb-6 font-semibold">Current Release</h2>
+                <div className="widget flex-1 p-6 text-lead text-ink">
+                  <h2 className="text-title mb-6 font-semibold">Current Release</h2>
                   {Latest.map((item, index) => {
                     return (
-                      <p key={index} className="text-gray-700">
+                      <p key={index} className="text-ink">
                         {item.author}, {item.commits} {item.commits === "1" ? "commit" : "commits"}{" "}
                         ({item.years})
                       </p>
@@ -33,11 +33,11 @@ export default function About() {
                   })}
                 </div>
 
-                <div className="flex-1 rounded-lg shadow-lg p-6 text-lg text-gray-700 bg-gray-200">
-                  <h2 className="text-4xl mb-6 font-semibold">All-time Contributors</h2>
+                <div className="widget flex-1 p-6 text-lead text-ink">
+                  <h2 className="text-title mb-6 font-semibold">All-time Contributors</h2>
                   {AllTime.map((item, index) => {
                     return (
-                      <p key={index} className="text-gray-700">
+                      <p key={index} className="text-ink">
                         {item.author}, {item.commits} {item.commits === "1" ? "commit" : "commits"}{" "}
                         ({item.years})
                       </p>

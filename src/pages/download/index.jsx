@@ -87,7 +87,7 @@ export default function Download() {
   }
 
   function listSeparator() {
-    return <div className="flex-1 border-b-2 border-b-gray-600"></div>
+    return <div className="flex-1 border-b border-line"></div>
   }
 
   function thanksPath(download_url) {
@@ -147,12 +147,12 @@ export default function Download() {
           {data.valid && data.separator && listSeparator()}
           {data.valid && data.alt === "AUR" && (
             <OutboundLink rel="noreferrer" target="_blank" href={data.url}>
-              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+              <div className="flex flex-row px-4 py-2 text-left transition-colors hover:text-brand-hover">
+                <div className="mr-2 flex-none w-6 h-6 text-muted">
                   <PlatformIcon os={data.os} />
                 </div>
                 <div className="flex-1">
-                  {data.os} <span className="text-gray-600">{data.arch}</span>
+                  {data.os} <span className="text-muted">{data.arch}</span>
                 </div>
                 <div className="flex-1 text-right">
                   {data.alt != null && data.alt}
@@ -164,12 +164,12 @@ export default function Download() {
           )}
           {data.valid && data.alt !== "AUR" && (
             <Link to={thanksPath(data.url)}>
-              <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+              <div className="flex flex-row px-4 py-2 text-left transition-colors hover:text-brand-hover">
+                <div className="mr-2 flex-none w-6 h-6 text-muted">
                   <PlatformIcon os={data.os} />
                 </div>
                 <div className="flex-1">
-                  {data.os} <span className="text-gray-600">{data.arch}</span>
+                  {data.os} <span className="text-muted">{data.arch}</span>
                 </div>
                 <div className="flex-1 text-right">
                   {data.alt != null && data.alt}
@@ -208,40 +208,37 @@ export default function Download() {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-b from-green-800 to-gray-800">
+      <div className="bg-gradient-to-b from-deepest to-dark">
         <Clamp>
           <section className="py-24 px-4 text-center">
             <div className="w-full max-w-2xl mx-auto mb-32">
-              <h1 className="text-6xl text-center mt-2 mb-24 font-bold text-gray-300">
+              <h1 className="mb-24 mt-2 text-center text-display font-bold text-ink">
                 Let Your Game Begin
               </h1>
 
-              <div className="text-2xl">
+              <div className="text-lead">
                 {crown_download_url ? (
-                  <Link
-                    className="inline-block py-4 px-8 mb-2 leading-none text-gray-200 hover:text-white bg-indigo-600 hover:bg-indigo-700 rounded shadow"
-                    to={thanksPath(crown_download_url)}
-                  >
+                  <Link className="button button-primary mb-2" to={thanksPath(crown_download_url)}>
                     Download Crown {crown_version}
                   </Link>
                 ) : (
-                  <span className="inline-block py-4 px-8 mb-2 leading-none text-gray-400 bg-gray-700 rounded shadow">
+                  <span className="button mb-2 cursor-not-allowed bg-cool-horizon-950 text-cool-horizon-500">
                     Download Crown {crown_version}
                   </span>
                 )}
               </div>
 
               <div className="mb-10">
-                <div className="flex space-x-2 justify-center text-lg">
-                  <span className="text-gray-200">
+                <div className="flex space-x-2 justify-center text-lead">
+                  <span className="text-inverse">
                     {crown_release} {crown_package_type}
                   </span>
-                  <span className="text-gray-200">•</span>
-                  <span className="text-gray-200">{crown_download_size}</span>
-                  <span className="text-gray-200">•</span>
+                  <span className="text-inverse">•</span>
+                  <span className="text-inverse">{crown_download_size}</span>
+                  <span className="text-inverse">•</span>
                   <span>
                     <Link
-                      className="text-gray-200 underline font-bold"
+                      className="text-inverse underline font-bold"
                       to={releaseNewsPath(crown_version)}
                     >
                       What's New?
@@ -249,20 +246,19 @@ export default function Download() {
                   </span>
                 </div>
               </div>
-
             </div>
 
             {/* All Versions */}
-            <div className="container mx-auto mb-4 px-4 py-4 w-10/12 sm:w-9/12 md:w-8/12 xl:w-6/12 bg-gray-800 rounded-lg shadow-lg flex flex-col space-y-2 text-gray-200 font-bold">
-              <h2 className="text-xl text-center mb-4 leading-tight font-semibold text-gray-200">
+            <div className="widget container mx-auto mb-4 flex w-10/12 flex-col space-y-2 px-4 py-4 font-bold text-inverse sm:w-9/12 md:w-8/12 xl:w-6/12">
+              <h2 className="text-lead text-center mb-4 leading-tight font-semibold text-inverse">
                 Other Platforms and Versions
               </h2>
               {downloadEntries()}
               {listSeparator()}
               {
                 <OutboundLink rel="noreferrer" target="_blank" href={Releases.tarball_url}>
-                  <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                    <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                  <div className="flex flex-row px-4 py-2 text-left transition-colors hover:text-brand-hover">
+                    <div className="mr-2 flex-none w-6 h-6 text-muted">
                       <FaCode aria-hidden="true" />
                     </div>
                     <div className="flex-1 text-left">Source Code</div>
@@ -272,8 +268,8 @@ export default function Download() {
               }
               {
                 <OutboundLink rel="noreferrer" target="_blank" href={Releases.zipball_url}>
-                  <div className="px-4 py-2 flex flex-row text-left bg-gray-800 hover:bg-gray-700 rounded-sm">
-                    <div className="mr-2 flex-none w-6 h-6 text-gray-500">
+                  <div className="flex flex-row px-4 py-2 text-left transition-colors hover:text-brand-hover">
+                    <div className="mr-2 flex-none w-6 h-6 text-muted">
                       <FaCode aria-hidden="true" />
                     </div>
                     <div className="flex-1 text-left">Source Code</div>
@@ -283,10 +279,10 @@ export default function Download() {
               }
             </div>
 
-            <p className="text-m text-center mb-24 leading-tight font-semibold text-gray-200">
+            <p className="text-body text-center mb-24 leading-tight font-semibold text-inverse">
               Looking for{" "}
               <a
-                className="text-gray-200 underline font-bold"
+                className="text-inverse underline font-bold"
                 rel="noreferrer"
                 target="_blank"
                 href="https://github.com/crownengine/crown/releases"
@@ -302,4 +298,9 @@ export default function Download() {
   )
 }
 
-export const Head = () => <Seo title="Download" description="No account, no internet required. Get a copy, unzip it and start building games." />
+export const Head = () => (
+  <Seo
+    title="Download"
+    description="No account, no internet required. Get a copy, unzip it and start building games."
+  />
+)

@@ -63,7 +63,7 @@ const StatsBanner = ({ animate = false }) => {
 
           return (
             <div key={item.label}>
-              <div className="text-6xl font-extrabold leading-tight">
+              <div className="text-display font-bold leading-tight">
                 {counters[index].toLocaleString()}
                 {item.suffix || ""}
               </div>
@@ -72,13 +72,13 @@ const StatsBanner = ({ animate = false }) => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 block uppercase tracking-wide text-base font-bold text-gray-400 hover:text-gray-200"
+                  className="mt-2 block uppercase tracking-wide text-body font-bold text-muted hover:text-inverse"
                 >
                   {item.label}
                 </a>
               ) : (
                 <Link
-                  className="mt-2 block uppercase tracking-wide text-base font-bold text-gray-400 hover:text-gray-200"
+                  className="mt-2 block uppercase tracking-wide text-body font-bold text-muted hover:text-inverse"
                   to={item.link}
                 >
                   {item.label}

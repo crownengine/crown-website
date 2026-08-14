@@ -9,15 +9,15 @@ import MDXComponents from "../components/mdx"
 import { getSrc } from "gatsby-plugin-image"
 
 function ShowcaseParagraph({ className = "", ...props }) {
-  return <p className={`leading-relaxed mb-5 text-xl ${className}`.trim()} {...props} />
+  return <p className={`leading-relaxed mb-5 text-lead ${className}`.trim()} {...props} />
 }
 
 function NewsHeading({ className = "", ...props }) {
-  return <h2 className={`text-[42px] font-extrabold mt-8 mb-6 ${className}`.trim()} {...props} />
+  return <h2 className={`text-title font-bold mt-8 mb-6 ${className}`.trim()} {...props} />
 }
 
 function NewsParagraph({ className = "", ...props }) {
-  return <p className={`leading-relaxed mb-10 mt-10 text-xl ${className}`.trim()} {...props} />
+  return <p className={`leading-relaxed mb-10 mt-10 text-lead ${className}`.trim()} {...props} />
 }
 
 const NewsMDXComponents = {
@@ -42,24 +42,24 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
 
   return (
     <Layout>
-      <div className="bg-gray-950">
+      <div className="bg-deepest">
         <Clamp>
           {/* Header */}
-          <section className={isShowcase ? "px-4 pt-32 text-left text-gray-200" : "px-4 pt-16 text-left text-gray-200"}>
-            <span className="text-1xl text-gray-400 mb-4">{mdx.frontmatter.date}</span>
-            <h1 className={isShowcase ? "text-8xl font-extrabold mb-4" : "text-8xl font-bold mb-12"}>{mdx.frontmatter.title}</h1>
+          <section className={isShowcase ? "px-4 pt-32 text-left text-inverse" : "px-4 pt-16 text-left text-inverse"}>
+            <span className="mb-4 text-small text-muted">{mdx.frontmatter.date}</span>
+            <h1 className={isShowcase ? "text-display font-bold mb-4" : "text-display font-bold mb-12"}>{mdx.frontmatter.title}</h1>
           </section>
 
           {/* Content */}
-          <section className={isShowcase ? "px-4 text-left mb-8 text-lg text-gray-200" : "px-4 text-left mb-8 text-gray-200"}>
+          <section className={isShowcase ? "px-4 text-left mb-8 text-lead text-inverse" : "px-4 text-left mb-8 text-inverse"}>
             <MDXProvider components={isShowcase ? ShowcaseMDXComponents : NewsMDXComponents}>{children}</MDXProvider>
           </section>
 
           {/* Prev/next news */}
-          <section className="flex flex-col md:flex-row px-4 text-gray-200">
+          <section className="flex flex-col md:flex-row px-4 text-inverse">
             {prevNews && (
               <Link
-                className="flex flex-col md:flex-row w-full inline-block py-4 px-4 font-semibold leading-none text-gray-400 hover:text-white hover:bg-indigo-700 rounded"
+                className="button button-inverse w-full justify-start"
                 to={prevNews.url}
               >
                 &lt; {prevNews.title}
@@ -67,7 +67,7 @@ export default function NewsTemplate({ data: { mdx }, children, pageContext }) {
             )}
             {nextNews && (
               <Link
-                className="flex flex-col md:flex-row w-full text-end justify-end inline-block py-4 px-4 font-semibold leading-none text-gray-400 hover:text-white hover:bg-indigo-700 rounded"
+                className="button button-inverse w-full justify-end text-right"
                 to={nextNews.url}
               >
                 {nextNews.title} &gt;

@@ -30,16 +30,16 @@ project builds and deployments.
 
 <div className="flex flex-col md:flex-row items-start gap-8 mt-80">
   <div className="w-full md:w-1/2">
-    <h2 className="text-[42px] leading-tight font-light mb-5 text-lime-400" style={{ marginTop: 0 }}>Full <span className="font-bold">Speed</span> Ahead</h2>
-    <p className="leading-relaxed mb-5 text-xl">Worlds containing <strong>many Units render faster</strong>, selected objects are cheaper to draw, and moving large groups of Units in the Level Editor is now much smoother.</p>
-    <p className="leading-relaxed mb-5 text-xl">The editor also handles large Unit trees and Units made of many meshes more efficiently.</p>
-    <p className="leading-relaxed mb-5 text-xl">The new <strong><code className="px-1 py-0.5 rounded bg-gray-700 text-gray-100">stat</code> console command</strong> makes the results easier to inspect by displaying useful runtime performance statistics.</p>
+    <h2 className="text-title leading-tight font-normal mb-5 editorial-lime" style={{ marginTop: 0 }}>Full <span className="font-bold">Speed</span> Ahead</h2>
+    <p className="leading-relaxed mb-5 text-lead">Worlds containing <strong>many Units render faster</strong>, selected objects are cheaper to draw, and moving large groups of Units in the Level Editor is now much smoother.</p>
+    <p className="leading-relaxed mb-5 text-lead">The editor also handles large Unit trees and Units made of many meshes more efficiently.</p>
+    <p className="leading-relaxed mb-5 text-lead">The new <strong><code className="px-1 py-0.5 rounded-widget bg-dark text-inverse">stat</code> console command</strong> makes the results easier to inspect by displaying useful runtime performance statistics.</p>
   </div>
   <div className="w-full md:w-1/2">
-    <video className="w-full mx-auto rounded-xl transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+    <video className="w-full mx-auto rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
       <source src={statVideo} type="video/mp4" />
     </video>
-    <span className="block text-center"><code className="px-1 py-0.5 rounded bg-gray-700 text-gray-100">stat</code> command showing live performance statistics.</span>
+    <span className="block text-center"><code className="px-1 py-0.5 rounded-widget bg-dark text-inverse">stat</code> command showing live performance statistics.</span>
   </div>
 </div>
 
@@ -47,7 +47,7 @@ project builds and deployments.
   <div className="w-full md:w-1/2">
     <FadeIn className="w-full max-w-md mx-auto" direction="from-left">
       <img
-        className="w-full rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none"
+        className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none"
         src={colorGradingImage}
         alt="Color Grading component controls"
       />
@@ -55,34 +55,34 @@ project builds and deployments.
   </div>
   <div className="w-full md:w-1/2">
     <FadeIn direction="from-right">
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-rose-400" style={{ marginTop: 0 }}><span className="bg-gradient-to-r from-rose-700 via-amber-400 to-blue-500 bg-clip-text text-transparent font-bold tracking-wide">Color</span> the Mood</h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-rose" style={{ marginTop: 0 }}><span className="editorial-spectrum font-bold tracking-wide">Color</span> the Mood</h2>
     </FadeIn>
-    <p className="leading-relaxed mb-5 text-xl">The new <strong>Color Grading component</strong> makes it easy to define the final look of a scene directly in the editor.</p>
-    <p className="leading-relaxed mb-5 text-xl">It provides controls for <strong>exposure</strong>, <strong>contrast</strong> and <strong>saturation</strong>, plus a <strong>color filter</strong> for tinting the rendered image.</p>
-    <p className="leading-relaxed mb-5 text-xl">Whether you want a subtle shift in mood or a bold stylized palette, you can now achieve it without changing lights or materials.</p>
+    <p className="leading-relaxed mb-5 text-lead">The new <strong>Color Grading component</strong> makes it easy to define the final look of a scene directly in the editor.</p>
+    <p className="leading-relaxed mb-5 text-lead">It provides controls for <strong>exposure</strong>, <strong>contrast</strong> and <strong>saturation</strong>, plus a <strong>color filter</strong> for tinting the rendered image.</p>
+    <p className="leading-relaxed mb-5 text-lead">Whether you want a subtle shift in mood or a bold stylized palette, you can now achieve it without changing lights or materials.</p>
   </div>
 </div>
 
 <div className="flex flex-col md:flex-row items-start gap-8 mt-80">
   <div className="w-full md:w-1/2">
     <FadeIn>
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-amber-400" style={{ marginTop: 0 }}>Made in the <span className="font-bold">Shade</span></h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-amber" style={{ marginTop: 0 }}>Made in the <span className="font-bold">Shade</span></h2>
     </FadeIn>
-    <p className="leading-relaxed mb-5 text-xl">Sun shadows have received a substantial upgrade too. Shadow **distance and shadow-map quality** are now configurable, as are cascade split weight and overlap.</p>
+    <p className="leading-relaxed mb-5 text-lead">Sun shadows have received a substantial upgrade too. Shadow **distance and shadow-map quality** are now configurable, as are cascade split weight and overlap.</p>
     <FadeIn>
-      <p className="leading-relaxed mb-5 text-xl">Shadow cascades now <strong>blend smoothly</strong> across overlaps, reducing visible transitions.</p>
+      <p className="leading-relaxed mb-5 text-lead">Shadow cascades now <strong>blend smoothly</strong> across overlaps, reducing visible transitions.</p>
     </FadeIn>
   </div>
   <div className="w-full md:w-1/2">
     <FadeIn className="w-full max-w-lg mx-auto">
-      <img className="w-full rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" src={shadowSettingsImage} alt="Sun shadow render settings" />
+      <img className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" src={shadowSettingsImage} alt="Sun shadow render settings" />
     </FadeIn>
     <span className="block text-center">The new sun shadow quality and cascade controls.</span>
   </div>
 </div>
 
 {/* Video: crown-0-64-shadows.mp4
-<video className="rounded-xl" autoPlay muted loop playsInline controls>
+<video className="rounded-widget" autoPlay muted loop playsInline controls>
   <source src={shadowsVideo} type="video/mp4" />
 </video>
 <span className="block text-center">The new sun-shadow controls in a large scene.</span>
@@ -91,7 +91,7 @@ project builds and deployments.
 <div className="flex flex-col md:flex-row items-start gap-8 mt-80">
   <div className="w-full md:w-1/2">
     <FadeIn className="w-full max-w-md mx-auto" direction="from-bottom">
-      <video className="w-full rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+      <video className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
         <source src={deployVideo} type="video/mp4" />
       </video>
       <span className="block text-center">Package creation no longer blocks the editor.</span>
@@ -99,47 +99,47 @@ project builds and deployments.
   </div>
   <div className="w-full md:w-1/2">
     <FadeIn direction="from-top">
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-blue-400" style={{ marginTop: 0 }}><span className="font-bold">Ship</span> non-Stop</h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-blue" style={{ marginTop: 0 }}><span className="font-bold">Ship</span> non-Stop</h2>
     </FadeIn>
     <FadeIn>
-      <p className="leading-relaxed mb-5 text-xl">Deploying a project now runs <strong>asynchronously</strong>, keeping the editor responsive while your game is being packaged.</p>
-      <p className="leading-relaxed mb-5 text-xl">Android deployment has also been refined: **minimum and target SDK versions** are configurable, and the deployer now only needs <strong>3 paths</strong> to find the required toolchain.</p>
+      <p className="leading-relaxed mb-5 text-lead">Deploying a project now runs <strong>asynchronously</strong>, keeping the editor responsive while your game is being packaged.</p>
+      <p className="leading-relaxed mb-5 text-lead">Android deployment has also been refined: **minimum and target SDK versions** are configurable, and the deployer now only needs <strong>3 paths</strong> to find the required toolchain.</p>
     </FadeIn>
     <span className="block">
-      <DocumentationButton colorClassName="text-gray-950 hover:text-gray-950 bg-blue-400 hover:bg-blue-500" href="https://docs.crownengine.org/html/v0.64.0/deploying/">Deploy Instructions</DocumentationButton>
+      <DocumentationButton className="news-button-blue" href="https://docs.crownengine.org/html/v0.64.0/deploying/">Deploy Instructions</DocumentationButton>
     </span>
   </div>
 </div>
 
-<div className="grid md:grid-cols-6 gap-8 p-8 bg-gray-800 rounded-2xl shadow-lg" style={{ marginTop: "25rem", marginBottom: "25rem" }}>
+<div className="widget grid md:grid-cols-6 gap-8 p-8" style={{ marginTop: "25rem", marginBottom: "25rem" }}>
   <div className="col-span-6 md:col-span-3 flex flex-col justify-center gap-6">
     <FadeIn direction="from-left">
-      <h2 className="text-[60px] leading-tight font-light text-rose-400" style={{ margin: 0 }}>Fuel the <span className="font-bold">Future</span></h2>
+      <h2 className="text-title leading-tight font-normal editorial-rose" style={{ margin: 0 }}>Fuel the <span className="font-bold">Future</span></h2>
     </FadeIn>
     <FadeIn direction="from-left">
-      <p className="text-2xl text-gray-200 leading-relaxed" style={{ margin: 0 }}>If you're enjoying Crown and want to see more, consider chipping in - it helps keep the project moving.</p>
+      <p className="text-lead text-inverse leading-relaxed" style={{ margin: 0 }}>If you're enjoying Crown and want to see more, consider chipping in - it helps keep the project moving.</p>
     </FadeIn>
   </div>
-  <div className="col-span-6 md:col-span-3 text-base">
-    <DonationBox />
+  <div className="col-span-6 md:col-span-3 text-body">
+    <DonationBox className="bg-panel" />
   </div>
 </div>
 
 <div className="flex flex-col md:flex-row items-start gap-8 mt-80">
   <div className="w-full md:w-1/2">
     <FadeIn direction="from-left">
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-blue-400" style={{ marginTop: 0 }}><span className="font-bold">Drag</span> et Impera</h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-blue" style={{ marginTop: 0 }}><span className="font-bold">Drag</span> et Impera</h2>
     </FadeIn>
     <FadeIn direction="from-left">
-      <p className="leading-relaxed mb-5 text-xl">Numeric entries can now be adjusted with a <strong>click and drag gesture</strong>, making it faster to fine-tune properties without repeatedly reaching for the keyboard.</p>
+      <p className="leading-relaxed mb-5 text-lead">Numeric entries can now be adjusted with a <strong>click and drag gesture</strong>, making it faster to fine-tune properties without repeatedly reaching for the keyboard.</p>
     </FadeIn>
   </div>
   <div className="w-full md:w-1/2">
     <FadeIn className="w-full mx-auto" direction="from-right">
-      <video className="w-full mx-auto rounded-xl transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+      <video className="w-full mx-auto rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
         <source src={inputDoubleDragVideo} type="video/mp4" />
       </video>
-      <span className="block text-center">Click and drag a numeric entry to adjust its value.</span>
+      <span className="block text-center">Click and drag a numeric entry to adjust the value.</span>
     </FadeIn>
   </div>
 </div>
@@ -147,37 +147,37 @@ project builds and deployments.
 <div className="flex flex-col md:flex-row items-start gap-8 mt-80">
   <div className="w-full md:w-1/2">
     <FadeIn className="w-full mx-auto" direction="from-left">
-      <img className="mx-auto rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" style={{ width: "21rem", maxWidth: "100%" }} src={renameMoveDeleteImage} alt="Rename, move and delete resource commands" />
+      <img className="mx-auto rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" style={{ width: "21rem", maxWidth: "100%" }} src={renameMoveDeleteImage} alt="Rename, move and delete resource commands" />
     </FadeIn>
   </div>
   <div className="w-full md:w-1/2">
     <FadeIn direction="from-right">
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-lime-400" style={{ marginTop: 0 }}>Everything in Its <span className="font-bold">Place</span></h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-lime" style={{ marginTop: 0 }}>Everything in Its <span className="font-bold">Place</span></h2>
     </FadeIn>
-    <p className="leading-relaxed mb-5 text-xl">The Project Browser can now <strong>move, rename and delete resources</strong>, making it possible to organize a project without leaving the editor.</p>
-    <p className="leading-relaxed mb-5 text-xl">Units can also have their <strong>prefab changed</strong> at any time, so replacing a placeholder or switching an existing object to a different variant no longer requires rebuilding it from scratch.</p>
+    <p className="leading-relaxed mb-5 text-lead">The Project Browser can now <strong>move, rename and delete resources</strong>, making it possible to organize a project without leaving the editor.</p>
+    <p className="leading-relaxed mb-5 text-lead">Units can also have their <strong>prefab changed</strong> at any time, so replacing a placeholder or switching an existing object to a different variant no longer requires rebuilding it from scratch.</p>
   </div>
 </div>
 
 <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] items-start gap-8 mt-80">
   <div>
     <FadeIn direction>
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-blue-400" style={{ marginTop: 0 }}>Follow that <span className="font-bold">Dependency</span>!</h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-blue" style={{ marginTop: 0 }}>Follow that <span className="font-bold">Dependency</span>!</h2>
     </FadeIn>
-    <p className="leading-relaxed mb-5 text-xl">The new dialog outlines dependencies between resources.</p>
+    <p className="leading-relaxed mb-5 text-lead">The new dialog outlines dependencies between resources.</p>
     <FadeIn direction="from-bottom">
-      <p className="leading-relaxed mb-5 text-xl">It is a handy way to understand unfamiliar projects, track down references and check the impact of a change before reorganizing content.</p>
+      <p className="leading-relaxed mb-5 text-lead">It is a handy way to understand unfamiliar projects, track down references and check the impact of a change before reorganizing content.</p>
     </FadeIn>
   </div>
   <div>
     <FadeIn className="w-full mx-auto">
-      <img className="w-full rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" src={resourceDependenciesImage} alt="Resource Dependencies dialog" />
+      <img className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" src={resourceDependenciesImage} alt="Resource Dependencies dialog" />
     </FadeIn>
   </div>
 </div>
 
 {/* Video: crown-0-64-resource-management.mp4
-<video className="rounded-xl" autoPlay muted loop playsInline controls>
+<video className="rounded-widget" autoPlay muted loop playsInline controls>
   <source src={resourceManagement} type="video/mp4" />
 </video>
 <span className="block text-center">Explore dependencies, reorganize resources and change a Unit's prefab without leaving the editor.</span>
@@ -186,22 +186,22 @@ project builds and deployments.
 <div className="flex flex-col md:flex-row items-start gap-8 mt-80">
   <div className="w-full md:w-1/2">
     <FadeIn className="w-full mx-auto" direction="from-left">
-      <img className="w-full rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" src={i18nImage} alt="Editor menus in four languages" />
+      <img className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" src={i18nImage} alt="Editor menus in four languages" />
     </FadeIn>
     <span className="block text-center">The editor menus in French, English, Italian and German.</span>
   </div>
   <div className="w-full md:w-1/2">
     <FadeIn direction="from-right">
-      <h2 className="text-[42px] leading-tight font-light mb-5 text-rose-400" style={{ marginTop: 0 }}><span className="font-bold">Ciao.</span> Salut. Hallo.</h2>
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-rose" style={{ marginTop: 0 }}><span className="font-bold">Ciao.</span> Salut. Hallo.</h2>
     </FadeIn>
     <FadeIn direction="from-right">
-      <p className="leading-relaxed mb-5 text-xl">The editor UI has been translated into <strong>Italian, French and German</strong>, making Crown more accessible to a wider range of developers.</p>
+      <p className="leading-relaxed mb-5 text-lead">The editor UI has been translated into <strong>Italian, French and German</strong>, making Crown more accessible to a wider range of developers.</p>
     </FadeIn>
   </div>
 </div>
 
 <FadeIn>
-  <h2 className="text-[42px] leading-tight font-light mt-80 mb-5 text-lime-400 text-center">Crown on <span className="font-bold">Command</span></h2>
+  <h2 className="text-title leading-tight font-normal mt-80 mb-5 editorial-lime text-center">Crown on <span className="font-bold">Command</span></h2>
 </FadeIn>
 
 <FadeIn>
@@ -211,18 +211,18 @@ project builds and deployments.
 </FadeIn>
 
 <span className="block text-left">
-  <DocumentationButton colorClassName="text-gray-950 hover:text-gray-950 bg-lime-400 hover:bg-lime-500" href="https://docs.crownengine.org/html/v0.64.0/reference/command_line.html#editor-options">CLI Reference</DocumentationButton>
+  <DocumentationButton className="news-button-lime" href="https://docs.crownengine.org/html/v0.64.0/reference/command_line.html#editor-options">CLI Reference</DocumentationButton>
 </span>
 
 {/* Video: crown-0-64-command-line-deploy.mp4
-<video className="rounded-xl" autoPlay muted loop playsInline controls>
+<video className="rounded-widget" autoPlay muted loop playsInline controls>
   <source src={commandLineDeploy} type="video/mp4" />
 </video>
 <span className="block text-center">Creating, importing and deploying a Crown project from the command line.</span>
 */}
 
 <FadeIn>
-  <h2 className="text-[48px] leading-tight font-light mt-80 mb-5 text-amber-400">That's <span className="underline decoration-2 underline-offset-8 font-bold">not</span> all Folks!</h2>
+  <h2 className="text-title leading-tight font-normal mt-80 mb-5 editorial-amber">That's <span className="underline decoration-2 underline-offset-8 font-bold">not</span> all Folks!</h2>
 </FadeIn>
 
 <FadeIn>

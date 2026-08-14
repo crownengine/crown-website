@@ -39,7 +39,7 @@ export default function Header() {
 
         <div className="block lg:hidden px-4">
           <button
-            className="navbar-burger flex items-center py-2 px-4 my-2 text-indigo-500 border border-indigo-500"
+            className="button button-secondary button-compact navbar-burger my-2"
             onClick={() => setIsOpen(open => !open)}
             aria-label="Menu"
             aria-controls="primary-navigation"
@@ -59,7 +59,7 @@ export default function Header() {
         {/* Main menu */}
         <div
           id="primary-navigation"
-          className={`${isOpen ? "block" : "hidden"} absolute left-0 top-full z-50 w-full bg-gray-100 px-4 text-gray-900 shadow-lg lg:static lg:z-auto lg:block lg:w-auto lg:bg-transparent lg:shadow-none`}
+          className={`${isOpen ? "block" : "hidden"} absolute left-0 top-full z-50 w-full bg-canvas px-4 text-ink lg:static lg:z-auto lg:block lg:w-auto lg:bg-transparent`}
         >
           <ul className="flex flex-col lg:flex-row">
             {menu_items.map((item, index) => {
@@ -67,11 +67,11 @@ export default function Header() {
                 return (
                   <li
                     key={index}
-                    className="border-b border-gray-300 hover:text-indigo-600 lg:border-b-0"
+                    className="border-b border-line hover:text-brand-hover lg:border-b-0"
                   >
                     <Link
                       className="block py-4 pl-2 pr-2 lg:hidden"
-                      activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
+                      activeClassName="font-semibold text-brand"
                       partiallyActive={true}
                       to={item.link}
                       onClick={() => setIsOpen(false)}
@@ -91,7 +91,7 @@ export default function Header() {
               return (
                 <li
                   key={index}
-                  className="border-b border-gray-300 hover:text-indigo-600 lg:border-b-0"
+                  className="border-b border-line hover:text-brand-hover lg:border-b-0"
                 >
                   {is_external ? (
                     <a
@@ -105,7 +105,7 @@ export default function Header() {
                   ) : (
                     <Link
                       className="block py-4 pl-2 pr-2"
-                      activeClassName="shadow-[inset_0_-4px_0_0_#4f46e5]" /* indigo-600 */
+                      activeClassName="font-semibold text-brand"
                       partiallyActive={true}
                       to={item.link}
                       onClick={() => setIsOpen(false)}

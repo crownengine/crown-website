@@ -7,13 +7,13 @@ import HeroImage from "../../components/hero-image.jsx"
 export default function Play() {
   return (
     <Layout>
-      <div className="bg-[url('../images/index/luna-background.svg')] bg-left-top bg-cover">
+      <div className="bg-dark">
         <Clamp>
-          <section className="py-24 px-4 text-left text-red-600">
-            <h1 className="text-6xl mb-6 font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-md">
+          <section className="px-4 py-24 text-left">
+            <h1 className="mb-6 bg-gradient-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899] bg-clip-text text-display font-bold text-transparent">
               Take a Bite of The Tech
             </h1>
-            <p className="text-2xl mb-24 text-gray-300">
+            <p className="text-lead mb-24 text-inverse-muted">
               Play a selection of interactive demos in-browser.
             </p>
 

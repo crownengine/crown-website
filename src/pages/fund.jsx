@@ -17,15 +17,15 @@ export default function Fund() {
 
   return (
     <Layout>
-      <div className="pb-80 md:pb-0 bg-gradient-to-b from-gray-900 to-gray-700">
+      <div className="pb-80 md:pb-0 bg-gradient-to-b from-deepest to-dark">
         <Clamp>
-          <section className="py-24 px-4 bg-gradient-to-r from-orange-300 to-orange-600 bg-clip-text">
+          <section className="px-4 py-24">
             <div className="grid md:grid-cols-6 gap-6 mb-40">
               <div className="col-span-6 md:col-span-3 flex flex-col gap-6">
-                <h1 className="text-6xl font-bold text-transparent">
+                <h1 className="donation-title text-display font-bold">
                   Help Crown grow Stronger and Faster
                 </h1>
-                <p className="text-2xl text-gray-300">
+                <p className="text-lead text-inverse-muted">
                   Donations support Core Contributors working on Features, Maintenance and
                   Improvements &#x1F970;
                 </p>
@@ -44,31 +44,29 @@ export default function Fund() {
         </Clamp>
       </div>
 
-      <div className="bg-gradient-to-b from-gray-900 to-gray-800 py-0">
+      <div className="bg-gradient-to-b from-deepest to-dark py-0">
         <Clamp>
-          <section className="p-8 text-white">
+          <section className="p-8 text-inverse">
             <StatsBanner animate />
           </section>
         </Clamp>
       </div>
 
-      <div className="py-10 pt-20 bg-white text-gray-600 text-center">
+      <div className="bg-surface py-10 pt-20 text-center text-muted">
         <Clamp>
           {/* Credits Header */}
           <section className="mb-6">
-            <h2 className="text-5xl font-extrabold capitalize">Credits</h2>
+            <h2 className="text-display font-bold capitalize">Credits</h2>
           </section>
 
           {/* Diamond */}
           <section className="hidden py-20 text-center">
-            <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-500 mb-8 capitalize">
-              Diamond
-            </h3>
+            <h3 className="tier-diamond mb-8 text-title font-bold capitalize">Diamond</h3>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
               {["Take", "The", "Lead"].map((name, i) => (
                 <div
                   key={i}
-                  className="w-52 h-28 bg-gray-100 border border-gray-300 rounded-lg flex items-center justify-center text-gray-800 text-xl font-semibold shadow-sm"
+                  className="widget flex h-28 w-52 items-center justify-center text-lead font-semibold text-ink"
                 >
                   {name}
                 </div>
@@ -78,14 +76,12 @@ export default function Fund() {
 
           {/* Platinum */}
           <section className="hidden py-10 text-center">
-            <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-700 via-gray-500 to-gray-600 mb-8 capitalize">
-              Platinum
-            </h3>
+            <h3 className="tier-platinum mb-8 text-title font-bold capitalize">Platinum</h3>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
               {["Make", "The", "First", "Gift"].map((name, i) => (
                 <div
                   key={i}
-                  className="w-40 h-20 bg-gray-100 border border-gray-300 rounded-lg flex items-center justify-center text-gray-800 text-xl font-semibold shadow-sm"
+                  className="widget flex h-20 w-40 items-center justify-center text-lead font-semibold text-ink"
                 >
                   {name}
                 </div>
@@ -95,10 +91,8 @@ export default function Fund() {
 
           {/* Titanium */}
           <section className="hidden py-10 text-center">
-            <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-700 via-gray-600 to-slate-500 mb-6 capitalize">
-              Titanium
-            </h3>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-900 text-2xl">
+            <h3 className="tier-titanium mb-6 text-title font-bold capitalize">Titanium</h3>
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-ink text-lead">
               {["Kick", "It", "Off"].map((name, i) => (
                 <span key={i} className="underline">
                   {name}
@@ -109,10 +103,8 @@ export default function Fund() {
 
           {/* Gold */}
           <section className="hidden py-10 text-center">
-            <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-400 mb-6 capitalize">
-              Gold
-            </h3>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-800 text-xl font-medium">
+            <h3 className="tier-gold mb-6 text-title font-bold capitalize">Gold</h3>
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-ink text-lead font-semibold">
               {["Start", "The", "Giving"].map((name, i) => (
                 <span key={i} className="px-4">
                   {name}
@@ -123,35 +115,22 @@ export default function Fund() {
 
           {/* Silver */}
           <section className="py-10 pb-10 text-center">
-            <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 mb-4 capitalize">
-              Silver
-            </h3>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-600">
+            <h3 className="tier-silver mb-4 text-title font-bold capitalize">Silver</h3>
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-muted">
               {["Gallonigher"].map((name, i) => (
-                <span key={i}>
-                  {name}
-                </span>
+                <span key={i}>{name}</span>
               ))}
             </div>
           </section>
 
           {/* Founding Supporter */}
           <section className="pt-4 pb-20 text-center">
-            <h3
-              className="text-4xl font-extrabold text-transparent bg-clip-text mb-4 capitalize tracking-wide"
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #9f1239 0%, #e11d48 26%, #fb7185 50%, #f59e0b 74%, #f97316 100%)",
-                filter: "drop-shadow(0 2px 6px rgba(190, 24, 93, 0.18))",
-              }}
-            >
+            <h3 className="tier-founder mb-4 text-title font-bold capitalize tracking-wide">
               Founding Supporter
             </h3>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-gray-600">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-muted">
               {["OscarLeif", "Gallonigher", "Simon DaRocha"].map((name, i) => (
-                <span key={i}>
-                  {name}
-                </span>
+                <span key={i}>{name}</span>
               ))}
             </div>
           </section>
@@ -161,4 +140,9 @@ export default function Fund() {
   )
 }
 
-export const Head = () => <Seo title="Donations" description="Join the Development Fund - help keeping game development free." />
+export const Head = () => (
+  <Seo
+    title="Donations"
+    description="Join the Development Fund - help keeping game development free."
+  />
+)

@@ -4,14 +4,12 @@ import { FaDownload, FaFileZipper, FaOsi, FaPlay } from "react-icons/fa6"
 import DownloadButton from "./download-button"
 import FadeIn from "./fade-in"
 
-function Feature({ accentClassName, children, description, imageOnLeft = false, title }) {
+function Feature({ children, description, imageOnLeft = false, title }) {
   const text = (
     <div className="w-full md:w-1/2">
       <FadeIn direction={imageOnLeft ? "from-right" : "from-left"}>
-        <h3 className={`mb-5 text-[44px] font-extrabold leading-tight ${accentClassName}`}>
-          {title}
-        </h3>
-        <p className="text-xl leading-relaxed text-gray-200">{description}</p>
+        <h3 className="mb-5 text-title font-bold leading-tight text-ink">{title}</h3>
+        <p className="text-lead leading-relaxed text-inverse">{description}</p>
       </FadeIn>
     </div>
   )
@@ -31,15 +29,14 @@ function Feature({ accentClassName, children, description, imageOnLeft = false, 
 }
 
 const imageClassName =
-  "w-full rounded-xl shadow transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none"
+  "w-full rounded-widget transform-gpu transition-transform duration-200 ease-out hover:scale-[1.04] motion-reduce:transform-none"
 
 export default function Features() {
   return (
-    <section className="bg-gray-950 py-24">
+    <section className="bg-deepest py-24">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-8 lg:px-20">
         <div className="space-y-32 md:space-y-40">
           <Feature
-            accentClassName="text-lime-400"
             title="Batteries Included"
             description="Complete Editor with importers, level editor, deployers, Lua REPL, and much more."
           >
@@ -49,13 +46,12 @@ export default function Features() {
               alt="Editing a moonlit boat scene in Crown"
               loading="lazy"
               placeholder="dominantColor"
-              quality={80}
+              quality={90}
               formats={["auto", "webp"]}
             />
           </Feature>
 
           <Feature
-            accentClassName="text-amber-400"
             title="Fast iteration times"
             description="Everything is hot-reloadable in less than a second, gameplay code included."
             imageOnLeft
@@ -66,13 +62,12 @@ export default function Features() {
               alt="Previewing an animation in the Crown Editor"
               loading="lazy"
               placeholder="dominantColor"
-              quality={80}
+              quality={90}
               formats={["auto", "webp"]}
             />
           </Feature>
 
           <Feature
-            accentClassName="text-blue-400"
             title="Multi-platform"
             description="Dev on your favorite desktop platform and ship to Android, HTML5, Linux or Windows."
           >
@@ -82,13 +77,12 @@ export default function Features() {
               alt="A Crown project running in the editor with development statistics"
               loading="lazy"
               placeholder="dominantColor"
-              quality={80}
+              quality={90}
               formats={["auto", "webp"]}
             />
           </Feature>
 
           <Feature
-            accentClassName="text-rose-400"
             title="Performance-first"
             description="Runtime data is carefully arranged to reach maximum gameplay performance all the time."
             imageOnLeft
@@ -99,13 +93,12 @@ export default function Features() {
               alt="A dense Crown scene used to demonstrate renderer performance"
               loading="lazy"
               placeholder="dominantColor"
-              quality={80}
+              quality={90}
               formats={["auto", "webp"]}
             />
           </Feature>
 
           <Feature
-            accentClassName="text-amber-400"
             title="Simple and hackable"
             description="Projects are just text files that are compiled into optimized binaries before shipping."
           >
@@ -115,36 +108,34 @@ export default function Features() {
               alt="Text-based render settings in a Crown project"
               loading="lazy"
               placeholder="dominantColor"
-              quality={80}
+              quality={90}
               formats={["auto", "webp"]}
             />
           </Feature>
 
           <Feature
-            accentClassName="text-blue-400"
             title="Plug-and-play"
             description="No account, no internet required. Get a copy, unzip it and start building games."
             imageOnLeft
           >
             <div
-              className="grid min-h-48 w-full grid-cols-[repeat(5,auto)] items-center justify-center gap-3 text-gray-200 sm:min-h-64 lg:gap-5"
+              className="grid min-h-48 w-full grid-cols-[repeat(5,auto)] items-center justify-center gap-3 text-inverse sm:min-h-64 lg:gap-5"
               role="img"
               aria-label="Download, unzip and start Crown"
             >
               <FaDownload className="h-auto w-16 lg:w-24" aria-hidden="true" />
-              <span className="text-4xl text-gray-600 lg:text-6xl" aria-hidden="true">
+              <span className="text-title text-muted lg:text-display" aria-hidden="true">
                 →
               </span>
               <FaFileZipper className="h-auto w-16 lg:w-24" aria-hidden="true" />
-              <span className="text-4xl text-gray-600 lg:text-6xl" aria-hidden="true">
+              <span className="text-title text-muted lg:text-display" aria-hidden="true">
                 →
               </span>
-              <FaPlay className="h-auto w-16 text-blue-400 lg:w-24" aria-hidden="true" />
+              <FaPlay className="h-auto w-16 text-ink lg:w-24" aria-hidden="true" />
             </div>
           </Feature>
 
           <Feature
-            accentClassName="text-rose-400"
             title="Polyglot"
             description="Editors are available in four languages, with additional ones on the roadmap."
           >
@@ -154,19 +145,18 @@ export default function Features() {
               alt="Crown Editor menus in French, English, Italian and German"
               loading="lazy"
               placeholder="dominantColor"
-              quality={80}
+              quality={90}
               formats={["auto", "webp"]}
             />
           </Feature>
 
           <Feature
-            accentClassName="text-lime-400"
             title="Free and Open Source"
             description="Crown is a public, collaborative project, owned by its contributors and free forever."
             imageOnLeft
           >
             <FaOsi
-              className="mx-auto h-48 w-48 text-gray-200 sm:h-64 sm:w-64"
+              className="mx-auto h-48 w-48 text-inverse sm:h-64 sm:w-64"
               aria-label="Open Source Initiative"
             />
           </Feature>

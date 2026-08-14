@@ -14,12 +14,12 @@ export default function Home({ data }) {
       <Cta />
       <Clamp>
         <section className="mb-16 px-4" aria-labelledby="latest-news">
-          <h2 className="mb-6 flex text-[40px] font-bold text-gray-600">
+          <h2 className="mb-6 flex text-title font-bold text-ink">
             <Link id="latest-news" className="block" to="/news">
               Latest News
             </Link>
             <a
-              className="ml-2 flex items-center text-3xl hover:text-indigo-800"
+              className="ml-2 flex items-center text-title text-brand hover:text-brand-hover"
               rel="noreferrer"
               target="_blank"
               href="https://www.crownengine.org/rss.xml"
@@ -29,55 +29,52 @@ export default function Home({ data }) {
             </a>
           </h2>
           {/* Latest news card.*/}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 flow-root lg:items-stretch">
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 gap-6 flow-root lg:grid-cols-4 lg:items-stretch">
+            <div className="lg:col-span-3 lg:h-full">
               <NewsList
                 edges={data.allMdx.edges}
                 start={0}
                 limit={1}
                 variant="regular"
-                excerptClassName="text-base"
-                listClassName=""
-                itemClassName=""
+                excerptClassName="text-body"
+                sectionClassName="h-full"
+                listClassName="h-full"
+                itemClassName="h-full"
+                linkClassName="block h-full"
               />
             </div>
 
             {/* Older news cards. */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-1 lg:h-full">
               <NewsList
                 edges={data.allMdx.edges}
                 start={1}
                 limit={3}
-                variant="row"
-                excerptClassName="text-base"
-                listClassName="flex flex-col gap-4 md:h-full"
-                itemClassName="md:flex-1"
+                variant="overlay"
+                sectionClassName="lg:h-full"
+                listClassName="flex flex-col gap-4 lg:h-full"
+                itemClassName="lg:flex-1"
+                linkClassName="block h-full"
               />
             </div>
           </div>
         </section>
 
         <section className="mb-16 px-4" aria-labelledby="crown-foundation">
-          <div className="flex flex-col gap-6 rounded-lg bg-gray-200 px-6 py-14 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+          <div className="widget flex flex-col gap-6 px-6 py-14 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex-1">
-              <h2 id="crown-foundation" className="text-[40px] font-bold text-gray-700">
+              <h2 id="crown-foundation" className="text-title font-bold text-ink">
                 The Crown Foundation
               </h2>
-              <p className="mt-2 max-w-4xl text-lg text-gray-700">
+              <p className="mt-2 max-w-4xl text-lead text-ink">
                 We develop Crown Engine, publish ready-to-use releases, and maintain free resources
                 that help people build awesome games.
               </p>
               <div className="mt-5 flex flex-wrap gap-4">
-                <Link
-                  className="inline-block whitespace-nowrap rounded bg-indigo-600 px-6 py-3 text-center font-semibold text-white shadow transition hover:bg-indigo-700"
-                  to="/about"
-                >
+                <Link className="button button-primary" to="/about">
                   About the Foundation
                 </Link>
-                <Link
-                  className="inline-block whitespace-nowrap rounded border border-indigo-600 px-6 py-3 text-center font-semibold text-indigo-700 transition hover:bg-indigo-100 hover:text-indigo-900"
-                  to="/fund"
-                >
+                <Link className="button button-secondary" to="/fund">
                   Help our Mission
                 </Link>
               </div>
@@ -102,7 +99,7 @@ export const data = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(quality: 80, width: 960, placeholder: DOMINANT_COLOR)
+                gatsbyImageData(quality: 90, width: 960, placeholder: DOMINANT_COLOR)
               }
             }
           }

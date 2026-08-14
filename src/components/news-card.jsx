@@ -4,49 +4,73 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export default function NewsCard({
   title,
   excerpt,
-  excerptClassName = "text-sm",
+  excerptClassName = "text-small",
   date,
   image,
   variant = "regular",
 }) {
   if (variant === "regular") {
     return (
-      <article className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col h-full">
+      <article className="widget group flex h-full flex-col overflow-hidden">
         {/* image at the top */}
         <div className="w-full h-64 overflow-hidden">
           {image && (
-            <GatsbyImage image={image} alt={title} className="w-full h-full object-cover" />
+            <GatsbyImage
+              image={image}
+              alt={title}
+              className="h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
+            />
           )}
         </div>
 
         {/* Title and Date */}
         <div className="p-4 flex-1 flex flex-col justify-end">
-          <h3 className="text-lg font-semibold mb-2">{title}</h3>
-          {excerpt && (
-            <p className={`${excerptClassName} text-gray-700 mb-2 line-clamp-3`}>{excerpt}</p>
-          )}
-          <p className="text-sm text-gray-500">{date}</p>
+          <h3 className="text-lead font-semibold mb-2">{title}</h3>
+          {excerpt && <p className={`${excerptClassName} text-ink mb-2 line-clamp-3`}>{excerpt}</p>}
+          <p className="text-small text-muted">{date}</p>
         </div>
       </article>
     )
   }
 
+  if (variant === "overlay") {
+    return (
+      <article className="widget group relative h-40 overflow-hidden sm:h-44 lg:h-full">
+        {image ? (
+          <GatsbyImage
+            image={image}
+            alt={title}
+            className="absolute inset-0 h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-panel" />
+        )}
+
+        <h3 className="absolute bottom-2 left-2 z-10 max-w-[calc(100%-1rem)] rounded-widget bg-button-white/85 px-2 py-1 text-small font-semibold leading-tight text-cool-horizon-950 line-clamp-2">
+          {title}
+        </h3>
+      </article>
+    )
+  }
+
   return (
-    <article className="bg-white rounded-2xl shadow-md overflow-hidden flex h-full">
+    <article className="widget group flex h-full overflow-hidden">
       <div className="w-1/3 overflow-hidden">
         {image ? (
-          <GatsbyImage image={image} alt={title} className="w-full h-full object-cover" />
+          <GatsbyImage
+            image={image}
+            alt={title}
+            className="h-full w-full transform-gpu object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] motion-reduce:group-hover:scale-100"
+          />
         ) : (
-          <div className="w-full h-full bg-gray-100" />
+          <div className="w-full h-full bg-canvas" />
         )}
       </div>
 
       <div className="p-3 flex-1 flex flex-col justify-center">
-        <h3 className="text-base font-semibold leading-snug mb-1 line-clamp-2">{title}</h3>
-        {excerpt && (
-          <p className={`${excerptClassName} text-gray-700 mb-1 line-clamp-2`}>{excerpt}</p>
-        )}
-        <p className="text-xs text-gray-500 mt-auto">{date}</p>
+        <h3 className="text-body font-semibold leading-tight mb-1 line-clamp-2">{title}</h3>
+        {excerpt && <p className={`${excerptClassName} text-ink mb-1 line-clamp-2`}>{excerpt}</p>}
+        <p className="text-caption text-muted mt-auto">{date}</p>
       </div>
     </article>
   )
