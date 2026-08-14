@@ -6,6 +6,12 @@ const bitcoinAddress = "bc1qhqqka8uj4wk5kn6c2675tggdgykwrr96szg8v2"
 const RECEIVER = "The Crown Foundation"
 const MIN_SATS = 25000
 const RELATIVE_TOLERANCE = 0.01
+const usdFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2,
+})
 
 function satsToBtc(sats) {
   const n = Number(sats) || 0
@@ -188,6 +194,8 @@ export default function DonateBTC({ location }) {
   }, [sats])
 
   const btc = sats === null ? "0" : satsToBtc(sats)
+  const amountUsd = Number(amountUsdParam)
+  const usd = sats !== null && Number.isFinite(amountUsd) && amountUsd > 0 ? amountUsd : null
   const bip21 =
     sats === null
       ? ""
@@ -235,9 +243,14 @@ export default function DonateBTC({ location }) {
             <div className="mt-6">
               <div className="text-caption text-muted">Amount</div>
               <div className="mt-1 text-lead font-bold text-inverse">
-                {sats === null ? "—" : `${sats} sats`}
+                {sats === null
+                  ? "—"
+                  : usd === null
+                    ? `${sats} sats`
+                    : `${usdFormatter.format(usd)} USD`}
               </div>
-              <div className="text-small text-muted mt-1">(~{btc} BTC)</div>
+              {usd !== null && <div className="mt-1 text-body text-muted">{sats} sats</div>}
+              <div className="mt-1 text-body text-muted">(~{btc} BTC)</div>
               {loading && (
                 <div className="text-caption text-muted mt-2">Calculating amount from USD...</div>
               )}
