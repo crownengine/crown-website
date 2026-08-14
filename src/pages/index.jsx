@@ -14,12 +14,12 @@ export default function Home({ data }) {
       <Cta />
       <Clamp>
         <section className="mb-16 px-4" aria-labelledby="latest-news">
-          <h2 className="mb-6 flex text-title font-bold text-ink">
+          <h2 className="group mb-6 flex text-title font-bold text-ink">
             <Link id="latest-news" className="block" to="/news">
               Latest News
             </Link>
             <a
-              className="ml-2 flex items-center text-title text-brand hover:text-brand-hover"
+              className="pointer-events-none ml-2 flex items-center text-lead text-ink opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100"
               rel="noreferrer"
               target="_blank"
               href="https://www.crownengine.org/rss.xml"
