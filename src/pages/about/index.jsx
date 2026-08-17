@@ -51,7 +51,7 @@ export default function About() {
               </div>
             </header>
 
-            <section className="mt-24 grid gap-8 lg:grid-cols-5" aria-labelledby="our-mission">
+            <section className="mt-24 grid gap-8 lg:grid-cols-5" aria-labelledby="our-mission" data-nosnippet>
               <div className="widget p-7 sm:p-8 lg:col-span-3">
                 <h2 id="our-mission" className="text-title font-semibold text-inverse">
                   Our Mission
@@ -105,7 +105,7 @@ export default function About() {
               </aside>
             </section>
 
-            <section className="mt-24" aria-labelledby="activities">
+            <section className="mt-24" aria-labelledby="activities" data-nosnippet>
               <div className="max-w-3xl">
                 <h2 id="activities" className="text-title font-semibold text-inverse">
                   What the Foundation Does
@@ -148,14 +148,14 @@ export default function About() {
               </div>
             </section>
 
-            <section className="widget mt-24 p-8 sm:p-10">
+            <section className="widget mt-24 p-8 sm:p-10" data-nosnippet>
               <h2 className="mb-10 text-title font-semibold text-inverse sm:text-title">
                 Crown's Public Reach
               </h2>
               <StatsBanner />
             </section>
 
-            <section className="mt-24 grid gap-8 lg:grid-cols-2" aria-labelledby="donations">
+            <section className="mt-24 grid gap-8 lg:grid-cols-2" aria-labelledby="donations" data-nosnippet>
               <div className="widget p-8 text-ink">
                 <h2 id="donations" className="text-title font-semibold text-ink sm:text-title">
                   How Donations Support the Mission
