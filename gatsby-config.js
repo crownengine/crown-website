@@ -68,7 +68,7 @@ module.exports = {
         link: `/support`,
       },
       {
-        label: `Foundation`,
+        label: `About`,
         link: `/about`,
       },
       {
