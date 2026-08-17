@@ -222,7 +222,7 @@ export default function Download() {
     <Layout>
       <div className="bg-gradient-to-b from-deepest to-dark">
         <Clamp>
-          <section className="py-24 px-4 text-center">
+          <section className="py-24 px-4 text-center" data-nosnippet>
             <div className="w-full max-w-2xl mx-auto mb-32">
               <h1 className="mb-24 mt-2 text-center text-display font-bold text-ink">
                 Let Your Game Begin
