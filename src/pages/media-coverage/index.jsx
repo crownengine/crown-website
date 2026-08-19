@@ -5,6 +5,14 @@ import Seo from "../../components/seo"
 
 const articles = [
   {
+    outlet: "Engines Database",
+    title: "This Week in Game Engines #39",
+    author: "Henrique L. Alves",
+    date: "August 19, 2026",
+    url: "https://enginesdatabase.com/blog/this-week-in-game-engines-39/",
+    screenshot: "/media-coverage/engines-database.png",
+  },
+  {
     outlet: "Phoronix",
     title: "Crown Engine 0.63 Restores Its OpenGL Renderer For Legacy Hardware Support",
     author: "Michael Larabel",
@@ -67,7 +75,7 @@ export default function MediaCoverageIndex() {
         <section className="mt-12 mb-16 px-4">
           <h1 className="mb-6 text-title font-bold text-ink">Media Coverage</h1>
           <div className="text-left text-muted">
-            <div className="grid gap-5 md:grid-cols-2 lg:max-w-[75%]">
+            <div className="grid gap-5 md:grid-cols-3">
               {articles.map(article => (
                 <MediaCoverageCard key={article.url} article={article} />
               ))}
