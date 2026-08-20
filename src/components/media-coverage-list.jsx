@@ -32,7 +32,7 @@ function MediaCoverageCard({ article, titleAs: Title }) {
   return (
     <article className="widget group flex h-full flex-col overflow-hidden">
       <a
-        className="block bg-deepest"
+        className="block overflow-hidden bg-deepest"
         href={article.url}
         rel="noreferrer"
         target="_blank"
