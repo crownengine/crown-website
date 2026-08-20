@@ -149,7 +149,7 @@ export default function Footer() {
           <div className="w-1/2 md:w-1/4">
             <h2 className={sectionHeadingClass}>Follow Crown</h2>
             <nav className="mb-2">
-              <div className="flex flex-row text-lead text-ink">
+              <div className="flex flex-row text-[1.5rem] text-ink">
                 <a
                   className="hover:text-ink"
                   rel="noreferrer"
