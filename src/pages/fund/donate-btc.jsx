@@ -6,6 +6,10 @@ const bitcoinAddress = "bc1qhqqka8uj4wk5kn6c2675tggdgykwrr96szg8v2"
 const RECEIVER = "The Crown Foundation"
 const MIN_SATS = 25000
 const RELATIVE_TOLERANCE = 0.01
+const QR_ERROR_CORRECTION_LEVEL = "L"
+const QR_BACKGROUND = "#fff"
+const QR_MARGIN = 2
+const QR_TARGET_SIZE = 288
 const usdFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -29,7 +33,7 @@ export default function DonateBTC({ location }) {
 
   // Sats is null until we determine the final value.
   const [sats, setSats] = useState(null)
-  const [qrDataUrl, setQrDataUrl] = useState("")
+  const [qrCode, setQrCode] = useState(null)
   const [copied, setCopied] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -180,10 +184,22 @@ export default function DonateBTC({ location }) {
 
     const btc = satsToBtc(sats)
     const bip21 = `bitcoin:${bitcoinAddress}?amount=${encodeURIComponent(btc)}&label=${encodeURIComponent(RECEIVER)}&message=${encodeURIComponent("One-time donation")}`
+    const moduleCount = QRCode.create(bip21, {
+      errorCorrectionLevel: QR_ERROR_CORRECTION_LEVEL,
+    }).modules.size
+    const qrSizeWithMargin = moduleCount + QR_MARGIN * 2
+    const scale = Math.max(1, Math.round(QR_TARGET_SIZE / qrSizeWithMargin))
+    const size = moduleCount * scale
+    const padding = QR_MARGIN * scale
 
     let mounted = true
-    QRCode.toDataURL(bip21, { errorCorrectionLevel: "L", margin: 2, scale: 12 })
-      .then(url => mounted && setQrDataUrl(url))
+    QRCode.toDataURL(bip21, {
+      color: { light: QR_BACKGROUND },
+      errorCorrectionLevel: QR_ERROR_CORRECTION_LEVEL,
+      margin: 0,
+      scale,
+    })
+      .then(dataUrl => mounted && setQrCode({ dataUrl, padding, size }))
       .catch(err => {
         console.error("Failed to generate QR code:", err)
       })
@@ -213,7 +229,7 @@ export default function DonateBTC({ location }) {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative overflow-hidden md:min-h-screen">
       {/* Background halves */}
       <div
         className="absolute left-0 top-0 w-full h-1/2 md:w-1/2 md:h-full bg-dark"
@@ -225,7 +241,7 @@ export default function DonateBTC({ location }) {
       />
 
       {/* Foreground content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto min-h-screen grid grid-cols-1 md:grid-cols-2 items-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto grid grid-cols-1 items-center md:min-h-screen md:grid-cols-2">
         {/* Left column */}
         <div className="flex items-center justify-center px-6 py-12">
           <div className="max-w-md text-center">
@@ -260,7 +276,7 @@ export default function DonateBTC({ location }) {
             <div className="mb-4 flex justify-center">
               <div className="relative inline-block">
                 <div
-                  className="px-4 py-2 rounded-full shadow-md text-white font-semibold text-sm"
+                  className="px-4 py-2 rounded-full shadow-md text-dark font-semibold text-sm"
                   style={{ backgroundColor: "#f7931a" }}
                 >
                   Scan Me!
@@ -281,13 +297,20 @@ export default function DonateBTC({ location }) {
               </div>
             </div>
 
-            {qrDataUrl ? (
-              <img
-                src={qrDataUrl}
-                alt="QR code for bitcoin payment"
-                title={bip21}
-                className="mx-auto h-72 w-72 bg-surface object-contain"
-              />
+            {qrCode ? (
+              <div
+                className="mx-auto inline-flex overflow-hidden rounded-widget"
+                style={{ backgroundColor: QR_BACKGROUND, padding: qrCode.padding }}
+              >
+                <img
+                  src={qrCode.dataUrl}
+                  alt="QR code for bitcoin payment"
+                  title={bip21}
+                  width={qrCode.size}
+                  height={qrCode.size}
+                  className="h-auto max-w-none"
+                />
+              </div>
             ) : (
               <div className="w-72 h-72 flex items-center justify-center text-body text-muted mx-auto">
                 {sats === null ? "Waiting for USD -> BTC conversion..." : "Generating QR..."}
