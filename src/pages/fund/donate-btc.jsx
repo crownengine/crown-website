@@ -236,23 +236,18 @@ export default function DonateBTC({ location }) {
             <h1 className="text-title font-bold text-inverse">One-time donation</h1>
 
             <div className="mt-6">
-              <div className="text-caption text-muted">Receiver</div>
-              <div className="mt-1 text-lead font-semibold text-inverse">{RECEIVER}</div>
-            </div>
-
-            <div className="mt-6">
-              <div className="text-caption text-muted">Amount</div>
-              <div className="mt-1 text-lead font-bold text-inverse">
+              <div className="text-body font-bold text-muted">Amount</div>
+              <div className="mt-1 text-[2rem] leading-tight font-bold text-inverse">
                 {sats === null
                   ? "—"
                   : usd === null
                     ? `${sats} sats`
                     : `${usdFormatter.format(usd)} USD`}
               </div>
-              {usd !== null && <div className="mt-1 text-body text-muted">{sats} sats</div>}
-              <div className="mt-1 text-body text-muted">(~{btc} BTC)</div>
+              {usd !== null && <div className="mt-1 text-lead text-muted">{sats} sats</div>}
+              <div className="mt-1 text-lead text-muted">(~{btc} BTC)</div>
               {loading && (
-                <div className="text-caption text-muted mt-2">Calculating amount from USD...</div>
+                <div className="text-small text-muted mt-2">Calculating amount from USD...</div>
               )}
             </div>
           </div>
@@ -264,9 +259,25 @@ export default function DonateBTC({ location }) {
             {/* Bubble */}
             <div className="mb-4 flex justify-center">
               <div className="relative inline-block">
-                <div className="rounded-widget bg-brand-surface px-4 py-2 text-small font-semibold text-brand">
+                <div
+                  className="px-4 py-2 rounded-full shadow-md text-white font-semibold text-sm"
+                  style={{ backgroundColor: "#f7931a" }}
+                >
                   Scan Me!
                 </div>
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderLeft: "8px solid transparent",
+                    borderRight: "8px solid transparent",
+                    borderTop: "8px solid #f7931a",
+                    position: "absolute",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    top: "100%",
+                  }}
+                />
               </div>
             </div>
 
@@ -278,7 +289,7 @@ export default function DonateBTC({ location }) {
                 className="mx-auto h-72 w-72 bg-surface object-contain"
               />
             ) : (
-              <div className="w-72 h-72 flex items-center justify-center text-small text-muted mx-auto">
+              <div className="w-72 h-72 flex items-center justify-center text-body text-muted mx-auto">
                 {sats === null ? "Waiting for USD -> BTC conversion..." : "Generating QR..."}
               </div>
             )}
@@ -287,7 +298,7 @@ export default function DonateBTC({ location }) {
               <button
                 onClick={copyUri}
                 disabled={!bip21}
-                className="button button-primary button-compact"
+                className="button button-primary"
               >
                 {copied ? "Copied!" : "Copy URI"}
               </button>
@@ -297,7 +308,7 @@ export default function DonateBTC({ location }) {
                 onClick={e => {
                   if (!bip21) e.preventDefault()
                 }}
-                className={`button button-secondary button-compact ${
+                className={`button button-secondary ${
                   bip21 ? "" : "cursor-not-allowed bg-cool-horizon-950 text-cool-horizon-500"
                 }`}
               >
