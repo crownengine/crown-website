@@ -1,0 +1,267 @@
+---
+title: Crown 0.65
+slug: /news/crown-0-65
+date: 2026-09-28
+author: Daniele Bartolini
+image: crown-0-65.png
+showcase: true
+title_image: true
+---
+
+import DonationBox from "../components/donation-box.jsx"
+import BeforeAfter from "../components/before-after.jsx"
+import DownloadButton from "../components/download-button.jsx"
+import DonateButton from "../components/donate-button.jsx"
+import editorLayoutOptimizationImage from "./crown-0-65-editor-layout-optimization.gif"
+import lightCookieVideo from "./crown-0-65-light-cookie.mp4"
+import multiMaterialVideo from "./crown-0-65-multi-material.mp4"
+import numericEntriesVideo from "./crown-0-65-numeric-entries.mp4"
+import compilerVideo from "./crown-0-65-compiler.mp4"
+import placeholderImage from "./crown-news-placeholder.png"
+import projectBrowserFilterImage from "./crown-0-65-project-brower-filter.png"
+import resourceChooserVideo from "./crown-0-65-resource-chooser.mp4"
+import shadowAfterImage from "./crown-0-65-shadow-after.png"
+import shadowBeforeImage from "./crown-0-65-shadow-before.png"
+import triplanarVideo from "./crown-0-65-triplanar.mp4"
+import unitEditorColliderVideo from "./crown-0-65-unit-editor-collider.mp4"
+import FadeIn from "../components/fade-in.jsx"
+
+Crown 0.65 expands rendering and scene-import capabilities while improving editor usability and
+performance on large projects. Materials and lighting are more flexible, resources are easier to
+find and data compilation makes better use of available hardware.
+<div className="flex flex-wrap gap-4 whitespace-nowrap">
+  <DownloadButton>Download Crown 0.65</DownloadButton> <DonateButton/>
+</div>
+
+<div className="news-starry">
+
+<div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8 mt-80">
+  <div>
+    <h2 className="text-title leading-tight font-normal mb-5 editorial-lime" style={{ marginTop: 0 }}>A Material <span className="font-bold">Difference</span></h2>
+    <p className="leading-relaxed mb-5 text-lead">Meshes can now use <strong>multiple material slots</strong>.</p>
+    <p className="leading-relaxed mb-5 text-lead">The existing scene importers have been updated to fully support them.</p>
+    <p className="leading-relaxed mb-5 text-lead">The scene-import pipeline also gains a new format: Crown can now import <strong>glTF 2.0 scenes</strong> in both text and binary form.</p>
+  </div>
+  <div>
+    <video className="w-full mx-auto rounded-widget" autoPlay muted loop playsInline>
+      <source src={multiMaterialVideo} type="video/mp4" />
+    </video>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] items-start gap-8 mt-80">
+  <div>
+    <FadeIn className="w-full mx-auto" direction="from-left">
+      <video className="news-video-radial-blend w-full rounded-widget" autoPlay muted loop playsInline>
+        <source src={triplanarVideo} type="video/mp4" />
+      </video>
+    </FadeIn>
+  </div>
+  <div>
+    <FadeIn direction="from-right">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-blue" style={{ marginTop: 0 }}>Map It <span className="font-bold">Your Way</span></h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">The mesh shader now supports <strong>world-space and local-space triplanar mapping</strong>.</p>
+    <p className="leading-relaxed mb-5 text-lead">Use <code className="inline-block rounded-widget border border-brand-border bg-brand-surface px-2 py-0.5 font-mono text-small font-semibold tracking-wide text-brand-light">+TRIPLANAR</code> for textures that stay fixed in the world. Add <code className="inline-block rounded-widget border border-brand-border bg-brand-surface px-2 py-0.5 font-mono text-small font-semibold tracking-wide text-brand-light">+TRIPLANAR_LOCAL</code> too when the texture should move with the object.</p>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8 mt-80">
+  <div>
+    <FadeIn direction="from-left">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-amber" style={{ marginTop: 0 }}>Out of the <span className="font-bold">Shadows</span></h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">Local lights make better use of their shadow atlas, allocating tiles more effectively for <strong>much higher shadow resolution</strong>.</p>
+    <p className="leading-relaxed mb-5 text-lead">A new configurable <strong>normal-offset bias</strong> also helps improve overall shadow-mapping quality.</p>
+  </div>
+  <div>
+    <FadeIn className="w-full mx-auto" direction="from-right">
+      <BeforeAfter
+        beforeSrc={shadowBeforeImage}
+        afterSrc={shadowAfterImage}
+        beforeAlt="Local light shadows before improved atlas tile allocation"
+        afterAlt="Local light shadows after improved atlas tile allocation"
+        beforeLabel="0.64"
+        afterLabel="0.65"
+        ariaLabel="Compare local light shadow quality before and after the improvements"
+        className="w-full"
+      />
+    </FadeIn>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8 mt-80">
+  <div>
+    <FadeIn className="w-full max-w-lg mx-auto" direction="from-left">
+      <video className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+        <source src={lightCookieVideo} type="video/mp4" />
+      </video>
+    </FadeIn>
+  </div>
+  <div>
+    <FadeIn direction="from-right">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-blue" style={{ marginTop: 0 }}>Come in, Take a <span className="font-bold">Cookie</span></h2>
+    </FadeIn>
+    <FadeIn direction="from-right">
+      <p className="leading-relaxed mb-5 text-lead">All light types can now project a <strong>cookie texture</strong>, with scale and offset controls for adjusting how its pattern falls across the scene.</p>
+    </FadeIn>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] items-start gap-8 mt-80">
+  <div>
+    <FadeIn direction="from-left">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-lime" style={{ marginTop: 0 }}>Collision <span className="font-bold">Vision</span></h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">The Unit Editor can now visualize an actor's <strong>collision shape</strong> directly in its viewport.</p>
+  </div>
+  <div>
+    <FadeIn className="w-full mx-auto" direction="from-right">
+      <video className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+        <source src={unitEditorColliderVideo} type="video/mp4" />
+      </video>
+      <span className="block text-center">Editing a box collider in the Unit Editor.</span>
+    </FadeIn>
+  </div>
+</div>
+
+</div>
+
+<div className="widget news-donation-glow grid md:grid-cols-6 gap-8 p-8" style={{ marginTop: "25rem", marginBottom: "25rem" }}>
+  <div className="col-span-6 md:col-span-3 flex flex-col justify-center gap-6">
+    <FadeIn direction="from-left">
+      <h2 className="text-title leading-tight font-normal editorial-rose" style={{ margin: 0 }}>Want to <span className="font-bold">Help?</span></h2>
+    </FadeIn>
+    <FadeIn direction="from-left">
+      <p className="text-lead text-inverse leading-relaxed" style={{ margin: 0 }}>Crown exists because contributors spend real time designing features, writing code, testing changes and fixing bugs. Donations help support the people doing that work.</p>
+    </FadeIn>
+  </div>
+  <div className="col-span-6 md:col-span-3 text-body">
+    <DonationBox className="bg-panel" />
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] items-start gap-8 mt-80">
+  <div>
+    <FadeIn className="w-full mx-auto" direction="from-left">
+      <img
+        className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none"
+        src={editorLayoutOptimizationImage}
+        alt="Comparison of the original and more compact editor layouts"
+      />
+    </FadeIn>
+  </div>
+  <div>
+    <FadeIn direction="from-right">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-lime" style={{ marginTop: 0 }}>Room to <span className="font-bold">Work</span></h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">The editor now makes better use of the available space by <strong>making the menu bar more compact</strong> and packing Inspector properties more efficiently.</p>
+    <p className="leading-relaxed mb-5 text-lead">Property widgets adapt better as panels are resized, while tighter spacing in the Project Browser allows more content to fit on screen.</p>
+  </div>
+</div>
+
+<div className="flex flex-col md:flex-row items-start gap-8 mt-80">
+  <div className="w-full md:w-1/2">
+    <FadeIn direction="from-left">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-rose" style={{ marginTop: 0 }}><span className="font-bold">Choose</span> Wisely</h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">The Resource Chooser has been redesigned with <strong>support for thumbnails</strong> and <strong>two view modes</strong>, making assets much easier to find.</p>
+    <p className="leading-relaxed mb-5 text-lead">Opening a Level now uses the new chooser too, avoiding cumbersome navigation in ordinary file pickers.</p>
+  </div>
+  <div className="w-full md:w-1/2">
+    <FadeIn className="w-full max-w-lg mx-auto" direction="from-right">
+      <video className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+        <source src={resourceChooserVideo} type="video/mp4" />
+      </video>
+    </FadeIn>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] items-start gap-8 mt-80">
+  <div>
+    <FadeIn className="w-full mx-auto" direction="from-left">
+      <video className="w-full mx-auto rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+        <source src={numericEntriesVideo} type="video/mp4" />
+      </video>
+      <span className="block text-center">Model by CharlieCatling.</span>
+    </FadeIn>
+  </div>
+  <div>
+    <FadeIn direction="from-right">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-blue" style={{ marginTop: 0 }}>Fine by <span className="font-bold">Design</span></h2>
+    </FadeIn>
+    <FadeIn direction="from-right">
+      <p className="leading-relaxed mb-5 text-lead">Numeric entries gain dedicated <strong>snapping and precision modes.</strong></p>
+      <p className="leading-relaxed mb-5 text-lead">Hold <strong>Ctrl</strong> while dragging to snap the value, or hold <strong>Shift</strong> for finer adjustments.</p>
+      <p className="leading-relaxed mb-5 text-lead">Editing also feels more deliberate thanks to clearer visual states, predictable Escape-key behavior and the removal of unwanted undo steps.</p>
+    </FadeIn>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] items-start gap-8 mt-80">
+  <div>
+    <FadeIn direction="from-left">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-lime" style={{ marginTop: 0 }}>Just Your <span className="font-bold">Type</span></h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">The Project Browser can now <strong>filter resources by type</strong>.</p>
+    <FadeIn direction="from-left">
+      <p className="leading-relaxed mb-5 text-lead">Searching is also <strong>much faster</strong>, keeping the browser responsive in large projects with many resources and thumbnails.</p>
+    </FadeIn>
+  </div>
+  <div>
+    <FadeIn className="w-full max-w-sm mx-auto" direction="from-right">
+      <img
+        className="w-full rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none"
+        src={projectBrowserFilterImage}
+        alt="Project Browser menu for filtering resources by type"
+      />
+    </FadeIn>
+  </div>
+</div>
+
+<div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] items-start gap-8 mt-80">
+  <div className="self-center">
+    <FadeIn className="w-full mx-auto" direction="from-left">
+      <video className="w-full mx-auto rounded-widget transform-gpu transition-transform duration-300 ease-out hover:scale-[1.02] motion-reduce:transform-none" autoPlay muted loop playsInline>
+        <source src={compilerVideo} type="video/mp4" />
+      </video>
+    </FadeIn>
+  </div>
+  <div>
+    <FadeIn direction="from-right">
+      <h2 className="text-title leading-tight font-normal mb-5 editorial-amber" style={{ marginTop: 0 }}>Firing on All <span className="font-bold">Cores</span></h2>
+    </FadeIn>
+    <p className="leading-relaxed mb-5 text-lead">The Data Compiler now builds resources <strong>in parallel</strong>, shortening the wait between making a change and seeing it live.</p>
+  </div>
+</div>
+
+<FadeIn>
+  <h2 className="text-title leading-tight font-normal mt-80 mb-5 editorial-rose">But Wait, There's <strong>More</strong></h2>
+</FadeIn>
+
+<FadeIn>
+  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 list-disc pl-6 text-lead leading-relaxed">
+    <li>Crown can now play <strong>MP3 audio files</strong>.</li>
+    <li>The Projects panel can create <strong>temporary projects</strong>.</li>
+    <li>A new <strong>Vignette</strong> post-processing effect is now available.</li>
+    <li>Animated meshes now use <strong>correct precomputed bounds</strong>.</li>
+    <li>An automatic update check makes new Crown releases easier to discover.</li>
+    <li>Files can now be imported directly from the <strong>Project Browser</strong>.</li>
+    <li>The Project Browser offers better keyboard workflows.</li>
+    <li>Identical mesh geometries are automatically <strong>deduplicated</strong> at compile time.</li>
+    <li><strong>Packages</strong> can be created from the Project Browser.</li>
+    <li>Imported models now receive a <strong>default animation</strong>.</li>
+    <li>Objects in the Level Editor can be moved to the camera view with <strong>Ctrl+Alt+F</strong>.</li>
+    <li>Large scenes now re-import faster.</li>
+    <li>Opening and closing the Unit Editor is <strong>faster</strong> when working with large units.</li>
+    <li>Games can now switch to <strong>full-screen mode on Windows and HTML5</strong>.</li>
+    <li>Lua scripts can now create colliders at runtime.</li>
+    <li>Project lists can now be filtered.</li>
+  </ul>
+</FadeIn>
+
+<FadeIn>
+  <p className="leading-relaxed mt-8 text-lead">This release also includes <strong>69 fixes</strong> across the Editor, Runtime, Data Compiler and Lua API. Check out the <a className="text-brand-light underline hover:text-inverse" href="https://docs.crownengine.org/html/v0.65.0/changelog.html#v0-65-0">latest changelog</a> for the complete list of improvements and fixes.</p>
+</FadeIn>
+
+<span className="block text-center mt-16 mb-32"><DownloadButton>Download Crown 0.65</DownloadButton></span>
