@@ -67,6 +67,8 @@ npm run clean
 npm run build
 echo 'www.crownengine.org' > ./public/CNAME
 
+rm -rf .cache
+
 git fetch origin gh-pages:gh-pages >/dev/null 2>&1 || true
 git checkout gh-pages || git checkout --orphan gh-pages
 git rm -rf . >/dev/null 2>&1 || true
