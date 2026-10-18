@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import { FaAndroid, FaApple, FaCode, FaLinux, FaWindows } from "react-icons/fa6"
 import Layout from "../../components/layout"
 import Clamp from "../../components/clamp"
+import DownloadMenu from "../../components/download-menu"
 import Seo from "../../components/seo"
 import Releases from "../../data/download/releases.json"
 
@@ -221,6 +222,7 @@ export default function Download() {
   return (
     <Layout>
       <div className="bg-gradient-to-b from-deepest to-dark">
+        <DownloadMenu />
         <Clamp>
           <section className="py-24 px-4 text-center" data-nosnippet>
             <div className="w-full max-w-2xl mx-auto mb-32">

@@ -86,6 +86,16 @@ module.exports = {
         link: `/about/credits`,
       },
     ],
+    download_menu: [
+      {
+        label: `Stable`,
+        link: `/download`,
+      },
+      {
+        label: `Nightly Builds`,
+        link: `/download/nightly`,
+      },
+    ],
   },
   plugins: [
     {
@@ -197,7 +207,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: [`/crown-license`, `/download/thanks`, `/fund/donate-btc`, `/website-about`],
+        excludes: [
+          `/crown-license`,
+          `/download/nightly`,
+          `/download/thanks`,
+          `/fund/donate-btc`,
+          `/website-about`,
+        ],
       },
     },
     `gatsby-plugin-robots-txt`,
