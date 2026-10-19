@@ -1,0 +1,33 @@
+{
+  "branch": "master",
+  "tag_name": "0.66.0-master-799942a64",
+  "assets": [
+    {
+      "name": "crown-0.66.0-master-799942a64-linux-x64.tar.gz",
+      "version": "0.66.0",
+      "commit": "799942a647dabf60a4ba1d2b8a210a8563bc06a3",
+      "os": "linux",
+      "architecture": "x64",
+      "size": 100394798,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1ET-HQZu-rPzLNBSW9X_ilFoDA04jImNp"
+    },
+    {
+      "name": "crown-0.66.0-master-799942a64-windows-x64.zip",
+      "version": "0.66.0",
+      "commit": "799942a647dabf60a4ba1d2b8a210a8563bc06a3",
+      "os": "windows",
+      "architecture": "x64",
+      "size": 114896059,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1UmtrWOQ5RM35m7n2KIRONkQlBq7azv4Y"
+    },
+    {
+      "name": "crown-0.66.0-master-799942a64.sha256",
+      "version": "0.66.0",
+      "commit": "799942a647dabf60a4ba1d2b8a210a8563bc06a3",
+      "os": null,
+      "architecture": null,
+      "size": 225,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=17SmXJW0rbvyYgHbEfWgIWdOvg3CQWGKz"
+    }
+  ]
+}
