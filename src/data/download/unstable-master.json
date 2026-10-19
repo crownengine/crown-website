@@ -1,33 +1,33 @@
 {
   "branch": "master",
-  "tag_name": "0.66.0-master-799942a64",
+  "tag_name": "0.66.0-master-1aff69c56",
   "assets": [
     {
-      "name": "crown-0.66.0-master-799942a64-linux-x64.tar.gz",
+      "name": "crown-0.66.0-master-1aff69c56-linux-x64.tar.gz",
       "version": "0.66.0",
-      "commit": "799942a647dabf60a4ba1d2b8a210a8563bc06a3",
+      "commit": "1aff69c56910a9c6b2ef8ba7c5031f2cdea467f3",
       "os": "linux",
       "architecture": "x64",
-      "size": 100394798,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1ET-HQZu-rPzLNBSW9X_ilFoDA04jImNp"
+      "size": 100396854,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1FgXC1a2Zmwh-r3-mvFSq0_qt2ypEo5d8"
     },
     {
-      "name": "crown-0.66.0-master-799942a64-windows-x64.zip",
+      "name": "crown-0.66.0-master-1aff69c56-windows-x64.zip",
       "version": "0.66.0",
-      "commit": "799942a647dabf60a4ba1d2b8a210a8563bc06a3",
+      "commit": "1aff69c56910a9c6b2ef8ba7c5031f2cdea467f3",
       "os": "windows",
       "architecture": "x64",
-      "size": 114896059,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1UmtrWOQ5RM35m7n2KIRONkQlBq7azv4Y"
+      "size": 114895336,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1r9uDCgiiJR_WVe3rpOp1CN6-OE57DChN"
     },
     {
-      "name": "crown-0.66.0-master-799942a64.sha256",
+      "name": "crown-0.66.0-master-1aff69c56.sha256",
       "version": "0.66.0",
-      "commit": "799942a647dabf60a4ba1d2b8a210a8563bc06a3",
+      "commit": "1aff69c56910a9c6b2ef8ba7c5031f2cdea467f3",
       "os": null,
       "architecture": null,
       "size": 225,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=17SmXJW0rbvyYgHbEfWgIWdOvg3CQWGKz"
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1CkxolSSuDIBM01ZOncNdbKEFgKUQA4Kb"
     }
   ]
 }
