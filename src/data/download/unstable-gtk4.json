@@ -1,0 +1,33 @@
+{
+  "branch": "gtk4",
+  "tag_name": "0.66.0-gtk4-f4f36ed8a",
+  "assets": [
+    {
+      "name": "crown-0.66.0-gtk4-f4f36ed8a-linux-x64.tar.gz",
+      "version": "0.66.0",
+      "commit": "f4f36ed8aaaa1fb9d824447647c2b7eeafcd467c",
+      "os": "linux",
+      "architecture": "x64",
+      "size": 100481750,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1OX0jzCfQZDA8PF88FE4MiWOUiFoDMmxi"
+    },
+    {
+      "name": "crown-0.66.0-gtk4-f4f36ed8a-windows-x64.zip",
+      "version": "0.66.0",
+      "commit": "f4f36ed8aaaa1fb9d824447647c2b7eeafcd467c",
+      "os": "windows",
+      "architecture": "x64",
+      "size": 119513454,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1V7pr2QYCEZsWf9if3_3uCFpRGiIb2zG6"
+    },
+    {
+      "name": "crown-0.66.0-gtk4-f4f36ed8a.sha256",
+      "version": "0.66.0",
+      "commit": "f4f36ed8aaaa1fb9d824447647c2b7eeafcd467c",
+      "os": null,
+      "architecture": null,
+      "size": 221,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1n_-mr9Wwi13u11xKCcyOqJNEKykS40Kx"
+    }
+  ]
+}
