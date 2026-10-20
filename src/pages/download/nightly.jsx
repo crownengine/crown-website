@@ -7,6 +7,7 @@ import DownloadMenu from "../../components/download-menu"
 import FadeIn from "../../components/fade-in"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
+import { getPackageType } from "../../utils/download"
 
 const nightly_files = require.context("../../data/download", false, /^\.\/unstable-.+\.json$/)
 const releases = nightly_files
@@ -140,6 +141,9 @@ export default function Nightly() {
                               <th scope="col" className="px-4 py-2 font-semibold">
                                 Architecture
                               </th>
+                              <th scope="col" className="px-4 py-2 font-semibold">
+                                Format
+                              </th>
                               <th scope="col" className="px-4 py-2 font-semibold text-right">
                                 Size
                               </th>
@@ -170,6 +174,7 @@ export default function Nightly() {
                                     </OutboundLink>
                                   </td>
                                   <td className="px-4 py-2">{asset.architecture}</td>
+                                  <td className="px-4 py-2">{getPackageType(asset.name)}</td>
                                   <td className="px-4 py-2 text-right">
                                     {Math.floor(asset.size / 1024 / 1024)} MiB
                                   </td>

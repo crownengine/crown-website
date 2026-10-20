@@ -7,6 +7,7 @@ import Clamp from "../../components/clamp"
 import DownloadMenu from "../../components/download-menu"
 import Seo from "../../components/seo"
 import Releases from "../../data/download/releases.json"
+import { getPackageType } from "../../utils/download"
 
 const platformIcons = {
   Android: FaAndroid,
@@ -65,16 +66,6 @@ export default function Download() {
     else return arch
   }
 
-  function getPackageType(package_name) {
-    const ext =
-      package_name.substring(package_name.lastIndexOf(".") + 1, package_name.length) || package_name
-
-    if (ext === "gz") return "Tarball"
-    else if (ext === "zip") return "ZIP"
-    else if (ext === "exe") return "Installer"
-    else return "Binary"
-  }
-
   function getPackageOS(package_name) {
     const tags = package_name.split("-")
     return getOSName(tags[2])
@@ -106,6 +97,7 @@ export default function Download() {
         valid: valid,
         os: valid ? getPackageOS(data.name) : "",
         arch: valid ? getPackageArch(data.name) : "",
+        format: getPackageType(data.name),
         url: data.browser_download_url,
         size: data.size,
         separator: separator,
@@ -162,7 +154,7 @@ export default function Download() {
                       <span className="max-[399px]:hidden">
                         {Math.floor(data.size / 1024 / 1024)} MiB,{" "}
                       </span>
-                      {getPackageType(data.url)}
+                      {data.format}
                     </>
                   )}
                 </div>
@@ -185,7 +177,7 @@ export default function Download() {
                       <span className="max-[399px]:hidden">
                         {Math.floor(data.size / 1024 / 1024)} MiB,{" "}
                       </span>
-                      {getPackageType(data.url)}
+                      {data.format}
                     </>
                   )}
                 </div>
@@ -203,16 +195,21 @@ export default function Download() {
       var os = getUserOS()
       if (os !== "linux" && os !== "windows") os = "windows"
 
+      let selected_asset
       for (const asset of github_assets) {
-        if (asset.name.indexOf(os) !== -1) {
-          const url = asset.browser_download_url
-          setCrownDownloadUrl(url)
-          setCrownPackageType(getPackageType(url))
-          const megs = Math.floor(asset.size / 1024 / 1024)
-          setCrownDownloadSize(megs.toString() + " MiB")
-          setCrownRelease(getOSName(os))
+        if (asset.name.indexOf(os) !== -1 && !asset.name.endsWith(".sha256")) {
+          selected_asset = asset
+          if (os === "linux" && getPackageType(asset.name) === "AppImage") break
         }
       }
+
+      if (!selected_asset) return
+
+      setCrownDownloadUrl(selected_asset.browser_download_url)
+      setCrownPackageType(getPackageType(selected_asset.name))
+      const megs = Math.floor(selected_asset.size / 1024 / 1024)
+      setCrownDownloadSize(megs.toString() + " MiB")
+      setCrownRelease(getOSName(os))
     }
 
     setCrownVersion(Releases.tag_name)
