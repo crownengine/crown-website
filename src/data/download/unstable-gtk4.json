@@ -1,33 +1,42 @@
 {
   "branch": "gtk4",
-  "tag_name": "0.66.0-gtk4-f4f36ed8a",
+  "tag_name": "0.66.0-gtk4-ae294876e",
   "assets": [
     {
-      "name": "crown-0.66.0-gtk4-f4f36ed8a-linux-x64.tar.gz",
+      "name": "crown-0.66.0-gtk4-ae294876e-linux-x64.AppImage",
       "version": "0.66.0",
-      "commit": "f4f36ed8aaaa1fb9d824447647c2b7eeafcd467c",
+      "commit": "ae294876ec52ac8b5e969849b2687260c955efbc",
       "os": "linux",
       "architecture": "x64",
-      "size": 100481750,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1OX0jzCfQZDA8PF88FE4MiWOUiFoDMmxi"
+      "size": 120408568,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1GqNjOzgvA2LfvuxWQXE8ZqQ5rdOZW3ah"
     },
     {
-      "name": "crown-0.66.0-gtk4-f4f36ed8a-windows-x64.zip",
+      "name": "crown-0.66.0-gtk4-ae294876e-linux-x64.tar.gz",
       "version": "0.66.0",
-      "commit": "f4f36ed8aaaa1fb9d824447647c2b7eeafcd467c",
+      "commit": "ae294876ec52ac8b5e969849b2687260c955efbc",
+      "os": "linux",
+      "architecture": "x64",
+      "size": 100478606,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1XHbV0TgneeOCtTWqTGePvaIEcYiGtOeK"
+    },
+    {
+      "name": "crown-0.66.0-gtk4-ae294876e-windows-x64.zip",
+      "version": "0.66.0",
+      "commit": "ae294876ec52ac8b5e969849b2687260c955efbc",
       "os": "windows",
       "architecture": "x64",
-      "size": 119513454,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1V7pr2QYCEZsWf9if3_3uCFpRGiIb2zG6"
+      "size": 119511127,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1vSCyexBBbYkmRCoubfsBMEHjQVYUYQHo"
     },
     {
-      "name": "crown-0.66.0-gtk4-f4f36ed8a.sha256",
+      "name": "crown-0.66.0-gtk4-ae294876e.sha256",
       "version": "0.66.0",
-      "commit": "f4f36ed8aaaa1fb9d824447647c2b7eeafcd467c",
+      "commit": "ae294876ec52ac8b5e969849b2687260c955efbc",
       "os": null,
       "architecture": null,
-      "size": 221,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1n_-mr9Wwi13u11xKCcyOqJNEKykS40Kx"
+      "size": 334,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1V8gpLY3EdOA_xkHl3PrUDMGdnk8fcCTe"
     }
   ]
 }
