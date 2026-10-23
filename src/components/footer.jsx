@@ -34,6 +34,14 @@ export default function Footer() {
                   className="hover:text-ink"
                   rel="noreferrer"
                   target="_blank"
+                  href="https://stats.crownengine.org"
+                >
+                  Build Sizes
+                </a>
+                <a
+                  className="hover:text-ink"
+                  rel="noreferrer"
+                  target="_blank"
                   href="https://github.com/crownengine/crown/"
                 >
                   Source Code

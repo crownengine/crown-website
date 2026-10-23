@@ -247,7 +247,15 @@ export default function Download() {
                         {crown_release} {crown_package_type}
                       </span>
                       <span>•</span>
-                      <span>{crown_download_size}</span>
+                      <a
+                        className="text-inverse underline font-bold"
+                        title="Curious how Crown's size has evolved?"
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://stats.crownengine.org"
+                      >
+                        {crown_download_size}
+                      </a>
                     </span>
                   )}
                   <span className="flex gap-x-2 max-[399px]:basis-full max-[399px]:justify-center">
