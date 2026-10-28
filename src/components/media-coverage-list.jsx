@@ -4,6 +4,14 @@ import PropTypes from "prop-types"
 const articles = [
   {
     outlet: "Engines Database",
+    title: "Gamedev Knitting #2",
+    author: "Henrique L. Alves",
+    date: "October 2, 2026",
+    url: "https://enginesdatabase.com/blog/gamedev-knitting-2/",
+    screenshot: "/media-coverage/engines-database.png",
+  },
+  {
+    outlet: "Engines Database",
     title: "This Week in Game Engines #39",
     author: "Henrique L. Alves",
     date: "August 19, 2026",
