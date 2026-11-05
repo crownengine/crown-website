@@ -1,42 +1,42 @@
 {
   "branch": "master",
-  "tag_name": "0.66.0-master-ce3e23fcc",
+  "tag_name": "0.66.0-master-a700d2811",
   "assets": [
     {
-      "name": "crown-0.66.0-master-ce3e23fcc-linux-x64.AppImage",
+      "name": "crown-0.66.0-master-a700d2811-linux-x64.AppImage",
       "version": "0.66.0",
-      "commit": "ce3e23fccc975ef78d31e32f0156007c22f2211d",
+      "commit": "a700d28112cae6ea79c295a360ff43e5959c185e",
       "os": "linux",
       "architecture": "x64",
       "size": 117127672,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1D-zkrIqyuBO7lP95A1UH0TnpP1Nyqu4A"
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1N--Jn-fmxvAmcGVxsXRX6yqViWzDPkrt"
     },
     {
-      "name": "crown-0.66.0-master-ce3e23fcc-linux-x64.tar.gz",
+      "name": "crown-0.66.0-master-a700d2811-linux-x64.tar.gz",
       "version": "0.66.0",
-      "commit": "ce3e23fccc975ef78d31e32f0156007c22f2211d",
+      "commit": "a700d28112cae6ea79c295a360ff43e5959c185e",
       "os": "linux",
       "architecture": "x64",
-      "size": 100902690,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1u341skGu4C_cYJx5-BaO9TKhejC2E8ft"
+      "size": 100900067,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1Bc0uXqdrq4fj_bQA_RmDxVawkrFydIYh"
     },
     {
-      "name": "crown-0.66.0-master-ce3e23fcc-windows-x64.zip",
+      "name": "crown-0.66.0-master-a700d2811-windows-x64.zip",
       "version": "0.66.0",
-      "commit": "ce3e23fccc975ef78d31e32f0156007c22f2211d",
+      "commit": "a700d28112cae6ea79c295a360ff43e5959c185e",
       "os": "windows",
       "architecture": "x64",
-      "size": 108732056,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=1LSopOjczMIelmFm3xojLbIfEz8TpgANI"
+      "size": 108730257,
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1DnOYqQWK9RZiI13qzEmN352ah-t_GjOZ"
     },
     {
-      "name": "crown-0.66.0-master-ce3e23fcc.sha256",
+      "name": "crown-0.66.0-master-a700d2811.sha256",
       "version": "0.66.0",
-      "commit": "ce3e23fccc975ef78d31e32f0156007c22f2211d",
+      "commit": "a700d28112cae6ea79c295a360ff43e5959c185e",
       "os": null,
       "architecture": null,
       "size": 340,
-      "browser_download_url": "https://drive.google.com/uc?export=download&id=10Q-zwlZLRIFsL15F2DTEOkergK9I37i4"
+      "browser_download_url": "https://drive.google.com/uc?export=download&id=1Ytx-hHilAoGidMgVqgusMuL4nDHsAmtD"
     }
   ]
 }
