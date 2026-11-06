@@ -40,7 +40,7 @@ export default function Cta() {
           </p>
           <div className="flex flex-wrap gap-4">
             <DownloadButton>Download Crown</DownloadButton>
-            <Link className="button button-inverse" to="/news/crown-0-64">
+            <Link className="button button-inverse" to="/news/crown-0-65">
               See Highlights
             </Link>
           </div>
