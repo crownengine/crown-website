@@ -28,11 +28,14 @@ export default function Play() {
                 }}
               />
             </a>
+            <p className="mb-32" />
             <a href="https://play.crownengine.org/vehicle" data-nosnippet>
               <HeroImage
                 {...{
                   src: "/play/vehicle.jpg",
                   title: "Vehicle",
+                  subtitle:
+                    "Vehicle physics with dynamic objects.",
                   heightClass: "h-96",
                 }}
               />
